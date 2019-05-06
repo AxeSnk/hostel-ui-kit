@@ -1,4 +1,4 @@
-.header {
+.standard-logged-in-nav-bar__header {
     padding: 0;
     height: 70px;
 }
@@ -8,11 +8,11 @@ ul, li {
     margin: 0;
     align-items: center;
 }
-.container{
+.standard-logged-in-nav-bar__container{
     margin: 10px 0;
     max-width: 1440px;
 }
-.nav {
+.standard-logged-in-nav-bar__nav {
     padding: 15px 0;
     align-items: center;
     display: -webkit-flex;
@@ -21,74 +21,61 @@ ul, li {
     display: -o-flex;
     display: flex;
 }
-.logo {
+.standard-logged-in-nav-bar__logo {
     display: block;
     background-image: url('/headers-and-footers/logo.svg');
     width: 106px;
     height: 40px;
     margin-left: 140px;
 }
-.menu {
+.standard-logged-in-nav-bar__menu {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    margin-left: 297px;
+    margin-left: 349.31px;
 }
-.menu__item {
+.standard-logged-in-nav-bar__menu__item {
     margin-right: 28px;
 }
-.menu__item:nth-child(3) {
+.standard-logged-in-nav-bar__menu__item:nth-child(3) {
     margin-right: 0px;
 }
-.menu__item a {
+.standard-logged-in-nav-bar__menu__item a {
     color: rgba(31, 32, 65, 0.5);
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
 }
-.menu__item a:hover {
+.standard-logged-in-nav-bar__menu__item a:hover {
     border-bottom: 1px solid rgba(31, 32, 65, 0.5);
 }
 a {
     text-decoration: none;
     transition: all 0.5s ease;
 }
-.home a {
+.standard-logged-in-nav-bar__home a {
     margin-right: 2px;
     font-weight: bold;
     color: rgba(31, 32, 65, 0.75);
 }
-.btn{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 22px;
-    text-transform: uppercase;
-    padding: 10px 0;
+.standard-logged-in-nav-bar__user {
+    color: rgba(31, 32, 65, 0.5);
+    margin-right: 140px;
+}
+.standard-logged-in-nav-bar__line {
     display: block;
-    text-decoration: none;
+    background-image: url('/headers-and-footers/standard-logged-in-nav-bar/line.svg');
+    width: 1px;
+    height: 30px;
+    margin-right: 30px;
 }
-.btn_login {
-    width: 79px;
-    color: #BC9CFF;
-    border: 2px solid #BC9CFF;
-    margin-right: 20px;
-}
-.btn_login:hover {
+.standard-logged-in-nav-bar__btn_login:hover {
     background: #BC9CFF;
     color: #fff;
 }
-.btn_register {
-    width: 101px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #FFFFFF;
-    border: 2px solid #BC9CFF;
-    margin-right: 140px;
-}
-.expand {
+.standard-logged-in-nav-bar__menu__item_expand {
     display: block;
     background-image: url('/headers-and-footers/expand.svg');
     width: 12px;
