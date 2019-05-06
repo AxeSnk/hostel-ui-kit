@@ -1,6 +1,8 @@
 .standard-logged-in-nav-bar__header {
     padding: 0;
     height: 70px;
+    margin-top: 40px;
+    background-color: #fff;
 }
 ul, li {
     display: block;
@@ -34,7 +36,7 @@ ul, li {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    margin-left: 349.31px;
+    margin-left: auto;
 }
 .standard-logged-in-nav-bar__menu__item {
     margin-right: 28px;
@@ -46,7 +48,6 @@ ul, li {
     color: rgba(31, 32, 65, 0.5);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
 }
 .standard-logged-in-nav-bar__menu__item a:hover {
     border-bottom: 1px solid rgba(31, 32, 65, 0.5);

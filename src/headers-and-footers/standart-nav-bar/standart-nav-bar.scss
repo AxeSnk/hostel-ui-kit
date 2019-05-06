@@ -1,6 +1,8 @@
 .header {
     padding: 0;
     height: 70px;
+    background-color: #fff;
+
 }
 ul, li {
     display: block;
@@ -11,6 +13,7 @@ ul, li {
 .container{
     margin: 10px 0;
     max-width: 1440px;
+
 }
 .nav {
     padding: 15px 0;
@@ -34,7 +37,7 @@ ul, li {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    margin-left: 297px;
+    margin-left: auto;
 }
 .menu__item {
     margin-right: 28px;
@@ -46,7 +49,6 @@ ul, li {
     color: rgba(31, 32, 65, 0.5);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
 }
 .menu__item a:hover {
     border-bottom: 1px solid rgba(31, 32, 65, 0.5);
@@ -70,9 +72,12 @@ a {
     padding: 10px 0;
     display: block;
     text-decoration: none;
+    line-height: 12px;
+    text-align: center;
+    // height: 30px;
 }
 .btn_login {
-    width: 79px;
+    width: 75px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF;
     margin-right: 20px;
@@ -82,7 +87,7 @@ a {
     color: #fff;
 }
 .btn_register {
-    width: 101px;
+    width: 97px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #FFFFFF;
     border: 2px solid #BC9CFF;
