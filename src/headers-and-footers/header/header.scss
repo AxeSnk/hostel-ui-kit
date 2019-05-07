@@ -1,21 +1,23 @@
+$dark_75-color: rgba(31, 32, 65, 0.75);
+$dark_50-color: rgba(31, 32, 65, 0.5);
+$primary-color: #BC9CFF;
+
 .header {
     padding: 0;
     height: 70px;
-    background-color: #fff;
-
+    background-color: #FFFFFF;
 }
-ul, li {
+.header ul, .header li {
     display: block;
     padding: 0;
     margin: 0;
     align-items: center;
 }
-.container{
+.header .header__container{
     margin: 10px 0;
     max-width: 1440px;
-
 }
-.nav {
+.header .header__nav {
     padding: 15px 0;
     align-items: center;
     display: -webkit-flex;
@@ -24,14 +26,14 @@ ul, li {
     display: -o-flex;
     display: flex;
 }
-.logo {
+.header .header__logo {
     display: block;
     background-image: url('/headers-and-footers/logo.svg');
     width: 106px;
     height: 40px;
     margin-left: 140px;
 }
-.menu {
+.header .header__menu {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -39,30 +41,30 @@ ul, li {
     display: flex;
     margin-left: auto;
 }
-.menu__item {
+.header .header__menu__item {
     margin-right: 28px;
 }
-.menu__item:nth-child(3) {
+.header .header__menu__item:nth-child(3) {
     margin-right: 0px;
 }
-.menu__item a {
-    color: rgba(31, 32, 65, 0.5);
+.header .header__menu__item a {
+    color: $dark_50-color;
     font-style: normal;
     font-weight: normal;
 }
-.menu__item a:hover {
-    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+.header .header__menu__item a:hover {
+    border-bottom: 1px solid $dark_50-color;
 }
-a {
+.header a {
     text-decoration: none;
     transition: all 0.5s ease;
 }
-.home a {
+.header .header__home-bold a {
     margin-right: 2px;
     font-weight: bold;
-    color: rgba(31, 32, 65, 0.75);
+    color: $dark_75-color;
 }
-.btn{
+.header .header__btn{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -76,24 +78,24 @@ a {
     text-align: center;
     // height: 30px;
 }
-.btn_login {
+.header .header__btn-login {
     width: 75px;
-    color: #BC9CFF;
-    border: 2px solid #BC9CFF;
+    color: $primary-color;
+    border: 2px solid $primary-color;
     margin-right: 20px;
 }
-.btn_login:hover {
+.header .header__btn-login:hover {
     background: #BC9CFF;
     color: #fff;
 }
-.btn_register {
+.header .header__btn-register {
     width: 97px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $primary-color 0%, #8BA4F9 100%);
     color: #FFFFFF;
-    border: 2px solid #BC9CFF;
+    border: 2px solid $primary-color;
     margin-right: 140px;
 }
-.expand {
+.header .header__expand {
     display: block;
     background-image: url('/headers-and-footers/expand.svg');
     width: 12px;
