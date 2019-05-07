@@ -5,9 +5,10 @@ $dark_100-color: #1F2041;
 
 .footer {
     padding: 0;
-    height: 443px;
-    background-color: #fff;
+    height: 372px;
+    background-color: #FFFFFF;
     margin-top: 40px;
+    width: 1440px;
 }
 .footer ul, .footer li {
     display: block;
@@ -32,7 +33,7 @@ $dark_100-color: #1F2041;
 }
 .footer .footer__logo {
     display: block;
-    background-image: url('/headers-and-footers/logo.svg');
+    background-image: url('/header-and-footer/footer/svg/logo.svg');
     width: 105.69px;
     height: 40px;
     margin-bottom: 20px;
@@ -121,7 +122,7 @@ $dark_100-color: #1F2041;
     line-height: 24px;
     padding-top: 2px;
     padding-left: 14px;
-    background-image: url('/headers-and-footers/footer/arrow_forward.svg');
+    background-image: url('/header-and-footer/footer/svg/arrow_forward.svg');
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position-x: 95%;
@@ -129,4 +130,52 @@ $dark_100-color: #1F2041;
 }
 .footer .footer__subscribe-form-input::placeholder {
     color: $dark_25-color;
+}
+.copyright-bar {
+    height: 70px;
+    background-color: #FFFFFF;
+    width: 1440px;
+    border-top: 1px solid #E5E5E5;
+
+}
+.copyright-bar__container {
+    height: 70px;
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: 140px;
+}
+.copyright-bar__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13.6px;
+    line-height: 17px;
+    color: $dark_75-color;
+    letter-spacing: 0.1px;
+}
+.copyright-bar__twitter {
+    margin-left: auto;
+}
+.copyright-bar__twitter a {
+    display: block;
+    width: 24px;
+    height: 20px;
+    background-image: url('/header-and-footer/footer/svg/twitter-logo.svg');
+}
+.copyright-bar__facebook a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url('/header-and-footer/footer/svg/facebook-logo.svg');
+    margin: 0 20px;
+}
+.copyright-bar__instagram a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url('/header-and-footer/footer/svg/instagram-logo.svg');
+    margin-right: 140px;
 }
