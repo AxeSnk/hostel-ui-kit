@@ -1,0 +1,37 @@
+$dark_100-color: #1F2041;
+$dark_75-color: rgba(31, 32, 65, 0.75);
+$dark_50-color: rgba(31, 32, 65, 0.5);
+$dark_25-color: rgba(31, 32, 65, 0.25);
+
+
+.field-default__form-input {
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    width: 320px;
+    height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    padding-left: 14px;
+    color: $dark_75-color;
+}
+.field-default__form-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: $dark_100-color;
+}
+.field-default__form-input::placeholder {
+    color: $dark_25-color;
+}
+.field-default__form-input:focus::placeholder {
+    color: $dark_75-color;
+}
+.field-default__form-input:focus{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}

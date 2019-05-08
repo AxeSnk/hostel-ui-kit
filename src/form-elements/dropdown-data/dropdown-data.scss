@@ -2,15 +2,16 @@ $dark_100-color: #1F2041;
 $dark_75-color: rgba(31, 32, 65, 0.75);
 $dark_50-color: rgba(31, 32, 65, 0.5);
 $dark_25-color: rgba(31, 32, 65, 0.25);
-.dropdown {
+
+.dropdown-data {
     display: block;
-    height: 64.44px;
+    height: 65px;
 }
-.dropdown-default__form {
+.dropdown-data__form {
     position: relative;
-    width: 320px;
+    width: 150px;
 }
-.dropdown-default__form-input {
+.dropdown-data__form-input {
     display: block;
     position: absolute;
     width: 100%;
@@ -25,7 +26,7 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     padding-left: 14px;
     color: $dark_75-color;
 }
-.dropdown-default__form-text {
+.dropdown-data__form-text {
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -33,20 +34,20 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     margin-bottom: 5px;
     color: $dark_100-color;
 }
-.dropdown-default__form-input::placeholder {
+.dropdown-data__form-input::placeholder {
     color: $dark_75-color;
 }
-.dropdown-default__form-input:focus::placeholder {
+.dropdown-data__form-input:focus::placeholder {
     color: $dark_75-color;
 }
-.dropdown-default__form-input:focus{
+.dropdown-data__form-input:focus{
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
-.dropdown-default__form-input-expand {
+.dropdown-data__form-input-expand {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url('/form-elements/dropdown-default/svg/expand.svg');
+    background-image: url('/form-elements/dropdown-data/svg/expand.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 44px;
