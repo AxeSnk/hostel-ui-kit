@@ -1,0 +1,14 @@
+.form-elements {
+    height: 1853px;
+    width: 1440px;
+    background-color: #FFFFFF;
+    margin-top: 40px;
+    padding: 140px 141px;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown {
+    margin-top: 20px;
+}
+@import 'form-elements/text-field-default/field-default.scss';
+@import 'form-elements/dropdown-default/dropdown-default.scss'
