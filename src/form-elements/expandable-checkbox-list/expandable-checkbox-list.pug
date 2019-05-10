@@ -1,0 +1,17 @@
+mixin checkbox(title)
+    li(class='expandable-checkbox__submenu-item')
+        input(type='checkbox' class='checkbox-submenu')
+        label(for='checkbox')= title
+
+div(class='expandable-checkbox-list')
+    ul(class='expandable-checkbox__menu') expandable checkbox list
+        li(class='expandable-checkbox-list__icon-expand' href='#')
+            ul(class='expandable-checkbox__submenu')
+                +checkbox('Завтрак')
+                +checkbox('Письменный стол')
+                +checkbox('Стул для кормления')
+                +checkbox('Кроватка')
+                +checkbox('Телевизор')
+                +checkbox('Шампунь')
+                +checkbox('Телевизор')
+                +checkbox('Шампунь')

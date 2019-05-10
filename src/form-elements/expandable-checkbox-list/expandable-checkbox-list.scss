@@ -1,0 +1,39 @@
+$dark_50-color: rgba(31, 32, 65, 0.5);
+
+.expandable-checkbox-list {
+    position: relative;
+    width: 266px;
+    height: 44px;
+}
+.expandable-checkbox-list ul {
+    position: absolute;
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+    line-height: 44px;
+    margin: 0 0;
+    padding: 0 0;
+    list-style-type: none;
+}
+.expandable-checkbox-list__icon-expand {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('/form-elements/expandable-checkbox-list/svg/expand.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 44px;
+    height: 44px;
+}
+.expandable-checkbox__submenu li{
+    text-decoration: none;
+    display: block;
+    width: 222px;
+    font-size: 14px;
+    color: $dark_50-color;
+    text-transform: none;
+}
