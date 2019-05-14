@@ -1,17 +1,17 @@
-mixin checkbox(title)
+mixin checkbox(title,id)
     li(class='expandable-checkbox__submenu-item')
-        input(type='checkbox' class='checkbox-submenu')
-        label(for='checkbox')= title
+        input(id=id type='checkbox' name='check' class='expandable-checkbox__submenu-item-input')
+        label(for=id)= title
 
 div(class='expandable-checkbox-list')
-    ul(class='expandable-checkbox__menu') expandable checkbox list
-        li(class='expandable-checkbox-list__icon-expand' href='#')
-            ul(class='expandable-checkbox__submenu')
-                +checkbox('Завтрак')
-                +checkbox('Письменный стол')
-                +checkbox('Стул для кормления')
-                +checkbox('Кроватка')
-                +checkbox('Телевизор')
-                +checkbox('Шампунь')
-                +checkbox('Телевизор')
-                +checkbox('Шампунь')
+    div(class='expandable-checkbox-list__menu') expandable checkbox list
+        div(class='expandable-checkbox-list__icon-expand')
+        ul(class='expandable-checkbox-list__submenu')
+            +checkbox('Завтрак','check1')
+            +checkbox('Письменный стол','check2')
+            +checkbox('Стул для кормления','check3')
+            +checkbox('Кроватка','check4')
+            +checkbox('Телевизор','check5')
+            +checkbox('Шампунь','check6')
+            +checkbox('Телевизор','check7')
+            +checkbox('Шампунь','check8')

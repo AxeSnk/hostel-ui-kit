@@ -1,2 +1,2 @@
 import './main.scss';
-console.log('Hello main.js!')
+import './form-elements/expandable-checkbox-list/expandable-checkbox-list.js'
