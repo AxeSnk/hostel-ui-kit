@@ -1,9 +1,14 @@
 div(class='form-elements')
-    include field-default/field-default.pug
-    include dropdown-default/dropdown-default.pug
-    include field-masked/field-masked.pug
-    include dropdown-data/dropdown-data.pug
-    include dropdown-filter/dropdown-filter.pug
-    include dropdown-expanded/dropdown-expanded.pug
-    include expandable-checkbox-list/expandable-checkbox-list.pug
-    include info/info.pug
+    div(class='column')
+        div(class='left-column')
+            include field-default/field-default.pug
+            include dropdown-default/dropdown-default.pug
+            include field-masked/field-masked.pug
+            include dropdown-data/dropdown-data.pug
+            include dropdown-filter/dropdown-filter.pug
+            include dropdown-expanded/dropdown-expanded.pug
+            include expandable-checkbox-list/expandable-checkbox-list.pug
+            include info/info.pug
+        div(class='center-column')
+            include checkbox-buttons/checkbox-buttons.pug
+            include radio-buttons/radio-buttons.pug

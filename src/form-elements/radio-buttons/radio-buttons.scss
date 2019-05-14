@@ -1,0 +1,17 @@
+$dark_100-color: #1F2041;
+
+.radio-buttons {
+    display: block;
+    width: 220.74px;
+    height: 55px;
+    margin-top: 20px;
+}
+.radio-buttons__name {
+    width: 107px;
+    height: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark_100-color;
+    margin-bottom: 16px;
+}

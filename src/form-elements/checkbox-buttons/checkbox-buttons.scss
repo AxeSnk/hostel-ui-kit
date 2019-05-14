@@ -1,0 +1,48 @@
+$dark_100-color: #1F2041;
+
+.checkbox-buttons {
+    width: 222px;
+    height: 129.12px;
+}
+.checkbox-buttons__name {
+    width: 136px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark_100-color;
+    margin-bottom: 16px;
+}
+.checkbox-buttons__item {
+    margin-bottom: 10px;
+    height: 20px;
+    list-style: none;
+}
+input[type="checkbox"] {
+    display: none;
+}
+label {
+    padding-left: 10px;
+    color: $dark_50-color;
+    font-size: 14px;
+    text-transform: none;
+}
+label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    border: 1px solid $dark_25-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+input[type="checkbox"]:checked + label::before {
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: 2px;
+    background-image: url('/form-elements/expandable-checkbox-list/svg/vector.svg')
+}

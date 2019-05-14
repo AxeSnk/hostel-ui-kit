@@ -1,0 +1,10 @@
+mixin checkboxbtn(title,id)
+    li(class='checkbox-buttons__item')
+        input(id=id type='checkbox' name='check' class='expandable-checkbox__item-input')
+        label(for=id)= title
+
+div(class='checkbox-buttons')
+    div(class='checkbox-buttons__name') Checkbox Buttons
+    +checkboxbtn('Можно курить','checkbtn1')
+    +checkboxbtn('Можно с питомцами','checkbtn2')
+    +checkboxbtn('Можно пригласить гостей (до 10 человек)','checkbtn3')
