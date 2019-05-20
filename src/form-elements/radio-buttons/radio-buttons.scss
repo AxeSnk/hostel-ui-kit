@@ -1,10 +1,11 @@
 $dark_100-color: #1F2041;
+$dark_75-color: rgba(31, 32, 65, 0.75);
+$dark_50-color: rgba(31, 32, 65, 0.5);
 
 .radio-buttons {
-    display: block;
     width: 220.74px;
     height: 55px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .radio-buttons__name {
     width: 107px;
@@ -14,4 +15,41 @@ $dark_100-color: #1F2041;
     text-transform: uppercase;
     color: $dark_100-color;
     margin-bottom: 16px;
+    display: block;
+}
+.radio-buttons__items {
+    display: flex;
+}
+.radio-buttons__item input[type="radio"] {
+    display: none;
+}
+.radio-buttons__item label {
+    color: $dark_50-color;
+    font-size: 14px;
+    text-transform: none;
+    padding-right: 10px;
+}
+.radio-buttons__item label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    background: #FFFFFF;
+    border: 1px solid $dark_25-color;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.radio-buttons__item input[type="radio"]:checked + label::before {
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    background-image: url('/form-elements/radio-buttons/svg/circle-solid.svg');
+    border: 1px solid #BC9CFF;
+}
+#radiobtn1:checked + label {
+    color: $dark_75-color;
+}
+#radiobtn2:checked + label {
+    color: $dark_75-color;
 }

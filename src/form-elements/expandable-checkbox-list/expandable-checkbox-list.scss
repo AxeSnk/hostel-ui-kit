@@ -21,11 +21,12 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     padding: 0 0;
     background-image: url('/form-elements/expandable-checkbox-list/svg/expand.svg');
     background-repeat: no-repeat;
-    background-position: right;
+    background-position-x: 238px;
+    background-position-y: 18px;
     cursor: pointer;
 }
 .expandable-checkbox-list__submenu {
-    display: block;
+    display: none;
     width: 266px;
     line-height: 0;
     padding: 0 0;
