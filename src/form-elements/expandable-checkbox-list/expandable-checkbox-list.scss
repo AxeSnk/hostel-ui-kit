@@ -19,22 +19,13 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     line-height: 44px;
     margin: 0 0;
     padding: 0 0;
-}
-.expandable-checkbox-list__icon-expand {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
     background-image: url('/form-elements/expandable-checkbox-list/svg/expand.svg');
     background-repeat: no-repeat;
-    background-position: center;
-    width: 44px;
-    height: 44px;
+    background-position: right;
     cursor: pointer;
 }
 .expandable-checkbox-list__submenu {
     display: block;
-    // position: absolute;
     width: 266px;
     line-height: 0;
     padding: 0 0;

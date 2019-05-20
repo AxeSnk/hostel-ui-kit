@@ -14,5 +14,10 @@
     "pug": "^2.0.3",
     "sass": "^1.19.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1"
+  }
 }
