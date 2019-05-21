@@ -26,6 +26,7 @@ $dark_100-color: #1F2041;
     color: $dark_50-color;
     font-size: 14px;
     text-transform: none;
+    cursor: pointer;
 }
 .checkbox-buttons__item label::before {
     content: '';

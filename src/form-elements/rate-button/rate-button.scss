@@ -1,0 +1,34 @@
+$dark_100-color: #1F2041;
+$dark_75-color: rgba(31, 32, 65, 0.75);
+$dark_50-color: rgba(31, 32, 65, 0.5);
+$dark_25-color: rgba(31, 32, 65, 0.25);
+
+.rate-button {
+    margin-top: 40px;
+}
+.rate-button__name {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark_100-color;
+    margin-bottom: 16px;
+    display: block;
+}
+.rate-button__container {
+    display: flex;
+}
+.rate-button__star input {
+    display: none;
+}
+.rate-button__star label::before {
+    content: '';
+    cursor: pointer;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-image: url('./form-elements/rate-button/svg/star_border.svg');
+}
+.rate-button__star input:checked + label::before {
+    background-image: url('./form-elements/rate-button/svg/star.svg');
+}
