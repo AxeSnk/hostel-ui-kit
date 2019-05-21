@@ -18,16 +18,16 @@ $dark_100-color: #1F2041;
     height: 20px;
     list-style: none;
 }
-input[type="checkbox"] {
+.checkbox-buttons__item input[type="checkbox"] {
     display: none;
 }
-label {
+.checkbox-buttons__item label {
     padding-left: 10px;
     color: $dark_50-color;
     font-size: 14px;
     text-transform: none;
 }
-label::before {
+.checkbox-buttons__item label::before {
     content: '';
     display: inline-block;
     width: 18px;
@@ -40,7 +40,7 @@ label::before {
     box-sizing: border-box;
     border-radius: 4px;
 }
-input[type="checkbox"]:checked + label::before {
+.checkbox-buttons__item input[type="checkbox"]:checked + label::before {
     background-repeat: no-repeat;
     background-position-x: 3px;
     background-position-y: 2px;
