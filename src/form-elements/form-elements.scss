@@ -28,6 +28,10 @@
 .center-column {
     display: block;
     margin-left: 126px;
+    margin-right: 132px;
+}
+.right-column {
+    display: block;
 }
 @import 'form-elements/field-default/field-default.scss';
 @import 'form-elements/dropdown-default/dropdown-default.scss';
@@ -42,3 +46,4 @@
 @import 'form-elements/toggle-buttons/toggle-buttons.scss';
 @import 'form-elements/like-button/like-button.scss';
 @import 'form-elements/rate-button/rate-button.scss';
+@import 'form-elements/range-slider/range-slider.scss';
