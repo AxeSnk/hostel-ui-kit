@@ -16,19 +16,39 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
 }
 .rate-button__container {
     display: flex;
+    position: absolute;
+    transform: rotateY(180deg);
 }
-.rate-button__star input {
+.rate-button__container input {
     display: none;
 }
-.rate-button__star label::before {
-    content: '';
-    cursor: pointer;
+.rate-button__container label {
     display: block;
+    cursor: pointer;
+}
+.rate-button__container label::before {
+    content: '';
+    display: block;
+    position: relative;
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
     background-image: url('./form-elements/rate-button/svg/star_border.svg');
 }
-.rate-button__star input:checked + label::before {
+.rate-button__container label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
     background-image: url('./form-elements/rate-button/svg/star.svg');
+}
+.rate-button__container input:checked ~ label:after,
+.rate-button__container label:hover ~ label:after,
+.rate-button__container label:hover:after
+ {
+    opacity: 1 ;
 }
