@@ -31,15 +31,35 @@
     opacity: 0.5;
 }
 .button__default--border {
-    color: #BC9CFF;
-    background: transparent;
-    border: 2px solid transparent;
-    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-image-slice: 1;
-    border-radius: 22px;
+    position: relative;
+    display: inline-block;
 }
-
-
+.button__default--border::before {
+    content: 'click me';
+    position: absolute;
+    line-height: 40px;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    border-radius: 22px;
+    background: #fff;
+    width: 95px;
+    height: 40px;
+    color: #BC9CFF;
+}
 .button__default--long {
     width: 320px;
+    position: relative;
+    vertical-align: middle;
+}
+.button__default--icon {
+    background: url('./form-elements/buttons/svg/arrow_forward-empty.svg');
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+
 }
