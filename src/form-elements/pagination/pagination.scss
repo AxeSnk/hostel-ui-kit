@@ -1,0 +1,41 @@
+.pagination__name {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.pagination__block {
+    display: flex;
+    width: 41,56‬px;
+    height: 40.44px;
+}
+.pagination__block a {
+    text-decoration: none;
+    width: 40.26px;
+    height: 40.44px;
+    display: block;
+    text-align: center;
+    line-height: 40.44px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.pagination__block .active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    color: #fff;
+}
+.pagination__forward {
+    border-radius: 22px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.pagination__forward--icon {
+    height: 18px;
+    width: 18px;
+    background: url('./form-elements/pagination/svg/arrow_forward-empty.svg');
+    margin-left: 10.13px;
+    margin-top: 10.22px;
+}
+.pagination__footnote {
+    margin-top: 10.56px;
+    margin-left: 8px;
+    color: rgba(31, 32, 65, 0.75);
+}
