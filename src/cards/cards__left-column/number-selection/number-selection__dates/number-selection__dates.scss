@@ -1,0 +1,51 @@
+$dark_100-color: #1F2041;
+$dark_75-color: rgba(31, 32, 65, 0.75);
+$dark_50-color: rgba(31, 32, 65, 0.5);
+$dark_25-color: rgba(31, 32, 65, 0.25);
+.number-selection__dates {
+    position: relative;
+    width: 150px;
+    height: 64.44px;
+    margin-right: 20px;
+}
+.number-selection__dates--name {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 5.44px;
+}
+.number-selection__dates--form--input {
+    display: block;
+    width: 150px;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    padding-left: 14px;
+    color: $dark_75-color;
+}
+.number-selection__dates--form--input::placeholder {
+    color: $dark_75-color;
+}
+.number-selection__dates--form--input:focus::placeholder {
+    color: $dark_75-color;
+}
+.number-selection__dates--form--input:focus{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.number-selection__dates--form--input-expand {
+    position: absolute;
+    top: 21px;
+    right: 0;
+    background-image: url('/cards/cards__left-column/number-selection/number-selection__dates/svg/expand.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 44px;
+    height: 44px;
+}

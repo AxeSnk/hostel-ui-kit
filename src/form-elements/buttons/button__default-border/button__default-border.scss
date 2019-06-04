@@ -1,0 +1,35 @@
+.button__defult {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 99px;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    padding: 0 0;
+    cursor: pointer;
+    font-family: "Montserrat-Regular", sans-serif;
+    border-style: none;
+    color: white;
+}
+.button__defult:hover {
+    opacity: 0.5;
+}
+.button__default-border {
+    position: relative;
+    display: inline-block;
+}
+.button__default-border::before {
+    content: 'click me';
+    position: absolute;
+    line-height: 40px;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    border-radius: 22px;
+    background: #fff;
+    width: 95px;
+    height: 40px;
+    color: #BC9CFF;
+}

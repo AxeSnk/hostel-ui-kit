@@ -1,0 +1,8 @@
+.cards {
+    width: 1440px;
+    height: 1350px;
+    background: #F4F4F6;
+    display: flex;
+    padding: 140px;
+}
+@import 'cards__left-column/cards__left-column.scss'

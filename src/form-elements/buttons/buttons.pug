@@ -1,11 +1,8 @@
 div(class='buttons')
     div(class='buttons__name') buttons
     div(class='buttons__container')
-        button(class='button__defult') click me
-        button(class='button__defult button__defult--opacity') click me
+        include button__defult/button__defult.pug
     div(class='buttons__container')
-        button(class='button__defult button__default--border') click me
-        button(class='button__defult button__default--border button__defult--opacity') click me
+        include button__default-border/button__default-border.pug
     div(class='buttons__container')
-        button(class='button__defult button__default--long') перейти к оплате
-            div(class='button__default--icon')
+        include button__default-long/button__default-long.pug

@@ -1,0 +1,17 @@
+.number-selection {
+    display: flex;
+    width: 380px;
+    height: 374px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px;
+    flex-direction: column;
+}
+.number-selection__arrival-and-departure {
+    display: flex;
+}
+@import 'number-selection__name/number-selection__name.scss';
+@import 'number-selection__dates/number-selection__dates.scss';
