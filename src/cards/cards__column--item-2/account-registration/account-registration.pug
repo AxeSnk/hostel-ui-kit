@@ -1,0 +1,49 @@
+div(class='account-registration')
+    h1 Регистрация аккаунта
+
+    //Field
+
+    div(class='field-masked__form-text')
+    form(class='field-masked__form')
+        input(class='field-masked__form-input' type='text' placeholder='Имя')
+    form(class='field-masked__form')
+        input(class='field-masked__form-input' type='text' placeholder='Фамилия')
+
+
+    //Radio-buttons
+
+    div(class='radio-buttons__items')
+        div(class='radio-buttons__item')
+            input(id='radiobtn1' type='radio' name='radio')
+            label(for='radiobtn1') Мужчина
+        div(class='radio-buttons__item')
+            input(id='radiobtn2' type='radio' name='radio')
+            label(for='radiobtn2') Женщина
+
+
+    //Field
+
+    div(class='field-masked__form-text') дата рождения
+    form(class='field-masked__form')
+        input(class='field-masked__form-input' type='date')
+
+
+    //Field
+
+    div(class='field-masked__form-text') данные для входа в сервис
+    form(class='field-masked__form')
+        input(class='field-masked__form-input' type='email' placeholder='Email')
+    form(class='field-masked__form')
+        input(class='field-masked__form-input' type='password' placeholder='Пароль')
+
+
+    //Toggle-buttons
+
+    div(class='toggle-buttons__item')
+        input(type='checkbox' id='switch1' name='toggle')
+        label(for='switch1') Получать спецпредложения
+    button(class='button__defult button__default-long') перейти к оплате
+        div(class='button__default-long--icon')
+    div(class='account-registration__footer')
+        p Уже есть аккаунт на Toxin
+        a(class='header__btn header__btn-login' href='#') Войти
