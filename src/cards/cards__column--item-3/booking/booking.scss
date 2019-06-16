@@ -1,0 +1,174 @@
+.booking {
+	width: 380px;
+	height: 512px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+    padding: 40px 30px 30px;
+}
+.booking-header {
+	display: flex;
+	margin-bottom: 23px;
+	align-items: flex-end;
+}
+p {
+	margin: 0 0;
+}
+.booking-number {
+    display: block;
+    font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 1.1px;
+	color: #1F2041;
+    margin-right: 5px;
+}
+small {
+    font-size: 14px;
+}
+.booking-luxury {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: #BC9CFF;
+	margin-right: auto;
+}
+.booking-cost {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(31, 32, 65, 0.5);
+}
+p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/*****   fiel-date   *****/
+.date-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.field-masked__form-date {
+    margin-bottom: 5    px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+.booking .field-masked__form-date-input,
+.booking .field-masked__form-input {
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    width: 150px;
+    height: 42px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    padding-left: 14px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.field-masked__form-input {
+	width: 320px;
+	margin-bottom: 20px;
+}
+.booking .field-masked__form-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #1F2041;
+}
+.field-masked__form-date-input::placeholder,
+.field-masked__form-input::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+}
+.field-masked__form-date-input:focus::placeholder,
+.field-masked__form-input:focus::placeholder {
+    color: rgba(31, 32, 65, 0.75);
+}
+.field-masked__form-date-input:focus,
+.field-masked__form-input:focus{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+/*****   Check-list   *****/
+.check-list {
+	margin-bottom: 30px;
+}
+.check-list--item {
+	display: flex;
+	height: 24px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.check-list--item p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(31, 32, 65, 0.75);
+	margin: 0 0;
+}
+.check-list--total-item {
+	width: 182px;
+	height: 0px;
+	border-top: 1px dotted rgba(31, 32, 65, 0.25);
+}
+.check-list--total {
+	display: flex;
+	align-items: flex-center;
+	justify-content: space-between;
+}
+.check-list--total p {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	color: #1F2041;
+	margin-bottom: 20px;
+}
+/*****   Button__default-long   *****/    
+.button__defult {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 99px;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    padding: 0 0;
+    cursor: pointer;
+    font-family: "Montserrat-Regular", sans-serif;
+    border-style: none;
+    color: white;
+}
+.button__defult:hover {
+    opacity: 0.5;
+}
+.button__default-long {
+    width: 320px;
+    position: relative;
+    vertical-align: middle;
+}
+.button__default-long--icon {
+    background: url('/cards/cards__column--item-3/booking/svg/arrow_forward-empty.svg');
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    position: absolute;
+	left: 328px;
+	top: 438px;
+}
