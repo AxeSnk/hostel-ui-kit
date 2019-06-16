@@ -1,5 +1,5 @@
 div(class='account-registration')
-    h1 Регистрация аккаунта
+    div(class='account-registration-text') Регистрация аккаунта
 
     //Field
 
@@ -14,17 +14,17 @@ div(class='account-registration')
 
     div(class='radio-buttons__items')
         div(class='radio-buttons__item')
-            input(id='radiobtn1' type='radio' name='radio')
-            label(for='radiobtn1') Мужчина
+            input(id='radiobtn3' type='radio' name='radio')
+            label(for='radiobtn3') Мужчина
         div(class='radio-buttons__item')
-            input(id='radiobtn2' type='radio' name='radio')
-            label(for='radiobtn2') Женщина
+            input(id='radiobtn4' type='radio' name='radio')
+            label(for='radiobtn4') Женщина
 
 
     //Field
 
     div(class='field-masked__form-text') дата рождения
-    form(class='field-masked__form')
+    form(class='field-masked__form date-of-birth')
         input(class='field-masked__form-input' type='date')
 
 
@@ -40,10 +40,18 @@ div(class='account-registration')
     //Toggle-buttons
 
     div(class='toggle-buttons__item')
-        input(type='checkbox' id='switch1' name='toggle')
-        label(for='switch1') Получать спецпредложения
+        input(type='checkbox' id='switch3' name='toggle')
+        label(for='switch3') Получать спецпредложения
+
+
+    //Button__default-long
+
     button(class='button__defult button__default-long') перейти к оплате
         div(class='button__default-long--icon')
+
+
+    //Account-registration__footer
+
     div(class='account-registration__footer')
         p Уже есть аккаунт на Toxin
-        a(class='header__btn header__btn-login' href='#') Войти
+        button(class='button__defult button__default-border' href='#') Войти

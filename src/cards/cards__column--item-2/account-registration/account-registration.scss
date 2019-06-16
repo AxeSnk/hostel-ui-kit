@@ -8,17 +8,14 @@
     border-radius: 4px;
     padding: 40px 30px 30px;
 }
-h1 {
+.account-registration-text {
+    font-family: arial;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
+    letter-spacing: 1.1px;
     color: #1F2041;
     padding-bottom: 20px;
-}
-p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
 }
 
 /*****   Fields   *****/
@@ -40,7 +37,7 @@ p {
 .field-masked__form-text {
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 12.4px;
     text-transform: uppercase;
     margin-bottom: 5px;
     color: #1F2041;
@@ -54,11 +51,13 @@ p {
 .field-masked__form-input:focus{
     border: 1px solid rgba(31, 32, 65, 0.5);
 }
-
+.date-of-birth {
+    margin-bottom: 14px;
+}
 /*****   Radio-buttons   *****/
 .radio-buttons__items {
     display: flex;
-margin-bottom: 19.56px;
+    margin-bottom: 24px;
 }
 .radio-buttons__item input[type="radio"] {
     display: none;
@@ -90,10 +89,10 @@ margin-bottom: 19.56px;
     background-image: url('/cards/cards__column--item-2/account-registration/svg/circle-solid.svg');
     border: 1px solid #BC9CFF;
 }
-#radiobtn1:checked + label {
+#radiobtn3:checked + label {
     color: rgba(31, 32, 65, 0.75);
 }
-#radiobtn2:checked + label {
+#radiobtn4:checked + label {
     color: rgba(31, 32, 65, 0.75);
 }
 
@@ -140,6 +139,9 @@ margin-bottom: 19.56px;
     background-position-y: 2px;
     border-color: #BC9CFF;
 }
+.account-registration .toggle-buttons__item {
+    margin-bottom: 20px;
+}
 
 /*****   Button-default-long   *****/
 .button__defult {
@@ -174,4 +176,40 @@ margin-bottom: 19.56px;
     position: absolute;
     right: 14px;
     top: 14px;
+}
+.account-registration .button__default-long {
+    margin-bottom: 30px;
+}
+
+/*****   Account-registration__footer   *****/
+.account-registration__footer {
+    display: flex;
+    justify-content: space-between;
+}
+.account-registration__footer p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/*****   Button-default-border   *****/
+.button__default-border {
+    position: relative;
+    display: inline-block;
+}
+.button__default-border::before {
+    content: 'Войти';
+    position: absolute;
+    line-height: 40px;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    border-radius: 22px;
+    background: #fff;
+    width: 95px;
+    height: 40px;
+    color: #BC9CFF;
+}
+.account-registration .button__default-border {
+    margin: 0;
 }
