@@ -21,9 +21,31 @@
 
     //field-masked
 
-    .field-masked__form-text гости
-    form(class='field-masked__form')
-        input(class='field-masked__form-input' type='text' placeholder='3 гостя')
+    .guests гости
+        .field-guests Сколько гостей
+            i(class='material-icons') expand_more
+    //dropdown
+    .dropdown-guests
+        .dropdown-container
+            .dropdown-container-text взрослые
+            .quantity
+                input(type='number' id="adults" min="0" max="9" step="1" value="0")
+
+        .dropdown-container
+            .dropdown-container-text дети
+            .quantity
+                input(type='number' id="childs" min="0" max="9" step="1" value="0")
+
+        .dropdown-container
+            .dropdown-container-text младенцы
+            .quantity
+                input(type='number' id="babies" min="0" max="9" step="1" value="0")
+
+
+        //clear-apply
+        .dropdown-container.container__clear-apply
+            .clear-quantity-invisible очистить
+            .apply-quantity применить
 
 
     //check-list
@@ -34,9 +56,11 @@
             p 39960Р
         .check-list--item
             p Сбор за услуги: скидка 2179Р
+            p(class='info-icon')
             p 0Р
         .check-list--item
             p Сбор за дополнительные услуги
+            p(class='info-icon')
             p 300Р
     
     .check-list--total
