@@ -69,7 +69,7 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
 	background: #fff;
 }
 /* оформление активного участка (между двумя ползунками) */
-.ui-widget-header { 
+.right-column .ui-widget-header { 
 	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 /* скругление для полосы слайдера */

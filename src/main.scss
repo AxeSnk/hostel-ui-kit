@@ -13,6 +13,12 @@ h1 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+th {
+    display: block;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
 @import 'fonts/fonts.scss';
 @import 'header-and-footer/header-and-footer.scss';
 @import 'form-elements/form-elements.scss';
