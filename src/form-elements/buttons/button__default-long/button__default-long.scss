@@ -1,3 +1,4 @@
+/*****   Button__default-long   *****/    
 .button__defult {
     margin-right: 20px;
     font-weight: bold;
@@ -19,15 +20,11 @@
 .button__default-long {
     width: 320px;
     position: relative;
-    vertical-align: middle;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.button__default-long--icon {
-    background: url('./form-elements/buttons/svg/arrow_forward-empty.svg');
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 14px;
-    top: 14px;
+.button__default-long i {
+	position: absolute;
+	right: 3%;
 }

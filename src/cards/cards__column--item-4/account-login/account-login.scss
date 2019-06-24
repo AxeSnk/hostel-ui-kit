@@ -8,12 +8,8 @@
 	border-radius: 4px;
 	padding: 40px 30px 30px;
 }
-h1 {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	color: #1F2041;
-	margin: 0 0 20px;
+.account-login__text {
+    margin-bottom: 20px;
 }
 p {
 	font-style: normal;
@@ -56,7 +52,9 @@ p {
 /*****   Account-login_footer   *****/  
 .account-login_footer {
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+
 }
 .account-login_footer p {
 	font-style: normal;
@@ -81,7 +79,12 @@ p {
 }
 .button-login {
 	width: 99px;
-	height: 44px;
+    height: 44px;
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
 .button__defult:hover {
     opacity: 0.5;

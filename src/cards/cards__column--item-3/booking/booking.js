@@ -103,21 +103,22 @@ $(window).on('load', function () {
     });
     
     //dropdown-slider Down
-    $('.field-guests, i').click(function(){
+    $('.field-guests, .field-guest > i').click(function(){
         
         $('.dropdown-guests').stop(true, false).slideDown(300);
-        $('i').text('expand_less');
-        $('.field-guests, i').css('cursor', 'context-menu');
-        
+        $('.field-guest > i').text('expand_less');
+        $('.field-guests, .field-guest > i').css('cursor', 'context-menu');
+        $('.field-guests, .field-guest > i').css('border-radius', '4px 4px 0 0');
+
     });
     
     //dropdown-slider Up
     $('.apply-quantity').click(function(){
     
         $('.dropdown-guests').stop(true, false).slideUp(300);
-        $('i.material-icons').text('expand_more')
-        $('.field-guests, i').css('cursor', 'pointer');
-        
+        $('.field-guest > i').text('expand_more')
+        $('.field-guests, .field-guest > i').css('cursor', 'pointer');
+        $('.field-guests, .field-guest > i').css('border-radius', '4px');
     });
     
     });

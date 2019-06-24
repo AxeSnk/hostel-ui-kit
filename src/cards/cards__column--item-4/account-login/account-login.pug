@@ -1,5 +1,6 @@
 .account-login
-    .account-login__text Войти
+    .account-login__text
+        h1 Войти
 
 
     //Field
@@ -13,12 +14,11 @@
 
     //Button__default-long
 
-    button(class='button__defult button__default-long') перейти к оплате
-        .button__default-long--icon
+    +btn_long('войти')
 
 
     //Account-login_footer
 
     .account-login_footer
-        p Нет аккаунта на Toxin
+        p Нет аккаунта на Toxin?
         bitton(class='button__defult button-login') Создать

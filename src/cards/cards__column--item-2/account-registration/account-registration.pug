@@ -1,5 +1,6 @@
 div(class='account-registration')
-    div(class='account-registration-text') Регистрация аккаунта
+    div(class='account-registration-text')
+        h1 Регистрация аккаунта
 
     //Field
 
@@ -46,12 +47,11 @@ div(class='account-registration')
 
     //Button__default-long
 
-    button(class='button__defult button__default-long') перейти к оплате
-        div(class='button__default-long--icon')
+    +btn_long('перейти к оплате')
 
 
     //Account-registration__footer
 
-    div(class='account-registration__footer')
+    .account-registration__footer
         p Уже есть аккаунт на Toxin
         button(class='button__defult button__default-border' href='#') Войти

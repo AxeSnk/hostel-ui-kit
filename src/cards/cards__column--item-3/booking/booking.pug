@@ -19,34 +19,8 @@
                 input(class='field-masked__form-date-input' type='date')
 
 
-    //field-masked
-
-    .guests гости
-        .field-guests Сколько гостей
-            i(class='material-icons') expand_more
-    //dropdown
-    .dropdown-guests
-        .dropdown-container
-            .dropdown-container-text взрослые
-            .quantity
-                input(type='number' id="adults" min="0" max="9" step="1" value="0")
-
-        .dropdown-container
-            .dropdown-container-text дети
-            .quantity
-                input(type='number' id="childs" min="0" max="9" step="1" value="0")
-
-        .dropdown-container
-            .dropdown-container-text младенцы
-            .quantity
-                input(type='number' id="babies" min="0" max="9" step="1" value="0")
-
-
-        //clear-apply
-        .dropdown-container.container__clear-apply
-            .clear-quantity-invisible очистить
-            .apply-quantity применить
-
+    //field-guest
+    include guests/guests.pug
 
     //check-list
 
@@ -72,6 +46,6 @@
     //button__default-long
 
     button(class='button__defult button__default-long') забронировать
-        .button__default-long--icon
+        i(class='material-icons') arrow_forward
 
 
