@@ -10,7 +10,8 @@
 		// Browser globals
 		factory( jQuery.datepicker );
 	}
-}( function( datepicker ) {
+}
+( function( datepicker ) {
 
 datepicker.regional.ru = {
 	closeText: "Закрыть",

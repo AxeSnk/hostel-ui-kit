@@ -5,8 +5,5 @@ div(class='dropdown-data')
         a(class='dropdown-data__form-input-expand' href='#')
 
 .number-selection__dates
-    label(for="from") From
-        input(type="text" id="from" name="from")
-.number-selection__dates
-    label(for="to") to
-        input(type="text" id="to" name="to")
+    input(type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" id="dpicker")
+    i(class='material-icons') expand_more
