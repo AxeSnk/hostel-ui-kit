@@ -28,14 +28,17 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
 .expandable-checkbox-list__submenu {
     display: none;
     width: 266px;
-    line-height: 0;
+    position: absolute;
     padding: 0 0;
     list-style: none;
     margin: 0 0;
+    background-color: #fff;
+    top: 14%;
 }
 .expandable-checkbox__submenu-item {
-    margin-bottom: 10px;
+    padding: 5px 0;
     height: 20px;
+    line-height: 20px;
 }
 .expandable-checkbox__submenu-item input[type="checkbox"] {
     display: none;
@@ -45,12 +48,13 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     color: $dark_50-color;
     font-size: 14px;
     text-transform: none;
+    cursor: pointer;
 }
 .expandable-checkbox__submenu-item label::before {
     content: '';
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
     margin-left: -10px;
     margin-right: 10px;
@@ -61,7 +65,7 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
 }
 .expandable-checkbox__submenu-item input[type="checkbox"]:checked + label::before {
     background-repeat: no-repeat;
-    background-position-x: 3px;
-    background-position-y: 2px;
+    background-position-x: 50%;
+    background-position-y: 40%;
     background-image: url('/form-elements/checkbox-buttons/svg/vector.svg')
 }
