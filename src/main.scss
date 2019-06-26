@@ -1,21 +1,4 @@
-body{
-    margin: 0;
-    font-family: "Montserrat-Regular", sans-serif;
-    font-size: 14px;
-    background-color: #E5E5E5;
-}
-h1 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    color: #1F2041;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-th {
-    font-weight: bold;
-}
+@import 'colors-and-type/colors-and-type.scss';
 @import 'fonts/fonts.scss';
 @import 'header-and-footer/header-and-footer.scss';
 @import 'form-elements/form-elements.scss';
