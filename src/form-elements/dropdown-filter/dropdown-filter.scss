@@ -6,26 +6,7 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     display: block;
     height: 64.44px;
 }
-.dropdown-filter__form {
-    position: relative;
-    width: 266px;
-}
-.dropdown-filter__form-input {
-    display: block;
-    position: absolute;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    height: 42px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.9px;
-    padding-left: 14px;
-    color: $dark_75-color;
-}
-.dropdown-filter__form-text {
+.dropdown-filter__text {
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -33,22 +14,6 @@ $dark_25-color: rgba(31, 32, 65, 0.25);
     margin-bottom: 5px;
     color: $dark_100-color;
 }
-.dropdown-filter__form-input::placeholder {
-    color: $dark_75-color;
-}
-.dropdown-filter__form-input:focus::placeholder {
-    color: $dark_75-color;
-}
-.dropdown-filter__form-input:focus{
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.dropdown-filter__form-input-expand {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url('/form-elements/dropdown-filter/svg/expand.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 44px;
-    height: 44px;
-}
+
+@import 'form-elements/dropdown-filter/selection-dates/selection-dates.scss';
+@import 'form-elements/dropdown-filter/selection-dates/air-datepicker.scss';

@@ -1,9 +1,4 @@
 div(class='dropdown-data')
-    div(class='dropdown-data__form-text') data dropdown
-    form(class='dropdown-data__form')
-        input(class='dropdown-data__form-input' type='date')
-        a(class='dropdown-data__form-input-expand' href='#')
-
-.number-selection__dates
-    input(type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" id="dpicker")
-    i(class='material-icons') expand_more
+    div(class='dropdown-data__form-text') date dropdown
+    include ../dropdown-filter/selection-dates/selection-dates.pug
+    +selDate("dpicker")
