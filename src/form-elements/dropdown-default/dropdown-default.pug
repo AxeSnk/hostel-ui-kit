@@ -1,27 +1,28 @@
-mixin guests
-    .guests гости
-        .field-guests Сколько гостей
-            i(class='material-icons') expand_more
-    //dropdown
-    .dropdown-guests
-        .dropdown-container
-            .dropdown-container-text взрослые
-            .quantity
-                input(type='number' id="adults" min="0" max="9" step="1" value="0")
+mixin guests(title)
+    .guests
+        h3= title
+            .field-guests Сколько гостей
+                i(class='material-icons') expand_more
+        //dropdown
+        .dropdown-guests
+            .dropdown-container
+                .dropdown-container-text взрослые
+                .quantity
+                    input(type='number' id="adults" min="0" max="9" step="1" value="0")
 
-        .dropdown-container
-            .dropdown-container-text дети
-            .quantity
-                input(type='number' id="childs" min="0" max="9" step="1" value="0")
+            .dropdown-container
+                .dropdown-container-text дети
+                .quantity
+                    input(type='number' id="childs" min="0" max="9" step="1" value="0")
 
-        .dropdown-container
-            .dropdown-container-text младенцы
-            .quantity
-                input(type='number' id="babies" min="0" max="9" step="1" value="0")
-        //clear-apply
-        .dropdown-container.container__clear-apply
-            .clear-quantity-invisible очистить
-            .apply-quantity применить
+            .dropdown-container
+                .dropdown-container-text младенцы
+                .quantity
+                    input(type='number' id="babies" min="0" max="9" step="1" value="0")
+            //clear-apply
+            .dropdown-container.container__clear-apply
+                .clear-quantity-invisible очистить
+                .apply-quantity применить
 
 .dropdown-default
-    +guests
+    +guests('default')

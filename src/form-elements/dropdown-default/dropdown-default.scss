@@ -7,7 +7,6 @@
     height: 63px;
     font-weight: bold;
     font-size: 12px;
-    text-transform: uppercase;
     margin-bottom: 20px;
 }
 .field-guests {
@@ -19,15 +18,20 @@
     text-transform: none;
     margin-top: 5px;
 	cursor: pointer;
-	border: 1px solid rgba(31, 32, 65, 0.25);
+	border: 1px solid $dark_25-color;
 	box-sizing: border-box;
 	border-radius: 4px 4px 4px 4px;
-	color: rgba(31, 32, 65, 0.75);
+	color: $dark_75-color;
 	align-items: center;
+}
+.field-guests:hover {
+	border-color: $dark_50-color;
 }
 .field-guests i {
     margin-left: auto;
-    cursor: pointer;
+	cursor: pointer;
+	color: $dark_50-color;
+
 }
 .dropdown-guests {
     position: absolute;
@@ -39,7 +43,7 @@
 	border-radius: 0 0 4px 4px;
 	background: #fff;
     z-index: 1;
-    top: 239px;
+    border-top: none;
 }
 .dropdown-guests .dropdown-container {
 	display: flex;

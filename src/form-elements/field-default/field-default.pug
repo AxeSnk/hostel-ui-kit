@@ -1,7 +1,7 @@
 mixin field-default__email(title)
     .field-default
         h3= title
-        form.field-default__form
-            input.field-default__form-input(type='email' name='email' placeholder='Еmail')
+        form
+            input(type='email' name='email' placeholder='Еmail')
 
 +field-default__email('text field')

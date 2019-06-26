@@ -103,22 +103,20 @@ $(window).on('load', function () {
     });
     
     //dropdown-slider Down
-    $('.field-guests, .field-guest > i').click(function(){
+    $('.field-guests, .field-guests > i').on('click',function(){
         
-        $('.dropdown-guests').stop(true, false).slideDown(300);
-        $('.field-guest > i').text('expand_less');
-        $('.field-guests, .field-guest > i').css('cursor', 'context-menu');
-        $('.field-guests, .field-guest > i').css('border-radius', '4px 4px 0 0');
-
+        $(this).closest('.guests').find('.dropdown-guests').stop(true, false).slideDown(300);
+        $(this).closest('.guests').find('i').css('cursor', 'context-menu').text('expand_less');
+        $(this).closest('.guests').find('.field-guests').css({'border-color':'rgba(31, 32, 65, 0.5)','border-radius':'4px 4px 0 0','cursor':'context-menu'});
+        $(this).closest('.guests').find('.dropdown-guests').css('border-color','rgba(31, 32, 65, 0.5)');
     });
     
     //dropdown-slider Up
     $('.apply-quantity').click(function(){
     
-        $('.dropdown-guests').stop(true, false).slideUp(300);
-        $('.field-guest > i').text('expand_more')
-        $('.field-guests, .field-guest > i').css('cursor', 'pointer');
-        $('.field-guests, .field-guest > i').css('border-radius', '4px');
+        $(this).closest('.guests').find('.dropdown-guests').stop(true, false).slideUp(300);
+        $(this).closest('.guests').find('i').css('cursor', 'pointer').text('expand_more');
+        $(this).closest('.guests').find('.field-guests').css({'border-color':'rgba(31, 32, 65, 0.25)','border-radius':'4px','cursor':'pointer'});
     });
     
     });

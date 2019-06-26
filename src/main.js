@@ -6,5 +6,5 @@ import './form-elements/dropdown-filter/selection-dates/datepicker-ru/datepicker
 import './form-elements/expandable-checkbox-list/expandable-checkbox-list.js';
 import './form-elements/like-button/like-button.js';
 import './form-elements/range-slider/range-slider.js';
-import './cards/cards__column--item-3/booking/booking.js';
+import './form-elements/dropdown-default/dropdown-default.js';
 

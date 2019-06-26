@@ -1,4 +1,4 @@
-.field-default__form-input {
+.field-default input {
     box-sizing: border-box;
     border-radius: 4px;
     background: #FFFFFF;
@@ -13,14 +13,14 @@
     color: $dark_75-color;
     margin-top: 5px;
 }
-.field-default__form-input::placeholder {
+.field-default input::placeholder {
     color: $dark_25-color;
 }
-.field-default__form-input:focus::placeholder,
-.field-default__form-input:hover::placeholder {
+.field-default input:focus::placeholder,
+.field-default input:hover::placeholder {
     color: $dark_75-color;
 }
-.field-default__form-input:focus,
-.field-default__form-input:hover{
+.field-default input:focus,
+.field-default input:hover{
     border: 1px solid $dark_50-color;
 }
