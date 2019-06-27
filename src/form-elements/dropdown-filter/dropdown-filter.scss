@@ -1,14 +1,6 @@
 .dropdown-filter {
-    display: block;
     height: 64.44px;
-}
-.dropdown-filter__text {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    color: $dark_100-color;
+    margin-bottom: 20px;
 }
 
 @import 'form-elements/dropdown-filter/selection-dates/selection-dates.scss';

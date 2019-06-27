@@ -1,0 +1,29 @@
+mixin furniture
+    .guests
+        .field-guests 2 спальни, 2 кровати...
+            i(class='material-icons') expand_more
+        //dropdown
+        .dropdown-guests
+            .dropdown-container
+                .dropdown-container-text спальни
+                .quantity
+                    input(type='number' id="bedrooms" min="0" max="9" step="1" value="0")
+
+            .dropdown-container
+                .dropdown-container-text кровати
+                .quantity
+                    input(type='number' id="beds" min="0" max="9" step="1" value="0")
+
+            .dropdown-container
+                .dropdown-container-text ванные
+                .quantity
+                    input(type='number' id="bathrooms" min="0" max="9" step="1" value="0")
+            //clear-apply
+            .dropdown-container.container__clear-apply
+                .clear-quantity-invisible очистить
+                .apply-quantity применить
+
+
+.dropdown_default__furniture
+    h3 dropdown_default
+    +furniture

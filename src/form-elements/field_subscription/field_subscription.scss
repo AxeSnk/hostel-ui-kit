@@ -1,0 +1,17 @@
+.field_subscription {
+    margin-bottom: 100px;
+}
+.field_subscription form{
+    position: relative;
+    height: 44px;
+}
+.field_subscription input{
+    width: 267px;
+}
+.field_subscription i {
+    position: absolute;
+    left: 74%;
+    top: 20%;
+    color: $purple-color;
+    cursor: pointer;
+}
