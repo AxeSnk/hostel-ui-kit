@@ -1,4 +1,4 @@
-mixin selDate(title)
-    .selection-dates
-        input(type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" id=title)
+mixin selDate(id)
+    .selection-dates(class!=attributes.class)
+        input(type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" id=id)
         i(class='material-icons') expand_more
