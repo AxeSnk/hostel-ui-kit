@@ -1,6 +1,4 @@
 .form-elements {
-    height: 1853px;
-    width: 1440px;
     background-color: #FFFFFF;
     margin-top: 40px;
     padding: 140px 141px;
@@ -33,8 +31,9 @@
 .right-column {
     display: block;
 }
-@import 'form-elements/field-default/field-default.scss';
-@import 'form-elements/dropdown-default/dropdown-default.scss';
+@import 'form-elements/field_default/field_default.scss';
+@import 'form-elements/field_hover-focus/field_hover-focus.scss';
+@import 'form-elements/dropdown_default/dropdown_default.scss';
 @import 'form-elements/field-masked/field-masked.scss';
 @import 'form-elements/dropdown-data/dropdown-data.scss';
 @import 'form-elements/dropdown-filter/dropdown-filter.scss';

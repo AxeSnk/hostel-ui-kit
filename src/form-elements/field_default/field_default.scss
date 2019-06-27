@@ -1,3 +1,9 @@
+.field-default {
+    margin-bottom: 20px;
+}
+.field-default h3 {
+    margin-bottom: 5px;
+}
 .field-default input {
     box-sizing: border-box;
     border-radius: 4px;
@@ -11,16 +17,7 @@
     font-weight: normal;
     padding-left: 14px;
     color: $dark_75-color;
-    margin-top: 5px;
 }
 .field-default input::placeholder {
     color: $dark_25-color;
-}
-.field-default input:focus::placeholder,
-.field-default input:hover::placeholder {
-    color: $dark_75-color;
-}
-.field-default input:focus,
-.field-default input:hover{
-    border: 1px solid $dark_50-color;
 }

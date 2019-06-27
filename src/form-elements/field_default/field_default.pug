@@ -1,0 +1,7 @@
+mixin form(type, name, placeholder)
+    form
+        input(class!=attributes.class type=type, name=name, placeholder=placeholder)
+
+.field-default
+    h3 text field_default
+    +form('email','email','Еmail')

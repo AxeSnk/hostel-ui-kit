@@ -78,27 +78,26 @@ $(window).on('load', function () {
     $('input[value]').change(function() {
         var count = 0;
         
-        $('input[type="number"]').each(function() {	
+        $(this).closest('.guests').find('input[type="number"]').each(function() {	
         
             count += parseInt($(this).val());
             
             if (count > 0){
-                $('.clear-quantity-invisible').addClass('clear-quantity');
+                $(this).closest('.guests').find('.clear-quantity-invisible').addClass('clear-quantity');
                 
             } else {
-                $('.clear-quantity-invisible').removeClass('clear-quantity');
+                $(this).closest('.guests').find('.clear-quantity-invisible').removeClass('clear-quantity');
                 
             };
         });
         
-        console.log(count);
     });
     
     //Очистить значения при нажатии на кнопку "Очистить"
     $('.clear-quantity-invisible').click(function() {
         
-        $('input[type="number"]').val(0);
-        $('.clear-quantity-invisible').removeClass('clear-quantity');
+        $(this).closest('.guests').find('input[type="number"]').val(0);
+        $(this).closest('.guests').find('.clear-quantity-invisible').removeClass('clear-quantity');
         
     });
     
