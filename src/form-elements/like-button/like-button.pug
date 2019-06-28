@@ -1,10 +1,11 @@
-div(class='like-button')
-    div(class='like-button__name') like button
-    div(class='like-button__container')
-        div(class='like-button__state')
-            button(class='like-button__not-pressed')
-                p 2
-        div(class='like-button__state')
-            button(class='like-button__pressed')
-                p 12
+mixin like(title)
+    .like-button__state
+        button(class!=attributes.class)
+            p= title
+
+.like-button
+    .like-button__name like button
+    .like-button__container
+        +like('2')(class="like-button__not-pressed")
+        +like('12')(class='like-button__pressed')
 

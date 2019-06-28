@@ -1,0 +1,25 @@
+.comment-container {
+    width: 711px;
+    display: flex;
+    flex-direction: column;
+}
+.comment-header,
+.comment-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.comment-header__avatar {
+    display: flex;
+    width: 47.67px;
+    height: 48px;
+    background: #fff;
+    background-image: url('/form-elements/comment-container/png/image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50%;
+}
+.comment-header__name {
+    display: flex;
+    flex-direction: column;
+}
