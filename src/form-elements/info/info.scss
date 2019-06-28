@@ -1,9 +1,7 @@
-$dark_75-color: rgba(31, 32, 65, 0.75);
-$dark_10-color: rgba(31, 32, 65, 0.1);
-
 .info {
     width: 291px;
     height: 158px;
+    margin-top: 272px;
 }
 .comfort {
     display: flex;
@@ -19,7 +17,7 @@ $dark_10-color: rgba(31, 32, 65, 0.1);
     background-image: url('/form-elements/info/svg/emoticon.svg');
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 .comfort__text {
     display: block;
@@ -52,7 +50,7 @@ $dark_10-color: rgba(31, 32, 65, 0.1);
     background-image: url('/form-elements/info/svg/location_city.svg');
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 .convenience__text {
     display: block;

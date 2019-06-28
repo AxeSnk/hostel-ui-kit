@@ -1,4 +1,6 @@
-
+.field_hover-focus{
+    margin-bottom: 21px;
+}
 .field_hover-focus input:focus::placeholder,
 .field_hover-focus input:hover::placeholder {
     color: $dark_75-color;
