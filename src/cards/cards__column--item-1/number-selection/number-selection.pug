@@ -1,9 +1,5 @@
 .number-selection
-    include number-selection__name/number-selection__name.pug
-    .number-selection__arrival-and-departure
-        include number-selection__dates/number-selection__dates.pug
-        include number-selection__dates/number-selection__dates.pug
-    .number-selection__guests
-        +guests
-    .number-selection__button
-        +btn_long('подобрать номер')
+    h1 Найдём номера под ваши пожелания
+    +dddate("прибытие","выезд")
+    +ddguests("гости")
+    +btn_long('подобрать номер')

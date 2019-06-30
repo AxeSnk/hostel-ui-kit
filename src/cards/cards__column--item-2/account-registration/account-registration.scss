@@ -144,39 +144,39 @@
 }
 
 /*****   Button-default-long   *****/
-.button__defult {
-    margin-right: 20px;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    width: 99px;
-    height: 44px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    padding: 0 0;
-    cursor: pointer;
-    font-family: "Montserrat-Regular", sans-serif;
-    border-style: none;
-    color: white;
-}
-.button__defult:hover {
-    opacity: 0.5;
-}
-.button__default-long {
-    width: 320px;
-    position: relative;
-    vertical-align: middle;
-}
-.button__default-long--icon {
-    background: url('/cards/cards__column--item-2/account-registration/svg/arrow_forward-empty.svg');
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 14px;
-    top: 14px;
-}
+// .button__defult {
+//     margin-right: 20px;
+//     font-weight: bold;
+//     font-size: 12px;
+//     text-transform: uppercase;
+//     width: 99px;
+//     height: 44px;
+//     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+//     border-radius: 22px;
+//     padding: 0 0;
+//     cursor: pointer;
+//     font-family: "Montserrat-Regular", sans-serif;
+//     border-style: none;
+//     color: white;
+// }
+// .button__defult:hover {
+//     opacity: 0.5;
+// }
+// .button__default-long {
+//     width: 320px;
+//     position: relative;
+//     vertical-align: middle;
+// }
+// .button__default-long--icon {
+//     background: url('/cards/cards__column--item-2/account-registration/svg/arrow_forward-empty.svg');
+//     display: block;
+//     width: 18px;
+//     height: 18px;
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     right: 14px;
+//     top: 14px;
+// }
 .account-registration .button__default-long {
     margin-bottom: 30px;
 }

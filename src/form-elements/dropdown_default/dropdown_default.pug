@@ -1,4 +1,4 @@
-mixin guests
+mixin guests(title)
     .guests
         .field-guests Сколько гостей
             i(class='material-icons') expand_more
@@ -23,6 +23,9 @@ mixin guests
                 .clear-quantity-invisible очистить
                 .apply-quantity применить
 
-.dropdown_default
-    h3 dropdown_default
-    +guests
+mixin ddguests(title)
+    .dropdown_default
+        h3= title
+        +guests
+
++ddguests("dropdown")

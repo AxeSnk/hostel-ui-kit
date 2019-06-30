@@ -10,11 +10,15 @@
     padding: 40px 30px 30px;
     flex-direction: column;
 }
+.number-selection h1 {
+    margin-bottom: 20px;
+}
 .number-selection__arrival-and-departure {
     display: flex;
 }
-.number-selection__guests {
-    margin-top: 20px;
+.number-selection .dropdown_date {
+    margin-bottom: 26px;
 }
-@import 'number-selection__name/number-selection__name.scss';
-@import 'number-selection__dates/number-selection__dates.scss';
+.number-selection .dropdown_default {
+    margin-bottom: 32px;
+}
