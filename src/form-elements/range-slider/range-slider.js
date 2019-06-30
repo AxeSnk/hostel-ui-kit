@@ -22,8 +22,8 @@ $("#slider").slider({
     values: [5000,10000],
     range: true,
     slide: function( event, ui ) {
-        $( "#amount" ).val(ui.values[ 0 ] + "Р - " + ui.values[ 1 ] + "Р");
+        $( "#amount" ).val(ui.values[ 0 ] + "\u20bd - " + ui.values[ 1 ] + "\u20bd");
     }
 });
-    $( "#amount" ).val($( "#slider" ).slider( "values", 0 ) + "Р - " + $( "#slider" ).slider( "values", 1 ) + "Р");
+    $( "#amount" ).val($( "#slider" ).slider( "values", 0 ) + "\u20bd - " + $( "#slider" ).slider( "values", 1 ) + "\u20bd");
 });

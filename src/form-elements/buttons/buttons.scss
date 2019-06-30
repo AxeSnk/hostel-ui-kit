@@ -1,8 +1,8 @@
 .buttons {
-    margin-top: 41px;
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 .buttons__name {
     font-weight: bold;
@@ -12,6 +12,12 @@
 }
 .buttons__container {
     margin-bottom: 30px;
+}
+.buttons__container:nth-child(3) {
+    margin-bottom: 66px;
+}
+.buttons__container:nth-child(4) {
+    margin-bottom: 14px;
 }
 @import 'button__defult/button__defult.scss';
 @import 'button__default-border/button__default-border.scss';

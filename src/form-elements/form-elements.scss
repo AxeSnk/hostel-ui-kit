@@ -27,7 +27,7 @@
 .center-column {
     display: block;
     margin-left: 126px;
-    margin-right: 132px;
+    margin-right: 72px;
 }
 .right-column {
     display: block;
@@ -57,3 +57,4 @@
 @import 'form-elements/range-slider/range-slider.scss';
 @import 'form-elements/buttons/buttons.scss';
 @import 'form-elements/pagination/pagination.scss';
+@import 'form-elements/bullet-list/bullet-list.scss';

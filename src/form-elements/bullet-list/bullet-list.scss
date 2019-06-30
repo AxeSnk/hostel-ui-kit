@@ -1,0 +1,20 @@
+.bullet-list {
+    margin-top: 256px;
+}
+.bullet-list h3 {
+    margin-bottom: 15px;
+}
+.bullet-list p {
+    margin-bottom: 10px;
+    width: 271px;
+    line-height: 24px;
+}
+.bullet-list-content p:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    margin-right: 11px;
+}
