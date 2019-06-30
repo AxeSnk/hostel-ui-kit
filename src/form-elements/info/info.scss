@@ -1,14 +1,13 @@
 .info {
     width: 291px;
     height: 158px;
-    margin-top: 272px;
+    margin-right: 156px;
 }
-.comfort {
+.comfort,.convenience {
     display: flex;
     width: 291px;
     height: 51px;
-    margin-top: 20px;
-    margin-bottom: 17px;
+    align-items: center;
 }
 .comfort__icon{
     display: block;
@@ -17,31 +16,25 @@
     background-image: url('/form-elements/info/svg/emoticon.svg');
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 8px;
+    margin-right: 10px;
 }
-.comfort__text {
+.comfort__text,
+.convenience__text {
     display: block;
     font-size: 14px;
     color: $dark_75-color;
     width: 233px;
     height: 48px;
-    padding-top: 3px;
+    padding-top: 10px;
 }
 .comfort__text p {
     margin: 0 0;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 .rectangle {
     width: 280px;
     border-bottom: 1px solid $dark_10-color;
-}
-.convenience {
-    display: flex;
-    width: 291px;
-    height: 51px;
-    margin-top: 20px;
-    margin-bottom: 17px;
-
+    margin: 17px 0;
 }
 .convenience__icon {
     display: block;
@@ -51,14 +44,6 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 8px;
-}
-.convenience__text {
-    display: block;
-    font-size: 14px;
-    color: $dark_75-color;
-    width: 233px;
-    height: 48px;
-    padding-top: 3px;
 }
 .convenience__text p {
     margin: 0 0;

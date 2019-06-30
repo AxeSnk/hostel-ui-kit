@@ -4,6 +4,7 @@
     padding: 140px 141px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .column {
     display: flex;
@@ -30,6 +31,10 @@
 }
 .right-column {
     display: block;
+}
+.footer-elements {
+    display: flex;
+    margin-top: 215px;
 }
 @import 'form-elements/field_default/field_default.scss';
 @import 'form-elements/field_hover-focus/field_hover-focus.scss';
