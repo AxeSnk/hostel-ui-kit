@@ -1,15 +1,13 @@
 .account-login
-    .account-login__text
-        h1 Войти
+    h1 Войти
 
 
     //Field
-
-    .field-masked__form-text
-    from(class='field-masked__form')
-        input(class='field-masked__form-input' type='email' placeholder='Email')
-    from(class='field-masked__form')
-        input(class='field-masked__form-input' type='password' placeholder='Пароль')
+    .fields_account
+        .field_default.field_hover-focus
+            +input('email','email','Email')
+        .field_default.field_hover-focus
+            +input('password','password','Пароль')
 
 
     //Button__default-long
@@ -21,4 +19,4 @@
 
     .account-login_footer
         p Нет аккаунта на Toxin?
-        bitton(class='button__defult button-login') Создать
+        +btn-border("click me")
