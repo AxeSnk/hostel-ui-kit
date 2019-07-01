@@ -1,9 +1,12 @@
-.radio-buttons
-    .radio-buttons__name Radio Buttons
+mixin radioBtn(id1,id2)
     .radio-buttons__items
         .radio-buttons__item
-            input(id='radiobtn1' type='radio' name='radio')
-            label(for='radiobtn1') Мужчина
+            input(id=id1 type='radio' name='radio')
+            label(for=id1) Мужчина
         .radio-buttons__item
-            input(id='radiobtn2' type='radio' name='radio')
-            label(for='radiobtn2') Женщина
+            input(id=id2 type='radio' name='radio')
+            label(for=id2) Женщина
+
+.radio-buttons
+    h3 Radio Buttons
+    +radioBtn("radiobtn1","radiobtn2")

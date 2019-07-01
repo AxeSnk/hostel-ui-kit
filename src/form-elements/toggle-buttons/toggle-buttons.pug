@@ -1,9 +1,9 @@
-.toggle-buttons
-    .toggle-buttons__name toggle
-    .toggle-buttons__items
-        .toggle-buttons__item
-            input(type='checkbox' id='switch1' name='toggle')
-            label(for='switch1') Получать спецпредложения
-        .toggle-buttons__item
-            input(type='checkbox' id='switch2' name='toggle')
-            label(for='switch2') Получать спецпредложения
+mixin toggle(id,title)
+    .toggle-buttons__item
+        input(type='checkbox' id=id name='toggle')
+        label(for=id)=title
+
+.toggle-buttons__name toggle
+.toggle-buttons__items
+    +toggle("switch1","Получать спецпредложения")
+    +toggle("switch2","Получать спецпредложения")

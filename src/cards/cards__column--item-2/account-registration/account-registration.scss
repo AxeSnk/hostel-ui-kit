@@ -8,175 +8,37 @@
     border-radius: 4px;
     padding: 40px 30px 30px;
 }
-.account-registration-text {
-    font-family: arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 1.1px;
-    color: #1F2041;
-    padding-bottom: 20px;
+.account-registration h1 {
+    margin-bottom: 20px;
 }
-
-/*****   Fields   *****/
-.field-masked__form-input {
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    width: 320px;
-    height: 42px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.9px;
-    padding-left: 14px;
-    color: rgba(31, 32, 65, 0.75);
+/*****   Fields name, surname   *****/
+.account-registration .field_default {
     margin-bottom: 10px;
 }
-.field-masked__form-text {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12.4px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    color: #1F2041;
-}
-.field-masked__form-input::placeholder {
-    color: rgba(31, 32, 65, 0.25);
-}
-.field-masked__form-input:focus::placeholder {
-    color: rgba(31, 32, 65, 0.75);
-}
-.field-masked__form-input:focus{
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.date-of-birth {
-    margin-bottom: 14px;
-}
 /*****   Radio-buttons   *****/
-.radio-buttons__items {
-    display: flex;
+.account-registration .radio-buttons__items {
+    margin-bottom: 26px;
+}
+/*****   Fields masked   *****/
+.account-registration .field_masked {
     margin-bottom: 24px;
 }
-.radio-buttons__item input[type="radio"] {
-    display: none;
+/*****   Fields email, password   *****/
+.fields-reg {
+    margin-bottom: 5px;
 }
-.radio-buttons__item label {
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 14px;
-    text-transform: none;
-    cursor: pointer;
-    margin-right: 20px;
+.fields-reg .field_default:nth-child(3) {
+    margin-bottom: 0;
 }
-.radio-buttons__item label::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.radio-buttons__item input[type="radio"]:checked + label::before {
-    background-repeat: no-repeat;
-    background-position-x: 2px;
-    background-position-y: 2px;
-    background-image: url('/cards/cards__column--item-2/account-registration/svg/circle-solid.svg');
-    border: 1px solid #BC9CFF;
-}
-#radiobtn3:checked + label {
-    color: rgba(31, 32, 65, 0.75);
-}
-#radiobtn4:checked + label {
-    color: rgba(31, 32, 65, 0.75);
+.fields-reg h3 {
+    margin-bottom: 7px;
 }
 
 /*****   Toggle-buttons   *****/
-.toggle-buttons__item {
-    display: flex;
-    align-items: center;
-    height: 24px;
-    margin-bottom: 10px;
-}
-.toggle-buttons__item label {
-    padding-left: 50px;
-    font-size: 14px;
-    color: rgba(31, 32, 65, 0.75);
-    cursor: pointer;
-    display: block;
-    position: relative;
-}
-.toggle-buttons__item label::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 38px;
-    height: 18px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-image: url('/cards/cards__column--item-2/account-registration/svg/circle-solid-off.svg');
-    background-repeat: no-repeat;
-    background-position-x: 2px;
-    background-position-y: 1.5px;
-    margin-left: -50px;
-    margin-right: 10px;
-}
-.toggle-buttons__item input[type=checkbox] {
-    display: none;
-    width: 0;
-    height: 0;
-}
-.toggle-buttons__item input:checked + label::before {
-    background-image: url('/cards/cards__column--item-2/account-registration/svg/circle-solid.svg');
-    background-repeat: no-repeat;
-    background-position-x: 22px;
-    background-position-y: 2px;
-    border-color: #BC9CFF;
-}
 .account-registration .toggle-buttons__item {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
-
 /*****   Button-default-long   *****/
-// .button__defult {
-//     margin-right: 20px;
-//     font-weight: bold;
-//     font-size: 12px;
-//     text-transform: uppercase;
-//     width: 99px;
-//     height: 44px;
-//     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-//     border-radius: 22px;
-//     padding: 0 0;
-//     cursor: pointer;
-//     font-family: "Montserrat-Regular", sans-serif;
-//     border-style: none;
-//     color: white;
-// }
-// .button__defult:hover {
-//     opacity: 0.5;
-// }
-// .button__default-long {
-//     width: 320px;
-//     position: relative;
-//     vertical-align: middle;
-// }
-// .button__default-long--icon {
-//     background: url('/cards/cards__column--item-2/account-registration/svg/arrow_forward-empty.svg');
-//     display: block;
-//     width: 18px;
-//     height: 18px;
-//     background-repeat: no-repeat;
-//     position: absolute;
-//     right: 14px;
-//     top: 14px;
-// }
 .account-registration .button__default-long {
     margin-bottom: 30px;
 }
@@ -195,23 +57,6 @@
 }
 
 /*****   Button-default-border   *****/
-.button__default-border {
-    position: relative;
-    display: inline-block;
-}
-.button__default-border::before {
-    content: 'Войти';
-    position: absolute;
-    line-height: 40px;
-    z-index: 1;
-    top: 2px;
-    left: 2px;
-    border-radius: 22px;
-    background: #fff;
-    width: 95px;
-    height: 40px;
-    color: #BC9CFF;
-}
 .account-registration .button__default-border {
     margin: 0;
 }

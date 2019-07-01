@@ -1,4 +1,7 @@
-.field_default.field_hover-focus.field_masked
-    h3 masked text  field
-    form
-        +input('date','date','ДД.ММ.ГГГГ')
+mixin maskedField(title)
+    .field_default.field_hover-focus.field_masked
+        h3= title
+        form
+            +input('date','date','ДД.ММ.ГГГГ')
+
++maskedField("masked text field")

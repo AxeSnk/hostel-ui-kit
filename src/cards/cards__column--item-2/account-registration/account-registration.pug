@@ -1,48 +1,33 @@
-div(class='account-registration')
-    div(class='account-registration-text')
-        h1 Регистрация аккаунта
+.account-registration
+    h1 Регистрация аккаунта
 
-    //Field
+    //Fields name, surname
 
-    div(class='field-masked__form-text')
-    form(class='field-masked__form')
-        input(class='field-masked__form-input' type='text' placeholder='Имя')
-    form(class='field-masked__form')
-        input(class='field-masked__form-input' type='text' placeholder='Фамилия')
-
+    .field_default.field_hover-focus
+        +input('name','name','Имя')
+    .field_default.field_hover-focus
+        +input('surname','surname','Фамилия')
 
     //Radio-buttons
 
-    div(class='radio-buttons__items')
-        div(class='radio-buttons__item')
-            input(id='radiobtn3' type='radio' name='radio')
-            label(for='radiobtn3') Мужчина
-        div(class='radio-buttons__item')
-            input(id='radiobtn4' type='radio' name='radio')
-            label(for='radiobtn4') Женщина
-
+    +radioBtn("radiobtn3","radiobtn4")
 
     //Field
 
-    div(class='field-masked__form-text') дата рождения
-    form(class='field-masked__form date-of-birth')
-        input(class='field-masked__form-input' type='date')
+    +maskedField("дата рождения")
 
-
-    //Field
-
-    div(class='field-masked__form-text') данные для входа в сервис
-    form(class='field-masked__form')
-        input(class='field-masked__form-input' type='email' placeholder='Email')
-    form(class='field-masked__form')
-        input(class='field-masked__form-input' type='password' placeholder='Пароль')
+        //Fields email, password
+    .fields-reg
+        h3 данные для входа в сервис
+        .field_default.field_hover-focus
+            +input('email','email','Email')
+        .field_default.field_hover-focus
+            +input('password','password','Пароль')
 
 
     //Toggle-buttons
 
-    div(class='toggle-buttons__item')
-        input(type='checkbox' id='switch3' name='toggle')
-        label(for='switch3') Получать спецпредложения
+    +toggle("switch3","Получать спецпредложения")
 
 
     //Button__default-long
@@ -54,4 +39,4 @@ div(class='account-registration')
 
     .account-registration__footer
         p Уже есть аккаунт на Toxin
-        button(class='button__defult button__default-border' href='#') Войти
+        +btn-border("click me")
