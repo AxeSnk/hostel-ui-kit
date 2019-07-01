@@ -1,6 +1,6 @@
 mixin guests(title)
     .guests
-        .field-guests Сколько гостей
+        .field-guests=title
             i(class='material-icons') expand_more
         //dropdown
         .dropdown-guests
@@ -26,6 +26,6 @@ mixin guests(title)
 mixin ddguests(title)
     .dropdown_default
         h3= title
-        +guests
+        +guests("Сколько гостей")
 
 +ddguests("dropdown")

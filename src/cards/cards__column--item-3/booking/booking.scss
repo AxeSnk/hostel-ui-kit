@@ -6,105 +6,55 @@
 	box-sizing: border-box;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	padding: 40px 30px 30px;
+	padding: 47px 30px 30px;
 	position: relative;
 }
 .booking-header {
 	display: flex;
-	margin-bottom: 23px;
+	margin-bottom: 28px;
 	align-items: flex-end;
 }
-p {
-	margin: 0 0;
+.booking-header strong {
+	font-weight: bold;
+}
+.booking-header small {
+	font-size: 12px;
 }
 .booking-number {
     display: block;
     font-family: arial;
 	font-style: normal;
 	font-weight: normal;
-    font-size: 24px;
+	font-size: 24px;
+	line-height: 14px;
     letter-spacing: 1.1px;
-	color: #1F2041;
+	color: $dark_100-color;
     margin-right: 5px;
-}
-small {
-    font-size: 14px;
 }
 .booking-luxury {
 	font-style: normal;
 	font-weight: bold;
 	font-size: 15px;
-	color: #BC9CFF;
+	color: $purple-color;
 	margin-right: auto;
 }
 .booking-cost {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
-	color: rgba(31, 32, 65, 0.5);
-}
-p {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
+	color: $dark_50-color;
 }
 
-/*****   fiel-date   *****/
-.date-container {
+/*****   field-date   *****/
+.booking .dropdown_date {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-bottom: 23px;
 }
-.field-masked__form-date {
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-
-}
-.booking .field-masked__form-date-input,
-.booking .field-masked__form-input {
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    width: 150px;
-    height: 42px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.9px;
-    padding-left: 14px;
-    color: rgba(31, 32, 65, 0.75);
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-.field-masked__form-input {
-	width: 320px;
+/*****   field-guest   *****/
+.booking .dropdown_default {
 	margin-bottom: 20px;
 }
-.booking .field-masked__form-text {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    color: #1F2041;
-}
-.field-masked__form-date-input::placeholder,
-.field-masked__form-input::placeholder {
-    color: rgba(31, 32, 65, 0.25);
-}
-.field-masked__form-date-input:focus::placeholder,
-.field-masked__form-input:focus::placeholder {
-    color: rgba(31, 32, 65, 0.75);
-}
-.field-masked__form-date-input:focus,
-.field-masked__form-input:focus{
-    border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-/*****   guests   *****/
 
 /*****   Check-list   *****/
 .booking .check-list {
@@ -112,21 +62,20 @@ p {
 }
 .booking .check-list--item {
 	display: flex;
-	height: 24px;
-	// justify-content: space-between;
-	align-items: center;
-	margin-bottom: 10px;
+	align-items: flex-start;
+	margin-bottom: 15px;
 }
 .booking .check-list--item p {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
-	color: rgba(31, 32, 65, 0.75);
+	line-height: 18px;
+	color: $dark_75-color;
 	margin: 0 0;
-	max-width: 214px;
+	max-width: 220px;
 }
 .booking .check-list--item p:first-child {
-	min-width: 214px;
+	min-width: 220px;
 }
 .booking .check-list--item p:last-child {
 	margin-left: auto;
@@ -136,23 +85,26 @@ p {
     display: block;
     width: 20px;
     height: 20px;
-    background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 .booking .check-list--total-item {
 	width: 182px;
 	height: 0px;
-	border-top: 1px dotted rgba(31, 32, 65, 0.25);
+	border-top: 1px dotted $dark_25-color;
 }
 .booking .check-list--total {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 2px;
 }
 .booking .check-list--total p {
+	
 	font-style: normal;
 	font-weight: bold;
-	font-size: 19px;
-	color: #1F2041;
+	font-size: 18px;
+	line-height: 24px;
+	color: $dark_100-color;
 	margin-bottom: 20px;
 }
 /*****   Button__default-long   *****/    

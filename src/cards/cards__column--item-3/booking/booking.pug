@@ -3,31 +3,25 @@
     //booking-header
 
     .booking-header
-        p(class='booking-number') <small>№</small> 888
-        p(class='booking-luxury') люкс
-        p(class='booking-cost') <strong>9990Р</strong><small> в сутки</small>
+        p.booking-number <small>№</small> 888
+        p.booking-luxury люкс
+        p.booking-cost <strong>9 990&#x20bd</strong><small> в сутки</small>
 
 
-    //fiel-date
+    //field-date
 
-    .date-container
-        .date-container-items
-            form(class='field-masked__form-date') прибытие
-                input(class='field-masked__form-date-input' type='date')
-        .date-container-items
-            form(class='field-masked__form-date') выезд
-                input(class='field-masked__form-date-input' type='date')
+    +dddate("прибытие","выезд")
 
 
     //field-guest
-    +guests('гости')
+    +ddguests("гости")
 
     //check-list
 
     .check-list
         .check-list--item
-            p 9990Р х 4суток
-            p 39960Р
+            p 9 990Р х 4 суток
+            p 39 960Р
         .check-list--item
             p Сбор за услуги: скидка 2179Р
             p(class='info-icon')
@@ -40,12 +34,12 @@
     .check-list--total
         p Итого
         .check-list--total-item
-        p 38081 Р
+        p 38 081&#x20bd
 
 
     //button__default-long
 
-    button(class='button__defult button__default-long') забронировать
+    button.button__defult.button__default-long забронировать
         i(class='material-icons') arrow_forward
 
 

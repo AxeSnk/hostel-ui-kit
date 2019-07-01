@@ -6,7 +6,7 @@
     display: inline-block;
 }
 .button__default-border::before {
-    content: '';
+    content: 'click me';
     position: absolute;
     line-height: 40px;
     z-index: 1;
