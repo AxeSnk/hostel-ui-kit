@@ -1,0 +1,26 @@
+.header .header__menu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.header .header__menu__item {
+    margin-right: 28px;
+}
+.header .header__menu__item a {
+    color: $dark_50-color;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.header .header__menu__item a:hover {
+    border-bottom: 1px solid $dark_50-color;
+}
+.header .header__menu__item:nth-child(1) a {
+    font-weight: bold;
+    color: $dark_75-color;
+}

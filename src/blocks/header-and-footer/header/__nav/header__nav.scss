@@ -1,0 +1,11 @@
+.header .header__nav {
+    padding: 15px 0;
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+@import 'blocks/header-and-footer/header/__nav/logo/logo.scss';
+@import 'blocks/header-and-footer/header/__nav/__menu/header__menu.scss';

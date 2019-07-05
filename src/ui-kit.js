@@ -1,4 +1,4 @@
 import jquery from "jquery";
 
-import './main.scss';
+import './ui-kit.scss';
 import './form-elements/form-elements.js';

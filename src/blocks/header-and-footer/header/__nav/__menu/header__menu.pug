@@ -1,0 +1,5 @@
+ul.header__menu
+    each item in [{text: "Home", icon: ""},{text: "About Us", icon: ""},{text: "Services", icon: "expand_more"},{text: "Carrers", icon: ""},{text: "News", icon: ""},{text: "Documentation", icon: ""}]
+        li.header__menu__item
+            a(href='#')= item.text
+                i.material-icons= item.icon
