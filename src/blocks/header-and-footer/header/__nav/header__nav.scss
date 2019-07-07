@@ -1,5 +1,5 @@
 .header .header__nav {
-    padding: 15px 0;
+    padding: 15px 140px;
     align-items: center;
     display: -webkit-flex;
     display: -moz-flex;
@@ -7,5 +7,22 @@
     display: -o-flex;
     display: flex;
 }
+.header .header__nav .button__default-border {
+    width: 79px;
+    height: 34px;
+    margin-right: 20px;
+}
+.header .header__nav .button__default-border::before {
+    content: 'login';
+    line-height: 30px;
+    width: 75px;
+    height: 30px;
+}
+.header__nav .button__defult {
+    margin-right: 0;
+    width: 101px;
+    height: 34px;
+}
+
 @import 'blocks/header-and-footer/header/__nav/logo/logo.scss';
 @import 'blocks/header-and-footer/header/__nav/__menu/header__menu.scss';

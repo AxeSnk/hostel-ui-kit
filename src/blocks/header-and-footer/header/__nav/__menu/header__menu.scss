@@ -9,6 +9,7 @@
 }
 .header .header__menu__item {
     margin-right: 28px;
+
 }
 .header .header__menu__item a {
     color: $dark_50-color;
@@ -16,6 +17,8 @@
     font-weight: normal;
     text-decoration: none;
     transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
 }
 .header .header__menu__item a:hover {
     border-bottom: 1px solid $dark_50-color;
