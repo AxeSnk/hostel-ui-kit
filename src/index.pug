@@ -6,7 +6,11 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title toxin
     body
-        include blocks/header-and-footer/header/header.pug
-        .content
-            include cards/cards__column--item-1/number-selection/number-selection.pug
-        script(src='index.js')
+        .l-page
+            include blocks/header-and-footer/header/header.pug
+            .content
+                include cards/cards__column--item-1/number-selection/number-selection.pug
+                p Лучшие номера для вашей работы, отдыха и просто вдохновения
+            include blocks/header-and-footer/footer/footer.pug
+
+            script(src='index.js')
