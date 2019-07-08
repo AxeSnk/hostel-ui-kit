@@ -1,2 +1,3 @@
-include btn_long/btn_long.pug
-+btn_long('перейти к оплате')
+mixin btn_long(title,href)
+    a(href= href).button__default.button__default-long= title
+            i.material-icons arrow_forward

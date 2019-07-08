@@ -27,7 +27,7 @@
 }
 .footer .footer__logo {
     display: block;
-    background-image: url('blocks/header-and-footer/footer/svg/logo.svg');
+    background-image: url('/blocks/header-and-footer/footer/svg/logo.svg');
     width: 105.69px;
     height: 40px;
     margin-bottom: 20px;
@@ -127,7 +127,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url('blocks/header-and-footer/footer/svg/arrow_forward.svg');
+    background-image: url('/blocks/header-and-footer/footer/svg/arrow_forward.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 44px;
@@ -167,19 +167,19 @@
     display: block;
     width: 24px;
     height: 20px;
-    background-image: url('blocks/header-and-footer/footer/svg/twitter-logo.svg');
+    background-image: url('/blocks/header-and-footer/footer/svg/twitter-logo.svg');
 }
 .copyright-bar__facebook a {
     display: block;
     width: 22px;
     height: 22px;
-    background-image: url('blocks/header-and-footer/footer/svg/facebook-logo.svg');
+    background-image: url('/blocks/header-and-footer/footer/svg/facebook-logo.svg');
     margin: 0 20px;
 }
 .copyright-bar__instagram a {
     display: block;
     width: 22px;
     height: 22px;
-    background-image: url('blocks/header-and-footer/footer/svg/instagram-logo.svg');
+    background-image: url('/blocks/header-and-footer/footer/svg/instagram-logo.svg');
     margin-right: 140px;
 }

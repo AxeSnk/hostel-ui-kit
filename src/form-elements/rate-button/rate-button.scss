@@ -31,7 +31,7 @@
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
-    background-image: url('./form-elements/rate-button/svg/star_border.svg');
+    background-image: url('/form-elements/rate-button/svg/star_border.svg');
 }
 .rate-button__container label::after {
     content: '';
@@ -42,7 +42,7 @@
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
-    background-image: url('./form-elements/rate-button/svg/star.svg');
+    background-image: url('/form-elements/rate-button/svg/star.svg');
 }
 .rate-button__container input:checked ~ label:after,
 .rate-button__container label:hover ~ label:after,
