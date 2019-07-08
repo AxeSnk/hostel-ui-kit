@@ -1,31 +1,5 @@
-mixin guests(title)
-    .guests
-        .field-guests=title
-            i(class='material-icons') expand_more
-        //dropdown
-        .dropdown-guests
-            .dropdown-container
-                .dropdown-container-text взрослые
-                .quantity
-                    input(type='number' id="adults" min="0" max="9" step="1" value="0")
+include guests/guests.pug
 
-            .dropdown-container
-                .dropdown-container-text дети
-                .quantity
-                    input(type='number' id="childs" min="0" max="9" step="1" value="0")
-
-            .dropdown-container
-                .dropdown-container-text младенцы
-                .quantity
-                    input(type='number' id="babies" min="0" max="9" step="1" value="0")
-            //clear-apply
-            .dropdown-container.container__clear-apply
-                .clear-quantity-invisible очистить
-                .apply-quantity применить
-
-mixin ddguests(title)
-    .dropdown_default
-        h3= title
-        +guests("Сколько гостей")
-
-+ddguests("dropdown")
+.dropdown_default
+    h3 dropdown
+    +guests("Сколько гостей")

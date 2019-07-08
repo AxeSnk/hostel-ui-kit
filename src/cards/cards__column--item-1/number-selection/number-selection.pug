@@ -1,5 +1,11 @@
+include ../../../form-elements/dropdown_date/dddate/dddate.pug
+include ../../../form-elements/dropdown_default/guests/guests.pug
+include ../../../form-elements/buttons/button__default-long/btn_long/btn_long.pug
+
 .number-selection
     h1 Найдём номера под ваши пожелания
     +dddate("прибытие","выезд")
-    +ddguests("гости")
+    .dropdown_default
+        h3 гости
+        +guests('Сколько гостей')
     +btn_long('подобрать номер')
