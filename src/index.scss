@@ -4,16 +4,12 @@
 @import 'form-elements/form-elements.scss';
 @import 'cards/cards.scss';
 @import 'blocks/header-and-footer/header-and-footer.scss';
-.l-page {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+
 .l-page .header {
     position: relative;
     z-index: 1;
 }
-.content {
+.l-page .content {
     width: 100%;
     height: 830px;
     background: url('pages/landing-page/image/image_3.png');
@@ -22,10 +18,8 @@
     position: relative;
     z-index: 0;
     background-size: 100% 100%;
-}
-.l-page .number-selection {
-    margin-left: 9.7%;
-    margin-top: 4.85%;
+    padding-left: 9.7%;
+    padding-top: 4.85%;
 }
 .content > p {
     position: absolute;

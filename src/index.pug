@@ -7,7 +7,10 @@ html(lang="en")
         title toxin
     body
         .l-page
-            include blocks/header-and-footer/header/header.pug
+            .header
+                include blocks/header-and-footer/header/__nav/header__nav.pug
+                +header-nav('pages/sign-in/sign-in.pug','pages/registration/registration.pug')
+
             .content
                 include cards/cards__column--item-1/number-selection/number-selection.pug
                 p Лучшие номера для вашей работы, отдыха и просто вдохновения

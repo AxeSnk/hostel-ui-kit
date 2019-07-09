@@ -1,9 +1,11 @@
-nav.header__nav
-    include logo/logo.pug
+include ../../../../form-elements/buttons/button__default-border/button__default-border.pug
+include ../../../../form-elements/buttons/button__default/button__default.pug
 
-    include __menu/header__menu.pug
+mixin header-nav(href1,href2)
+    nav.header__nav
+        include logo/logo.pug
 
-    include ../../../../form-elements/buttons/button__default-border/button__default-border.pug
-    +btn-border('','./pages/sign-in/sign-in.pug')
-    include ../../../../form-elements/buttons/button__default/button__default.pug
-    +btn('register','./pages/registration/registration.pug')
+        include __menu/header__menu.pug
+
+        +btn-border('',href1)
+        +btn('register',href2)

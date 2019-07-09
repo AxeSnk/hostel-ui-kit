@@ -6,6 +6,9 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title toxin
     body
-        P Search-room page
+        .search-room
+            .header
+                include ../../blocks/header-and-footer/header/__nav/header__nav.pug
+                +header-nav('../sign-in/sign-in.pug','../registration/registration.pug')
 
         script(src='search-room.js')
