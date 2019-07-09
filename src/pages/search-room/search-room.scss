@@ -7,8 +7,28 @@
 
 .search-room {
     background-color: #fff;
-}
-.search-room .header {
-    position: relative;
-    z-index: 1;
+
+    .header {
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+        padding: 2.08% 9.72% 4.79%;
+
+        .filters {
+            display: flex;
+
+            .filters__bar {
+
+                .dropdown-filter {
+                    margin-bottom: 20px;
+                }
+
+                .dropdown_default .guests {
+                    width: 266px;
+                }
+            } 
+        }
+    }
 }

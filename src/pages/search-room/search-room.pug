@@ -10,5 +10,24 @@ html(lang="en")
             .header
                 include ../../blocks/header-and-footer/header/__nav/header__nav.pug
                 +header-nav('../sign-in/sign-in.pug','../registration/registration.pug')
+            .content
+                .filters
+                    .filters__bar
+                        .dropdown-filter
+                            h3 даты пребывания в отеле
+                            include ..\..\form-elements\dropdown-filter\selection-dates\selection-dates.pug
+                            +selDate("filter")
+                        .dropdown_default
+                            h3 гости
+                            include ..\..\form-elements\dropdown_default\guests\guests.pug
+                            +guests("Сколько гостей")
+                        .range-slider-container
+                            include ..\..\form-elements\range-slider-container\range-slider\range-slider.pug
+                            +range-slider('диапазон цены')
 
+
+
+                    .filters__results
+
+                .pagination
         script(src='search-room.js')
