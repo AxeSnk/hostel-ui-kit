@@ -8,13 +8,19 @@
 .sample-room_image {
     position: relative;
     height: 151.38px;
-    background-image: url('/cards/cards__column--item-6/sample-room/image/image_1.png');
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.sample-room .room-1 {
+    background-image: url('/cards/cards__column--item-6/sample-room/image/image_1.png');
+}
+.sample-room .room-2 {
+    background-image: url('/cards/cards__column--item-6/sample-room/image/image_2.png');
+}
+
 .sample-room_image-left {
     display: flex;
     justify-content: center;
@@ -59,8 +65,15 @@
     height: 61.12px;
     padding: 24px 21px 20px;
 }
-.sample-room-info .booking-header {
+.sample-room-info_price {
     margin-bottom: 14px;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 }
 .sample-room-info_price .booking-number {
     font-size: 18px;
@@ -70,13 +83,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
     border-top: 1px solid rgba(31, 32, 65, 0.1);
 }
 .sample-room-info_reviews .rate-button__container {
     position: relative;
     left: 0;
     width: 120px;
+}
+.sample-room-info_reviews .rate-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
 }
 .sample-room-info_reviews bold {
     font-weight: bold;

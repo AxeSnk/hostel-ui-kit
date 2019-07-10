@@ -1,20 +1,27 @@
-.sample-room
-    .sample-room_image
-        .sample-room_image-left
-            i.material-icons keyboard_arrow_left
-        .sample-room_image-right
-            i.material-icons keyboard_arrow_left
-        .ellipses
-    .sample-room-info
-        .sample-room-info_price.booking-header
-            p.booking-number <small>№</small> 888
-            p.booking-luxury люкс
-            p.booking-cost <strong>9 990&#x20bd</strong><small> в сутки</small>
-        .sample-room-info_reviews
-            .rate-button__container
-                +rateBtn('room1-1')
-                +rateBtn('room1-2')
-                +rateBtn('room1-3')
-                +rateBtn('room1-4')
-                +rateBtn('room1-5')
-            p <bold>145</bold> Отзывов
+mixin sampleRoom
+    each room in rooms
+        .sample-room
+            .sample-room_image(class!=room.class)
+                .sample-room_image-left
+                    i.material-icons keyboard_arrow_left
+                .sample-room_image-right
+                    i.material-icons keyboard_arrow_left
+                .ellipses
+            .sample-room-info
+                .sample-room-info_price
+                    p.booking-number= room.number
+                    p.booking-luxury= room.luxe
+                    p.booking-cost
+                        strong= room.cost
+                        strong &#x20bd
+                        small  в сутки
+                .sample-room-info_reviews
+                    .rate-button__container
+                        each star in stars
+                            input(type='radio' id='star'+star name='star')
+                            label(for='star'+star)
+                    p <bold>145</bold> Отзывов
+
+- var stars = [6,7,8,9,10]
+- var rooms = [{class: 'room-1', number: '888', luxe: 'люкс', cost: '9990', stars: [6,7,8,9,10]},{class: 'room-2', number: '2', luxe: '', cost: '1990', stars: [11,12,13,14,15]}]
++sampleRoom

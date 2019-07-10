@@ -1,11 +1,11 @@
-mixin rateBtn(id)
-    input(type='radio' id=id name='star')
-    label(for=id)
-.rate-button
-    .rate-button__name rate button
+mixin rateBtn()
     .rate-button__container
-        +rateBtn('star1')
-        +rateBtn('star2')
-        +rateBtn('star3')
-        +rateBtn('star4')
-        +rateBtn('star5')
+        each star in stars
+            input(type='radio' id='star'+star name='star')
+            label(for='star'+star)
+
+- var stars = [1,2,3,4,5]
+
+.rate-button
+    .rate-button__name rate buttons
+        +rateBtn
