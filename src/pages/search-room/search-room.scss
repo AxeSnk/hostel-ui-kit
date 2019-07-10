@@ -20,6 +20,7 @@
             display: flex;
 
             .filters__bar {
+                margin-right: 5px;
 
                 .dropdown-filter {
                     margin-bottom: 20px;
@@ -57,6 +58,10 @@
                     margin-bottom: 16px;
                 }
             } 
+
+            h1 {
+                letter-spacing: 0.8px;
+            }
         }
     }
 }
