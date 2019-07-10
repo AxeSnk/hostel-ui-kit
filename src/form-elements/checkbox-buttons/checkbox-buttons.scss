@@ -41,7 +41,7 @@
 }
 .checkbox-buttons__item input[type="checkbox"]:checked + label::before {
     background-repeat: no-repeat;
-    background-position-x: 3px;
-    background-position-y: 2px;
+    background-position-x: 5px;
+    background-position-y: 3px;
     background-image: url('/form-elements/expandable-checkbox-list/svg/vector.svg')
 }
