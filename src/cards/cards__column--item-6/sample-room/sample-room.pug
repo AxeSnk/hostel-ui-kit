@@ -17,11 +17,9 @@ mixin sampleRoom
                         small  в сутки
                 .sample-room-info_reviews
                     .rate-button__container
-                        each star in stars
-                            input(type='radio' id='star'+star name='star')
-                            label(for='star'+star)
-                    p <bold>145</bold> Отзывов
-
-- var stars = [6,7,8,9,10]
-- var rooms = [{class: 'room-1', number: '888', luxe: 'люкс', cost: '9990', stars: [6,7,8,9,10]},{class: 'room-2', number: '2', luxe: '', cost: '1990', stars: [11,12,13,14,15]}]
-+sampleRoom
+                        each star in room.stars
+                            input(type='radio' id= star name='star')
+                            label(for= star)
+                    p 
+                        bold= room.reviews
+                        p Отзывов
