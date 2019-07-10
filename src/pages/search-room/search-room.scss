@@ -14,7 +14,7 @@
     }
 
     .content {
-        padding: 2.08% 9.72% 4.79%;
+        padding: 2.2% 9.72% 4.79%;
 
         .filters {
             display: flex;
@@ -25,8 +25,26 @@
                     margin-bottom: 20px;
                 }
 
-                .dropdown_default .guests {
+                .dropdown_default {
+                    
+                    margin-bottom: 30px;
+
+                    .guests {
                     width: 266px;
+                    }
+                }
+
+                .range-slider-container {
+                    
+                    p {
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: $dark_50-color;
+                    }
+
+                    .range-slider {
+                        margin-bottom: 22px;
+                    }
                 }
             } 
         }

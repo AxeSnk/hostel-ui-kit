@@ -1,11 +1,14 @@
 .range-slider {
 	display: flex;
-	align-content: space-between;
 	font-weight: bold;
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #1F2041;
 	width: 266px;
+
+	h3 {
+		margin-right: auto;
+	}
 
 	input {
 		font-size: 12px;
@@ -13,8 +16,9 @@
 		color: $dark_50-color;
 		font-family: "Montserrat-Regular", sans-serif;
 		line-height: 15px;
-		height: 14.5455px;
-		letter-spacing: 0;
+		letter-spacing: 0.2px;
+		width: 102px;
+		text-align: right;
 	}
 }
 /* Ширина слайдера */
