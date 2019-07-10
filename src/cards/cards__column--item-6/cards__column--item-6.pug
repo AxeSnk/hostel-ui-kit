@@ -1,5 +1,4 @@
-.cards__column--item-6.scss
+.cards__column--item-6
     include sample-room/sample-room.pug
-    //- - var stars = [6,7,8,9,10]
-    - var rooms = [{class: 'room-1', number: '888', luxe: 'люкс', cost: '9990', stars: [6,7,8,9,10], reviews: '148'},{class: 'room-2', number: '2', luxe: '', cost: '1990', stars: [11,12,13,14,15], reviews: '132'}]
+    - var rooms = [{class: 'room-1', number: '888', luxe: 'люкс', cost: '9990', stars: [true,true,true,true,false], reviews: '148'},{class: 'room-2', number: '2', luxe: '', cost: '1990', stars: [true,true,true,false,false], reviews: '132'}]
     +sampleRoom

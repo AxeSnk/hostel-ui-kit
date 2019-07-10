@@ -17,9 +17,9 @@ mixin sampleRoom
                         small  в сутки
                 .sample-room-info_reviews
                     .rate-button__container
-                        each star in room.stars
-                            input(type='radio' id= star name='star')
-                            label(for= star)
+                        each star, index in room.stars
+                            input(type='checkbox' id= room.number + index name='star' disabled checked= star)
+                            label(for= room.number + index)
                     p 
                         bold= room.reviews
                         p Отзывов
