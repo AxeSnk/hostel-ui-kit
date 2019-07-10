@@ -40,11 +40,16 @@
                         font-size: 12px;
                         line-height: 14px;
                         color: $dark_50-color;
+                        margin-top: 12px;
                     }
 
                     .range-slider {
                         margin-bottom: 22px;
                     }
+                }
+
+                .checkbox-buttons__rich {
+                    margin-top: 30px;
                 }
             } 
         }
