@@ -32,6 +32,24 @@ html(lang="en")
 
                     .filters__results
                         h1 Номера, которые мы для вас подобрали
+                        .filters__results-rooms
+                            include ..\..\cards\cards__column--item-6\sample-room\sample-room.pug
+                            - 
+                                var rooms = [
+                                    {class: 'room-1', number: '888', luxe: 'люкс', cost: '9 990', stars: [true,true,true,true,true], reviews: '145'},
+                                    {class: 'room-2', number: '840', luxe: '', cost: '9 990', stars: [true,true,true,true,false], reviews: '65'},
+                                    {class: 'room-3', number: '980', luxe: 'люкс', cost: '8 500', stars: [true,true,true,false,false], reviews: '35'},
+                                    {class: 'room-4', number: '856', luxe: '', cost: '7 300', stars: [true,true,true,true,true], reviews: '19'},
+                                    {class: 'room-5', number: '740', luxe: '', cost: '6 000', stars: [true,true,true,true,false], reviews: '44'},
+                                    {class: 'room-6', number: '982', luxe: '', cost: '5 800', stars: [true,true,true,false,false], reviews: '56'},
+                                    {class: 'room-7', number: '678', luxe: '', cost: '5 500', stars: [true,true,true,true,true], reviews: '45'},
+                                    {class: 'room-8', number: '450', luxe: '', cost: '5 300', stars: [true,true,true,true,false], reviews: '39'},
+                                    {class: 'room-9', number: '350', luxe: '', cost: '5 000', stars: [true,true,true,false,false], reviews: '77'},
+                                    {class: 'room-10', number: '666', luxe: '', cost: '5 000', stars: [true,true,true,true,true], reviews: '25'},
+                                    {class: 'room-11', number: '444', luxe: '', cost: '5 000', stars: [true,true,true,false,false], reviews: '15'},
+                                    {class: 'room-12', number: '352', luxe: '', cost: '5 000', stars: [true,true,true,false,false], reviews: '55'}
+                                    ]
+                            +sampleRoom
 
                 .pagination
         script(src='search-room.js')

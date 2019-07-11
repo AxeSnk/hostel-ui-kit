@@ -14,13 +14,13 @@
     }
 
     .content {
-        padding: 2.2% 9.72% 4.79%;
+        padding: 2.2% 8% 4.79% 9.72%;
 
         .filters {
             display: flex;
 
             .filters__bar {
-                margin-right: 5px;
+                margin-right: 6px;
 
                 .dropdown-filter {
                     margin-bottom: 20px;
@@ -59,8 +59,75 @@
                 }
             } 
 
-            h1 {
-                letter-spacing: 0.8px;
+            .filters__results {
+
+                height: inherit;
+
+                h1 {
+                    letter-spacing: 0.8px;
+                    margin-bottom: 20px;
+                }
+
+                .filters__results-rooms {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    .sample-room {
+                        margin-right: 12px;
+                        margin-bottom: 20px;
+
+                        .room-1 {
+                            background-image: url('../../pages/search-room/image/1.png');
+                        }
+
+                        .room-2 {
+                            background-image: url('../../pages/search-room/image/2.png');
+                        }
+
+                        .room-3 {
+                            background-image: url('../../pages/search-room/image/3.png');
+                        }
+
+                        .room-4 {
+                            background-image: url('../../pages/search-room/image/4.png');
+                        }
+
+                        .room-5 {
+                            background-image: url('../../pages/search-room/image/5.png');
+                        }
+
+                        .room-6 {
+                            background-image: url('../../pages/search-room/image/6.png');
+                        }
+
+                        .room-7 {
+                            background-image: url('../../pages/search-room/image/7.png');
+                        }
+
+                        .room-8 {
+                            background-image: url('../../pages/search-room/image/8.png');
+                        }
+
+                        .room-9 {
+                            background-image: url('../../pages/search-room/image/9.png');
+                        }
+
+                        .room-10 {
+                            background-image: url('../../pages/search-room/image/10.png');
+                        }
+
+                        .room-11 {
+                            background-image: url('../../pages/search-room/image/11.png');
+                        }
+
+                        .room-12 {
+                            background-image: url('../../pages/search-room/image/12.png');
+                        }
+
+                    }
+                }
             }
         }
     }
