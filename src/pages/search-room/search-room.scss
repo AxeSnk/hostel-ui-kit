@@ -18,6 +18,7 @@
 
         .filters {
             display: flex;
+            margin-bottom: 27px;
 
             .filters__bar {
                 margin-right: 6px;
@@ -125,10 +126,16 @@
                         .room-12 {
                             background-image: url('../../pages/search-room/image/12.png');
                         }
-
                     }
                 }
             }
         }
+    }
+
+    .filters-pagination {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 }

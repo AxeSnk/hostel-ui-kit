@@ -24,6 +24,9 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
     "normalize.css": "^8.0.1",
+    "pagination": "^0.4.6",
+    "pagination.js": "^0.1.1",
+    "paginationjs": "^2.1.4",
     "reset.css": "^2.0.2"
   }
 }
