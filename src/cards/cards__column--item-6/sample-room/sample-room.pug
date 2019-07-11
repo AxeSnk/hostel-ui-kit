@@ -1,7 +1,7 @@
 mixin sampleRoom
     each room in rooms
         .sample-room
-            .sample-room_image(class!=room.class)
+            .sample-room_image(class= room.class)
                 .sample-room_image-left
                     i.material-icons keyboard_arrow_left
                 .sample-room_image-right
@@ -9,6 +9,7 @@ mixin sampleRoom
                 .ellipses
             .sample-room-info
                 .sample-room-info_price
+                    bold № 
                     p.booking-number= room.number
                     p.booking-luxury= room.luxe
                     p.booking-cost
@@ -17,9 +18,8 @@ mixin sampleRoom
                         small  в сутки
                 .sample-room-info_reviews
                     .rate-button__container
-                        each star, index in room.stars
-                            input(type='checkbox' id= room.number + index name='star' disabled checked= star)
+                        each val, index in room.stars
+                            input(type='checkbox' id= room.number + index name='star' disabled checked= val)
                             label(for= room.number + index)
-                    p 
-                        bold= room.reviews
-                        p Отзывов
+                    bold= room.reviews
+                    p Отзывов

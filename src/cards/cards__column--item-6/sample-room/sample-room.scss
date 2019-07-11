@@ -66,24 +66,54 @@
     padding: 24px 21px 20px;
 }
 .sample-room-info_price {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     display: flex;
     align-items: flex-end;
+
+    bold {
+        font-weight: bold;
+        line-height: 16px;
+        margin-right: 5px;
+    }
 
     p {
         margin-block-start: 0;
         margin-block-end: 0;
     }
-}
-.sample-room-info_price .booking-number {
-    font-size: 18px;
-    font-weight: bold;
+
+    .booking-number {
+        display: block;
+        font-family: arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 1.1px;
+        color: #1F2041;
+        margin-right: 5px;
+    }
+    
+    .booking-luxury {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        color: #BC9CFF;
+        margin-right: auto;
+    }
 }
 .sample-room-info_reviews {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(31, 32, 65, 0.1);
+
+    .rate-button__container  {
+        margin-right: auto;
+    }
+
+    bold {
+        margin-right: 3px;
+    }
 }
 .sample-room-info_reviews .rate-button__container {
     position: relative;
