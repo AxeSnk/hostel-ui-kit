@@ -1,21 +1,6 @@
-.button__default:hover {
-    opacity: 0.5;
-}
 .button__default-border {
-    position: relative;
-    display: inline-block;
-}
-.button__default-border::before {
-    content: 'click me';
-    position: absolute;
-    line-height: 40px;
-    z-index: 1;
-    top: 2px;
-    left: 2px;
-    border-radius: 22px;
-    background: #fff;
-    width: 95px;
-    height: 40px;
     color: #BC9CFF;
-    text-align: center;
+    background: #fff;
+    border: 2px solid $purple-color;
+    padding: 12px 17px 13px;
 }

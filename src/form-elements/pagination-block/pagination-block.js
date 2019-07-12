@@ -1,13 +1,5 @@
 import './simplePagination.js';
 
-// $('#pagination-demo').twbsPagination({
-//     totalPages: 35,
-//     visiblePages: 7,
-//     onPageClick: function (event, page) {
-//       $('#page-content').text('Page ' + page);
-//     }
-//   });
-
   $('#pagination-demo').pagination({
     items: 15,
     itemOnPage: 1,
@@ -23,12 +15,3 @@ import './simplePagination.js';
         // some code
     }
 });
-
-// $(function() {
-//     $('#pagination-demo').pagination({
-//         items: 15,
-//         itemOnPage: 15,
-//         displayedPages: 5,
-//         cssStyle: ''
-//     });
-// });
