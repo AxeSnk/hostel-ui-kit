@@ -36,7 +36,12 @@
                     margin-bottom: 30px;
 
                     .guests {
-                    width: 266px;
+                        width: 266px;
+                    
+                        .dropdown-guests {
+                            width: 243px;
+                            z-index: 3;
+                        }
                     }
                 }
 
@@ -62,6 +67,12 @@
 
                 .dropdown_default__furniture {
                     margin-bottom: 16px;
+
+                    .dropdown-guests {
+                        width: 243px;
+                        z-index: 3;
+                    }
+
                 }
             } 
 
@@ -141,7 +152,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-    
+            margin-right: 6.25%;
         }
     }
 
