@@ -1,13 +1,11 @@
-/*****   Button__default-long   *****/    
-.button__default:hover {
-    opacity: 0.5;
-}
 .button__default-long {
     position: relative;
-    padding: 14px 95px 15px;
-}
-.button__default-long i {
-	position: absolute;
-    right: 3%;
-    top: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        position: absolute;
+        right: 3%;
+    }
 }
