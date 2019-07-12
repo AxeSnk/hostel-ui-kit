@@ -1,7 +1,5 @@
-mixin toggle(id,title)
-    .toggle-buttons__item
-        input(type='checkbox' id=id name='toggle')
-        label(for=id)=title
+include toggle/toggle.pug
+
 .toggle-buttons
     .toggle-buttons__name toggle
     .toggle-buttons__items

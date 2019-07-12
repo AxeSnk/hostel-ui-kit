@@ -4,3 +4,11 @@
 @import '/form-elements/form-elements.scss';
 @import '/cards/cards.scss';
 @import '/blocks/header-and-footer/header-and-footer.scss';
+
+.registration {
+
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+}

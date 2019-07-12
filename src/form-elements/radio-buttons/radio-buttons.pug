@@ -1,11 +1,4 @@
-mixin radioBtn(id1,id2)
-    .radio-buttons__items
-        .radio-buttons__item
-            input(id=id1 type='radio' name='radio')
-            label(for=id1) Мужчина
-        .radio-buttons__item
-            input(id=id2 type='radio' name='radio')
-            label(for=id2) Женщина
+include radioBtn/radioBtn.pug
 
 .radio-buttons
     h3 Radio Buttons
