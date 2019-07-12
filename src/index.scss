@@ -10,6 +10,10 @@
     .header {
         position: relative;
         z-index: 1;
+
+        .header__nav .header__menu .header__menu__item:nth-child(1) a {
+            font-weight: normal;
+        }
     }
 
     .content {

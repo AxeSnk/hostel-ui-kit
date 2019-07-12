@@ -11,14 +11,19 @@
     .header {
         position: relative;
         z-index: 1;
+
+        .header__nav .header__menu .header__menu__item:nth-child(1) a {
+            font-weight: normal;
+        }
+
     }
 
     .content {
         padding: 2.2% 8% 4.79% 9.72%;
+        margin-bottom: 7px;
 
         .filters {
             display: flex;
-            margin-bottom: 27px;
 
             .filters__bar {
                 margin-right: 6px;
@@ -74,6 +79,7 @@
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content: flex-start;
+                    margin-bottom: 25px;
 
                     .sample-room {
                         margin-right: 12px;
@@ -130,12 +136,17 @@
                 }
             }
         }
+
+        .filters-pagination {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+        }
     }
 
-    .filters-pagination {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
+    .footer {
+        margin-top: 0;
+        border-top: 1px solid $dark_25-color;
     }
 }
