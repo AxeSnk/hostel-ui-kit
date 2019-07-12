@@ -1,2 +1,11 @@
 header.header
     include __nav/header__nav.pug
+    +header-nav([
+            {text: "Home", icon: ""},
+            {text: "About Us", icon: ""},
+            {text: "Services", icon: "expand_more"},
+            {text: "Carrers", icon: ""},
+            {text: "News", icon: ""},
+            {text: "Documentation", icon: ""}
+            ],{registered: false},
+            {nickname: 'Cosmin Negoita'},'login','register')

@@ -9,6 +9,8 @@ html(lang="en")
         .search-room
             .header
                 include ../../blocks/header-and-footer/header/__nav/header__nav.pug
+                - var items = [{text: "Home", icon: ""},{text: "About Us", icon: ""},{text: "Services", icon: "expand_more"},{text: "Carrers", icon: ""},{text: "News", icon: ""},{text: "Documentation", icon: ""}]
+
                 +header-nav('../sign-in/sign-in.pug','../registration/registration.pug')
             .content
                 .filters
