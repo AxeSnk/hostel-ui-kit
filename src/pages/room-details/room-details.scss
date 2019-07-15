@@ -4,3 +4,47 @@
 @import '../../blocks/header-and-footer/header-and-footer.scss';
 @import '../../form-elements/form-elements.scss';
 @import '../../cards/cards.scss';
+
+.room-details {
+
+    .header {
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+
+        &__image {
+            display: flex;
+            
+
+            &--big {
+                width: 981px;
+                height: 485px;
+                background-image: url('image/image_1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &--small {
+
+                &-1 {
+                    background-image: url('image/image_2.png');
+                    width: 461px;
+                    height: 243px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &-2 {
+                    background-image: url('image/image_3.png');
+                    width: 461px;
+                    height: 243px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                }
+            }
+        }
+    }
+}
