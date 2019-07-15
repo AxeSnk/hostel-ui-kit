@@ -6,6 +6,23 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title toxin
     body
-        P Sign-in page
+        .sign-in
+            .header
+                include ../../blocks/header-and-footer/header/__nav/header__nav.pug
+                +header-nav([
+                    {text: "О нас", icon: ""},
+                    {text: "Услуги", icon: "expand_more"},
+                    {text: "Вакансии", icon: ""},
+                    {text: "Новости", icon: ""},
+                    {text: "Соглашения", icon: "expand_more"}
+                    ],{registered: false},
+                    {nickname: 'Cosmin Negoita'},
+                    'войти','../sign-in/sign-in.pug',
+                    'зарегистрироваться','../registration/registration.pug')
+
+            .content
+                include ..\..\cards\cards__column--item-4\account-login\account-login.pug
+
+            include ..\..\blocks\header-and-footer\footer\footer.pug
 
         script(src='sign-in.js')

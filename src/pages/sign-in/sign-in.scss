@@ -4,3 +4,16 @@
 @import '/form-elements/form-elements.scss';
 @import '/cards/cards.scss';
 @import '/blocks/header-and-footer/header-and-footer.scss';
+
+.sign-in {
+
+    .content {
+        display: flex;
+        justify-content: center;
+        background-image: url('image/sign-in-fon.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding: 11.31% 36.8% 11.25%;
+    }
+}
