@@ -5,8 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.pug --open",
-    "start2": "parcel src/ui-kit.pug --open",
-    "build": "parcel build src/index.pug src/ui-kit.pug -d docs --public-url ./"
+    "build": "parcel build src/index.pug -d docs --public-url ./"
   },
   "keywords": [],
   "author": "",
