@@ -1,3 +1,5 @@
+include ..\..\..\form-elements\rate-button-container\rate-button\rate-button.pug
+
 mixin sampleRoom
     each room in rooms
         .sample-room
@@ -17,9 +19,7 @@ mixin sampleRoom
                         strong &#x20bd
                         small  в сутки
                 .sample-room-info_reviews
-                    .rate-button__container
-                        each val, index in room.stars
-                            input(type='checkbox' id= room.number + index name='star' disabled checked= val)
-                            label(for= room.number + index)
+                    
+                    +rateBtn(room.stars)
                     bold= room.reviews
                     p Отзывов

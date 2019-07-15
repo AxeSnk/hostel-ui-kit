@@ -105,17 +105,8 @@
             align-items: center;
             border-top: 1px solid rgba(31, 32, 65, 0.1);
 
-            .rate-button__container  {
+            .rate-button {
                 margin-right: auto;
-                position: relative;
-                left: 0;
-                width: 120px;
-
-                .rate-button {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    height: 0;
-                }
             }
 
             bold {

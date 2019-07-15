@@ -12,23 +12,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lodash": ">=4.17.13",
     "cssnano": "^4.1.10",
     "pug": "^2.0.3",
     "sass": "^1.19.0"
   },
   "description": "",
   "dependencies": {
-    "lodash": ">=4.17.13",
     "air-datepicker": "^2.2.3",
-    "form": "^0.2.4",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
-    "normalize.css": "^8.0.1",
-    "pagination": "^0.4.6",
-    "pagination.js": "^0.1.1",
-    "paginationjs": "^2.1.4",
-    "reset.css": "^2.0.2"
+    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^5.0.1",
+    "normalize.css": "^8.0.1"
   }
 }
