@@ -1,7 +1,5 @@
 .case {
     display: flex;
-    border-bottom: 1px solid $dark_10-color;
-    padding-bottom: 17px;
 
     &__icon {
 
@@ -19,4 +17,9 @@
         flex-direction: column;
         justify-content: space-around;
     }
+}
+
+.case--underlined {
+    border-bottom: 1px solid $dark_10-color;
+    padding-bottom: 17px;
 }

@@ -52,8 +52,19 @@
             }
         }
 
-        &__info {
-            height: 939px;
+        &__details {
+            height: 799px;
+            padding: 70px 140px;
+
+            .info {
+
+                .info__data {
+
+                    h1 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
         }
     }
 }
