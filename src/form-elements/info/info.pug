@@ -1,13 +1,4 @@
 .info
-    .comfort
-        .comfort__icon
-        .comfort__text
-            b Комфорт
-            p Шумопоглощающие стены
-    .rectangle
-    .convenience
-        .convenience__icon
-        .convenience__text
-            b Удобство
-            p Окно в каждой из спален
-    .rectangle
+    include case/case.pug
+    +case({icon: "mood", text_bold: "Комфорт", text: "Шумопоглощающие стены"})
+    +case({icon: "location_city", text_bold: "Удобство", text: "Окно в каждой из спален"})

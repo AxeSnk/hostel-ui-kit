@@ -2,50 +2,10 @@
     width: 291px;
     height: 158px;
     margin-right: 156px;
+
+    .case {
+        margin-bottom: 17px;
+    }
 }
-.comfort,.convenience {
-    display: flex;
-    width: 291px;
-    height: 51px;
-    align-items: center;
-}
-.comfort__icon{
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-image: url('/form-elements/info/svg/emoticon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 10px;
-}
-.comfort__text,
-.convenience__text {
-    display: block;
-    font-size: 14px;
-    color: $dark_75-color;
-    width: 233px;
-    height: 48px;
-    padding-top: 10px;
-}
-.comfort__text p {
-    margin: 0 0;
-    margin-top: 10px;
-}
-.rectangle {
-    width: 280px;
-    border-bottom: 1px solid $dark_10-color;
-    margin: 17px 0;
-}
-.convenience__icon {
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-image: url('/form-elements/info/svg/location_city.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 8px;
-}
-.convenience__text p {
-    margin: 0 0;
-    margin-top: 8px;
-}
+
+@import './case/case.scss';

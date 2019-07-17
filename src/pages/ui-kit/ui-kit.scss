@@ -8,3 +8,11 @@
 @import '../../blocks/header-and-footer/header-and-footer.scss';
 @import '../../form-elements/form-elements.scss';
 @import '../../cards/cards.scss';
+
+p {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
