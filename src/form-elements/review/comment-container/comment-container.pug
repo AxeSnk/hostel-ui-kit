@@ -1,0 +1,14 @@
+include ..\..\like-button\like\like.pug
+
+mixin comment(options)
+    .comment-container
+        .comment-header
+            .comment-header__avatar(class= options.classAvatar)
+            .comment-header__name
+                b= options.name
+                p= options.date
+        .comment-body
+            .comment-body__like-button
+                +like(options.likes)(class= options.classLike)
+            .comment-body__content
+                p= options.text

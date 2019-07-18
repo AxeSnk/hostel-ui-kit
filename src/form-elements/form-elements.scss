@@ -36,29 +36,29 @@
     display: flex;
     margin-top: 215px;
 }
-@import '/form-elements/field_default/field_default.scss';
-@import '/form-elements/field_hover-focus/field_hover-focus.scss';
-@import '/form-elements/dropdown_default/dropdown_default.scss';
-@import '/form-elements/field_masked/field_masked.scss';
-@import '/form-elements/dropdown_date/dropdown_date.scss';
-@import '/form-elements/dropdown-filter/dropdown-filter.scss';
-@import '/form-elements/field_subscription/field_subscription.scss';
-@import '/form-elements/dropdown_default__furniture/dropdown_default__furniture.scss';
-@import '/form-elements/dropdown_expanded/dropdown_expanded.scss';
-@import '/form-elements/expandable-checkbox-list/expandable-checkbox-list.scss';
-@import '/form-elements/info/info.scss';
+@import './field_default/field_default.scss';
+@import './field_hover-focus/field_hover-focus.scss';
+@import './dropdown_default/dropdown_default.scss';
+@import './field_masked/field_masked.scss';
+@import './dropdown_date/dropdown_date.scss';
+@import './dropdown-filter/dropdown-filter.scss';
+@import './field_subscription/field_subscription.scss';
+@import './dropdown_default__furniture/dropdown_default__furniture.scss';
+@import './dropdown_expanded/dropdown_expanded.scss';
+@import './expandable-checkbox-list/expandable-checkbox-list.scss';
+@import './info/info.scss';
 
 //center-column
-@import '/form-elements/checkbox-buttons/checkbox-buttons.scss';
-@import '/form-elements/radio-buttons/radio-buttons.scss';
-@import '/form-elements/toggle-buttons/toggle-buttons.scss';
-@import '/form-elements/like-button/like-button.scss';
-@import '/form-elements/rate-button-container/rate-button-container.scss';
-@import '/form-elements/checkbox-buttons__rich/checkbox-buttons__rich.scss';
-@import '/form-elements/comment-container/comment-container.scss';
+@import './checkbox-buttons/checkbox-buttons.scss';
+@import './radio-buttons/radio-buttons.scss';
+@import './toggle-buttons/toggle-buttons.scss';
+@import './like-button/like-button.scss';
+@import './rate-button-container/rate-button-container.scss';
+@import './checkbox-buttons__rich/checkbox-buttons__rich.scss';
+@import './review/review.scss';
 
 // right-column
-@import '/form-elements/range-slider-container/range-slider-container.scss';
-@import '/form-elements/buttons/buttons.scss';
-@import '/form-elements/pagination-block/pagination-block.scss';
-@import '/form-elements/bullet-list/bullet-list.scss';
+@import './range-slider-container/range-slider-container.scss';
+@import './buttons/buttons.scss';
+@import './pagination-block/pagination-block.scss';
+@import './bullet-list/bullet-list.scss';

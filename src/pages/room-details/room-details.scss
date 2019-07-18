@@ -15,6 +15,10 @@
 
     .content {
 
+        h1 {
+            margin-bottom: 20px;
+        }
+
         &__image {
             display: flex;
             width: 100%;
@@ -22,7 +26,7 @@
 
             &--big {
                 flex-grow: 2;
-                background-image: url('image/image_1.png');
+                background-image: url("image/image_1.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100% 100%;
@@ -35,7 +39,7 @@
 
                 &-1 {
                     flex-grow: 1;
-                    background-image: url('image/image_2.png');
+                    background-image: url("image/image_2.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100% 100%;
@@ -43,7 +47,7 @@
 
                 &-2 {
                     flex-grow: 1;
-                    background-image: url('image/image_3.png');
+                    background-image: url("image/image_3.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100% 100%;
@@ -55,15 +59,75 @@
         &__details {
             height: 799px;
             padding: 70px 140px;
+            display: flex;
+            justify-content: space-between;
 
-            .info {
+            &--left {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                flex-grow: 2;
+                padding-right: 70px;
 
-                .info__data {
+                .info {
+                    display: flex;
+                    flex-direction: row;
 
-                    h1 {
-                        margin-bottom: 20px;
+                    &__data {
+                        margin-right: 70px;
+
                     }
                 }
+
+                .reviews {
+
+                    &__header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        h1 {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            color: $dark_50-color;
+                        }
+                    }
+
+                    .comment-container {
+                        margin-bottom: 22px;
+
+                        .avatar-1 {
+                            background-image: url("image/avatar_1.png");
+                        }
+
+                        .avatar-2 {
+                            background-image: url("image/avatar_2.png");
+                        }
+                    }
+                }
+
+                .additionally {
+                    display: flex;
+
+                    .rules {
+                        margin-right: 70px;
+                    }
+
+                    .cancellation {
+                        word-wrap: break-word;
+
+                        p {
+                            line-height: 24px;
+                            max-width: 343px;
+                        }
+                    }
+                }
+            }
+
+            &--right {
             }
         }
     }

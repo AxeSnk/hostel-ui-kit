@@ -1,11 +1,6 @@
-mixin like(title)
-    .like-button__state
-        button(class!=attributes.class)
-            p= title
-
-.like-button
-    .like-button__name like button
+.like-button__name like button
     .like-button__container
-        +like('2')(class="like-button__not-pressed")
-        +like('12')(class='like-button__pressed')
+    include like/like.pug
+    +like('2')(class='like-button__not-pressed')
+    +like('12')(class='like-button__pressed')
 

@@ -8,46 +8,45 @@
 	border-radius: 4px;
 	padding: 47px 30px 30px;
 	position: relative;
-}
-.booking-header {
-	display: flex;
-	margin-bottom: 28px;
-	align-items: flex-end;
-}
-.booking-header strong {
-	font-weight: bold;
-}
-.booking-header small {
-	font-size: 12px;
-}
-.booking-number {
-    display: block;
-    font-family: arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 14px;
-    letter-spacing: 1.1px;
-	color: $dark_100-color;
-	margin-right: 5px;
-}
-.booking-header p {
-	margin-block-start: 0;
-    margin-block-end: 0;
 
-}
-.booking-luxury {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 15px;
-	color: $purple-color;
-	margin-right: auto;
-}
-.booking-cost {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	color: $dark_50-color;
+	&-header {
+		display: flex;
+		margin-bottom: 28px;
+		align-items: flex-end;
+
+		bold {
+			margin-right: 5px;
+			font-weight: bold;
+			line-height: 16px;
+		}
+
+		.booking-number {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 18px;
+			letter-spacing: 1.1px;
+			color: $dark_100-color;
+			margin-right: 5px;
+		}
+		.booking-luxury {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 15px;
+			color: $purple-color;
+			margin-right: auto;
+		}
+		.booking-cost {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			color: $dark_50-color;
+
+			strong:nth-child(2) {
+				margin-right: 5px;
+			}
+		}
+	}
 }
 
 /*****   field-date   *****/
@@ -81,6 +80,10 @@
 }
 .booking .check-list--item p:first-child {
 	min-width: 220px;
+}
+.booking .check-list--item:first-child p:first-child {
+	min-width: 0;
+	margin-right: 5px;
 }
 .booking .check-list--item p:last-child {
 	margin-left: auto;
