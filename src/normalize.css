@@ -9,7 +9,7 @@
  */
 
  html {
-	line-height: 1.15; /* 1 */
+/*	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
   }
   
@@ -37,10 +37,10 @@
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   
-  h1 {
+  /* h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
-  }
+  } */
   /* Grouping content
 	 ========================================================================== */
   
@@ -62,7 +62,7 @@
   
   pre {
 	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
+/*	font-size: 1em; /* 2 */
   }
   
   /* Text-level semantics
@@ -105,7 +105,7 @@
   kbd,
   samp {
 	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
+/*	font-size: 1em; /* 2 */
   }
   
   /**
@@ -129,13 +129,13 @@
 	vertical-align: baseline;
   }
   
-  sub {
+  /* sub {
 	bottom: -0.25em;
-  }
+  } */
   
-  sup {
+  /* sup {
 	top: -0.5em;
-  }
+  } */
   
   /* Embedded content
 	 ========================================================================== */
@@ -163,7 +163,7 @@
   textarea {
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
+/*	line-height: 1.15; /* 1 */
 	margin: 0; /* 2 */
   }
   
@@ -225,9 +225,9 @@
    * Correct the padding in Firefox.
    */
   
-  fieldset {
+  /* fieldset {
 	padding: 0.35em 0.75em 0.625em;
-  }
+  } */
   
   /**
    * 1. Correct the text wrapping in Edge and IE.
