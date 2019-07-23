@@ -1,60 +1,42 @@
-footer.footer
-    .footer__container
-        .footer__info
-            .footer__logo(href='#')
-            .footer__info-content Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+mixin footer(info, navigation, aboutUs, support, subscribe, copyright)
+    footer.footer
+        .footer__container
+            .footer__info
+                .footer__logo
+                .footer__info-content= info.info
 
-        .footer__navigation
-            ul.footer__navigation-menu
-                li.footer__navigation-menu__item
-                    a(href='#') Navigation
-                li.footer__navigation-menu__item
-                    a(href='#') About Us
-                li.footer__navigation-menu__item 
-                    a(href='#') News
-                li.footer__navigation-menu__item
-                    a(href='#') Support
-                li.footer__navigation-menu__item
-                    a(href='#') Products
+            .footer__navigation
+                ul.footer__navigation-menu
+                    each val in navigation
+                        li.footer__navigation-menu__item
+                            a(href='#')= val.item
 
-        .footer__about-us
-            ul.footer__about-us-menu
-                li.footer__about-us-menu__item
-                    a(href='#') About Us
-                li.footer__about-us-menu__item
-                    a(href='#') Who we are
-                li.footer__about-us-menu__item 
-                    a(href='#') Our team
-                li.footer__about-us-menu__item
-                    a(href='#') Carrers
-                li.footer__about-us-menu__item
-                    a(href='#') Investors
+            .footer__about-us
+                ul.footer__about-us-menu
+                    each val in aboutUs
+                        li.footer__navigation-menu__item
+                            a(href='#')= val.item
 
-        .footer__support
-            ul.footer__support-menu
-                li.footer__support-menu__item
-                    a(href='#') Support
-                li.footer__support-menu__item
-                    a(href='#') Documentation
-                li.footer__support-menu__item 
-                    a(href='#') Community
-                li.footer__support-menu__item
-                    a(href='#') Get in Touch
+            .footer__support
+                ul.footer__support-menu
+                    each val in support
+                        li.footer__navigation-menu__item
+                            a(href='#')= val.item
 
-        .footer__subscribe
-            .footer__subscribe-title Subscribe to our newsletter
-            .footer__subscribe-content Receive our latest news and promotions in your inbox!
-            form.footer__subscribe-form
-                input.footer__subscribe-form-input(type='email' name='email' placeholder='Your email address')
-                a.footer__subscribe-form-input-expand(href='#')
+            .footer__subscribe
+                h3= subscribe.title
+                .footer__subscribe-content= subscribe.content
+                form.footer__subscribe-form
+                    input.footer__subscribe-form-input(type='email' name='email' placeholder='Your email address')
+                    a.footer__subscribe-form-input-expand(href='#')
 
 
-.copyright-bar
-    .copyright-bar__container
-        .copyright-bar__text Copyright © 2018 Toxin UI Kit. All rights reserved.
-        .copyright-bar__twitter
-            a(href='#')
-        .copyright-bar__facebook
-            a(href='#')
-        .copyright-bar__instagram
-            a(href='#')
+        .copyright-bar
+            .copyright-bar__container
+                .copyright-bar__text= copyright.copyright
+                .copyright-bar__twitter
+                    a(href='#')
+                .copyright-bar__facebook
+                    a(href='#')
+                .copyright-bar__instagram
+                    a(href='#')

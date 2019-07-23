@@ -9,12 +9,11 @@
 
     .header {
         position: relative;
-        z-index: 1;
         height: 4.86%;
     }
 
     .content {
-
+        position: relative;
         h2 {
             margin-bottom: 20px;
         }
@@ -57,9 +56,12 @@
         }
 
         &__details {
-            padding: 70px 140px;
+            padding: 70px 140px 60px;
             display: flex;
             justify-content: space-between;
+            // position: relative;
+            // z-index: 1;
+
 
             &--left {
                 display: flex;
