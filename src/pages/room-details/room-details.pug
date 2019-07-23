@@ -40,7 +40,7 @@ html(lang="en")
 
                                 figure
                                     .figure-content
-                                        svg(width="100%" height="100%" viewBox="3 4 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img")
+                                        svg(width="125%" height="125%" viewBox="3 4 42 42" class="donut" aria-labelledby="beers-title beers-desc" role="img")
                                             title(id="beers-title") Впечатления от номера
                                             desc(id="beers-desc") Donut chart showing 10 total beers. Two beers are Imperial India Pale Ales, four beers are Belgian Quadrupels, and three are Russian Imperial Stouts. The last remaining beer is unlabeled.
                                             circle(class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent" role="presentation")
@@ -66,9 +66,18 @@ html(lang="en")
 
                                     figcaption.figure-key
                                         ul(class="figure-key-list" aria-hidden="true" role="presentation")
-                                            li.shape-circle.shape-orange Великолепно
-                                            li.shape-circle.shape-green Хорошо
-                                            li.shape-circle.shape-puprple Удовлетворительно
+                                            li.shape-orange
+                                                i.material-icons fiber_manual_record
+                                                p Великолепно
+                                            li.shape-green
+                                                i.material-icons fiber_manual_record
+                                                p Хорошо
+                                            li.shape-puprple
+                                                i.material-icons fiber_manual_record
+                                                p Удовлетворительно
+                                            li.shape-dark
+                                                i.material-icons fiber_manual_record
+                                                p Разочарован
 
                         .reviews
                             .reviews__header
