@@ -10,7 +10,7 @@
     align-items: center;
 }
 .footer .footer__container {
-    height: 372px;
+    height: 270px;
     padding: 102px 0 0;
     display: -webkit-flex;
     display: -moz-flex;
@@ -20,7 +20,7 @@
     justify-content: space-between;
 }
 .footer .footer__info {
-    width: 260px;
+    max-width: 260px;
     height: 156px;
 }
 .footer .footer__logo {
@@ -40,25 +40,28 @@
     line-height: 24px;
     color: $dark_75-color;
 }
-// .footer .footer__navigation {
-//     width: 81px;
-//     height: 168px;
-//     margin-left: 40px;
-// }
-// .footer .footer__about-us {
-//     width: 82px;
-//     height: 168px;
-//     margin-left: 119px;
-// }
-// .footer .footer__support {
-//     width: 113px;
-//     height: 130px;
-//     margin-left: 118px;
-// }
+.footer .footer__navigation {
+    // width: 81px;
+    height: 168px;
+    // margin-left: 40px;
+}
+.footer .footer__about-us {
+    // width: 82px;
+    height: 168px;
+    // margin-left: 119px;
+}
+.footer .footer__support {
+    // width: 113px;
+    height: 130px;
+    // margin-left: 118px;
+}
 .footer .footer__subscribe {
-    max-width: 215px;
-    // height: 84px;
+    height: 84px;
     // margin-left: 87px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
 }
 .footer a {
     text-decoration: none;
@@ -87,6 +90,7 @@
     margin-bottom: 20px;
 }
 .footer .footer__subscribe-content {
+    max-width: 260px;
     font-style: normal;
     font-weight: normal;
     font-size: 13.6px;
@@ -94,40 +98,36 @@
     color: $dark_75-color;
     margin-bottom: 22px;
 }
-.footer .footer__subscribe-form {
+.footer .footer__subscribe form {
     position: relative;
     width: 260px;
 }
-.footer .footer__subscribe-form-input {
+.footer .footer__subscribe input {
     display: block;
-    position: absolute;
     box-sizing: border-box;
     border-radius: 4px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
-    width: 100%;
+    width: 260px;
     height: 42px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.9px;
     padding-left: 14px;
-    background-position-x: 95%;
-    background-position-y: 50%;
 }
-.footer__subscribe-form-input-expand{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url('/blocks/header-and-footer/footer/svg/arrow_forward.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 44px;
-    height: 44px;
-}
-.footer .footer__subscribe-form-input::placeholder {
+.footer .footer__subscribe input::placeholder {
     color: $dark_25-color;
 }
+.footer .footer__subscribe input:hover {
+    border: 1px solid $dark_50-color;
+}
+
+.footer .footer__subscribe i {
+    position: absolute;
+    right: 5%;
+    top: 22%;
+    color: $purple-color;
+    cursor: pointer;
+}
+
+
 .copyright-bar {
     height: 70px;
     background-color: #FFFFFF;
@@ -171,5 +171,4 @@
     width: 22px;
     height: 22px;
     background-image: url('/blocks/header-and-footer/footer/svg/instagram-logo.svg');
-    margin-right: 140px;
 }

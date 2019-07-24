@@ -26,9 +26,9 @@ mixin footer(info, navigation, aboutUs, support, subscribe, copyright)
             .footer__subscribe
                 h3= subscribe.title
                 .footer__subscribe-content= subscribe.content
-                form.footer__subscribe-form
-                    input.footer__subscribe-form-input(type='email' name='email' placeholder='Your email address')
-                    a.footer__subscribe-form-input-expand(href='#')
+                form
+                    input(type='email' name='email' placeholder='Email')
+                    i.material-icons arrow_forward
 
 
         .copyright-bar

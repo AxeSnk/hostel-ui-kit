@@ -125,12 +125,17 @@
 
                 .additionally {
                     display: flex;
+                    justify-content: space-between;
 
                     .rules {
                         margin-right: 0px;
 
                         h2 {
                             margin-left: 20px;
+                        }
+
+                        .bullet-list-content {
+                            max-width: 292px;
                         }
                     }
 
