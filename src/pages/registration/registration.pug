@@ -23,7 +23,15 @@ html(lang="en")
             .content
                 include ..\..\cards\cards__column--item-2\account-registration\account-registration.pug
 
-            include ..\..\blocks\header-and-footer\footer\footer.pug
+            include ../../blocks/header-and-footer/footer/footer.pug
+            +footer(
+                {info: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"},
+                [{item: "навигация"}, {item: "О нас"}, {item: "Новости"}, {item: "Служба поддержки"}, {item: "Услуги"}],
+                [{item: "о нас"}, {item: "О сервисе"}, {item: "Наша команда"}, {item: "Вакансии"}, {item: "Инвесторы"}],
+                [{item: "Служба поддержки"}, {item: "Соглашения"}, {item: "Сообщества"}, {item: "Связь с нами"}],
+                {title: "Подписка", content: "Получайте специальные предложения и новости сервиса"},
+                {copyright: "Copyright © 2018 Toxin отель. Все права защищены."}
+                )
 
 
         script(src="registration.js")
