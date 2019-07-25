@@ -1,0 +1,9 @@
+.info {
+    max-width: 260px;
+    height: 156px;
+
+    @import 'logo/logo.scss';
+
+    @import 'content/content.scss';
+}
+

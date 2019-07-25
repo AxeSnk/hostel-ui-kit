@@ -1,0 +1,13 @@
+.copyright-bar__container {
+    height: 70px;
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    @import 'text/text.scss';
+
+    @import 'logo-social/logo-social.scss';
+}

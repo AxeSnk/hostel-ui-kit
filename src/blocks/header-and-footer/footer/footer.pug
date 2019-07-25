@@ -1,42 +1,6 @@
 mixin footer(info, navigation, aboutUs, support, subscribe, copyright)
     footer.footer
-        .footer__container
-            .footer__info
-                .footer__logo
-                .footer__info-content= info.info
 
-            .footer__navigation
-                ul.footer__navigation-menu
-                    each val in navigation
-                        li.footer__navigation-menu__item
-                            a(href='#')= val.item
+        include __container/__container.pug
 
-            .footer__about-us
-                ul.footer__about-us-menu
-                    each val in aboutUs
-                        li.footer__navigation-menu__item
-                            a(href='#')= val.item
-
-            .footer__support
-                ul.footer__support-menu
-                    each val in support
-                        li.footer__navigation-menu__item
-                            a(href='#')= val.item
-
-            .footer__subscribe
-                h3= subscribe.title
-                .footer__subscribe-content= subscribe.content
-                form
-                    input(type='email' name='email' placeholder='Email')
-                    i.material-icons arrow_forward
-
-
-        .copyright-bar
-            .copyright-bar__container
-                .copyright-bar__text= copyright.copyright
-                .copyright-bar__twitter
-                    a(href='#')
-                .copyright-bar__facebook
-                    a(href='#')
-                .copyright-bar__instagram
-                    a(href='#')
+        include copyright-bar/copyright-bar.pug
