@@ -10,50 +10,37 @@ $green-color: #6FCF97;
 body{
     margin: 0;
     font-family: "Montserrat-Regular", sans-serif;
-    font-size: 14px;
+    font-size: 0.97vw;
     color: $dark_75-color;
-
-    @media (min-width: 1441px) {
-        font-size: 0.97vw;
-    }
+    font-style: normal;
 }
 h1 {
-    font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.667vw;
+    line-height: 2.083vw;
     color: $dark_100-color;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 h2 {
-    font-style: normal;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 1.319vw;
     color: $dark_100-color;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 h3 {
-    font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    letter-spacing: 0.02em;
+    font-size: 0.83vw;
+    letter-spacing: 0.0138vw;
     text-transform: uppercase;
     color: $dark_100-color;
     margin-block-start: 0;
     margin-block-end: 0;
-
-    @media (min-width: 1441px) {
-        font-size: 0.83vw;
-        letter-spacing: 0.0138vw;
-    }
-
 }
 th {
     font-weight: bold;
 }
-
 p {
     margin-block-start: 0;
     margin-block-end: 0;

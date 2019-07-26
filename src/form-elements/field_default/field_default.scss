@@ -5,22 +5,5 @@
         margin-bottom: 5px;
     }
 
-    input {
-        box-sizing: border-box;
-        border-radius: 4px;
-        background: #FFFFFF;
-        border: 1px solid $dark_25-color;
-        width: 320px;
-        height: 44px;
-        font-size: 14px;
-        letter-spacing: 1.1px;
-        font-style: normal;
-        font-weight: normal;
-        padding-left: 14px;
-        color: $dark_75-color;
-
-        &:placeholder {
-            color: $dark_25-color;
-        }
-    }
+    @import 'input/input.scss';
 }

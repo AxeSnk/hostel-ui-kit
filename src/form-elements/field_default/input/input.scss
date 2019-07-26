@@ -1,0 +1,14 @@
+input {
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid $dark_25-color;
+    width: 100%;
+    line-height: 1.667vw;
+    padding: 0.694vw 0.972vw;
+    color: $dark_75-color;
+
+    &:placeholder {
+        color: $dark_25-color;
+    }
+}

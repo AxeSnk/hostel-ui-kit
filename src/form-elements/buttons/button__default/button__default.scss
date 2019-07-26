@@ -1,24 +1,16 @@
 .button__default {
     display: inline-block;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.83vw;
     text-transform: uppercase;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    padding: 14px 19px 15px;
+    border-radius: 1.528vw;
+    padding: 0.97vw 1.32vw 1.04vw;
     cursor: pointer;
     color: #fff;
-    line-height: 15px;
-    letter-spacing: 0.2px;
+    line-height: 1.04vw;
+    letter-spacing: 0.0138vw;
     text-decoration: none;
-
-    @media (min-width: 1441px) {
-        font-size: 0.83vw;
-        padding: 0.97vw 1.32vw 1.04vw;
-        line-height: 1.04vw;
-        letter-spacing: 0.0138vw;
-    }
-
 
     &:hover {
         opacity: 0.5;
