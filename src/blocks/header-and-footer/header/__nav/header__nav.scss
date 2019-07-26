@@ -37,6 +37,10 @@
     transition: all 0.5s ease;
     display: flex;
     align-items: center;
+
+    .material-icons {
+        font-size: 1.667vw;
+    }
 }
 // .header .header__menu__item:nth-child(1) a {
 // }

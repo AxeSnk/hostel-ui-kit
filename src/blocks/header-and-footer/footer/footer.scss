@@ -16,29 +16,17 @@
 .footer .footer__support-menu__item a{
     font-style: normal;
     font-weight: normal;
-    line-height: 17px;
+    line-height: 1.18vw;
     color: $dark_50-color;
     text-decoration: none;
-
-    @media (min-width: 1441px) {
-        line-height: 1.18vw;
-    }
-
 }
 .footer .menu .menu__item:first-child a,
 .footer .footer__support-menu li:first-child a {
     color: $dark_100-color;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.83vw;
+    line-height: 1.04vw;
     text-transform: uppercase;
-    
-
-    @media (min-width: 1441px) {
-        font-size: 0.83vw;
-        line-height: 1.04vw;
-    }
-
 }
 .footer .menu__item {
     margin-bottom: 1.52vw;

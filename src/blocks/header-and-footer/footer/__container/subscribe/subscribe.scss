@@ -10,12 +10,12 @@
         max-width: 18.056vw;
         line-height: 1.667vw;
         color: $dark_75-color;
-        margin-bottom: 22px;
+        margin-bottom: 1.528vw;
     }
 
     form {
         position: relative;
-        width: 260px;
+        width: 100%;
 
         input {
             display: block;
@@ -23,9 +23,9 @@
             border-radius: 4px;
             background: #FFFFFF;
             border: 1px solid rgba(31, 32, 65, 0.25);
-            width: 260px;
-            height: 42px;
-            padding-left: 14px;
+            width: 100%;
+            padding: 0.833vw 0.972vw;
+            font-size: 0.972vw;
 
             &::placeholder {
                 color: $dark_25-color;
@@ -42,6 +42,7 @@
             top: 22%;
             color: $purple-color;
             cursor: pointer;
+            font-size: 1.667vw;
         }
     }
 }
