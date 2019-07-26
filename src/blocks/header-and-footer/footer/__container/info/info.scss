@@ -1,6 +1,9 @@
 .info {
     max-width: 260px;
-    height: 156px;
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @import 'logo/logo.scss';
 

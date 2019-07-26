@@ -12,6 +12,14 @@
     letter-spacing: 0.2px;
     text-decoration: none;
 
+    @media (min-width: 1441px) {
+        font-size: 0.83vw;
+        padding: 0.97vw 1.32vw 1.04vw;
+        line-height: 1.04vw;
+        letter-spacing: 0.0138vw;
+    }
+
+
     &:hover {
         opacity: 0.5;
     }
