@@ -1,22 +1,17 @@
-.copyright-bar__twitter {
-    margin-left: auto;
+a {
+    display: block;
+    width: 1.528vw;
+    height: 1.528vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 .copyright-bar__twitter a {
-    display: block;
-    width: 24px;
-    height: 20px;
     background-image: url('/blocks/header-and-footer/footer/copyright-bar/__container/logo-social/svg/twitter-logo.svg');
 }
 .copyright-bar__facebook a {
-    display: block;
-    width: 22px;
-    height: 22px;
     background-image: url('/blocks/header-and-footer/footer/copyright-bar/__container/logo-social/svg/facebook-logo.svg');
-    margin: 0 20px;
 }
 .copyright-bar__instagram a {
-    display: block;
-    width: 22px;
-    height: 22px;
     background-image: url('/blocks/header-and-footer/footer/copyright-bar/__container/logo-social/svg/instagram-logo.svg');
 }

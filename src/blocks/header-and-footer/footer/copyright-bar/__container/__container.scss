@@ -1,13 +1,20 @@
 .copyright-bar__container {
-    height: 70px;
+    height: 4.861vw;
     align-items: center;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    justify-content: space-between;
 
     @import 'text/text.scss';
 
-    @import 'logo-social/logo-social.scss';
+    .logo__container {
+        display: flex;
+        justify-content: space-between;
+        width: 7.778vw;
+
+        @import 'logo-social/logo-social.scss';
+    }
 }
