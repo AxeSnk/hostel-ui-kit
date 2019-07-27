@@ -39,18 +39,31 @@
     align-items: center;
 
     .material-icons {
-        font-size: 1.667vw;
+        font-size: 24px;
+
+        @media (min-width: 1920px) {
+            font-size: 1.667vw;
+        }
     }
 }
 // .header .header__menu__item:nth-child(1) a {
 // }
 
 .header .header__nav .button__default {
-    padding: 0.625vw 1.38vw 0.69vw;
+    padding: 9px 20px 10px;
+
+    @media (min-width: 1920px) {
+        padding: 0.694vw 1.388vw;
+    }
 }
 .header .header__nav .button__default-border {
-    padding: 0.486vw 1.250vw 0.556vw;
-    margin-right: 1.5vw;
+    padding: 7px 18px 8px;
+    margin-right: 20px;
+
+    @media (min-width: 1920px) {
+        padding: 0.555vw 1.25vw;
+        margin-right: 1.5vw;
+    }
 }
 
 

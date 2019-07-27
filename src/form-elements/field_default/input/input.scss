@@ -4,9 +4,14 @@ input {
     background: #FFFFFF;
     border: 1px solid $dark_25-color;
     width: 100%;
-    line-height: 1.667vw;
-    padding: 0.694vw 0.972vw;
+    line-height: 24px;
+    padding: 10px 15px 8px;
     color: $dark_75-color;
+
+    @media (min-width: 1920px) {
+        padding: 0.694vw 0.972vw;
+        line-height: 1.667vw;
+    }
 
     &:placeholder {
         color: $dark_25-color;

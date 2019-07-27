@@ -1,16 +1,20 @@
 .button__default {
     display: inline-block;
     font-weight: bold;
-    font-size: 0.83vw;
+    font-size: 12px;
     text-transform: uppercase;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 1.528vw;
-    padding: 0.97vw 1.32vw 1.04vw;
+    border-radius: 22px;
+    padding: 14px 20px 15px;
     cursor: pointer;
     color: #fff;
-    line-height: 1.04vw;
-    letter-spacing: 0.0138vw;
+    line-height: 15px;
+    letter-spacing: 0.2px;
     text-decoration: none;
+
+    @media (min-width: 1920px) {
+        font-size: 0.8em;
+    }
 
     &:hover {
         opacity: 0.5;

@@ -1,5 +1,4 @@
 .footer {
-    padding: 0 9.722vw;
     background-color: #FFFFFF;
     border-top: 1px solid #E5E5E5;
 
@@ -24,10 +23,31 @@
 .footer .footer__support-menu li:first-child a {
     color: $dark_100-color;
     font-weight: bold;
-    font-size: 0.83vw;
-    line-height: 1.04vw;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
+
+    @media (min-width: 1920px) {
+        font-size: 0.83vw;
+        line-height: 1.04vw;
+    }
+
 }
 .footer .menu__item {
-    margin-bottom: 1.52vw;
+    margin-bottom: 1.388vw;
+
+    &:first-child {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 1.458vw;
+
+        @media (min-width: 1920px) {
+            font-size: 0.83vw;
+            line-height: 1.04vw;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

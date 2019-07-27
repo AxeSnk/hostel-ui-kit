@@ -1,12 +1,16 @@
 .footer__container {
-    height: 18.750vw;
-    padding: 7.083vw 0 0;
+    // height: 18.750vw;
+    padding: 6.944vw 9.722vw 6.944vw;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
     justify-content: space-between;
+
+    ul {
+        margin-top: 0.277vw;
+    }
 
     @import 'info/info.scss';
 
