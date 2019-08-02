@@ -13,6 +13,11 @@
         justify-content: space-between;
         z-index: 4;
 
+        @media (min-width: 1441px) {
+            height: 2.777vw;
+            padding: 1.041vw 9.72%;
+        }
+
         @media (max-width: 970px) {
             padding: 15px 7%;
         }
