@@ -1,37 +1,49 @@
 .account-login {
-	width: 26.388vw;
-	// height: 24.861vw;
+	min-width: 26.388vw;
 	background: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	padding: 2.777% 2.013% 2.152%;
+	// padding: 2.777% 2.013% 2.152%;
+	padding: 40px 29px 31px;
 }
 .account-login h1 {
-    margin-bottom: 1.319vw;
+	// margin-bottom: 1.319vw;
+	margin-bottom: 19px;
 }
 
 /*****   Fields   *****/
 .fields_account {
-	margin-bottom: 1.388vw;
+	// margin-bottom: 1.388vw;
+	margin-bottom: 20px;
 }
 .account-login .field_default {
-    margin-bottom: 0.694vw;
+	// margin-bottom: 0.694vw;
+	margin-bottom: 10px;
 }
 /*****   Button__default-long   *****/
 .account-login .button__default-long {
-    margin-bottom: 2.083vw;
+	// margin-bottom: 2.083vw;
+	margin-bottom: 30px;
 }
 
-/*****   Account-login_footer   *****/  
+/*****   Account-login_footer   *****/
 .account-login_footer {
 	display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .account-login_footer p {
-    color: #000000;
+	color: #000000;
+	
+	@media (max-width: 1280px) {
+		margin-right: 10px;
+	}
+	@media (max-width: 320px) {
+		max-width: 100px;
+		margin-right: 0;
+	}
 }
 /*****   Button-default-border   *****/
 .account-login_footer .button__default-border {
