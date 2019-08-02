@@ -4,5 +4,10 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 7.34vw;
-    height: 100%;
+    height: 2.778vw;
+
+    @media (max-width: 970px) {
+        width: 80px;
+        height: 30px;
+    }
 }

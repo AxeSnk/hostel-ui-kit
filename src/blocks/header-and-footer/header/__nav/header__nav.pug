@@ -5,6 +5,11 @@ mixin header-nav(items,reg,nick,title1,href1,title2,href2)
     nav.header__nav
         include logo/logo.pug
 
+        .burger
+            .line1
+            .line2
+            .line3
+
         ul.header__menu
             each val in items
                 li.header__menu__item
@@ -14,5 +19,6 @@ mixin header-nav(items,reg,nick,title1,href1,title2,href2)
         if reg.registered
             p= nick.nickname
         else
-            +btn-border(title1,href1)
-            +btn(title2,href2)
+            .header__buttons
+                +btn-border(title1,href1)
+                +btn(title2,href2)

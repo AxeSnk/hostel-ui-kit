@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: 1024px) {
+        height: auto;
+    }
+
     @import 'logo/logo.scss';
 
     @import 'content/content.scss';

@@ -5,6 +5,10 @@
     height: 10.625vw;
     min-width: 10vw;
 
+    @media (max-width: 1025px) {
+        height: auto;
+    }
+
     h3 {
         margin-top: 0.277vw;
     }
@@ -49,7 +53,7 @@
             top: 22%;
             color: $purple-color;
             cursor: pointer;
-            font-size: 1.667vw;
+            // font-size: 1.667vw;
         }
     }
 }

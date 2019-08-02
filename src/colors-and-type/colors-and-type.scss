@@ -17,6 +17,11 @@ body{
     @media (min-width: 1920px) {
         font-size: 1.2em;
     }
+
+    @media (max-width: 790px) {
+        overflow-x: hidden;
+    }
+
 }
 h1 {
     font-weight: bold;
@@ -49,4 +54,8 @@ th {
 p {
     margin-block-start: 0;
     margin-block-end: 0;
+}
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0
 }
