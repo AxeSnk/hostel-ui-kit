@@ -1,5 +1,5 @@
 .copyright-bar__container {
-    height: 4.861vw;
+    height: 70px;
     align-items: center;
     display: -webkit-flex;
     display: -moz-flex;
@@ -8,12 +8,22 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 480px) {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
     @import 'text/text.scss';
 
     .logo__container {
         display: flex;
         justify-content: space-between;
         width: 7.778vw;
+
+        @media (max-width: 1024px) {
+            width: 100px;
+        }
 
         @import 'logo-social/logo-social.scss';
     }

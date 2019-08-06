@@ -5,6 +5,11 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
+    @media (max-width: 1280px) {
+        width: 22px;
+        height: 22px;
+    }
 }
 .copyright-bar__twitter a {
     background-image: url('/blocks/header-and-footer/footer/copyright-bar/__container/logo-social/svg/twitter-logo.svg');

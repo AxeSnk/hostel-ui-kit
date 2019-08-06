@@ -47,6 +47,10 @@ h3 {
     color: $dark_100-color;
     margin-block-start: 0;
     margin-block-end: 0;
+
+    @media (min-width: 1600px) {
+        font-size: 0.833vw;
+    }
 }
 th {
     font-weight: bold;

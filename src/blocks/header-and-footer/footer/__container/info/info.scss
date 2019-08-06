@@ -1,12 +1,12 @@
 .info {
     max-width: 18.056vw;
-    height: 9.023vw;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @media (max-width: 1024px) {
-        height: auto;
+    @media (max-width: 1023px) {
+        display: none;
     }
 
     @import 'logo/logo.scss';

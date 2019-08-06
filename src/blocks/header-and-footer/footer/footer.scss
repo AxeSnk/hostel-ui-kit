@@ -27,7 +27,7 @@
     line-height: 15px;
     text-transform: uppercase;
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1600px) {
         font-size: 0.83vw;
         line-height: 1.04vw;
     }
@@ -35,6 +35,13 @@
 }
 .footer .menu__item {
     margin-bottom: 1.388vw;
+
+    &:not(:first-child) {
+
+        @media (max-width: 719px) {
+            display: none;
+        }
+    }
 
     &:first-child {
         font-size: 12px;
