@@ -7,13 +7,13 @@
 
 .registration {
 
-    .content {
+    > .content {
         display: flex;
         justify-content: center;
         background-image: url("image/reg-fon.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
-        padding: 2.08% 36.8% 1.8%;
+        padding: 2.08% 0 1.8%;
     }
 }

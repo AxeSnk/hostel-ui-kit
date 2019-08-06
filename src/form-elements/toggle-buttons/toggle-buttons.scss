@@ -15,10 +15,14 @@
     align-items: center;
     height: 24px;
     margin-bottom: 10px;
+
+    @media (min-width: 1441px) {
+        height: 1.666vw;
+    }
+
 }
 .toggle-buttons__item label {
     padding-left: 50px;
-    font-size: 14px;
     color: $dark_75-color;
     cursor: pointer;
     display: block;
@@ -39,6 +43,11 @@
     background-position-y: 1.5px;
     margin-left: -50px;
     margin-right: 10px;
+
+    @media (min-width: 1441px) {
+        height: 1.25vw;
+        border-radius: 0.694vw;
+    }
 }
 .toggle-buttons__item input[type=checkbox] {
     display: none;
