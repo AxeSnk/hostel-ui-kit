@@ -8,10 +8,10 @@ module.exports = {
     mode: 'production',
     entry: {
         'index' : './src/index.js',
-        './src/pages/ui-kit/ui-kit' : './src/pages/ui-kit/ui-kit.js'
+        'uikit' : './src/pages/ui-kit/ui-kit.js'
     },
     output: {
-        filename: '[name].js',
+        filename: './src/js/[name].js',
         path: __dirname + '/dist'
     },
     module: {
@@ -32,8 +32,8 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
-                    outputPath: './src/fonts/',
-                    useRelativePath: true
+                    outputPath: 'src/fonts',
+                    publicPath: '../fonts'
                 }
             },
             {
@@ -46,8 +46,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: './src/img/',
-                            useRelativePath: true
+                            outputPath: 'src/img/',
+                            publicPath: '../img'
                         }
                     },
                     {
@@ -74,19 +74,19 @@ module.exports = {
             chunks: ['index']
         }),
         new HtmlWebpackPlugin({
-            filename: './src/pages/ui-kit/ui-kit.html',
+            filename: 'ui-kit.html',
             template: './src/pages/ui-kit/ui-kit.pug',
-            chunks: ['./src/pages/ui-kit/ui-kit']
+            chunks: ['uikit']
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: './src/css/[name].css',
             template: './src/index.scss',
             chunks: ['index']
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: './src/css/[name].css',
             template: './src/pages/ui-kit/ui-kit.scss',
-            chunks: ['./src/pages/ui-kit/ui-kit']
+            chunks: ['uikit']
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
