@@ -24,7 +24,7 @@
 
             &--big {
                 flex-grow: 2;
-                background-image: url("image/image_1.png");
+                background-image: url('img/room-details (1).png');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 100% 100%;
@@ -37,7 +37,7 @@
 
                 &-1 {
                     flex-grow: 1;
-                    background-image: url("image/image_2.png");
+                    background-image: url('img/room-details (2).png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100% 100%;
@@ -45,7 +45,7 @@
 
                 &-2 {
                     flex-grow: 1;
-                    background-image: url("image/image_3.png");
+                    background-image: url('img/room-details (3).png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 100% 100%;
@@ -109,11 +109,11 @@
                         margin-bottom: 20px;
 
                         .avatar-1 {
-                            background-image: url("image/avatar_1.png");
+                            background-image: url("img/room-details_avatar (1).png");
                         }
 
                         .avatar-2 {
-                            background-image: url("image/avatar_2.png");
+                            background-image: url("img/room-details_avatar (2).png");
                         }
                     }
                     .comment-container:last-child {
