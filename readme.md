@@ -6,6 +6,9 @@
 готовые файлы собираются в папке `docs`
 
 ---
+https://axesnk.github.io/hostel-ui-kit/
+
+---
 Что использовал:
 ---
 * Сборщик - Webpack
