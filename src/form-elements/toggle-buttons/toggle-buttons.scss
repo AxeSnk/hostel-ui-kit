@@ -37,7 +37,7 @@
     border: 1px solid $dark_25-color;
     box-sizing: border-box;
     border-radius: 10px;
-    background-image: url('/form-elements/toggle-buttons/svg/circle-solid-off.svg');
+    background-image: url('../../form-elements/toggle-buttons/svg/circle-solid-off.svg');
     background-repeat: no-repeat;
     background-position-x: 2px;
     background-position-y: 1.5px;
@@ -55,7 +55,7 @@
     height: 0;
 }
 .toggle-buttons__item input:checked + label::before {
-    background-image: url('/form-elements/toggle-buttons/svg/circle-solid.svg');
+    background-image: url('../../form-elements/toggle-buttons/svg/circle-solid.svg');
     background-repeat: no-repeat;
     background-position-x: 22px;
     background-position-y: 2px;

@@ -8,11 +8,16 @@ module.exports = {
     mode: 'production',
     entry: {
         'index' : './src/index.js',
-        'uikit' : './src/pages/ui-kit/ui-kit.js'
+        'uikit' : './src/pages/ui-kit/ui-kit.js',
+        'signin' : './src/pages/sign-in/sign-in.js',
+        'registration' : './src/pages/registration/registration.js',
+        'searchroom' : './src/pages/search-room/search-room.js',
+        'landingpage' : './src/pages/landing-page/landing-page.js',
+        'roomdetails' : './src/pages/room-details/room-details.js'
     },
     output: {
         filename: './src/js/[name].js',
-        path: __dirname + '/dist'
+        path: __dirname + '/docs'
     },
     module: {
         rules: [
@@ -55,7 +60,7 @@ module.exports = {
                         options: {
                             mozjpeg: {
                                 progressive: true,
-                                quality: 70
+                                quality: 80
                             }
                         }
                     }
@@ -78,6 +83,32 @@ module.exports = {
             template: './src/pages/ui-kit/ui-kit.pug',
             chunks: ['uikit']
         }),
+        new HtmlWebpackPlugin({
+            filename: 'sign-in.html',
+            template: './src/pages/sign-in/sign-in.pug',
+            chunks: ['signin']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration.html',
+            template: './src/pages/registration/registration.pug',
+            chunks: ['registration']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'search-room.html',
+            template: './src/pages/search-room/search-room.pug',
+            chunks: ['searchroom']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'landing-page.html',
+            template: './src/pages/landing-page/landing-page.pug',
+            chunks: ['landingpage']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'room-details.html',
+            template: './src/pages/room-details/room-details.pug',
+            chunks: ['roomdetails']
+        }),
+
         new MiniCssExtractPlugin({
             filename: './src/css/[name].css',
             template: './src/index.scss',
@@ -88,6 +119,32 @@ module.exports = {
             template: './src/pages/ui-kit/ui-kit.scss',
             chunks: ['uikit']
         }),
+        new MiniCssExtractPlugin({
+            filename: './src/css/[name].css',
+            template: './src/pages/sign-in/sign-in.scss',
+            chunks: ['signin']
+        }),
+        new MiniCssExtractPlugin({
+            filename: './src/css/[name].css',
+            template: './src/pages/registration/registration.scss',
+            chunks: ['registration']
+        }),
+        new MiniCssExtractPlugin({
+            filename: './src/css/[name].css',
+            template: './src/pages/search-room/search-room.scss',
+            chunks: ['searchroom']
+        }),
+        new MiniCssExtractPlugin({
+            filename: './src/css/[name].css',
+            template: './src/pages/landing-page/landing-page.scss',
+            chunks: ['landingpage']
+        }),
+        new MiniCssExtractPlugin({
+            filename: './src/css/[name].css',
+            template: './src/pages/room-details/room-details.scss',
+            chunks: ['roomdetails']
+        }),
+
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
