@@ -80,6 +80,10 @@
         @media (min-width: 1441px) {
             margin-bottom: 1.666vw;
         }
+
+        @media (max-width: 320px) {
+            height: auto;
+        }
     }
 
     .button__default-long {
