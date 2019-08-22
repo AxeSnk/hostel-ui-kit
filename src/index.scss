@@ -18,6 +18,7 @@ body{
     justify-content: space-evenly;
     margin: auto auto;
     padding: 20% 20%;
+    height: 100vh;
 
     @media (max-width: 1025px) {
         justify-content: space-between;

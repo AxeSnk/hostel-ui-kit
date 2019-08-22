@@ -43,7 +43,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(jpg|png|svg|gif|ico)$/,
+                test: /\.(jpg|png|svg|gif)$/,
                 exclude: [
                     path.resolve(__dirname, './src/fonts')
                 ],

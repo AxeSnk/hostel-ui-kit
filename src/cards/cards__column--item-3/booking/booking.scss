@@ -1,6 +1,5 @@
 .booking {
 	width: 380px;
-	height: 511px;
 	background: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -8,6 +7,11 @@
 	border-radius: 4px;
 	padding: 47px 30px 30px;
 	position: relative;
+
+	@media (max-width: 376px) {
+		padding: 40px 23px 23px;
+	}
+
 
 	&-header {
 		display: flex;
@@ -80,6 +84,16 @@
 }
 .booking .check-list--item p:first-child {
 	min-width: 220px;
+
+	
+	@media (max-width: 376px) {
+		max-width: 75%;
+		min-width: auto;
+	}
+	@media (max-width: 321px) {
+		max-width: 70%;
+	}
+
 }
 .booking .check-list--item:first-child p:first-child {
 	min-width: 0;
