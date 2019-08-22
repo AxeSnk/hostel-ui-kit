@@ -19,7 +19,6 @@ body{
     justify-content: space-evenly;
     margin: auto auto;
     padding: 20% 20%;
-    height: 100vh;
 
     @media (max-width: 1025px) {
         justify-content: space-between;
@@ -33,15 +32,11 @@ body{
         flex-direction: column;
         justify-content: space-between;
         padding: 10% 0%;
+        height: 75vh;
     }
 
     li {
         display: block;
-
-        @media (max-width: 426px) {
-            margin-bottom: 10px;
-        }
-    
 
         a {
             text-decoration: none;
