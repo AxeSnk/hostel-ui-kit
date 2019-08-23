@@ -19,6 +19,11 @@
 		letter-spacing: 0.2px;
 		width: 102px;
 		text-align: right;
+
+		@media (min-width: 1600px) {
+			font-size: 0.65vw;
+			line-height: 1.041vw;
+		}
 	}
 }
 /* Ширина слайдера */

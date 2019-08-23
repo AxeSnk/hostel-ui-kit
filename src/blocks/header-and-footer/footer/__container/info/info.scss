@@ -9,6 +9,10 @@
         display: none;
     }
 
+    @media (min-width: 1445px) {
+        height: 9.027vw;
+    }
+
     @import 'logo/logo.scss';
 
     @import 'content/content.scss';

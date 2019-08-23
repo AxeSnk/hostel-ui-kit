@@ -41,6 +41,10 @@ body{
         a {
             text-decoration: none;
             font-size: 18px;
+
+            @media (min-width: 1600px) {
+                font-size: 1.25vw;
+            }
         }
     }
 }

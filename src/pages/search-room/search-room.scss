@@ -77,6 +77,11 @@
                         line-height: 14px;
                         color: $dark_50-color;
                         margin-top: 12px;
+
+                        @media (min-width: 1600px) {
+                            font-size: 0.833vw;
+                            line-height: 0.972vw;
+                        }
                     }
 
                     .range-slider {

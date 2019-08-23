@@ -20,6 +20,12 @@
     background-position-x: 238px;
     background-position-y: 18px;
     cursor: pointer;
+
+    @media (min-width: 1600px) {
+        // font-size: 0.972vw;
+        // line-height: 3.055vw;
+    }
+
 }
 .expandable-checkbox-list__submenu {
     display: none;
