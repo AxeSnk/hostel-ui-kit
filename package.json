@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "air-datepicker": "^2.2.3",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^2.1.1",
     "del-cli": "^2.0.0",
