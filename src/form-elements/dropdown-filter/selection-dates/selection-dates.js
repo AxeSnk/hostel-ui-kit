@@ -16,12 +16,14 @@ $.fn.datepicker.language = {
 };
 
 $('.my-datepicker').datepicker({
+    position: "bottom left",
     multipleDates: true,
     todayButton: true,
     clearButton: true,
     prevHtml: '<i class="material-icons">arrow_back</i>',
     nextHtml: '<i class="material-icons">arrow_forward</i>',
     range: true,
+    multipleDatesSeparator: " - ",
     navTitles: {
         days: 'MM <i>yyyy</i>',
     },
