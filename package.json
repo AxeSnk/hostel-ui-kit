@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clear": "del-cli dist",
+    "clear": "del-cli docs",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack -d",
     "prod": "webpack -p"

@@ -55,9 +55,11 @@
 
 /*****   field-date   *****/
 .booking .dropdown_date {
-	display: flex;
-	justify-content: space-between;
 	margin-bottom: 20px;
+
+	@media (max-width: 426px) {
+		flex-direction: column;
+}
 }
 /*****   field-guest   *****/
 .booking .dropdown_default {

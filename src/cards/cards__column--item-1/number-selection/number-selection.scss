@@ -34,6 +34,11 @@
     @media(min-width: 1441px) {
         margin-bottom: 1.527vw;
     }
+
+    @media(max-width: 426px) {
+        flex-direction: column;
+    }
+
 }
 .number-selection .dropdown_default {
     margin-bottom: 32px;

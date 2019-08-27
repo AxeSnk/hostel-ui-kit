@@ -12,12 +12,8 @@
 .dropdown_date .date-from {
     margin-right: 20px;
 
-    @media (max-width: 426px) {
-        margin-right: 10px;
+    @media(max-width: 426px) {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
-
-    @media (max-width: 321px) {
-        margin-right: 5px;
-    }
-
 }
