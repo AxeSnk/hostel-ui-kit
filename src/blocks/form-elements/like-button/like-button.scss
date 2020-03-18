@@ -1,0 +1,52 @@
+.like-button__name {
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $dark_100-color;
+  margin-bottom: 16px;
+  display: block;
+}
+.like-button__container {
+  display: flex;
+}
+.like-button__state {
+  margin-right: 10px;
+}
+.like-button__not-pressed {
+  display: inline-block;
+  color: $dark_25-color;
+  width: 40px;
+  height: 20px;
+  background: #ffffff;
+  background-image: url('../../form-elements/like-button/svg/favorite_border.svg');
+  background-repeat: no-repeat;
+  background-position-x: 4px;
+  background-position-y: 5px;
+  border: 1px solid $dark_25-color;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  padding-left: 16px;
+}
+.like-button__pressed {
+  display: inline-block;
+  color: #bc9cff;
+  text-align: center;
+  width: 40px;
+  height: 20px;
+  background: #ffffff;
+  background-image: url('../../form-elements/like-button/svg/favorite.svg');
+  background-repeat: no-repeat;
+  background-position-x: 4px;
+  background-position-y: 5px;
+  border: 1px solid #bc9cff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  padding-left: 16px;
+}
+.like-button p {
+  margin: 0 0;
+}

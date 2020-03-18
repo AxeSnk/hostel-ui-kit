@@ -1,0 +1,141 @@
+.dropdown_default {
+  margin-bottom: 26px;
+}
+.dropdown_default h3 {
+  margin-bottom: 5px;
+
+  @media (min-width: 1441px) {
+    margin-bottom: 0.347vw;
+  }
+}
+/*****   guests   *****/
+.guests {
+  font-weight: bold;
+}
+.field-guests {
+  display: flex;
+  padding: 12px 15px;
+  font-weight: normal;
+  text-transform: none;
+  cursor: pointer;
+  border: 1px solid $dark_25-color;
+  box-sizing: border-box;
+  border-radius: 4px 4px 4px 4px;
+  color: $dark_75-color;
+  align-items: center;
+  position: relative;
+  line-height: 18px;
+
+  @media (min-width: 1600px) {
+    padding: 0.833vw 1.041vw;
+    line-height: 1.25vw;
+  }
+}
+.field-guests:hover {
+  border-color: $dark_50-color;
+}
+.field-guests i {
+  position: absolute;
+  right: 3%;
+  cursor: pointer;
+  color: $dark_50-color;
+}
+.dropdown-guests {
+  position: absolute;
+  display: none;
+  width: 297px;
+  padding: 7px 7px 7px 14px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 0 0 4px 4px;
+  background: #fff;
+  z-index: 1;
+  border-top: none;
+}
+.dropdown-guests .dropdown-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.dropdown-container-text {
+  color: #1f2041;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.dropdown-guests .quantity {
+  width: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-guests input[type='number']::-webkit-inner-spin-button,
+.dropdown-guests input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.dropdown-guests input[type='number'] {
+  -moz-appearance: textfield;
+}
+.quantity input {
+  width: 13px;
+  height: 22px;
+  color: #1f2041;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.quantity-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 15px;
+  color: rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+.quantity-up {
+  position: relative;
+}
+.quantity-down {
+  position: relative;
+  opacity: 0.5;
+}
+.opacity {
+  opacity: 1;
+  cursor: context-menu;
+}
+.container__clear-apply {
+  margin-top: 19px;
+}
+.clear-quantity-invisible {
+  visibility: hidden;
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.clear-quantity {
+  visibility: visible;
+}
+.apply-quantity {
+  cursor: pointer;
+  color: #bc9cff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,6 @@
+mixin rateBtn(rating)
+  .rate-button
+    - for (var x=0; x < rating; x++)
+      .rate-button__star--active
+    - for (var x = rating; x < 5; x++)
+      .rate-button__star

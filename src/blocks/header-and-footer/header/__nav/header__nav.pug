@@ -1,24 +1,24 @@
-include ../../../../form-elements/buttons/button__default-border/button__default-border.pug
-include ../../../../form-elements/buttons/button__default/button__default.pug
+include ../../../form-elements/buttons/button__default-border/button__default-border.pug
+include ../../../form-elements/buttons/button__default/button__default.pug
 
 mixin header-nav(items,reg,nick,title1,href1,title2,href2)
-    nav.header__nav
-        include logo/logo.pug
+  nav.header__nav
+    include logo/logo.pug
 
-        .burger
-            .line1
-            .line2
-            .line3
+    .burger
+      .line1
+      .line2
+      .line3
 
-        ul.header__menu
-            each val in items
-                li.header__menu__item
-                    a(href='#')= val.text
-                        i.material-icons= val.icon
-        
-        if reg.registered
-            p= nick.nickname
-        else
-            .header__buttons
-                +btn-border(title1,href1)
-                +btn(title2,href2)
+    ul.header__menu
+      each val in items
+        li.header__menu__item
+          a(href='#')= val.text
+            i.material-icons= val.icon
+
+    if reg.registered
+      p= nick.nickname
+    else
+      .header__buttons
+        +btn-border(title1,href1)
+        +btn(title2,href2)

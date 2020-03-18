@@ -1,14 +1,17 @@
 doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon")
-        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-        title ui-kit-toxin
-    body
-        .ui-kit
-            include ../../blocks/header-and-footer/header-and-footer.pug
-            include ../../form-elements/form-elements.pug
-            include ../../cards/cards.pug
-        //- script(src='ui-kit.js')
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    link(
+      href='https://fonts.googleapis.com/icon?family=Material+Icons',
+      rel='stylesheet'
+    )
+    title ui-kit-toxin
+  body
+    .ui-kit
+      include ../../blocks/header-and-footer/header-and-footer.pug
+      include ../../blocks/form-elements/form-elements.pug
+      include ../../blocks/cards/cards.pug
+    //- script(src='ui-kit.js')

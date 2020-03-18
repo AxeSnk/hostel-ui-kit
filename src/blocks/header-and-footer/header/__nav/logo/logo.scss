@@ -1,13 +1,13 @@
 .header .logo {
-    display: block;
-    background-image: url('../../blocks/header-and-footer/header/__nav/logo/svg/logo.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 7.34vw;
-    height: 2.778vw;
+  display: block;
+  background-image: url('../../blocks/header-and-footer/header/__nav/logo/svg/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 7.34vw;
+  height: 2.778vw;
 
-    @media (max-width: 970px) {
-        width: 80px;
-        height: 30px;
-    }
+  @media (max-width: 970px) {
+    width: 80px;
+    height: 30px;
+  }
 }

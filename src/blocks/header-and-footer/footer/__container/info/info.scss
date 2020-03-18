@@ -1,20 +1,19 @@
 .info {
-    max-width: 18.056vw;
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  max-width: 18.056vw;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    @media (max-width: 1023px) {
-        display: none;
-    }
+  @media (max-width: 1023px) {
+    display: none;
+  }
 
-    @media (min-width: 1445px) {
-        height: 9.027vw;
-    }
+  @media (min-width: 1445px) {
+    height: 9.027vw;
+  }
 
-    @import 'logo/logo.scss';
+  @import 'logo/logo.scss';
 
-    @import 'content/content.scss';
+  @import 'content/content.scss';
 }
-

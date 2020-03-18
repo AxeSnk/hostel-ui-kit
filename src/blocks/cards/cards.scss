@@ -1,0 +1,17 @@
+.cards {
+  width: 1440px;
+  height: 1350px;
+  background: #f4f4f6;
+  display: flex;
+  padding: 140px;
+}
+.cards__column--center {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+@import 'cards__column--item-1/cards__column--item-1.scss';
+@import 'cards__column--item-2/cards__column--item-2.scss';
+@import 'cards__column--item-3/cards__column--item-3.scss';
+@import 'cards__column--item-4/cards__column--item-4.scss';
+@import 'cards__column--item-5/cards__column--item-5.scss';
+@import 'cards__column--item-6/cards__column--item-6.scss';

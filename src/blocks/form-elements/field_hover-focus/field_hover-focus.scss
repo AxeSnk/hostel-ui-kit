@@ -1,0 +1,11 @@
+.field_hover-focus {
+  margin-bottom: 23px;
+}
+.field_hover-focus input:focus::placeholder,
+.field_hover-focus input:hover::placeholder {
+  color: $dark_75-color;
+}
+.field_hover-focus input:focus,
+.field_hover-focus input:hover {
+  border: 1px solid $dark_50-color;
+}

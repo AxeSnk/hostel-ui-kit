@@ -1,0 +1,25 @@
+.rate-button {
+  display: flex;
+}
+
+.rate-button__star {
+  &::after {
+    font-family: 'Material Icons';
+    content: 'star_border';
+    font-size: 24px;
+    line-height: 20px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--active::after {
+    font-family: 'Material Icons';
+    content: 'star';
+    font-size: 24px;
+    line-height: 20px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

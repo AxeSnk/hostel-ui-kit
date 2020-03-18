@@ -1,0 +1,45 @@
+include ..\..\..\form-elements\field_default\input\input.pug
+include ..\..\..\form-elements\radio-buttons\radioBtn\radioBtn.pug
+include ..\..\..\form-elements\field_masked\maskedField\maskedField.pug
+include ..\..\..\form-elements\toggle-buttons\toggle\toggle.pug
+include ..\..\..\form-elements\buttons\button__default-long\button__default-long.pug
+include ..\..\..\form-elements\buttons\button__default-border\button__default-border.pug
+
+.account-registration
+  h1 Регистрация аккаунта
+
+  //Fields name, surname
+
+  .field_default.field_hover-focus
+    +input('name','name','Имя')
+  .field_default.field_hover-focus
+    +input('surname','surname','Фамилия')
+
+  //Radio-buttons
+
+  +radioBtn("radiobtn3","radiobtn4")
+
+  //Field
+
+  +maskedField("дата рождения")
+    //Fields email, password
+  .fields-reg
+    h3 данные для входа в сервис
+    .field_default.field_hover-focus
+      +input('email','email','Email')
+    .field_default.field_hover-focus
+      +input('password','password','Пароль')
+
+  //Toggle-buttons
+
+  +toggle("switch3","Получать спецпредложения")
+
+  //Button__default-long
+
+  +btn_long('перейти к оплате')
+
+  //Account-registration__footer
+
+  .account-registration__footer
+    p Уже есть аккаунт на Toxin
+    +btn-border('войти')

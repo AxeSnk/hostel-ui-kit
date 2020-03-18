@@ -1,0 +1,5 @@
+mixin maskedField(title)
+  .field_default.field_hover-focus.field_masked
+    h3= title
+    form
+      +input('','date','дд.мм.гггг')
