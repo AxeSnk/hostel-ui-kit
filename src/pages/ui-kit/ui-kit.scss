@@ -1,12 +1,13 @@
-.ui-kit {
-  max-width: 1920px;
-  min-width: 320px;
-}
 @import '../../normalize.css';
 @import '../../colors-and-type/colors-and-type.scss';
 @import '../../blocks/header-and-footer/header-and-footer.scss';
 @import '../../blocks/form-elements/form-elements.scss';
 @import '../../blocks/cards/cards.scss';
+
+.ui-kit {
+  max-width: 1920px;
+  min-width: 320px;
+}
 
 p {
   display: block;

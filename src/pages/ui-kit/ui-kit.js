@@ -1,2 +1,2 @@
 import './ui-kit.scss';
-import '../../form-elements/form-elements.js';
+import '../../blocks/form-elements/form-elements';

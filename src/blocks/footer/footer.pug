@@ -1,0 +1,40 @@
+mixin footer(info, navigation, aboutUs, support, subscribe, copyright)
+  footer.footer
+    .footer__container
+      .footer__info
+        .footer__logo
+        .footer__content
+
+      .footer__nav
+        .navigation
+          ul.menu
+            each val in navigation
+              li.menu__item
+                a(href='#')= val.item
+        .about-us
+          ul.menu
+            each val in aboutUs
+              li.menu__item
+                a(href='#')= val.item
+        .support
+          ul.menu
+            each val in support
+              li.menu__item
+                a(href='#')= val.item
+      .footer__subscribe
+        h3= subscribe.title
+        .footer__subscribe-content= subscribe.content
+        form
+          input(type='email', name='email', placeholder='Email')
+          i.material-icons arrow_forward
+
+    .copyright-bar
+      .copyright-bar__container
+        .text
+        .logo__container
+          .copyright-bar__twitter
+            a
+          .copyright-bar__facebook
+            a
+          .copyright-bar__instagram
+            a

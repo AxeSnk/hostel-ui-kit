@@ -1,8 +1,8 @@
-@import '../../normalize.css';
-@import '../../colors-and-type/colors-and-type.scss';
-@import '../../blocks/header-and-footer/header-and-footer.scss';
-@import '../../blocks/form-elements/form-elements.scss';
-@import '../../blocks/cards/cards.scss';
+// @import '../../normalize.css';
+// @import '../../colors-and-type/colors-and-type.scss';
+// @import '../../blocks/header-and-footer/header-and-footer.scss';
+// @import '../../blocks/form-elements/form-elements.scss';
+// @import '../../blocks/cards/cards.scss';
 
 .sign-in {
   width: 100%;
@@ -10,7 +10,7 @@
   > .content {
     display: flex;
     justify-content: center;
-    background-image: url('img/reg-sign.png');
+    background-image: url('./images/reg-sign.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;

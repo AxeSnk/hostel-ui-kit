@@ -1,3 +1,5 @@
+@import './logo/logo.scss';
+
 .header {
   .header__nav {
     height: 40px;
@@ -156,7 +158,6 @@
     }
   }
 }
-@import '../../blocks/header-and-footer/header/__nav/logo/logo.scss';
 
 @keyframes navLinkFade {
   from {

@@ -1,10 +1,6 @@
 mixin checkbox(title,id)
   li.expandable-checkbox__submenu-item
-    input.expandable-checkbox__submenu-item-input(
-      id=id,
-      type='checkbox',
-      name='check'
-    )
+    input.expandable-checkbox__submenu-item-input(id=id, type='checkbox', name='check')
     label(for=id)= title
 
 .expandable-checkbox-list
