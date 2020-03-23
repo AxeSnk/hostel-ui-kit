@@ -5,6 +5,16 @@
   }
 
   &__wrapper {
-    padding: 0 141px;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 141px 0;
+
+    .form-elements__left-column {
+      
+      .form-elements__item {
+        width: 320px;
+        margin-bottom: 18px;
+      }
+    }
   }
 }

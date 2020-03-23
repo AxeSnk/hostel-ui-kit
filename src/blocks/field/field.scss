@@ -1,0 +1,47 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.field__wrapper {
+  .filed__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4375rem;
+
+    .field__title {
+    }
+    .field__note {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+  }
+  .field__input {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid $dark_25-color;
+    width: 100%;
+    line-height: 18px;
+    padding: 12px 15px;
+    color: $dark_75-color;
+    letter-spacing: 0.02rem;
+    outline: none;
+
+    @media (min-width: 1600px) {
+      padding: 0.833vw 1.041vw;
+      line-height: 1.25vw;
+    }
+
+    &::placeholder {
+      color: $dark_25-color;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    
+    &:focus,
+    &:hover {
+      border: 1px solid $dark_50-color;
+      color: $dark_75-color;
+    }
+  }
+}

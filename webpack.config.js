@@ -122,8 +122,8 @@ const PAGES = fs.readdirSync(PAGES_DIR);
 module.exports = {
   entry: {
     index: './src/index.js',
-    uikit: './src/pages/ui-kit/ui-kit.js',
-    'form-elements': './src/pages/form-elements/form-elements.js'
+    // uikit: './src/pages/ui-kit/ui-kit.js',
+    // 'form-elements': './src/pages/form-elements/form-elements.js'
     // signin: './src/pages/sign-in/sign-in.js',
     // registration: './src/pages/registration/registration.js',
     // searchroom: './src/pages/search-room/search-room.js',
@@ -185,17 +185,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.pug',
-      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-kit.html',
       template: './src/pages/ui-kit/ui-kit.pug',
-      chunks: ['index', 'uikit']
     }),
     new HtmlWebpackPlugin({
       filename: 'form-elements.html',
       template: './src/pages/form-elements/form-elements.pug',
-      chunks: ['index', 'form-elements']
     }),
     // new HtmlWebpackPlugin({
     //   filename: 'sign-in.html',

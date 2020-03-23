@@ -1,6 +1,6 @@
-mixin field({ title, note, placeholder })
-  .field__wrapper
+mixin field({ title, note, placeholder, value })
+  .field__wrapper&attributes(attributes)
     .filed__header
       h3.field__title= title
       .field__note= note
-    input.field__input(type='text' placeholder=placeholder)
+    input.field__input(type='text' placeholder=placeholder value=value)
