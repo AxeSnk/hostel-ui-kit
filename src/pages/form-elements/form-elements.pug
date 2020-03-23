@@ -1,0 +1,18 @@
+extends ../../blocks/layout/layout
+
+include ../../blocks/logo/logo
+include ../../blocks/field/field
+
+block title
+  title form-elements
+
+block header
+block content
+  .form-elements
+    .form-elements__logo
+      +logo({ui: true})
+    .form-elements__wrapper
+      .form-elements__left-column
+        +field({title: 'text-field', note: 'defailt', placeholder: 'Email'})
+
+block footer

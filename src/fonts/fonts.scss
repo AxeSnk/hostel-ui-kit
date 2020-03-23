@@ -1,6 +1,13 @@
 @font-face {
-  font-family: 'Montserrat-Regular';
-  src: url('Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
-    url('Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'),
-    url('Montserrat-Regular/Montserrat-Regular.svg') format('svg');
+  font-family: 'Montserrat';
+  src: url('Montserrat/Montserrat.woff') format('woff'),
+    url('Montserrat/Montserrat.ttf') format('truetype'),
+    url('Montserrat/Montserrat.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('OpenSans/OpenSans.woff') format('woff'),
+    url('OpenSans/OpenSans.ttf') format('truetype'),
+    url('OpenSans/OpenSans.svg') format('svg');
 }

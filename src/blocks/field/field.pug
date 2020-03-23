@@ -1,0 +1,6 @@
+mixin field({ title, note, placeholder })
+  .field__wrapper
+    .filed__header
+      h3.field__title= title
+      .field__note= note
+    input.field__input(type='text' placeholder=placeholder)

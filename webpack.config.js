@@ -6,8 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-// const PAGES_DIR = path.resolve(__dirname, 'src/pages');
-// const PAGES = fs.readdirSync(PAGES_DIR);
+const PAGES_DIR = path.resolve(__dirname, 'src/pages');
+const PAGES = fs.readdirSync(PAGES_DIR);
 
 // module.exports = {
 //   resolve: {
@@ -122,7 +122,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index.js',
-    uikit: './src/pages/ui-kit/ui-kit.js'
+    uikit: './src/pages/ui-kit/ui-kit.js',
+    'form-elements': './src/pages/form-elements/form-elements.js'
     // signin: './src/pages/sign-in/sign-in.js',
     // registration: './src/pages/registration/registration.js',
     // searchroom: './src/pages/search-room/search-room.js',
@@ -157,7 +158,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img'
+              outputPath: 'img',
+              publicPath: '../img'
             }
           }
         ]
@@ -181,9 +183,19 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.pug',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
       filename: 'ui-kit.html',
       template: './src/pages/ui-kit/ui-kit.pug',
       chunks: ['index', 'uikit']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'form-elements.html',
+      template: './src/pages/form-elements/form-elements.pug',
+      chunks: ['index', 'form-elements']
     }),
     // new HtmlWebpackPlugin({
     //   filename: 'sign-in.html',
@@ -213,7 +225,7 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      template: './src/index.scss',
+      template: './src/index.scss'
     }),
     // new MiniCssExtractPlugin({
     //   filename: 'css/[name].css',

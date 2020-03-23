@@ -1,0 +1,6 @@
+mixin logo({ ui = false })
+  - let classes = ['logo'];
+  if ui
+    - classes.push('logo__ui-kit');
+
+  div(class=classes)
