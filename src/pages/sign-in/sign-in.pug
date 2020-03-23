@@ -1,15 +1,25 @@
-extends ../../blocks/layout/layout
+//- extends ../../blocks/layout/layout
 
-include ../../blocks/footer/footer
+//- include ../../blocks/footer/footer
 
-block title 
-  title toxin
-block content
-  .sign-in
-  .header
-    include ../../blocks/header-and-footer/header/__nav/header__nav.pug
-    +header-nav([ {text: "О нас", icon: ""}, {text: "Услуги", icon: "expand_more"}, {text: "Вакансии", icon: ""}, {text: "Новости", icon: ""}, {text: "Соглашения", icon: "expand_more"} ],{registered: false}, {nickname: 'Cosmin Negoita'}, 'войти','../sign-in/sign-in.pug', 'зарегистрироваться','../registration/registration.pug')
+//- block title 
+//-   title toxin
+//- block content
+//-   .sign-in
+//-   .header
+//-     include ../../blocks/header-and-footer/header/__nav/header__nav.pug
+//-     +header-nav([ {text: "О нас", icon: ""}, {text: "Услуги", icon: "expand_more"}, {text: "Вакансии", icon: ""}, {text: "Новости", icon: ""}, {text: "Соглашения", icon: "expand_more"} ],{registered: false}, {nickname: 'Cosmin Negoita'}, 'войти','../sign-in/sign-in.pug', 'зарегистрироваться','../registration/registration.pug')
 
   //- .content
   //-   include ../../blocks/cards/cards__column--item-4/account-login/account-login.pug
 
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='shortcut icon', href='/favicon/favicon.ico', type='image/x-icon')
+    title sign-in
+  body
+    .wrapper sign-in
+      .content
