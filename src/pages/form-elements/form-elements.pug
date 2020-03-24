@@ -28,6 +28,10 @@ block content
           +field({title: 'filter date dropdown'})
         .form-elements__item.form-elements__item--small
           +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
+        .form-elements__item.form-elements__item--small.form-elements__item--drpodown
+          +field({title: 'dropdown', note: 'default', value: '2 спальни, 2 кровати', button:{dropdown:true}})
+        .form-elements__item.form-elements__item--small
+          +field({title: 'dropdown', note: 'expanded', value: '2 спальни, 2 кровати', button:{dropdown:true}})
 
       .form-elements__midl-column
       .form-elements__rigth-column
