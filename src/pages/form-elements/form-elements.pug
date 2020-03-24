@@ -19,8 +19,11 @@ block content
           +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
         .form-elements__item
           +field({title: 'dropdown', note: 'default', value: 'Сколько гостей'})(class='js-dropdown__guests')
+        .form-elements__item
+          +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: 'true'})
 
       .form-elements__midl-column
       .form-elements__rigth-column
 
 block footer
+  

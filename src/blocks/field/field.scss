@@ -1,6 +1,8 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .field__wrapper {
+  position: relative;
+
   .filed__header {
     display: flex;
     justify-content: space-between;
@@ -14,6 +16,7 @@
       text-transform: uppercase;
     }
   }
+
   .field__input {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -43,5 +46,15 @@
       border: 1px solid $dark_50-color;
       color: $dark_75-color;
     }
+  }
+
+  .dropdown__icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: $dark_50-color;
+    cursor: pointer;
   }
 }

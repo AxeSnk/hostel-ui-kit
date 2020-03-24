@@ -1,6 +1,10 @@
-mixin field({ title, note, placeholder, value })
+mixin field({ title, note, placeholder, value, masked })
+  - let classes = []
+  if masked
+    - classes.push('js-masked')
+    
   .field__wrapper&attributes(attributes)
     .filed__header
       h3.field__title= title
       .field__note= note
-    input.field__input(type='text' placeholder=placeholder value=value)
+    input.field__input(class=classes type='text' placeholder=placeholder value=value)
