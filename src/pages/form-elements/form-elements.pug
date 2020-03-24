@@ -3,6 +3,7 @@ extends ../../blocks/layout/layout
 include ../../blocks/logo/logo
 include ../../blocks/field/field
 include ../../blocks/range-date/range-date
+include ../../blocks/checkbox-list/checkbox-list
 
 block title
   title form-elements
@@ -32,6 +33,27 @@ block content
           +field({title: 'dropdown', note: 'default', value: '2 спальни, 2 кровати', button:{dropdown:true}})
         .form-elements__item.form-elements__item--small
           +field({title: 'dropdown', note: 'expanded', value: '2 спальни, 2 кровати', button:{dropdown:true}})
+        .form-elements__item.form-elements__checkbox
+          +checkbox-list({
+            title: "Expandable checkbox list",
+            list: [
+              { label: "Завтрак", checked: false }
+            ]
+          })
+        .form-elements__item
+          +checkbox-list({
+            title: "Expandable checkbox list",
+            list: [
+              { label: "Завтрак", checked: false },
+              { label: "Письменный стол", checked: true },
+              { label: "Стул для кормления", checked: true },
+              { label: "Кроватка", checked: true },
+              { label: "Телевизор", checked: false },
+              { label: "Шампунь", checked: false },
+              { label: "Телевизор", checked: false },
+              { label: "Шампунь", checked: false },
+            ]
+          })
 
       .form-elements__midl-column
       .form-elements__rigth-column

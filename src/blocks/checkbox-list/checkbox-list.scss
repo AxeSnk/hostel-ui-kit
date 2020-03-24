@@ -1,0 +1,24 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.checkbox-list {
+  .checkbox-list__header {
+    position: relative;
+    line-height: 1.5rem;
+    margin-bottom: 0.875rem;
+
+    .expand-more__icon {
+      position: absolute;
+      right: 20%;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      color: $dark_50-color;
+      cursor: pointer;
+    }
+  }
+
+  .checkbox-list__menu {
+    .checkbox {
+      margin-bottom: 10px;
+    }
+  }
+}
