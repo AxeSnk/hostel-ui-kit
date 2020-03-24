@@ -14,6 +14,16 @@
       .form-elements__item {
         width: 320px;
         margin-bottom: 16px;
+
+        .range-date {
+          margin-top: 42px;
+          margin-bottom: 41px;
+        }
+      }
+
+      .form-elements__item--small {
+        width: 266px;
+        margin-bottom: 42px;
       }
     }
   }

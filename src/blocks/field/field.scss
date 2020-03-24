@@ -48,7 +48,7 @@
     }
   }
 
-  .dropdown__icon {
+  .expand-more__icon {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -56,5 +56,17 @@
     line-height: 1.5rem;
     color: $dark_50-color;
     cursor: pointer;
+  }
+  
+  .arrow__icon {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

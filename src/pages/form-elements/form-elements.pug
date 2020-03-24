@@ -2,6 +2,7 @@ extends ../../blocks/layout/layout
 
 include ../../blocks/logo/logo
 include ../../blocks/field/field
+include ../../blocks/range-date/range-date
 
 block title
   title form-elements
@@ -18,12 +19,17 @@ block content
         .form-elements__item
           +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
         .form-elements__item
-          +field({title: 'dropdown', note: 'default', value: 'Сколько гостей'})(class='js-dropdown__guests')
+          +field({title: 'dropdown', note: 'default', value: 'Сколько гостей', button:{dropdown:true}})
         .form-elements__item
-          +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: 'true'})
+          +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
+        .form-elements__item
+          +range-date
+        .form-elements__item.form-elements__item--small
+          +field({title: 'filter date dropdown'})
+        .form-elements__item.form-elements__item--small
+          +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
 
       .form-elements__midl-column
       .form-elements__rigth-column
 
 block footer
-  

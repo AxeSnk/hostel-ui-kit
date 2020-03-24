@@ -1,10 +1,16 @@
-mixin field({ title, note, placeholder, value, masked })
-  - let classes = []
+mixin field({ title='', note='', placeholder='', value='', masked=false, calendar=false, type='text', button={send:false,dropdown:false} }={})
+  - let classes = [];
   if masked
-    - classes.push('js-masked')
-    
-  .field__wrapper&attributes(attributes)
+    - classes.push("js-masked");
+  if calendar
+    - classes.push("js-calendar");
+
+  .field__wrapper
     .filed__header
       h3.field__title= title
       .field__note= note
-    input.field__input(class=classes type='text' placeholder=placeholder value=value)
+    input.field__input(class=classes, placeholder=placeholder, value=value, type=type)
+    if button.send
+      i.material-icons.arrow__icon arrow_forward
+    if button.dropdown
+      i.material-icons.expand-more__icon expand_more
