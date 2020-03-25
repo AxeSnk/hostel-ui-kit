@@ -1,0 +1,59 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.toggle {
+
+  &__header {
+    margin-bottom: 12px;
+  }
+
+  .toggle-label__wrapper {
+    margin-bottom: 10px;
+
+    .toggle__label {
+      // display: block;
+      padding-left: 50px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      margin-bottom: 17px;
+      
+      .toggle__input {
+        display: none;
+      }
+  
+      .toggle__marker {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 18px;
+        border: 1px solid $dark_25-color;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+  
+      .toggle__marker::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 3px;
+        left: 4px;
+        border-radius: 50%;
+        background-color: $dark_25-color;
+        transition: 0.3s;
+      }
+  
+      .toggle__input:checked ~ .toggle__marker::after {
+        transform: translateX(20px);
+        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      }
+  
+      .toggle__input:checked ~ .toggle__marker {
+        border-color: $purple-color;
+      }
+    }
+  }
+
+}

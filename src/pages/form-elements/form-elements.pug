@@ -7,6 +7,7 @@ include ../../blocks/field/field
 include ../../blocks/logo/logo
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
+include ../../blocks/toggle/toggle
 
 block title
   title form-elements
@@ -80,6 +81,15 @@ block content
               {label: 'Мужчина', name: 'sex', checked: true},
               {label: 'Женщина', name: 'sex', checked: false}
             ]
+          })
+        .form-elements__item
+          +toggle({
+            title: 'Toggle',
+            items: [
+              {label: 'Получать спецпредложения', checked: true},
+              {label: 'Получать спецпредложения', checked: false},
+            ]
+            
           })
       .form-elements__rigth-column
 

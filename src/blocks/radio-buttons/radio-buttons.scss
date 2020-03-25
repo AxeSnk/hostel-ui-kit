@@ -17,7 +17,7 @@
       display:none;
     }
 
-    .radio-buttons__input:checked ~ .radio-buttons__marker:after {
+    .radio-buttons__input:checked ~ .radio-buttons__marker::after {
       content: '';
       position: absolute;
       top: 50%;
