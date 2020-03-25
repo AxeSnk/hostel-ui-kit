@@ -3,22 +3,24 @@
 .checkbox-list {
   .checkbox-list__header {
     position: relative;
-    line-height: 1.5rem;
-    margin-bottom: 0.875rem;
+    line-height: 24px;
+    margin-bottom: 14px;
 
     .expand-more__icon {
       position: absolute;
       right: 20%;
-      font-size: 1.5rem;
-      line-height: 1.5rem;
+      font-size: 24px;
+      line-height: 24px;
       color: $dark_50-color;
       cursor: pointer;
     }
   }
 
   .checkbox-list__menu {
+    display: none;
+
     .checkbox {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 }

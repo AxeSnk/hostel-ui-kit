@@ -130,6 +130,7 @@ module.exports = {
     // landingpage: './src/pages/landing-page/landing-page.js',
     // roomdetails: './src/pages/room-details/room-details.js'
   },
+  devtool: 'source-map',
   output: {
     filename: 'js/[name].js',
     path: __dirname + '/dist'

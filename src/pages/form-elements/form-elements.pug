@@ -5,6 +5,7 @@ include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/feature/feature
 include ../../blocks/field/field
 include ../../blocks/logo/logo
+include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
 
 block title
@@ -65,15 +66,21 @@ block content
       .form-elements__midl-column
         .form-elements__item.form-elements__item--short
           +checkbox-button({
-            title: 'Checkbox button',
+            title: 'Checkbox buttons',
             list: [
               { label: 'Можно курить', checked: false },
               { label: 'Можно с питомцами', checked: true },
               { label: 'Можно пригласить гостей (до 10 человек)', checked: true }
             ]
           })
-
-
+        .form-elements__item
+          +radio-buttons({ 
+            title: 'Radio buttons',
+            items: [
+              {label: 'Мужчина', name: 'sex', checked: true},
+              {label: 'Женщина', name: 'sex', checked: false}
+            ]
+          })
       .form-elements__rigth-column
 
 block footer

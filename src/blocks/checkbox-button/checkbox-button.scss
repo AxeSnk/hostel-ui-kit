@@ -1,11 +1,11 @@
 .checkbox-button {
-  .checkbox-button__header {
+  &__header {
     margin-bottom: 17px;
   }
 
-  .checkbox-button__list {
+  &__list {
     .checkbox {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 }
