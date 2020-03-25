@@ -1,6 +1,6 @@
 extends ../../blocks/layout/layout
 
-include ../../blocks/checkbox-button/checkbox-button
+include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/feature/feature
 include ../../blocks/field/field
@@ -9,6 +9,7 @@ include ../../blocks/logo/logo
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
 include ../../blocks/rate-button/rate-button
+include ../../blocks/rich-checkbox/rich-checkbox
 include ../../blocks/toggle/toggle
 
 block title
@@ -32,7 +33,7 @@ block content
         .form-elements__item
           +range-date
         .form-elements__item.form-elements__item--small
-          +field({title: 'filter date dropdown'})
+          +field({title: 'filter date dropdown', button:{dropdown:true}})
         .form-elements__item.form-elements__item--small
           +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__item.form-elements__item--small.form-elements__item--drpodown
@@ -68,7 +69,7 @@ block content
 
       .form-elements__midl-column
         .form-elements__item.form-elements__item--short
-          +checkbox-button({
+          +checkbox-buttons({
             title: 'Checkbox buttons',
             list: [
               { label: 'Можно курить', checked: false },
@@ -106,6 +107,12 @@ block content
           .rate-button__wrapper
             +rate-button({rate: 4})
             +rate-button({rate: 5})
+        .form-elements__item
+          +field({title: 'dropdown', value: 'Сколько гостей', button:{dropdown:true}})
+        .form-elements__item.form-elements__item--small
+          h3.rich-checkbox__header Rich checkbox buttons
+          +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
+          +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
 
       .form-elements__rigth-column
 

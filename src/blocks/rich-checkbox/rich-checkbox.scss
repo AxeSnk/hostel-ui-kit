@@ -1,0 +1,18 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.rich-checkbox {
+
+  .checkbox {
+    color: $dark_75-color;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+
+  .rich-checkbox__details {
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 30px;
+  }
+}

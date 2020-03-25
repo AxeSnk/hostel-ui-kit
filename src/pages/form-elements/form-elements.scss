@@ -56,16 +56,26 @@
 
       .rate-button__wrapper {
         display: flex;
+        margin-bottom: 186px;
 
         .rate-button {
           margin-right: 20px;
         }
       }
 
+      .rich-checkbox__header {
+        margin-top: 256px;
+        margin-bottom: 15px;
+      }
+
+      .rich-checkbox {
+        margin-bottom: 10px;
+      }
+
     }
 
     .form-elements__item--small {
-      width: 266px;
+      max-width: 266px;
       margin-bottom: 36px;
     }
 
