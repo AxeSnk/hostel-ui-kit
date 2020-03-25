@@ -14,19 +14,41 @@
       width: 320px;
       margin-bottom: 16px;
 
+      .radio-buttons__header {
+        margin-bottom: 12px;
+        margin-top: 40px;
+      }
+    
       .range-date {
         margin-top: 40px;
         margin-bottom: 37px;
       }
       
       .radio-buttons {
-        margin-top: 40px;
         margin-bottom: 39px;
       }
 
-      .toggle {
-        margin-top: 16px;
+      .toggle__header {
+        margin-bottom: 12px;
       }
+
+      .toggle {
+        margin-bottom: 10px;
+      }
+
+      .like-button__header {
+        margin-top: 42px;
+        margin-bottom: 15px;
+      }
+
+      .like-button__wrapper {
+        display: flex;
+
+        .like-button {
+          margin-right: 10px;
+        }
+      }
+
     }
 
     .form-elements__item--small {

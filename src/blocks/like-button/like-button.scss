@@ -1,0 +1,35 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.like-button {
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: $dark_25-color;
+  padding: 3px 10px 3px 6px;
+
+  .like-button__icon {
+    font-size: 10px;
+    margin-right: 5px;
+    background: $dark_25-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .like-button__counter {
+    font-size: 10px;
+    line-height: 12px;
+    color: $purple-color;
+  }
+}
+
+.like-button--liked {
+  border-color: $purple-color;
+
+  .like-button__icon {
+    background: $purple-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

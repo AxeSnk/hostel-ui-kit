@@ -1,9 +1,7 @@
-mixin toggle({ title='', items=[] }={})
-  .toggle
-    h3.toggle__header= title
-    each item in items
-      .toggle-label__wrapper
-        label.toggle__label= item.label
-          input.toggle__input(type='checkbox', checked=item.checked)
-          .toggle__marker
+mixin toggle({ items=[] }={})
+  each item in items
+    .toggle
+      label.toggle__label= item.label
+        input.toggle__input(type='checkbox', checked=item.checked)
+        .toggle__marker
 

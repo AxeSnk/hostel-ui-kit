@@ -4,6 +4,7 @@ include ../../blocks/checkbox-button/checkbox-button
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/feature/feature
 include ../../blocks/field/field
+include ../../blocks/like-button/like-button
 include ../../blocks/logo/logo
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
@@ -75,22 +76,31 @@ block content
             ]
           })
         .form-elements__item
+          h3.radio-buttons__header Radio buttons
           +radio-buttons({ 
-            title: 'Radio buttons',
             items: [
               {label: 'Мужчина', name: 'sex', checked: true},
               {label: 'Женщина', name: 'sex', checked: false}
             ]
           })
         .form-elements__item
+          h3.toggle__header Toggle
           +toggle({
-            title: 'Toggle',
             items: [
               {label: 'Получать спецпредложения', checked: true},
               {label: 'Получать спецпредложения', checked: false},
             ]
-            
           })
+        .form-elements__item
+          h3.like-button__header Like button
+          .like-button__wrapper
+            +like-button({
+              items: [
+                {liked: false, counter: '2'},
+                {liked: true, counter: '12'}
+              ]
+            })
+
       .form-elements__rigth-column
 
 block footer
