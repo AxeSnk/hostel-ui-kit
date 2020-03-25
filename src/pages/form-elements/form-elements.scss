@@ -10,7 +10,7 @@
     padding: 2rem 141px 0;
 
     .form-elements__left-column {
-      
+    
       .form-elements__item {
         width: 320px;
         margin-bottom: 1.125rem;
@@ -36,8 +36,12 @@
         margin-bottom: 1rem;
       }
       
-      
     }
+
+    .form-elements__item--short {
+      max-width: 222px;
+    }
+
   }
 
 }
