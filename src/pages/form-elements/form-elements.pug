@@ -4,6 +4,7 @@ include ../../blocks/logo/logo
 include ../../blocks/field/field
 include ../../blocks/range-date/range-date
 include ../../blocks/checkbox-list/checkbox-list
+include ../../blocks/feature/feature
 
 block title
   title form-elements
@@ -54,6 +55,11 @@ block content
               { label: "Шампунь", checked: false },
             ]
           })
+        .form-elements__item.form-elements__features
+          .feature__wrapper
+            +feature({icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
+          .feature__wrapper
+            +feature({icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
 
       .form-elements__midl-column
       .form-elements__rigth-column
