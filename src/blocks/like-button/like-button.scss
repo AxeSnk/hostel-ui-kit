@@ -8,6 +8,7 @@
   border-style: solid;
   border-color: $dark_25-color;
   padding: 3px 10px 3px 6px;
+  cursor: pointer;
 
   .like-button__icon {
     font-size: 10px;
@@ -20,7 +21,7 @@
   .like-button__counter {
     font-size: 10px;
     line-height: 12px;
-    color: $purple-color;
+    color: $dark_25-color;
   }
 }
 
@@ -31,5 +32,9 @@
     background: $purple-color;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .like-button__counter {
+    color: $purple-color;
   }
 }

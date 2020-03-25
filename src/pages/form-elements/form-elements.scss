@@ -49,6 +49,19 @@
         }
       }
 
+      .rate-button__header {
+        margin-top: 38px;
+        margin-bottom: 15px;
+      }
+
+      .rate-button__wrapper {
+        display: flex;
+
+        .rate-button {
+          margin-right: 20px;
+        }
+      }
+
     }
 
     .form-elements__item--small {

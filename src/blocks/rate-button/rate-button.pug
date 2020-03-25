@@ -1,0 +1,9 @@
+mixin rate-button( {rate}={})
+  - var count = 0;
+  .rate-button
+    while count < 5
+      if count < rate
+        i.rate-button__icon.material-icons star
+      else
+        i.rate-button__icon.material-icons star_border
+      - count++;
