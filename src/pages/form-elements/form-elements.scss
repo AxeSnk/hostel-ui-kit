@@ -14,11 +14,11 @@
     }
 
     .form-elements__midl-column {
-      flex-grow: .28;
+      flex-grow: .23;
     }
 
     .form-elements__rigth-column {
-      flex-grow: .22;
+      // flex-grow: .22;
     }
 
        
@@ -82,6 +82,27 @@
 
       .rich-checkbox {
         margin-bottom: 10px;
+      }
+
+      .buttons__header {
+        margin-top: 43px;
+        margin-bottom: 15px;
+      }
+
+      .button {
+        margin-right: 19px;
+      }
+
+      .buttons__default {
+        margin-bottom: 30px;
+      }
+
+      .buttons__border {
+        margin-bottom: 26px;
+      }
+
+      .buttons__link {
+        margin-bottom: 26px;
       }
 
     }

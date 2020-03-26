@@ -1,5 +1,6 @@
 extends ../../blocks/layout/layout
 
+include ../../blocks/button/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/comment/comment
@@ -114,6 +115,19 @@ block content
       .form-elements__rigth-column
         .form-elements__item.form-elements__item--small
           +slider({title: 'Range slider'})
+        .form-elements__item
+          h3.buttons__header Buttons
+          .buttons__default
+            +button({title: 'Click me'})
+            +button({title: 'Click me', disabled: true})
+          .buttons__border
+            +button({title: 'Click me', border: true})
+            +button({title: 'Click me', border: true, disabled: true})
+          .buttons__link
+            +button({title: 'Click me', link: true})
+            +button({title: 'Click me', link: true, disabled: true})
+          .buttons__long
+            +button({title: 'Перейти к оплате', long: true})
     
     .form-elements__footer
       .form-elements__item.form-elements__features

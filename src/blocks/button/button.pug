@@ -1,0 +1,13 @@
+mixin button({ title='', border=false, disabled=false, link=false, long=false }={})
+  - let classes = ['button']
+  if border
+    - classes.push('button--border')
+  if disabled
+    - classes.push('button--disabled')
+  if link
+    - classes.push('button--link')
+  if long
+    - classes.push('button--long')
+  button(class=classes)= title
+    if long
+      i.material-icons.button__icon arrow_forward

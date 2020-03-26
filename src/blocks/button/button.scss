@@ -1,0 +1,59 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.button {
+  padding: 14px 19px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06px;
+  color: #fff;
+  text-transform: uppercase;
+  background: $gradient-color;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.button--border {
+  color: $purple-color;
+  background: #fff;
+  border: 2px solid $purple-color;
+  padding: 12px 17px 13px;
+}
+
+.button--disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.button--link {
+  padding: 0;
+  background: none;
+  color: $purple-color;
+}
+
+.button--link + .button--disabled {
+  color: $dark_50-color;
+}
+
+.button--long {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button__icon {
+    font-size: 24px;
+    line-height: 24px;
+    position: absolute;
+    color: #FFFFFF;
+    right: 3%;
+  }
+
+}
+
+.button:hover {
+  opacity: 0.5;
+}
