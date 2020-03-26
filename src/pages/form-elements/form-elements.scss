@@ -9,6 +9,18 @@
     justify-content: space-between;
     padding: 31px 141px 0;
 
+    .form-elements__left-column {
+      flex-grow: .5;
+    }
+
+    .form-elements__midl-column {
+      flex-grow: .28;
+    }
+
+    .form-elements__rigth-column {
+      flex-grow: .22;
+    }
+
        
     .form-elements__item {
       width: 320px;

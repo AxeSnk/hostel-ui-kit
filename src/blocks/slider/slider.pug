@@ -1,0 +1,8 @@
+mixin slider({ title='', footnote='' }={})
+  .slider
+    .slider__header
+      h3.slider__title= title
+      input.slider__amount(type='text', readonly)
+    .js-slider
+    if footnote
+      .slider__footnote= footnote

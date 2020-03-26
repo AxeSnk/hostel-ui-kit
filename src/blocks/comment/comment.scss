@@ -1,7 +1,7 @@
 .comment {
   display: flex;
 
-  .comment__icons {
+  &__icons {
     margin-right: 10px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,11 @@
     }
   }
 
-  .comment__title {
+  &__title {
     margin-bottom: 12px;
+
+    &-name {
+      font-weight: bold;
+    }
   }
 }

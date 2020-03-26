@@ -11,6 +11,7 @@ include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
 include ../../blocks/rate-button/rate-button
 include ../../blocks/rich-checkbox/rich-checkbox
+include ../../blocks/slider/slider
 include ../../blocks/toggle/toggle
 
 block title
@@ -111,6 +112,8 @@ block content
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
 
       .form-elements__rigth-column
+        .form-elements__item.form-elements__item--small
+          +slider({title: 'Range slider'})
     
     .form-elements__footer
       .form-elements__item.form-elements__features
