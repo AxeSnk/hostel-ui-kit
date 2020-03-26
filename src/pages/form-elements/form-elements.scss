@@ -93,11 +93,22 @@
       margin-bottom: 36px;
     }
 
-    .form-elements__features {
-      margin-top: 282px;
+  }
 
-      .feature__wrapper {
-        margin-bottom: 24px;
+  .form-elements__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 188px 141px 0;
+
+    .form-elements__item {
+      width: 280px;
+    }
+
+    .form-elements__item--long {
+      width: 711px;
+
+      .comment {
+        padding-top: 10px;
       }
     }
   }

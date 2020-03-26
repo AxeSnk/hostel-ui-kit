@@ -2,6 +2,7 @@ extends ../../blocks/layout/layout
 
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/checkbox-list/checkbox-list
+include ../../blocks/comment/comment
 include ../../blocks/feature/feature
 include ../../blocks/field/field
 include ../../blocks/like-button/like-button
@@ -61,11 +62,6 @@ block content
               { label: 'Шампунь', checked: false },
             ]
           })
-        .form-elements__item.form-elements__features
-          .feature__wrapper
-            +feature({icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
-          .feature__wrapper
-            +feature({icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
 
       .form-elements__midl-column
         .form-elements__item.form-elements__item--short
@@ -115,5 +111,15 @@ block content
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
 
       .form-elements__rigth-column
+    
+    .form-elements__footer
+      .form-elements__item.form-elements__features
+        .feature__wrapper
+          +feature({icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
+        .feature__wrapper
+          +feature({icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
+      .form-elements__item--long
+        +comment({img:'ava', name: 'Мурад Сарафанов', date: '5 дней назад', liked: true, counter: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+
 
 block footer
