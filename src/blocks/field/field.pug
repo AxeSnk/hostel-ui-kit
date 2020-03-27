@@ -1,9 +1,9 @@
-mixin field({ title='', note='', placeholder='', value='', masked=false, calendar=false, type='text', button={send:false,dropdown:false} }={})
+mixin field({ title='', note='', placeholder='', value='', masked=false, calendar={on, input}, type='text', button={send:false,dropdown:false} }={})
   - let classes = [];
   if masked
-    - classes.push("js-masked");
-  if calendar
-    - classes.push("js-calendar");
+    - classes.push('js-masked');
+  if calendar.on
+    - classes.push(`js-calendar ${calendar.input}`);
 
   .field__wrapper
     .filed__header

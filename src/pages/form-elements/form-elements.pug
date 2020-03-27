@@ -8,6 +8,7 @@ include ../../blocks/feature/feature
 include ../../blocks/field/field
 include ../../blocks/like-button/like-button
 include ../../blocks/logo/logo
+include ../../blocks/pagination/pagination
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-date/range-date
 include ../../blocks/rate-button/rate-button
@@ -128,6 +129,9 @@ block content
             +button({title: 'Click me', link: true, disabled: true})
           .buttons__long
             +button({title: 'Перейти к оплате', long: true})
+        .form-elements__item
+          h3.pagination__header Pagination
+          +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
     
     .form-elements__footer
       .form-elements__item.form-elements__features

@@ -2,7 +2,7 @@ mixin slider({ title='', footnote='' }={})
   .slider
     .slider__header
       h3.slider__title= title
-      input.slider__amount(type='text', readonly)
+      input.slider__val(type='text')
     .js-slider
     if footnote
       .slider__footnote= footnote
