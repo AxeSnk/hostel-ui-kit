@@ -1,0 +1,65 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.iqdropdown {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid $dark_25-color;
+  width: 100%;
+  line-height: 18px;
+  padding: 12px 15px;
+  outline: none;
+
+  .expand-more__icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark_50-color;
+    cursor: pointer;
+  }
+
+  .iqdropdown-selection {
+    font-family: 'Montserrat', sans-serif;
+    color: $dark_75-color;
+    font-size: 14px;
+    letter-spacing: 0.02rem;
+    &::after {
+      display: none;
+    }
+  }
+
+
+  &::placeholder {
+    color: $dark_25-color;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  &:focus,
+  &:hover {
+    border: 1px solid $dark_50-color;
+    color: $dark_75-color;
+  }
+
+}
+
+.iqdropdown.menu-open .iqdropdown-menu {
+  box-shadow: none;
+  border: 1px solid $dark_50-color;
+  border-radius: 0 0 4px 4px;
+
+  .iqdropdown-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: $dark_100-color;
+  }
+}
+
+
+.iqdropdown.menu-open {
+  border-radius: 4px 4px 0 0;
+  border-color: $dark_50-color;
+}
+

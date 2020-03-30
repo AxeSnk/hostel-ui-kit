@@ -15,7 +15,7 @@
 
   &__marker {
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     width: 18px;
     height: 18px;
@@ -38,11 +38,11 @@
     transform: rotate(45deg);
   }
 
-  &__input:checked ~ &__marker {
+  &__input:checked + &__marker {
     border-color: $purple-color;
   }
 
-  &__input:checked ~ &__marker::after {
+  &__input:checked + &__marker::after {
     display: block;
   }
 }

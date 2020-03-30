@@ -6,6 +6,13 @@ p {
   margin-inline-end: 0px;
 }
 
+.links-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .material-icons {
   font-family: 'MaterialIcons';
   font-weight: normal;

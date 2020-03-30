@@ -26,6 +26,22 @@
       width: 320px;
       margin-bottom: 16px;
 
+      .dropdown__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 24px;
+    
+        .dropdown__title {
+          line-height: 24px;
+        }
+    
+        .dropdown__note {
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+      }    
+
       .radio-buttons__header {
         margin-bottom: 12px;
         margin-top: 40px;
@@ -131,7 +147,7 @@
   .form-elements__footer {
     display: flex;
     justify-content: space-between;
-    padding: 188px 141px 0;
+    padding: 185px 140px 0;
 
     .form-elements__item {
       width: 280px;

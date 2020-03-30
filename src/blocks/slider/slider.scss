@@ -55,11 +55,9 @@
 }
 /* позиционируем ползунки */
 .ui-slider-horizontal .ui-slider-handle {
-  top: -6px;
   margin-left: -6px;
 }
 .ui-slider-horizontal .ui-slider-range {
-  top: -1px;
   height: 6px;
 }
 .ui-slider-horizontal .ui-slider-range-min {
@@ -82,4 +80,6 @@
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
 }

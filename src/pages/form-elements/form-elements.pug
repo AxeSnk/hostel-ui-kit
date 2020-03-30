@@ -4,6 +4,7 @@ include ../../blocks/button/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/checkbox-list/checkbox-list
 include ../../blocks/comment/comment
+include ../../blocks/dropdown/dropdown
 include ../../blocks/feature/feature
 include ../../blocks/field/field
 include ../../blocks/like-button/like-button
@@ -31,7 +32,12 @@ block content
         .form-elements__item
           +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
         .form-elements__item
-          +field({title: 'dropdown', note: 'default', value: 'Сколько гостей', button:{dropdown:true}})
+          .dropdown__header
+            h3.dropdown__title Dropdown
+            .dropdown__note Default
+          +dropdown
+        //dropdown filed
+          +field({title: 'dropdown', dropdown: {on: true, class: 'guests'}, note: 'default', value: 'Сколько гостей', button:{dropdown:true}})
         .form-elements__item
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
         .form-elements__item
@@ -107,7 +113,7 @@ block content
             +rate-button({rate: 4})
             +rate-button({rate: 5})
         .form-elements__item
-          +field({title: 'dropdown', value: 'Сколько гостей', button:{dropdown:true}})
+          +field({title: 'dropdown', dropdown: {on: true, class: 'dropdown-menu__guest'}, value: 'Сколько гостей', button:{dropdown:true}})
         .form-elements__item.form-elements__item--small
           h3.rich-checkbox__header Rich checkbox buttons
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
