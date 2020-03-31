@@ -1,15 +1,18 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-
-
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 $(document).ready(() => {
-  
-
   $('.js-dropdown__guest').iqDropdown({
     maxItems: 9,
     minItems: 0,
-    // openingText: 'Сколько гостей',
+    onChange: (id, count, totalItems) => {
+      let clearButton = $('.button__clear');
+      totalItems > 0
+        ? clearButton.attr('style', 'display: block')
+        : clearButton.attr('style', 'display: none');
+      clearButton.on('click', (totalItems = 0));
+      return totalItems;
+    },
     setSelectionText(itemCount, totalItems) {
       let text;
       if (totalItems == 0) {
@@ -27,4 +30,6 @@ $(document).ready(() => {
       }
     }
   });
+
+  $('.button__clear');
 });
