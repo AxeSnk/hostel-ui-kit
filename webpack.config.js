@@ -195,6 +195,11 @@ module.exports = {
       filename: 'form-elements.html',
       template: './src/pages/form-elements/form-elements.pug',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'cards.html',
+      template: './src/pages/cards/cards.pug',
+    }),
+
     // new HtmlWebpackPlugin({
     //   filename: 'sign-in.html',
     //   template: './src/pages/sign-in/sign-in.pug',

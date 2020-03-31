@@ -1,0 +1,53 @@
+extends ../../blocks/layout/layout
+
+include ../../blocks/button/button
+include ../../blocks/dropdown/dropdown
+include ../../blocks/logo/logo
+include ../../blocks/field/field
+include ../../blocks/radio-buttons/radio-buttons
+include ../../blocks/toggle/toggle
+
+block title
+  title cards
+
+block header
+block content
+  .cards
+    .cards__logo
+      +logo({ui: true})
+    .cards__wrapper
+      .cards__column
+        .search-humber
+          .cards__item
+            h1.cards__item__header Найдём номера под ваши пожелания
+            .cards__range
+              +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
+              +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
+            .dropdown__header
+              h3.dropdown__title Гости
+              +dropdown({category: 'guests'})
+            +button({title: 'Перейти к оплате', long: true})
+
+        .cards__item
+          .register
+            h1.cards__item__header Регистрация аккаунта
+            +field({placeholder: 'Имя'})
+            +field({placeholder: 'Фамилия'})
+            +radio-buttons({ 
+              items: [
+                {label: 'Мужчина', name: 'sex', checked: true},
+                {label: 'Женщина', name: 'sex', checked: false}
+              ]
+            })
+            +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
+            h3.data__header Данные для входа в сервис
+            +field({placeholder: 'Email'})
+            +field({placeholder: 'Пароль'})
+            +toggle({ items: [{label: 'Получать спецпредложения'}] })
+            +button({title: 'Перейти к оплате', long: true})
+            .register__foot
+              .register__note Уже есть уккаунт на Toxin
+              +button({title: 'Войти', border: true})
+
+block footer
+
