@@ -1,5 +1,5 @@
-mixin dropdown
-  .js-dropdown__guest.iqdropdown
+mixin dropdown({ category })
+  div(class= `js-dropdown__${category}`).iqdropdown
     p.iqdropdown-selection Сколько гостей
     i.material-icons.expand-more__icon expand_more
     .iqdropdown-menu

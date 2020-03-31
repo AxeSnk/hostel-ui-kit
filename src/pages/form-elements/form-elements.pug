@@ -35,21 +35,25 @@ block content
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
-          +dropdown
-        //dropdown filed
-          +field({title: 'dropdown', dropdown: {on: true, class: 'guests'}, note: 'default', value: 'Сколько гостей', button:{dropdown:true}})
+          +dropdown({category: 'guests'})
         .form-elements__item
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
         .form-elements__item
           +range-date
         .form-elements__item.form-elements__item--small
-          +field({title: 'filter date dropdown', button:{dropdown:true}})
+          +field({title: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}})
         .form-elements__item.form-elements__item--small
           +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__item.form-elements__item--small.form-elements__item--drpodown
-          +field({title: 'dropdown', note: 'default', value: '2 спальни, 2 кровати', button:{dropdown:true}})
+          .dropdown__header
+            h3.dropdown__title Dropdown
+            .dropdown__note Default
+          +dropdown({category: 'rooms'})
         .form-elements__item.form-elements__item--small
-          +field({title: 'dropdown', note: 'expanded', value: '2 спальни, 2 кровати', button:{dropdown:true}})
+          .dropdown__header
+            h3.dropdown__title Dropdown
+            .dropdown__note Default
+          +dropdown({category: 'rooms'})
         .form-elements__item.form-elements__checkbox
           +checkbox-list({
             title: 'Expandable checkbox list',
@@ -113,7 +117,9 @@ block content
             +rate-button({rate: 4})
             +rate-button({rate: 5})
         .form-elements__item
-          +field({title: 'dropdown', dropdown: {on: true, class: 'dropdown-menu__guest'}, value: 'Сколько гостей', button:{dropdown:true}})
+          .dropdown__header
+            h3.dropdown__title Dropdown
+          +dropdown({category: 'guests'})
         .form-elements__item.form-elements__item--small
           h3.rich-checkbox__header Rich checkbox buttons
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})

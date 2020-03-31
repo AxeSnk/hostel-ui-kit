@@ -3,7 +3,7 @@ mixin field({ title='', note='', placeholder='', value='', masked=false, calenda
   if masked
     - classes.push("js-masked");
   if calendar.on
-    - classes.push(`js-calendar ${calendar.input}`);
+    - classes.push(`js-calendar__${calendar.input}`);
 
   .field__wrapper
     .filed__header

@@ -14,7 +14,6 @@
       font-family: 'Montserrat-Regular', sans-serif;
       line-height: 15px;
       letter-spacing: 0.2px;
-      // width: 102px;
       text-align: right;
     }
   }
@@ -35,8 +34,8 @@
 .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
-  width: 12px; /* Задаем нужную ширину */
-  height: 12px; /* и высоту */
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   border: 2px solid #ffffff;
@@ -51,7 +50,7 @@
 }
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
 .ui-slider-horizontal {
-  height: 4px; /* задаем высоту согласно дизайна */
+  height: 4px; 
 }
 /* позиционируем ползунки */
 .ui-slider-horizontal .ui-slider-handle {
