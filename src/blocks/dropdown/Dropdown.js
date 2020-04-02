@@ -1,12 +1,13 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+import ButtonsDD from '../dropdown/ButtonsDD.js';
 
 $(document).ready(() => {
   const defaultText = 'Сколько гостей';
 
   $('.js-dropdown__guests').iqDropdown({
     maxItems: 9,
-    minItems: 1,
+    minItems: 0,
     setSelectionText(itemCount, totalItems) {
       let text;
       if (totalItems == 0) {
@@ -24,10 +25,7 @@ $(document).ready(() => {
       }
     },
     onChange: (id, count, totalItems) => {
-      let clearButton = $('.js-dropdown__guests .button__clear')
-      totalItems > 0
-        ? clearButton.attr('style', 'display: block')
-        : clearButton.attr('style', 'display: none');
+      new ButtonsDD(totalItems);
     },
 
   });

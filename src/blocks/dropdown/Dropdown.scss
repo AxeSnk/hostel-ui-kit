@@ -120,12 +120,12 @@
       text-transform: uppercase;
     }
 
-    .button__apply {
+    .button__dropdown--apply {
       color: $purple-color;
       margin-left: auto;
     }
 
-    .button__clear {
+    .button__dropdown--clear {
       display: none;
       color: $dark_50-color;
     }
