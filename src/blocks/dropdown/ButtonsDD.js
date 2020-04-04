@@ -2,6 +2,8 @@ class ButtonsDD {
   constructor(totalItems) {
     this.clearButton = $('.button__dropdown--clear');
     this.render(totalItems);
+
+    this.clearButton.on('click', this.setSelectionText.bind(this));
   }
 
   render(totalItems) {
@@ -10,6 +12,11 @@ class ButtonsDD {
     } else {
       this.clearButton.attr('style', 'display: none');
     }
+  }
+
+  setSelectionText(totalItems) {
+    totalItems = 0;
+    return totalItems;
   }
 }
 

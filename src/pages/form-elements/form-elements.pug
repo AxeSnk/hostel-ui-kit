@@ -35,7 +35,7 @@ block content
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
-          +dropdown({category: 'guests'})
+          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .form-elements__item
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
         .form-elements__item
@@ -48,12 +48,12 @@ block content
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
-          +dropdown({category: 'rooms'})
+          +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__item.form-elements__item--small
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
-          +dropdown({category: 'rooms'})
+          +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__item.form-elements__checkbox
           +checkbox-list({
             title: 'Expandable checkbox list',
@@ -119,7 +119,7 @@ block content
         .form-elements__item
           .dropdown__header
             h3.dropdown__title Dropdown
-          +dropdown({category: 'guests'})
+          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .form-elements__item.form-elements__item--small
           h3.rich-checkbox__header Rich checkbox buttons
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})

@@ -1,0 +1,31 @@
+include ../dropdown/dropdown
+include ../field/field
+
+mixin booking({ header=[], price=[], total='' })
+  .booking
+    .booking__header
+      .booking__header__numeration= header.numeration
+      .booking__header__number= header.number
+      .booking__header__luxury= header.luxury
+      .booking__header__cost= header.cost
+      .booking__header__inday= header.inday
+    .booking__range
+      +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
+      +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
+    .booking__guests
+      h3.dropdown__title Гости
+      +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+    .booking__price-list
+      each item in price
+        .price-list__item
+          .price-list__item__name= item.name
+          if item.info
+            i.material-icons.price-list__item__info error_outline
+          .price-list__item__cost= item.cost
+    .booking__total
+      .booking__total__title Итого
+      .booking__total__points
+      .booking__total__cost= total
+    +button({title: 'Забронировать', long: true})
+
+

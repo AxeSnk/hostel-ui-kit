@@ -1,0 +1,125 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.booking {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 40px 30px 29px;
+  margin-bottom: 40px;
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+
+    &__numeration {
+      font-family: 'OpenSans', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark_100-color;
+      margin-right: 5px;
+    }
+
+    &__number {
+      font-family: 'OpenSans', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: $dark_100-color;
+      margin-right: 5px;
+    }
+
+    &__luxury {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $purple-color;
+    }
+
+    &__cost {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark_50-color; 
+      margin-left: auto;
+      margin-right: 5px;
+    }
+
+    &__inday {
+      font-size: 12px;
+      line-height: 18px;
+      color: $dark_50-color;
+    }
+  }
+
+  &__range {
+    display: flex;
+    margin-bottom: 19px;
+
+    .field__wrapper:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__guests {
+    margin-bottom: 21px;
+
+    .dropdown__title {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__price-list {
+    margin-bottom: 30px;
+
+    .price-list__item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      line-height: 18px;
+
+      &__name {
+        max-width: 214px;
+      }
+
+      &__info {
+        font-size: 26px;
+        line-height: 18px;
+        color: $dark_25-color;
+        transform: rotate(180deg);
+      }
+
+      &__cost {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    color: $dark_100-color;
+    margin-bottom: 20px;
+
+    &__title {
+      margin-right: 5px;
+    }
+
+    &__points {
+      flex: 1;
+      border-bottom: 1px dotted $dark_25-color;
+    }
+
+    &__cost {
+      margin-left: 5px;
+    }
+  }
+}

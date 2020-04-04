@@ -1,5 +1,6 @@
 extends ../../blocks/layout/layout
 
+include ../../blocks/booking/booking
 include ../../blocks/button/button
 include ../../blocks/dropdown/dropdown
 include ../../blocks/logo/logo
@@ -17,15 +18,15 @@ block content
       +logo({ui: true})
     .cards__wrapper
       .cards__column
-        .search-humber
-          .cards__item
+        .cards__item
+          .search-humber
             h1.cards__item__header Найдём номера под ваши пожелания
             .cards__range
               +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
               +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
             .dropdown__header
               h3.dropdown__title Гости
-              +dropdown({category: 'guests'})
+              +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
             +button({title: 'Перейти к оплате', long: true})
 
         .cards__item
@@ -48,6 +49,21 @@ block content
             .register__foot
               .register__note Уже есть уккаунт на Toxin
               +button({title: 'Войти', border: true})
+      
+      .cards__column
+        .cards__item
+          +booking({
+              header:{numeration: '№', number: '888', luxury: 'люкс', cost: '9 990₽', inday: 'в сутки'},
+              price: [
+                {name: '9 990₽ х 4 суток', cost: '39 960₽'},
+                {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'},
+                {name: 'Сбор за дополнительные услуги', info: true, cost: '300₽'}
+              ],
+              total: '38 081₽'
+            })
+
+      .cards__column
+        .cards__item
 
 block footer
 
