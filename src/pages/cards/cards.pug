@@ -1,9 +1,11 @@
 extends ../../blocks/layout/layout
 
 include ../../blocks/booking/booking
+include ../../blocks/field/field
 include ../../blocks/login/login
 include ../../blocks/logo/logo
 include ../../blocks/register/register
+include ../../blocks/sample/sample
 include ../../blocks/search/search
 
 block title
@@ -25,7 +27,7 @@ block content
       .cards__column
         .cards__item
           +booking({
-              header:{numeration: '№', number: '888', luxury: 'люкс', cost: '9 990₽', inday: 'в сутки'},
+              header:{number: '888', luxury: 'люкс', cost: '9 990₽'},
               price: [
                 {name: '9 990₽ х 4 суток', cost: '39 960₽'},
                 {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'},
@@ -33,12 +35,19 @@ block content
               ],
               total: '38 081₽'
             })
-            
+
         .cards__item
           +login({ title: 'Войти'})
 
-
       .cards__column
+        .js-calendar__range
+
+        +sample({ list: [
+          {img: '1', arrows: true, number: '888', luxury: 'люкс', cost: '9 990₽', rate: 5, reviews: '145'},
+          {img: '2', arrows: false, number: '840', luxury: 'люкс', cost: '9 900₽', rate: 4, reviews: '65'}
+
+        ]})
+
 
 block footer
 

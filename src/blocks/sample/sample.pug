@@ -1,0 +1,28 @@
+include ../rate-button/rate-button
+
+mixin sample({ list=[] })
+  each item in list
+    .sample
+      .sample__image(style=`background-image: url('img/room${item.img}.jpg')`)
+        if item.arrows
+          .image__arrow__left
+            i.material-icons.sample__image--prev keyboard_arrow_left
+          .image__arrow__right
+            i.material-icons.sample__image--next keyboard_arrow_left
+          .image__ellipses__wrapper
+            .image__ellipses.elipses__filled
+            .image__ellipses
+            .image__ellipses
+            .image__ellipses
+
+      .sample__info
+        .sample__price
+          .price__numeration №
+          .price__number= item.number
+          .price__luxury= item.luxury
+          .price__cost= item.cost
+          .price__inday в сутки
+        .sample__reviews
+          +rate-button({rate: item.rate})
+          .reviews__number= item.reviews
+          .reviews__text Отзывов

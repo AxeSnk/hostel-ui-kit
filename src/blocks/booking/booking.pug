@@ -4,11 +4,11 @@ include ../field/field
 mixin booking({ header=[], price=[], total='' })
   .booking
     .booking__header
-      .booking__header__numeration= header.numeration
+      .booking__header__numeration №
       .booking__header__number= header.number
       .booking__header__luxury= header.luxury
       .booking__header__cost= header.cost
-      .booking__header__inday= header.inday
+      .booking__header__inday в сутки
     .booking__range
       +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
       +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})

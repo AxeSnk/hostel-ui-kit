@@ -1,6 +1,5 @@
 import 'air-datepicker';
 
-
   $('.js-calendar__').datepicker({
     position: 'bottom left',
     // multipleDates: false,

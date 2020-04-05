@@ -1,0 +1,132 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.sample {
+  max-width: 270px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+  .sample__image {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 270px;
+    height: 151.38px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .image__arrow__left {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      padding: 0 9px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .image__arrow__right {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      padding: 0 9px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .sample__image--prev,
+    .sample__image--next {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .image__ellipses__wrapper {
+      position: absolute;
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-between;
+      width: 42px;
+      right: 5%;
+      bottom: 10%;
+
+      .image__ellipses {
+        width: 7.5px;
+        height: 7.5px;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+      }
+
+      .elipses__filled {
+        background: #fff;
+      }
+    }
+  }
+
+  .sample__info {
+    padding: 20px 20px 10px;
+
+    .sample__price {
+      display: flex;
+      align-items: baseline;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid $dark_10-color;
+    }
+        
+    .price__numeration{
+      font-family: 'OpenSans', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark_100-color;
+      margin-right: 5px;
+    }
+
+    .price__number {
+      font-family: 'OpenSans', sans-serif;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: $dark_100-color;
+      margin-right: 5px;
+    }
+
+    .price__luxury {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $purple-color;
+    }
+
+    .price__cost,
+    .reviews__number {
+      font-weight: bold;
+      font-size: 14px;
+      color: $dark_50-color; 
+      margin-left: auto;
+      margin-right: 5px;
+    }
+
+    .price__inday {
+      font-size: 12px;
+      line-height: 18px;
+      color: $dark_50-color;
+    }
+    
+
+    .sample__reviews {
+      display: flex;
+    }
+
+    .reviews__text {
+      font-size: 14px;
+      color: $dark_50-color; 
+    }
+
+  }
+}
