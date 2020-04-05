@@ -1,0 +1,25 @@
+include ../button/button
+include ../field/field
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
+
+mixin register({ title='' })
+  .register
+    h1.register__header= title
+    +field({placeholder: 'Имя'})
+    +field({placeholder: 'Фамилия'})
+    +radio-buttons({ 
+      items: [
+        {label: 'Мужчина', name: 'sex', checked: true},
+        {label: 'Женщина', name: 'sex', checked: false}
+      ]
+    })
+    +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
+    h3.register__data__header Данные для входа в сервис
+    +field({placeholder: 'Email', type: 'email'})
+    +field({placeholder: 'Пароль'})
+    +toggle({ items: [{label: 'Получать спецпредложения'}] })
+    +button({title: 'Перейти к оплате', long: true})
+    .register__foot
+      .register__note Уже есть аккаунт на Toxin
+      +button({title: 'Войти', border: true})

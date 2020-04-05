@@ -1,12 +1,10 @@
 extends ../../blocks/layout/layout
 
 include ../../blocks/booking/booking
-include ../../blocks/button/button
-include ../../blocks/dropdown/dropdown
+include ../../blocks/login/login
 include ../../blocks/logo/logo
-include ../../blocks/field/field
-include ../../blocks/radio-buttons/radio-buttons
-include ../../blocks/toggle/toggle
+include ../../blocks/register/register
+include ../../blocks/search/search
 
 block title
   title cards
@@ -19,36 +17,10 @@ block content
     .cards__wrapper
       .cards__column
         .cards__item
-          .search-humber
-            h1.cards__item__header Найдём номера под ваши пожелания
-            .cards__range
-              +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
-              +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: ''}})
-            .dropdown__header
-              h3.dropdown__title Гости
-              +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
-            +button({title: 'Перейти к оплате', long: true})
+          +search({ title: 'Найдём номера под ваши пожелания' })
 
         .cards__item
-          .register
-            h1.cards__item__header Регистрация аккаунта
-            +field({placeholder: 'Имя'})
-            +field({placeholder: 'Фамилия'})
-            +radio-buttons({ 
-              items: [
-                {label: 'Мужчина', name: 'sex', checked: true},
-                {label: 'Женщина', name: 'sex', checked: false}
-              ]
-            })
-            +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
-            h3.data__header Данные для входа в сервис
-            +field({placeholder: 'Email'})
-            +field({placeholder: 'Пароль'})
-            +toggle({ items: [{label: 'Получать спецпредложения'}] })
-            +button({title: 'Перейти к оплате', long: true})
-            .register__foot
-              .register__note Уже есть уккаунт на Toxin
-              +button({title: 'Войти', border: true})
+          +register({ title: 'Регистрация аккаунта' })
       
       .cards__column
         .cards__item
@@ -61,9 +33,12 @@ block content
               ],
               total: '38 081₽'
             })
+            
+        .cards__item
+          +login({ title: 'Войти'})
+
 
       .cards__column
-        .cards__item
 
 block footer
 

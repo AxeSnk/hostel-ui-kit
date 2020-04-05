@@ -42,11 +42,6 @@
     letter-spacing: 0.02rem;
     outline: none;
 
-    @media (min-width: 1600px) {
-      padding: 0.833vw 1.041vw;
-      line-height: 1.25vw;
-    }
-
     &::placeholder {
       color: $dark_25-color;
       font-size: 14px;

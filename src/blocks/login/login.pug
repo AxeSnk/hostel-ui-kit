@@ -1,0 +1,14 @@
+include ../button/button
+include ../field/field
+
+mixin login({ title })
+  .login
+    h1.login__header= title
+    +field({placeholder: 'Email', type: 'email'})
+    +field({placeholder: 'Пароль'})
+    +button({title: 'Войти', long: true})
+    .login__foot
+      .login__note Нет аккаунта на Toxin?
+      +button({title: 'Создать', border: true})
+
+
