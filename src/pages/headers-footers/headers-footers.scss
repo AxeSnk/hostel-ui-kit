@@ -1,0 +1,36 @@
+.headers-footers {
+  background-color: #e5e5e5;
+  
+  .headers-footers__wrapper {
+    padding: 30px 30px 72px;
+  }
+
+  .header {
+    background-color: #fff;
+    padding: 15px 140px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+
+    .main {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    .main__login {
+      margin-left: 38px;
+    }
+
+
+    .buttons__wrapper {
+      .button {
+        padding: 10px 20px 9px 19px;
+      }
+
+      .button--border {
+        padding: 8px 17px 7px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.main{
+  display: flex;
+  align-items: center;
+
+  .nav-menu {
+    display: flex;
+
+    .nav-menu__item {
+      display: flex;
+      margin-right: 27px;
+      align-items: center;
+
+      .expand-more__icon {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+
+    .nav-menu__item:last-child {
+      margin-right: 0;
+    }
+
+    .item--bold {
+      font-weight: bold;
+    }
+  }
+}

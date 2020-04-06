@@ -1,0 +1,9 @@
+include ../logo/logo
+
+mixin main({ list=[] })
+  .main
+    nav.nav-menu
+      each item in list
+        .nav-menu__item(class= item.bold)= item.title
+          if item.more
+            i.material-icons.expand-more__icon expand_more

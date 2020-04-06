@@ -1,0 +1,34 @@
+extends ../../blocks/layout/layout
+
+include ../../blocks/button/button
+include ../../blocks/header/header
+include ../../blocks/logo/logo
+include ../../blocks/main/main
+
+block title
+  title headers-footers
+block header
+block content
+  .headers-footers
+    .headers-footers__wrapper
+      +logo({ui: true})
+    +header({ list: [
+      {title: 'Home', bold: 'item--bold'},
+      {title: 'About us'},
+      {title: 'Services', more: true},
+      {title: 'Careers'},
+      {title: 'News'},
+      {title: 'Documentation'},
+    ], reg: {on: false}})
+    +header({ list: [
+      {title: 'Home', bold: 'item--bold'},
+      {title: 'About us'},
+      {title: 'Services', more: true},
+      {title: 'Careers'},
+      {title: 'News'},
+      {title: 'Documentation'},
+    ], reg: {on: true, name: 'Cosmin Negota'}})
+
+
+
+block footer

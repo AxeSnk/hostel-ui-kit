@@ -199,6 +199,10 @@ module.exports = {
       filename: 'cards.html',
       template: './src/pages/cards/cards.pug',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'headers-footers.html',
+      template: './src/pages/headers-footers/headers-footers.pug',
+    }),
 
     // new HtmlWebpackPlugin({
     //   filename: 'sign-in.html',

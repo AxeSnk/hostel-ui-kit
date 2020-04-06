@@ -1,0 +1,12 @@
+mixin header({ list=[], reg })
+  .header
+    +logo({ui: false})
+    +main({list: list})
+    if reg.on
+      .main__login= reg.name
+    else
+      .buttons__wrapper
+        +button({title: 'Login', border: true})
+        +button({title: 'register'})
+
+
