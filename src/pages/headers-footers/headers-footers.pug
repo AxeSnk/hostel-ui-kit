@@ -1,9 +1,8 @@
 extends ../../blocks/layout/layout
 
-include ../../blocks/button/button
+include ../../blocks/footer/footer
 include ../../blocks/header/header
 include ../../blocks/logo/logo
-include ../../blocks/main/main
 
 block title
   title headers-footers
@@ -14,7 +13,7 @@ block content
       +logo({ui: true})
     +header({ list: [
       {title: 'Home', bold: 'item--bold'},
-      {title: 'About us'},
+      {title: 'About Us'},
       {title: 'Services', more: true},
       {title: 'Careers'},
       {title: 'News'},
@@ -22,12 +21,38 @@ block content
     ], reg: {on: false}})
     +header({ list: [
       {title: 'Home', bold: 'item--bold'},
-      {title: 'About us'},
+      {title: 'About Us'},
       {title: 'Services', more: true},
       {title: 'Careers'},
       {title: 'News'},
       {title: 'Documentation'},
     ], reg: {on: true, name: 'Cosmin Negota'}})
+    +footer({
+      info: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      list1: [
+        {title: 'Navigation', bold: 'item--bold'},
+        {title: 'About Us'},
+        {title: 'News'},
+        {title: 'Support'},
+        {title: 'Products'}
+      ],
+      list2: [
+        {title: 'About Us', bold: 'item--bold'},
+        {title: 'Who we are'},
+        {title: 'Our team'},
+        {title: 'Careers'},
+        {title: 'Investors'}
+      ],
+      list3: [
+        {title: 'Support', bold: 'item--bold'},
+        {title: 'Documentation'},
+        {title: 'Community'},
+        {title: 'Get in Touch'}
+      ],
+      title: 'Subscribe to our newsletter',
+      text: 'Receive our latest news and promotions in your inbox!'
+
+    })
 
 
 

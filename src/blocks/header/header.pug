@@ -1,9 +1,13 @@
+include ../logo/logo
+include ../menu/menu
+include ../button/button
+
 mixin header({ list=[], reg })
-  .header
+  header.header
     +logo({ui: false})
-    +main({list: list})
+    +menu({list: list})
     if reg.on
-      .main__login= reg.name
+      .name__login= reg.name
     else
       .buttons__wrapper
         +button({title: 'Login', border: true})

@@ -1,0 +1,11 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.social {
+  .social__logo {
+    font-family: 'FontAwesome';
+    font-size: 24px;
+    background: $gradient-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
