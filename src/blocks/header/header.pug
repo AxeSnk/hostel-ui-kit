@@ -2,7 +2,7 @@ include ../logo/logo
 include ../menu/menu
 include ../button/button
 
-mixin header({ list=[], reg })
+mixin header({ list=[], reg, buttons })
   header.header
     +logo({ui: false})
     +menu({list: list})
@@ -10,7 +10,7 @@ mixin header({ list=[], reg })
       .name__login= reg.name
     else
       .buttons__wrapper
-        +button({title: 'Login', border: true})
-        +button({title: 'register'})
+        +button({title: buttons.title1, border: true})
+        +button({title: buttons.title2})
 
 

@@ -203,12 +203,10 @@ module.exports = {
       filename: 'headers-footers.html',
       template: './src/pages/headers-footers/headers-footers.pug',
     }),
-
-    // new HtmlWebpackPlugin({
-    //   filename: 'sign-in.html',
-    //   template: './src/pages/sign-in/sign-in.pug',
-    //   chunks: ['signin']
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'sign-in.html',
+      template: './src/pages/sign-in/sign-in.pug',
+    }),
     // new HtmlWebpackPlugin({
     //   filename: 'registration.html',
     //   template: './src/pages/registration/registration.pug',
