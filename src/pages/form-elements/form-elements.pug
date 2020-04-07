@@ -1,5 +1,6 @@
 extends ../../blocks/layout/layout
 
+include ../../blocks/bullet/bullet
 include ../../blocks/button/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/checkbox-list/checkbox-list
@@ -41,7 +42,7 @@ block content
         .form-elements__item
           +range-date
         .form-elements__item.form-elements__item--small
-          +field({title: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}})
+          +field({title: 'filter date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}})
         .form-elements__item.form-elements__item--small
           +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__item.form-elements__item--small.form-elements__item--drpodown
@@ -125,7 +126,7 @@ block content
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
 
-      .form-elements__rigth-column
+      .form-elements__right-column
         .form-elements__item.form-elements__item--small
           +slider({title: 'Range slider'})
         .form-elements__item
@@ -144,6 +145,19 @@ block content
         .form-elements__item
           h3.pagination__header Pagination
           +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
+        .form-elements__item
+          .dropdown__header
+            h3.dropdown__title Dropdown
+          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 2}, {title: 'Дети', count: 1}, {title: 'Младенцы', count: 0}]})
+        .form-elements__item
+          h3.bullet-list__header Bullet list
+          .bullet-list
+            +bullet({text: 'Нельзя с питомцами'})
+            +bullet({text: 'Без вечеринок и мероприятий'})
+            +bullet({text: 'Время прибытия — после 13:00, а выезд до 12:00'})
+
+
+
     
     .form-elements__footer
       .form-elements__item.form-elements__features

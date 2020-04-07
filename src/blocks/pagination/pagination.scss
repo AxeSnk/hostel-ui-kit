@@ -1,0 +1,38 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.pagination {
+  max-width: 241px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .pagination__item {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: $dark_50-color;
+      line-height: 40px;
+      border-radius: 22px;
+      cursor: pointer;
+    }
+
+    .pagination__current {
+      font-weight: bold;
+      color: #FFFFFF;
+      background: $gradient-color;
+    }
+
+    .pagination__next {
+      font-size: 24px;
+      color: #FFFFFF;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+  }
+
+  .pagination__footnote {
+    text-align: center;
+  }
+}

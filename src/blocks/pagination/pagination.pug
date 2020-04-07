@@ -1,3 +1,10 @@
 mixin pagination({ footnote='' })
-  
-  .pagination__footnote= footnote
+  .pagination
+    .pagination__wrapper
+      .pagination__item.pagination__current 1
+      .pagination__item 2
+      .pagination__item 3
+      .pagination__item ...
+      .pagination__item 15
+      i.pagination__item.pagination__next.material-icons arrow_forward
+    .pagination__footnote= footnote

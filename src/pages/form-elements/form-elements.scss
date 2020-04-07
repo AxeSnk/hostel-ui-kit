@@ -14,10 +14,12 @@
     }
 
     .form-elements__midl-column {
+      padding-top: 3px;
       flex-grow: .23;
     }
 
-    .form-elements__rigth-column {
+    .form-elements__right-column {
+      padding-top: 3px;
       // flex-grow: .22;
     }
 
@@ -44,7 +46,7 @@
 
       .radio-buttons__header {
         margin-bottom: 12px;
-        margin-top: 40px;
+        margin-top: 41px;
       }
     
       .range-date {
@@ -119,6 +121,27 @@
 
       .buttons__link {
         margin-bottom: 26px;
+      }
+
+      .buttons__long {
+        margin-bottom: 38px;
+      }
+
+      .pagination__header {
+        margin-bottom: 15px;
+      }
+
+      .pagination {
+        margin-bottom: 229px;
+      }
+
+      .bullet-list__header {
+        margin-top: 255px;
+        margin-bottom: 15px;
+      }
+
+      .bullet {
+        margin-bottom: 8px;
       }
 
     }
