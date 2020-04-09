@@ -1,4 +1,6 @@
-.menu{
+@import '../../colors-and-type/colors-and-type.scss';
+
+.menu {
   display: flex;
   align-items: center;
 
@@ -9,6 +11,7 @@
       display: flex;
       margin-right: 27px;
       align-items: center;
+      cursor: pointer;
 
       .expand-more__icon {
         font-size: 24px;
@@ -24,4 +27,7 @@
       font-weight: bold;
     }
   }
+
+
 }
+

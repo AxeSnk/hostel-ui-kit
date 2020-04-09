@@ -1,4 +1,11 @@
 .sign-in {
-  padding: 163px 530px 123px;
+  padding: 163px 0;
   background: url('img/reg-sign.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .login {
+    width: 380px;
+    margin: 0 auto;
+  }
 }

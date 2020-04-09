@@ -1,6 +1,4 @@
 .wrapper {
-  max-width: 1920px;
-  min-width: 320px;
 
   .header {
     .menu {
@@ -10,5 +8,8 @@
         margin-right: 21px;
       }
     }
+  }
+
+  .content__wrapper {
   }
 }

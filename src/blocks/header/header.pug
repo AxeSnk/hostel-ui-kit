@@ -4,13 +4,14 @@ include ../button/button
 
 mixin header({ list=[], reg, buttons })
   header.header
-    +logo({ui: false})
-    +menu({list: list})
-    if reg.on
-      .name__login= reg.name
-    else
-      .buttons__wrapper
-        +button({title: buttons.title1, border: true})
-        +button({title: buttons.title2})
+    .header__wrapper
+      +logo({ui: false})
+      +menu({list: list})
+      if reg.on
+        .name__login= reg.name
+      else
+        .buttons__wrapper
+          +button({title: buttons.title1, border: true})
+          +button({title: buttons.title2})
 
 
