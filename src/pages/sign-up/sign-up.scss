@@ -1,0 +1,16 @@
+.sign-up {
+  padding: 163px 0;
+  background: url('img/reg-sign.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .register {
+    width: 380px;
+    margin: 0 auto;
+
+    @media(max-width: 480px) {
+      max-width: 320px;
+    }
+  }
+}

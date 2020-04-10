@@ -1,0 +1,12 @@
+extends ../../blocks/layout/layout
+
+include ../../blocks/register/register
+
+block title
+  title sign-up
+
+block content
+  .sign-up
+    +register({ title: 'Регистрация аккаунта' })
+    
+block footer

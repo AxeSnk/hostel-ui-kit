@@ -19,7 +19,7 @@ const PAGES = fs.readdirSync(PAGES_DIR);
 //     'index': './src/index.js',
 //     'uikit': './src/pages/ui-kit/ui-kit.js',
 //     // signin: './src/pages/sign-in/sign-in.js',
-//     // registration: './src/pages/registration/registration.js',
+//     // sign-up: './src/pages/sign-up/sign-up.js',
 //     // searchroom: './src/pages/search-room/search-room.js',
 //     // landingpage: './src/pages/landing-page/landing-page.js',
 //     // roomdetails: './src/pages/room-details/room-details.js'
@@ -125,7 +125,7 @@ module.exports = {
     // uikit: './src/pages/ui-kit/ui-kit.js',
     // 'form-elements': './src/pages/form-elements/form-elements.js'
     // signin: './src/pages/sign-in/sign-in.js',
-    // registration: './src/pages/registration/registration.js',
+    // sign-up: './src/pages/sign-up/sign-up.js',
     // searchroom: './src/pages/search-room/search-room.js',
     // landingpage: './src/pages/landing-page/landing-page.js',
     // roomdetails: './src/pages/room-details/room-details.js'
@@ -207,11 +207,10 @@ module.exports = {
       filename: 'sign-in.html',
       template: './src/pages/sign-in/sign-in.pug',
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'registration.html',
-    //   template: './src/pages/registration/registration.pug',
-    //   chunks: ['registration']
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'sign-up.html',
+      template: './src/pages/sign-up/sign-up.pug',
+    }),
     // new HtmlWebpackPlugin({
     //   filename: 'search-room.html',
     //   template: './src/pages/search-room/search-room.pug',
@@ -239,8 +238,8 @@ module.exports = {
     // }),
     // new MiniCssExtractPlugin({
     //   filename: 'css/[name].css',
-    //   template: './src/pages/registration/registration.scss',
-    //   chunks: ['registration']
+    //   template: './src/pages/sign-up/sign-up.scss',
+    //   chunks: ['sign-up']
     // }),
     // new MiniCssExtractPlugin({
     //   filename: 'css/[name].css',
