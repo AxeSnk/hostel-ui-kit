@@ -1,0 +1,33 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 9.72% 18px;
+  background: url('img/landing.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media(max-width: 480px) {
+    align-items: center;
+    padding: 70px 0 18px;
+  }
+
+  .search {
+    width: 380px;
+    margin-bottom: 320px;
+
+    @media(max-width: 480px) {
+      max-width: 320px;
+    }
+  }
+
+  .landing__note {
+    max-width: 268px;
+    align-self: flex-end;
+    text-align: end;
+
+    @media(max-width: 480px) {
+      align-self: inherit;
+    }
+  }
+}

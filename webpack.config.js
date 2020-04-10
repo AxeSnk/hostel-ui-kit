@@ -211,6 +211,11 @@ module.exports = {
       filename: 'sign-up.html',
       template: './src/pages/sign-up/sign-up.pug',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'landing.html',
+      template: './src/pages/landing/landing.pug',
+    }),
+
     // new HtmlWebpackPlugin({
     //   filename: 'search-room.html',
     //   template: './src/pages/search-room/search-room.pug',
