@@ -5,6 +5,16 @@
   grid-template-columns: 1fr 3fr;
   padding: 26px 9.72% 73px;
 
+  @media(max-width: 1024px) {
+    grid-template-columns: 1fr 2fr;
+    padding: 26px 5% 73px;
+  }
+
+  @media(max-width: 824px) {
+    grid-template-columns: none;
+    justify-items: center;
+  }
+
   .search-room__sidebar {
     max-width: 266px;
 
@@ -49,11 +59,16 @@
     margin-left: 36px;
     margin-top: 5px;
 
+    @media(max-width: 824px) {
+      margin-left: 0;
+    }
+
     .search-room__samples__header {
       margin-bottom: 20px;
     }
     .samples__wrapper {
       display: grid;
+      justify-items: center;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       row-gap: 20px;
       column-gap: 12px;
