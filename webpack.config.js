@@ -215,12 +215,10 @@ module.exports = {
       filename: 'landing.html',
       template: './src/pages/landing/landing.pug',
     }),
-
-    // new HtmlWebpackPlugin({
-    //   filename: 'search-room.html',
-    //   template: './src/pages/search-room/search-room.pug',
-    //   chunks: ['searchroom']
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'search-room.html',
+      template: './src/pages/search-room/search-room.pug',
+    }),
     // new HtmlWebpackPlugin({
     //   filename: 'landing-page.html',
     //   template: './src/pages/landing-page/landing-page.pug',

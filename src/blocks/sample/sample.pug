@@ -20,7 +20,7 @@ mixin sample({ list=[] })
           .price__numeration №
           .price__number= item.number
           .price__luxury= item.luxury
-          .price__cost= item.cost
+          .price__cost= `${item.cost}₽`
           .price__inday в сутки
         .sample__reviews
           +rate-button({rate: item.rate})
