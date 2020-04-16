@@ -27,10 +27,11 @@ block content
             +feature({icon: 'whatshot', title: 'Уют', text: 'Номер оснащён камином'})
         .room-details__impressions
           h2.room-details__impressions__header Впечатления от номера
-          +diagram({})
-
+          +diagram
         .room-details__reviews
-          h2.room-details__reviews__header Отзывы посетителей номера
+          .room-details__reviews__header
+            h2.reviews__title Отзывы посетителей номера
+            .reviews__number 2 отзыва
           +comment({img:'ava', name: 'Мурад Сарафанов', date: '5 дней назад', liked: true, counter: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
           +comment({img:'ava2', name: 'Патрисия Стёклышкова', date: 'Неделю назад', liked: false, counter: '2', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
         .room-details__bullet-list
