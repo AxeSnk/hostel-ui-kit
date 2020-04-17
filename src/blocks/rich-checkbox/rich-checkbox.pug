@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 
 mixin rich-checkbox({ label, details, checked=false }={})
-  .rich-checkbox
+  form.rich-checkbox
     +checkbox({ label: label, checked: checked })
     .rich-checkbox__details= details

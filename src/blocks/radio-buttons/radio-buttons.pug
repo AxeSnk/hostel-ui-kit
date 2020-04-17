@@ -1,5 +1,5 @@
 mixin radio-buttons({ items=[] }={})
-  .radio-buttons
+  form.radio-buttons
     each item in items
       label.radio-buttons__label= item.label
         input.radio-buttons__input(type='radio', name=item.name, checked=item.checked)

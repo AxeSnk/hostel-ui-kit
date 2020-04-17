@@ -30,13 +30,5 @@
     .login__note {
       color: #000000;
     }
-
-    .button {
-      width: 30%;
-
-      @media(max-width: 480px) {
-        width: auto;
-      }
-    }
   }
 }

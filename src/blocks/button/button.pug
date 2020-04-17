@@ -8,6 +8,7 @@ mixin button({ title='', border=false, disabled=false, link=false, long=false }=
     - classes.push('button--link')
   if long
     - classes.push('button--long')
-  button(class=classes)= title
-    if long
-      i.material-icons.button__icon arrow_forward
+  form.button__form
+    button(class=classes)= title
+      if long
+        i.material-icons.button__icon arrow_forward
