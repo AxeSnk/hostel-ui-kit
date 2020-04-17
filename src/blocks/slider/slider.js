@@ -7,7 +7,7 @@ class Slider {
 
   init() {
     let $element = $('.js-slider');
-    let val = $('.slider__val');
+    let val = $('.js-slider__val');
 
     $element.slider({
       min: 0,

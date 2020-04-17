@@ -1,6 +1,6 @@
 class ButtonsDD {
   constructor(totalItems) {
-    this.clearButton = $('.button__dropdown--clear');
+    this.clearButton = $('.js-button__dropdown--clear');
     this.render(totalItems);
 
     this.clearButton.on('click', this.setSelectionText.bind(this));

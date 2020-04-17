@@ -1,11 +1,11 @@
 mixin menu({ list=[] })
   .menu
-    .burger-menu
+    .burger-menu.js-burger-menu
       .burger-menu__line.menu__line1
       .burger-menu__line.menu__line2
       .burger-menu__line.menu__line3
-    nav.nav-menu
+    nav.nav-menu.js-nav-menu
       each item in list
-        .nav-menu__item(class= item.bold)= item.title
+        .nav-menu__item.js-nav-menu__item(class= item.bold)= item.title
           if item.more
             i.material-icons.expand-more__icon expand_more

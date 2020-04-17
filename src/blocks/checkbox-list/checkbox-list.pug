@@ -2,7 +2,7 @@ include ../checkbox/checkbox
 
 mixin checkbox-list({ title='', list=[] } = {})
   form.checkbox-list
-    h3.checkbox-list__header= title
+    h3.checkbox-list__header.js-checkbox-list__header= title
       i.material-icons.expand-more__icon expand_more
     .checkbox-list__menu
       each item in list

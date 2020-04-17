@@ -1,8 +1,8 @@
 class Menu {
   constructor() {
-    this.burger = document.querySelector('.burger-menu');
-    this.nav = document.querySelector('.nav-menu');
-    this.navLinks = document.querySelectorAll('.nav-menu__item');
+    this.burger = document.querySelector('.js-burger-menu');
+    this.nav = document.querySelector('.js-nav-menu');
+    this.navLinks = document.querySelectorAll('.js-nav-menu__item');
 
     this.burger.addEventListener('click', this.toggleOn.bind(this));
   }
