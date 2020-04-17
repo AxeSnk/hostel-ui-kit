@@ -57,5 +57,8 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector('.diagram'), options);
-chart.render();
+$(document).ready(() => {
+  var chart = new ApexCharts(document.querySelector('.diagram'), options);
+  chart.render();
+})
+

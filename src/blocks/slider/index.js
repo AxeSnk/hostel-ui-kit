@@ -1,3 +1,5 @@
 import Slider from './Slider';
 
-new Slider();
+$(document).ready(() => {
+  new Slider();
+});
