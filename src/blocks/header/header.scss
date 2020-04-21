@@ -30,6 +30,7 @@
 
     .menu {
       margin-right: 30px;
+      position: relative;
 
       .nav-menu {
         @media (max-width: 1020px) {
@@ -39,7 +40,7 @@
 
       .menu-active {
         position: absolute;
-        top: 70px;
+        top: 50px;
         display: flex;
         flex-direction: column;
         background: #fff;
