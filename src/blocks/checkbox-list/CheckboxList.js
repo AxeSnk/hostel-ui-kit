@@ -1,7 +1,15 @@
 class CheckboxList {
   constructor() {
+    this.init();
+    this.addListener();
+  }
+
+  init() {
     this.checkboxList = $('.js-checkbox-list__header');
     this.icon = $('.js-checkbox-list__header .expand-more__icon')
+  }
+
+  addListener() {
     this.checkboxList.on('click', this.onClick.bind(this));
   }
 

@@ -1,6 +1,8 @@
 import Inputmask from 'inputmask';
 
-var selector = document.getElementsByClassName('js-masked');
+$(document).ready(() => {
+  let selector = document.getElementsByClassName("js-masked");
+  let im = new Inputmask("99.99.9999");
+  im.mask(selector);
+});
 
-var im = new Inputmask('99.99.9999');
-im.mask(selector);

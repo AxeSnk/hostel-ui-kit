@@ -1,10 +1,19 @@
 class Menu {
   constructor() {
+    this.init();
+    this.addListener();
+  }
+
+  init() {
     this.burger = document.querySelector('.js-burger-menu');
     this.nav = document.querySelector('.js-nav-menu');
     this.navLinks = document.querySelectorAll('.js-nav-menu__item');
+  }
 
-    this.burger.addEventListener('click', this.toggleOn.bind(this));
+  addListener() {
+    if(this.burger) {
+      this.burger.addEventListener('click', this.toggleOn.bind(this));
+    }
   }
 
   toggleOn() {
