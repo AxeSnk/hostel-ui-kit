@@ -6,6 +6,6 @@ mixin menu({ list=[] })
       .burger-menu__line.menu__line3
     nav.nav-menu.js-nav-menu
       each item in list
-        .nav-menu__item.js-nav-menu__item(class= item.bold)= item.title
+        a.nav-menu__item.js-nav-menu__item(class= item.bold href="/mock-address/change-me")= item.title
           if item.more
             i.material-icons.expand-more__icon expand_more
