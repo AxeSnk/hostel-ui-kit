@@ -17,7 +17,7 @@ mixin register({ title='' })
     +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
     h3.register__data__header Данные для входа в сервис
     +field({placeholder: 'Email', type: 'email'})
-    +field({placeholder: 'Пароль'})
+    +field({placeholder: 'Пароль', type: 'password'})
     +toggle({ items: [{label: 'Получать спецпредложения'}] })
     +button({title: 'Перейти к оплате', long: true})
     .register__foot
