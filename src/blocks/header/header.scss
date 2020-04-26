@@ -51,6 +51,11 @@
 
         .nav-menu__item {
           margin-bottom: 10px;
+
+          .submenu-active {
+            left: 100%;
+            top: 0;
+          }
         }
       }
     }

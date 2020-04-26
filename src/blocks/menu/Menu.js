@@ -1,32 +1,52 @@
 class Menu {
-  constructor() {
-    this.init();
-    this.addListener();
+  constructor(root) {
+    this.init(root);
+    this.addListenerBurger();
+    this.addListenerSubmenu();
   }
 
-  init() {
-    this.burger = document.querySelector('.js-burger-menu');
-    this.nav = document.querySelector('.js-nav-menu');
-    this.navLinks = document.querySelectorAll('.js-nav-menu__item');
+  init(root) {
+    this.menu = root;
+    this.burger = $(this.menu).find('.js-burger-menu');
+    this.nav = $(this.menu).find('.js-nav-menu');
+    this.navLinks = $(this.menu).find('.js-nav-menu__item');
+    this.menuMore = $(this.menu).find('.js-menu-more');
+
+    this.burger.each(this.addListenerBurger.bind(this));
+    this.menuMore.each(this.addListenerSubmenu.bind(this));
   }
 
-  addListener() {
-    if(this.burger) {
-      this.burger.addEventListener('click', this.toggleOn.bind(this));
-    }
+  addListenerBurger(i, element) {
+    $(element).on('click', this.toggleOn.bind(this));
+  }
+
+  addListenerSubmenu(i, element) {
+    $(element).on('click', this.toggleSubmenu.bind(this));
   }
 
   toggleOn() {
-    this.nav.classList.toggle('menu-active');
-    this.navLinks.forEach((link, index) => {
+    this.nav.toggleClass('menu-active');
+    this.navLinks.each((index, link) => {
       if (link.style.animation) {
         link.style.animation = '';
       } else {
         link.style.animation = `navLinkFade ease forwards ${index / 5 + 0.3}s`;
       }
     });
-    this.burger.classList.toggle('toggle');
+    this.burger.toggleClass('toggle');
   }
+
+  toggleSubmenu(e) {
+    const submenu = $(e.currentTarget)
+      .parent()
+      .find('.js-nav-menu__submenu');
+    const arrow = $(e.currentTarget)
+      .find('.expand-more__icon');
+
+    submenu.toggleClass('submenu-active');
+    arrow.toggleClass('more-active')
+  }
+
 }
 
 export default Menu;

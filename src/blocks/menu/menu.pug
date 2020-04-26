@@ -1,11 +1,16 @@
 mixin menu({ list=[] })
-  .menu
+  .menu.js-menu
     .burger-menu.js-burger-menu
       .burger-menu__line.menu__line1
       .burger-menu__line.menu__line2
       .burger-menu__line.menu__line3
     nav.nav-menu.js-nav-menu
       each item in list
-        a.nav-menu__item.js-nav-menu__item(class= item.bold href="/mock-address/change-me")= item.title
-          if item.more
-            i.material-icons.expand-more__icon expand_more
+        .nav-menu__item.js-nav-menu__item
+          a.nav-menu__item-link.js-menu-more(class= item.bold href= item.href)= item.title
+            if item.more
+              i.material-icons.expand-more__icon expand_more
+          if item.more  
+            .js-nav-menu__submenu
+              each subitem in item.sublist
+                a.nav-menu__submenu-item(href= subitem.subhref)= subitem.subtitle

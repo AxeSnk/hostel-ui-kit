@@ -1,5 +1,5 @@
 import Menu from './Menu';
 
 $(document).ready(() => {
-  new Menu();
+  $('.js-menu').each((i, root) => new Menu(root));
 })

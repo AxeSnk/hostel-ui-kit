@@ -13,42 +13,48 @@ block content
     .headers-footers__wrapper
       +logo({ui: true})
     +header({ list: [
-      {title: 'Home', bold: 'item--bold'},
-      {title: 'About Us'},
-      {title: 'Services', more: true},
-      {title: 'Careers'},
-      {title: 'News'},
-      {title: 'Documentation'},
+      {title: 'Home', href: '/mock-address/change-me', bold: 'item--bold'},
+      {title: 'About Us', href: '/mock-address/change-me'},
+      {title: 'Services', more: true, sublist: [
+        {subtitle: 'Item1', subhref: '/mock-address/change-me'},
+        {subtitle: 'Item2', subhref: '/mock-address/change-me'}
+      ]},
+      {title: 'Careers', href: '/mock-address/change-me'},
+      {title: 'News', href: '/mock-address/change-me'},
+      {title: 'Documentation', href: '/mock-address/change-me'},
     ], reg: {on: false}, buttons: {title1: 'Login', title2: 'Register'}})
     +header({ list: [
-      {title: 'Home', bold: 'item--bold'},
-      {title: 'About Us'},
-      {title: 'Services', more: true},
-      {title: 'Careers'},
-      {title: 'News'},
-      {title: 'Documentation'},
+      {title: 'Home', href: '/mock-address/change-me', bold: 'item--bold'},
+      {title: 'About Us', href: '/mock-address/change-me'},
+      {title: 'Services', more: true, sublist: [
+        {subtitle: 'Item1', subhref: '/mock-address/change-me'},
+        {subtitle: 'Item2', subhref: '/mock-address/change-me'}
+      ]},
+      {title: 'Careers', href: '/mock-address/change-me'},
+      {title: 'News', href: '/mock-address/change-me'},
+      {title: 'Documentation', href: '/mock-address/change-me'},
     ], reg: {on: true, name: 'Cosmin Negota'}, buttons: {title1: 'Login', title2: 'Register'}})
     +footer({
       info: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
       list1: [
-        {title: 'Navigation', bold: 'item--bold'},
-        {title: 'About Us'},
-        {title: 'News'},
-        {title: 'Support'},
-        {title: 'Products'}
+        {title: 'Navigation', href: '/mock-address/change-me', bold: 'item--bold'},
+        {title: 'About Us', href: '/mock-address/change-me'},
+        {title: 'News', href: '/mock-address/change-me'},
+        {title: 'Support', href: '/mock-address/change-me'},
+        {title: 'Products', href: '/mock-address/change-me'}
       ],
       list2: [
-        {title: 'About Us', bold: 'item--bold'},
-        {title: 'Who we are'},
-        {title: 'Our team'},
-        {title: 'Careers'},
-        {title: 'Investors'}
+        {title: 'About Us', href: '/mock-address/change-me', bold: 'item--bold'},
+        {title: 'Who we are', href: '/mock-address/change-me'},
+        {title: 'Our team', href: '/mock-address/change-me'},
+        {title: 'Careers', href: '/mock-address/change-me'},
+        {title: 'Investors', href: '/mock-address/change-me'}
       ],
       list3: [
-        {title: 'Support', bold: 'item--bold'},
-        {title: 'Documentation'},
-        {title: 'Community'},
-        {title: 'Get in Touch'}
+        {title: 'Support', href: '/mock-address/change-me', bold: 'item--bold'},
+        {title: 'Documentation', href: '/mock-address/change-me'},
+        {title: 'Community', href: '/mock-address/change-me'},
+        {title: 'Get in Touch', href: '/mock-address/change-me'}
       ],
       title: 'Subscribe to our newsletter',
       text: 'Receive our latest news and promotions in your inbox!',
