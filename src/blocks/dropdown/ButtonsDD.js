@@ -1,12 +1,13 @@
 class ButtonsDD {
-  constructor(totalItems) {
-    this.init();
+  constructor(root, totalItems) {
+    this.init(root);
     this.addListener();
     this.render(totalItems);
   }
 
-  init() {
-    this.clearButton = $('.js-button__dropdown--clear');
+  init(root) {
+    this.droprdown = root;
+    this.clearButton = $(this.droprdown).find('.js-button__dropdown--clear');
   }
 
   addListener() {
@@ -15,9 +16,9 @@ class ButtonsDD {
 
   render(totalItems) {
     if (totalItems > 0) {
-      this.clearButton.attr('style', 'display: block');
+      this.clearButton.addClass('button__dropdown--clear-active');
     } else {
-      this.clearButton.attr('style', 'display: none');
+      this.clearButton.removeClass('button__dropdown--clear-active');
     }
   }
 

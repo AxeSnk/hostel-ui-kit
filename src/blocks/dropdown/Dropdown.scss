@@ -129,5 +129,9 @@
       display: none;
       color: $dark_50-color;
     }
+
+    .button__dropdown--clear-active {
+      display: block;
+    }
   }
 }
