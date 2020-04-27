@@ -9,7 +9,6 @@ class Menu {
     this.menu = root;
     this.burger = $(this.menu).find('.js-burger-menu');
     this.nav = $(this.menu).find('.js-nav-menu');
-    this.navLinks = $(this.menu).find('.js-nav-menu__item');
     this.menuMore = $(this.menu).find('.js-menu-more');
     this.submenu = $(this.menu).find('.js-nav-menu__submenu');
     this.arrow = $(this.menu).find('.expand-more__icon');
@@ -30,7 +29,7 @@ class Menu {
   hide(e) {
     if (!this.burger.is(e.target) && !this.menuMore.is(e.target)) {
       this.nav.removeClass('menu-active');
-      this.burger.removeClass('toggle');
+      this.burger.removeClass('cross-icon');
       this.submenu.removeClass('submenu-active');
       this.arrow.removeClass('more-active');
     }
@@ -38,14 +37,7 @@ class Menu {
 
   toggleOn() {
     this.nav.toggleClass('menu-active');
-    this.navLinks.each((index, link) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade ease forwards ${index / 5 + 0.3}s`;
-      }
-    });
-    this.burger.toggleClass('toggle');
+    this.burger.toggleClass('cross-icon');
   }
 
   toggleSubmenu(e) {

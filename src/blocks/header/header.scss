@@ -63,18 +63,22 @@
     .burger-menu {
       display: none;
       cursor: pointer;
-
-      .burger-menu__line {
-        width: 25px;
-        height: 3px;
-        background-color: $purple-color;
-        margin: 5px;
-        transition: all 0.3s ease;
-      }
+      font-size: 30px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-color: $purple-color;
 
       @media (max-width: 1020px) {
         display: block;
       }
+    }
+
+    .burger-menu::after {
+      content: "menu";
+    }
+
+    .cross-icon::after {
+      content: "close";
     }
 
     .name__login {
@@ -107,24 +111,4 @@
     }
   }
 
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-
-  .toggle .menu__line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .toggle .menu__line2 {
-    opacity: 0;
-  }
-  .toggle .menu__line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
 }
