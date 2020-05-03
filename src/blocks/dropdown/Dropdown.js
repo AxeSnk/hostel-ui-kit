@@ -16,18 +16,30 @@ $(document).ready(() => {
       );
 
       let text;
+      let textBaby;
       if (totalItems == 0) {
         text = defaultText;
         return `${text}`;
       } else {
-        if (totalItems > 4) {
+        if(totalItems > 4) {
           text = 'гостей';
         } else if (totalItems == 1) {
           text = 'гость';
         } else {
           text = 'гостя';
         }
-        return `${totalItems} ${text}`;
+
+        if(itemCount["Младенцы"] > 4) {
+          textBaby = 'младенцев'
+        } else if (itemCount["Младенцы"] == 1) {
+          textBaby = 'младенец'
+        } else {
+          textBaby = 'младенца'
+        }
+        
+        return itemCount["Младенцы"]
+          ? `${totalItems} ${text}, ${itemCount["Младенцы"]} ${textBaby}`
+          : `${totalItems} ${text}`
       }
     },
   });
