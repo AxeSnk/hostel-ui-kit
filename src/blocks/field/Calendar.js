@@ -1,27 +1,26 @@
 import 'air-datepicker';
 
-$('.js-calendar__right').datepicker({
-  position: 'bottom right',
+let $start = $('.js-calendar__start'),
+  $end = $('.js-calendar__end');
+  
+let picker = $start.datepicker({
+  range: true,
+  multipleDatesSeparator: '-',
   todayButton: true,
   clearButton: true,
   prevHtml: '<i class="material-icons">arrow_back</i>',
   nextHtml: '<i class="material-icons">arrow_forward</i>',
-  multipleDatesSeparator: ' - ',
   navTitles: {
     days: 'MM <i>yyyy</i>'
   },
-});
+  onSelect: function(fd, d, picker) {
+    $start.val(fd.split("-")[0]);
+    $end.val(fd.split("-")[1]);
+  }
+}).data('datepicker');
 
-$('.js-calendar__left').datepicker({
-  position: 'bottom left',
-  todayButton: true,
-  clearButton: true,
-  prevHtml: '<i class="material-icons">arrow_back</i>',
-  nextHtml: '<i class="material-icons">arrow_forward</i>',
-  multipleDatesSeparator: ' - ',
-  navTitles: {
-    days: 'MM <i>yyyy</i>'
-  },
+$end.on('click', () => {
+  picker.show();
 });
 
 $('.js-calendar__range').datepicker({
@@ -35,6 +34,5 @@ $('.js-calendar__range').datepicker({
   multipleDatesSeparator: ' - ',
   navTitles: {
     days: 'MM <i>yyyy</i>'
-  },
-});  
-
+  }
+});
