@@ -10,6 +10,14 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 .links-wrapper {
   display: flex;
   flex-direction: column;

@@ -1,13 +1,17 @@
 import { createElementNS } from './createElements';
 
-function createGradient(gradient) {
+function createGradient(gradient, name) {
   let linearGradient = createElementNS('linearGradient', {
-    id: `${gradient.name}`
+    id: `${name}`,
+    x1: '0',
+    x2: '0',
+    y1: '0',
+    y2: '1'
   });
 
-  gradient.values.forEach(item => {
+  gradient.forEach(item => {
     let stop = createElementNS('stop', {
-      offset: `${item.offset}`,
+      offset: `${item.offset}%`,
       'stop-color': `${item.color}`
     });
     linearGradient.appendChild(stop);

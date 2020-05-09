@@ -6,14 +6,36 @@ $(document).ready(() => {
     size: 70,
     sectors: [
       {
-        gradient: {
-          name: 'satisfactorily',
-          values: [
+        name: 'Удовлетворительно',
+        value: 25,
+        gradient: [
             { offset: 0, color: '#BC9CFF' },
             { offset: 100, color: '#8BA4F9' }
-          ],
-        },
-        value: 20
+        ]
+      },
+      {
+        name: 'Хорошо',
+        value: 25,
+        gradient: [
+            { offset: 0, color: '#6FCF97' },
+            { offset: 100, color: '#66D2EA' }
+        ]
+      },
+      {
+        name: 'Великолепно',
+        value: 50,
+        gradient: [
+            { offset: 0, color: '#FFE39C' },
+            { offset: 100, color: '#FFBA9C' }
+        ]
+      },
+      {
+        name: 'Разочарован',
+        value: 0,
+        gradient: [
+          { offset: 0, color: '#919191' },
+          { offset: 100, color: '#3D4975' }
+        ]
       }
     ]
   };

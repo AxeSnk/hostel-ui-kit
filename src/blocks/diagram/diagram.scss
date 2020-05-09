@@ -49,13 +49,41 @@
       flex-direction: row;
     }
   }
-  .diagram__figure,
-  .figure-key {
+  .diagram__figure-wrap,
+  .diagram__legend {
     flex: 1;
     padding-left: 15px;
     padding-right: 15px;
     align-self: center;
   }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .legend-item__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .circle--Удовлетворительно {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+
+  .circle--Хорошо {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+
+  .circle--Великолепно {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+
+  .circle--Разочарован {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+   }
+
   .figure-content svg {
     height: auto;
   }

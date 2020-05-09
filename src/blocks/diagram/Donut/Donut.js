@@ -1,5 +1,7 @@
 import { createElement, createElementNS } from './createElements';
 import createGradient from './createGradient';
+import Legend from './Legend';
+import Sectors from './Sectors';
 
 class Donut {
   constructor(root, config) {
@@ -7,12 +9,13 @@ class Donut {
     this.config = config;
     this.createWrap();
     this.createDonut();
-    this.createSectors();
+    this.sectors = new Sectors(this.donut, config);
+    this.legend = new Legend(this.figure, config);
   }
 
   createWrap() {
     this.figure = createElement('figure', { class: 'diagram__figure' });
-    this.wrap = createElement('div', { class: 'diagram__figure' });
+    this.wrap = createElement('div', { class: 'diagram__figure-wrap' });
     this.figure.appendChild(this.wrap);
     this.root.appendChild(this.figure);
   }
@@ -22,8 +25,8 @@ class Donut {
 
     this.donut = createElementNS('svg', {
       class: 'donut',
-      width: `${size}px`,
-      height: `${size}px`,
+      width: `${size}%`,
+      height: `${size}%`,
       viewBox: `0 0 42 42`
     });
 
@@ -41,8 +44,8 @@ class Donut {
       cy: '21',
       r: '15.91549430918954',
       fill: 'transparent',
-      stroke: '#d2d3d4',
-      strokeWidth: '3'
+      stroke: '#fff',
+      'stroke-width': '3'
     });
 
     this.donut.appendChild(hole);
@@ -50,35 +53,6 @@ class Donut {
     this.wrap.appendChild(this.donut);
   }
 
-  createSectors() {
-    const { size, sectors } = this.config;
-
-    sectors.forEach(item => {
-      let { color, value } = item;
-
-      if (item.color) {
-        color = item.color;
-      } else {
-        color = `url(#${item.gradient.name})`;
-        let gradient = createGradient(item.gradient)
-        this.donut.appendChild(gradient)
-      }
-
-      let sector = createElementNS('circle', {
-        class: 'donut-segment',
-        cx: '21',
-        cy: '21',
-        r: '15.91549430918954',
-        fill: 'transparent',
-        stroke: `${color}`,
-        strokeWidth: '3',
-        strokeDasharray: `${value} 80`,
-        strokeDashoffset: '25'
-      });
-
-      this.donut.appendChild(sector);
-    });
-  }
 }
 
 export default Donut;
