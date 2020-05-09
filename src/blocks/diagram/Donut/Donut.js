@@ -21,7 +21,7 @@ class Donut {
   }
 
   createDonut() {
-    const { size, sectors } = this.config;
+    const { size, total, labels, sectors } = this.config;
 
     this.donut = createElementNS('svg', {
       class: 'donut',
@@ -30,16 +30,16 @@ class Donut {
       viewBox: `0 0 42 42`
     });
 
-    let hole = createElementNS('circle', {
-      class: 'donut-hole',
+    const hole = createElementNS('circle', {
+      class: 'donut__hole',
       cx: '21',
       cy: '21',
       r: '15.91549430918954',
       fill: '#fff'
     });
 
-    let ring = createElementNS('circle', {
-      class: 'donut-ring',
+    const ring = createElementNS('circle', {
+      class: 'donut__ring',
       cx: '21',
       cy: '21',
       r: '15.91549430918954',
@@ -48,11 +48,34 @@ class Donut {
       'stroke-width': '3'
     });
 
+    const label = createElementNS('g', {
+      class: 'donut__label'
+    });
+
+    if (labels.show) {
+      const labelValue = createElementNS('text', {
+        class: 'donut-label__value',
+        x: '50%',
+        y: '50%'
+      });
+      labelValue.innerHTML = `${total}`;
+
+      const labelUnit = createElementNS('text', {
+        class: 'donut-label__unit',
+        x: '50%',
+        y: '50%'
+      });
+      labelUnit.innerHTML = `${labels.unit}`
+
+      label.appendChild(labelValue);
+      label.appendChild(labelUnit);
+    }
+
     this.donut.appendChild(hole);
     this.donut.appendChild(ring);
+    this.donut.appendChild(label);
     this.wrap.appendChild(this.donut);
   }
-
 }
 
 export default Donut;

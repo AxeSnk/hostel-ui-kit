@@ -1,5 +1,5 @@
-import createGradient from "./createGradient";
-import { createElementNS } from "./createElements";
+import createGradient from './createGradient';
+import { createElementNS } from './createElements';
 
 class Sectors {
   constructor(root, config) {
@@ -9,13 +9,14 @@ class Sectors {
   }
 
   createSectors() {
-    const { size, sectors } = this.config;
+    const { size, total, sectors } = this.config;
 
-    let count = 0;
+    let dashoffset = 25;
 
     sectors.forEach(item => {
-      let { name, color, value, gradient } = item;
-      let stroke
+      const { name, color, value, gradient } = item;
+      let stroke;
+      let percent = value * 100 / total;
 
       if (color) {
         stroke = color;
@@ -25,19 +26,19 @@ class Sectors {
         this.root.appendChild(gradientSvg);
       }
 
-      let sector = createElementNS('circle', {
-        class: 'donut-segment',
+      dashoffset += percent;
+
+      const sector = createElementNS('circle', {
+        class: 'donut__sector',
         cx: '22',
         cy: '22',
         r: '15.91549430918954',
         fill: 'transparent',
         stroke: `${stroke}`,
         'stroke-width': '3',
-        'stroke-dasharray': `${value} ${100 - value}`,
-        'stroke-dashoffset': `${100 - count + 25}`
+        'stroke-dasharray': `${percent} ${100 - percent}`,
+        'stroke-dashoffset': `${dashoffset}`
       });
-
-      count += value;
 
       this.root.appendChild(sector);
     });

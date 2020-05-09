@@ -8,34 +8,34 @@
     cursor: pointer;
   }
 
-  // .chart-text {
-  //   font-size: 16px;
-  //   fill: #000;
-  //   -moz-transform: translateY(0.25em);
-  //   -ms-transform: translateY(0.25em);
-  //   -webkit-transform: translateY(0.25em);
-  //   transform: translateY(0.25em);
-  // }
+  .donut__label {
+    font-size: 16px;
+    fill: #000;
+    -moz-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
 
-  // .chart-number {
-  //   font-size: 0.6em;
-  //   line-height: 1;
-  //   text-anchor: middle;
-  //   -moz-transform: translateY(-0.25em);
-  //   -ms-transform: translateY(-0.25em);
-  //   -webkit-transform: translateY(-0.25em);
-  //   transform: translateY(-0.25em);
-  // }
+  .donut-label__value {
+    font-size: 0.6em;
+    line-height: 1;
+    text-anchor: middle;
+    -moz-transform: translateY(-0.25em);
+    -ms-transform: translateY(-0.25em);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+  }
 
-  // .chart-label {
-  //   font-size: 0.2em;
-  //   text-transform: uppercase;
-  //   text-anchor: middle;
-  //   -moz-transform: translateY(0.7em);
-  //   -ms-transform: translateY(0.7em);
-  //   -webkit-transform: translateY(0.7em);
-  //   transform: translateY(0.7em);
-  // }
+  .donut-label__unit {
+    font-size: 0.2em;
+    text-transform: uppercase;
+    text-anchor: middle;
+    -moz-transform: translateY(0.7em);
+    -ms-transform: translateY(0.7em);
+    -webkit-transform: translateY(0.7em);
+    transform: translateY(0.7em);
+  }
 
   figure {
     display: flex;
