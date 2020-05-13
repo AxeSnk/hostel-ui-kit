@@ -11,7 +11,6 @@ class Menu {
     this.nav = $(this.menu).find('.js-nav-menu');
     this.menuMore = $(this.menu).find('.js-menu-more');
     this.submenu = $(this.menu).find('.js-nav-menu__submenu');
-    this.arrow = $(this.menu).find('.expand-more__icon');
 
     document.addEventListener('click', this.hide.bind(this));
     this.burger.each(this.addListenerBurger.bind(this));
@@ -31,7 +30,7 @@ class Menu {
       this.nav.removeClass('menu-active');
       this.burger.removeClass('cross-icon');
       this.submenu.removeClass('submenu-active');
-      this.arrow.removeClass('more-active');
+      this.menuMore.removeClass('more-active');
     }
   }
 
@@ -44,7 +43,7 @@ class Menu {
     const submenu = $(e.currentTarget)
       .parent()
       .find('.js-nav-menu__submenu');
-    const arrow = $(e.currentTarget).find('.expand-more__icon');
+    const arrow = $(e.currentTarget).parent().find('.expand-more');
 
     submenu.toggleClass('submenu-active');
     arrow.toggleClass('more-active');
