@@ -1,5 +1,7 @@
 import createGradient from './createGradient';
 import { createElementNS } from './createElements';
+import createAnimate from './createAnimate';
+import getSectorPath from './getSectorPath';
 
 class Sectors {
   constructor(root, config) {
@@ -11,12 +13,14 @@ class Sectors {
   createSectors() {
     const { size, total, sectors } = this.config;
 
-    let dashoffset = 25;
+    let startAngle = 0;
+    let endAngle = 0;
 
     sectors.forEach(item => {
       const { name, color, value, gradient } = item;
       let stroke;
-      let percent = value * 100 / total;
+      let angle = (value !== 0) ? value * 360 / total : 0;
+      endAngle += angle
 
       if (color) {
         stroke = color;
@@ -26,20 +30,21 @@ class Sectors {
         this.root.appendChild(gradientSvg);
       }
 
-      dashoffset += percent;
-
-      const sector = createElementNS('circle', {
+      const sector = createElementNS('path', {
         class: 'donut__sector',
-        cx: '22',
-        cy: '22',
-        r: '15.91549430918954',
-        fill: 'transparent',
+        d: `${getSectorPath(18, 18, 32, startAngle, endAngle)}`,
+        fill: 'none',
         stroke: `${stroke}`,
-        'stroke-width': '3',
-        'stroke-dasharray': `${percent} ${100 - percent}`,
-        'stroke-dashoffset': `${dashoffset}`
+        'stroke-width': (value !== 0) ? '1' : '0',
       });
 
+      startAngle += angle;
+
+      const animateOver = createAnimate('stroke-width', 3, 1, 'mouseover');
+      const animateOut = createAnimate('stroke-width', 1, 3, 'mouseoout')
+
+      sector.appendChild(animateOver);
+      sector.appendChild(animateOut);
       this.root.appendChild(sector);
     });
   }

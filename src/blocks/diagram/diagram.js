@@ -3,7 +3,7 @@ import Donut from './Donut/Donut';
 
 $(document).ready(() => {
   const config = {
-    size: 70,
+    size: 100,
     total: 1040,
     labels: {
       show: true,

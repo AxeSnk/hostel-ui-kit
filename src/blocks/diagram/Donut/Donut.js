@@ -30,24 +30,6 @@ class Donut {
       viewBox: `0 0 42 42`
     });
 
-    const hole = createElementNS('circle', {
-      class: 'donut__hole',
-      cx: '21',
-      cy: '21',
-      r: '15.91549430918954',
-      fill: '#fff'
-    });
-
-    const ring = createElementNS('circle', {
-      class: 'donut__ring',
-      cx: '21',
-      cy: '21',
-      r: '15.91549430918954',
-      fill: 'transparent',
-      stroke: '#fff',
-      'stroke-width': '3'
-    });
-
     const label = createElementNS('g', {
       class: 'donut__label'
     });
@@ -55,15 +37,15 @@ class Donut {
     if (labels.show) {
       const labelValue = createElementNS('text', {
         class: 'donut-label__value',
-        x: '50%',
-        y: '50%'
+        x: '43%',
+        y: '36%'
       });
       labelValue.innerHTML = `${total}`;
 
       const labelUnit = createElementNS('text', {
         class: 'donut-label__unit',
-        x: '50%',
-        y: '50%'
+        x: '43%',
+        y: '40%'
       });
       labelUnit.innerHTML = `${labels.unit}`
 
@@ -71,8 +53,6 @@ class Donut {
       label.appendChild(labelUnit);
     }
 
-    this.donut.appendChild(hole);
-    this.donut.appendChild(ring);
     this.donut.appendChild(label);
     this.wrap.appendChild(this.donut);
   }
