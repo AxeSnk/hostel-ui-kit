@@ -2,6 +2,7 @@ import { createElement, createElementNS } from './createElements';
 import createGradient from './createGradient';
 import Legend from './Legend';
 import Sectors from './Sectors';
+import getSectorPath from './getSectorPath';
 
 class Donut {
   constructor(root, config) {
@@ -11,6 +12,7 @@ class Donut {
     this.createDonut();
     this.sectors = new Sectors(this.donut, config);
     this.legend = new Legend(this.figure, config);
+    this.addListener();
   }
 
   createWrap() {
@@ -47,7 +49,7 @@ class Donut {
         x: '43%',
         y: '40%'
       });
-      labelUnit.innerHTML = `${labels.unit}`
+      labelUnit.innerHTML = `${labels.unit}`;
 
       label.appendChild(labelValue);
       label.appendChild(labelUnit);
@@ -56,6 +58,37 @@ class Donut {
     this.donut.appendChild(label);
     this.wrap.appendChild(this.donut);
   }
+
+  addListener() {
+    const list = [...this.legend.getList().querySelectorAll('.legend-item__title')];
+    list.map(item => {
+      item.addEventListener('mouseover', this.handlePathOver.bind(this));
+      item.addEventListener('mouseout', this.handlePathOut.bind(this));
+    });
+  }
+
+  handlePathOver(e) {
+    const sector = [...this.donut.querySelectorAll('.donut__sector')];
+    sector.map(item => {
+      const isTarget =
+        item.getAttribute('data-name') == e.target.getAttribute('data-name');
+      if (isTarget) {
+        item.dispatchEvent(new Event('mouseover'));
+      }
+    });
+  }
+
+  handlePathOut(e) {
+    const sector = [...this.donut.querySelectorAll('.donut__sector')];
+    sector.map(item => {
+      const isTarget =
+        item.getAttribute('data-name') == e.target.getAttribute('data-name');
+      if (isTarget) {
+        item.dispatchEvent(new Event('mouseout'));
+      }
+    });
+  }
+
 }
 
 export default Donut;

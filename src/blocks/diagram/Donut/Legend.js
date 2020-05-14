@@ -9,8 +9,12 @@ class Legend {
     this.createListItem();
   }
 
+  getList() {
+    return this.list;
+  }
+
   createLegend() {
-    this.legend = createElement('figcaption', { class: 'diagram__legend' });
+    this.legend = createElement('div', { class: 'diagram__legend' });
     this.root.appendChild(this.legend);
   }
 
@@ -31,19 +35,24 @@ class Legend {
         color = `url(#${name})`;
       }
 
-      let li = createElement('li', { class: `legend-item legend-item--${name}` });
+      const li = createElement('li', {
+        class: `legend-item legend-item--${name}`,
+        'data-name': name
+      });
       this.list.appendChild(li);
 
-      let circle = createElement('div', {
+      const circle = createElement('div', {
         class: `legend-item__circle circle--${name}`
       });
       li.appendChild(circle);
 
-      let title = createElement('span', { class: `legend-item__title title--${name}` });
+      const title = createElement('span', {
+        class: `legend-item__title title--${name}`,
+        'data-name': name
+      });
       title.innerHTML = `${name}`;
       li.appendChild(title);
     });
-
   }
 }
 

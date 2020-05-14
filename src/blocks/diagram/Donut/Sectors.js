@@ -30,21 +30,29 @@ class Sectors {
         this.root.appendChild(gradientSvg);
       }
 
+      const d = getSectorPath(18, 18, 32, startAngle, endAngle);
+      const d2 = getSectorPath(18, 18, 32 - 2, startAngle, endAngle);
+
       const sector = createElementNS('path', {
         class: 'donut__sector',
-        d: `${getSectorPath(18, 18, 32, startAngle, endAngle)}`,
+        d,
         fill: 'none',
-        stroke: `${stroke}`,
+        stroke,
+        'data-name': name,
         'stroke-width': (value !== 0) ? '1' : '0',
       });
 
       startAngle += angle;
 
-      const animateOver = createAnimate('stroke-width', 3, 1, 'mouseover');
-      const animateOut = createAnimate('stroke-width', 1, 3, 'mouseoout')
+      const animateWidthOver = createAnimate('stroke-width', 1, 3, 'mouseover');
+      const animateWidthOut = createAnimate('stroke-width', 3, 1, 'mouseout');
+      const animateDOver = createAnimate('d', d, d2, 'mouseover');
+      const animateDOut = createAnimate('d', d2, d, 'mouseout');
 
-      sector.appendChild(animateOver);
-      sector.appendChild(animateOut);
+      sector.appendChild(animateWidthOver);
+      sector.appendChild(animateWidthOut);
+      sector.appendChild(animateDOver);
+      sector.appendChild(animateDOut);
       this.root.appendChild(sector);
     });
   }

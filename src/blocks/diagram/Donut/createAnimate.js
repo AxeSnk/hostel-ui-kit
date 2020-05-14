@@ -2,11 +2,11 @@ import { createElementNS } from "./createElements";
 
 function createAnimate(name, from, to, begin) {
   const animate = createElementNS('animate', {
-    attributeName: `${name}`,
-    from: `${from}`,
-    to: `${to}`,
+    attributeName: name,
+    from,
+    to,
     dur: '300ms',
-    begin: `${begin}`,
+    begin,
     fill: 'freeze'
   });
 
