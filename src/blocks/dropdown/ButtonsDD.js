@@ -1,13 +1,8 @@
 class ButtonsDD {
-  constructor(root, totalItems) {
-    this.init(root);
+  constructor(clearButton, totalItems) {
+    this.clearButton = clearButton;
     this.addListener();
     this.render(totalItems);
-  }
-
-  init(root) {
-    this.droprdown = root;
-    this.clearButton = $(this.droprdown).find('.js-button__dropdown--clear');
   }
 
   addListener() {

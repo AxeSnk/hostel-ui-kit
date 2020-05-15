@@ -18,7 +18,7 @@ block content
       aside.search-room__sidebar
         .sidebar__item
           +field({title: 'Даты пребывания в отеле', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
-        .sidebar__item
+        .sidebar__item.js-dropdown
           h3.dropdown-guests__title Гости
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .sidebar__item
@@ -36,7 +36,7 @@ block content
           h3.rich-checkbox__header доступность
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
-        .sidebar__item
+        .sidebar__item.js-dropdown
           h3.dropdown-rooms__title Удобства номера
           +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .sidebar__item

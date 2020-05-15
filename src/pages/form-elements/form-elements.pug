@@ -32,7 +32,7 @@ block content
           +field({title: 'text-field', note: 'default', placeholder: 'Email'})
         .form-elements__item
           +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
-        .form-elements__item
+        .form-elements__item.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
@@ -45,12 +45,12 @@ block content
           +field({title: 'filter date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
         .form-elements__item.form-elements__item--small
           +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
-        .form-elements__item.form-elements__item--small.form-elements__item--drpodown
+        .form-elements__item.form-elements__item--small.form-elements__item--drpodown.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
           +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
-        .form-elements__item.form-elements__item--small
+        .form-elements__item.form-elements__item--small.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown
             .dropdown__note Default
@@ -117,7 +117,7 @@ block content
           .rate-button__wrapper
             +rate-button({rate: 4})
             +rate-button({rate: 5})
-        .form-elements__item
+        .form-elements__item.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
@@ -145,7 +145,7 @@ block content
         .form-elements__item
           h3.pagination__header Pagination
           +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
-        .form-elements__item
+        .form-elements__item.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 2}, {title: 'Дети', count: 1}, {title: 'Младенцы', count: 0}]})

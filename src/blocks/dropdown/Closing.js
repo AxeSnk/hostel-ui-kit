@@ -1,11 +1,7 @@
 class Closing {
   constructor(root) {
-    this.init(root);
+    this.root = root
     this.addListener();
-  }
-
-  init(root) {
-    this.dropdown = root; 
   }
 
   addListener() {
@@ -13,8 +9,8 @@ class Closing {
   }
 
   hide(e) {
-    if (!this.dropdown.contains(e.target)) {
-      this.dropdown.classList.remove('menu-open')
+    if (!this.root.contains(e.target)) {
+      this.root.classList.remove('menu-open')
     }
   }
 }
