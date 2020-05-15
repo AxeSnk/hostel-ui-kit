@@ -1,7 +1,7 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .checkbox-list {
-  .checkbox-list__header {
+  &__header {
     position: relative;
     line-height: 24px;
     margin-bottom: 14px;
@@ -20,7 +20,7 @@
     }
   }
 
-  .checkbox-list__menu {
+  &__menu {
     display: none;
 
     .checkbox {
@@ -28,7 +28,7 @@
     }
   }
 
-  .checkbox-list__menu--open {
+  &__menu--open {
     display: block;
   }
 }

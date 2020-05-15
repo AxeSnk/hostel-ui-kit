@@ -7,11 +7,11 @@
   padding: 40px 30px 29px;
   margin-bottom: 40px;
 
-  .search__header {
+  &__header {
     margin-bottom: 15px;
   }
 
-  .search__range {
+  &__range {
     display: flex;
     margin-bottom: 20px;
 
@@ -20,7 +20,7 @@
     }
   }
 
-  .search__dropdown__header {
+  &__dropdown__header {
     margin-bottom: 31px;
     
     .dropdown__title {

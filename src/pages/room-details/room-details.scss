@@ -4,7 +4,7 @@
   margin: 0 auto;
   max-width: 1920px;
 
-  .room-details__foto {
+  &__foto {
     display: flex;
 
     @media(max-width: 930px) {
@@ -18,7 +18,7 @@
         width: 100%;
       }
 
-      .foto__main__item {
+      &__item {
         height: 485px;
         background-image: url('img/details1.jpg');
         background-repeat: no-repeat;
@@ -39,7 +39,7 @@
         width: 100%;
       }
 
-      .foto__secondary__item-1 {
+      &__item-1 {
         height: 242.5px;
         background-image: url('img/details2.jpg');
         background-repeat: no-repeat;
@@ -47,7 +47,7 @@
         background-size: cover;
       }
 
-      .foto__secondary__item-2 {
+      &__item-2 {
         height: 242.5px;
         background-image: url('img/details3.jpg');
         background-repeat: no-repeat;
@@ -57,7 +57,7 @@
     }
   }
 
-  .room-details__content {
+  &__content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 56px;
@@ -113,7 +113,7 @@
           width: 320px;
         } 
         
-        .room-details__impressions__header {
+        &__header {
           @media(max-width: 400px) {
             padding: 0 20px;
           }
@@ -135,7 +135,7 @@
         }
     
 
-        .room-details__reviews__header {
+        &__header {
           display: flex;
           justify-content: space-between;
 
@@ -169,7 +169,7 @@
           margin-bottom: 30px;
         }  
 
-        .room-details__bullet-list__header {
+        &__header {
           margin-left: 20px;
           margin-bottom: 16px;
         }
@@ -187,7 +187,7 @@
           padding: 0 20px;
         }
 
-        .room-details__cancellation__header {
+        &__header {
           margin-bottom: 16px;
         }
       }

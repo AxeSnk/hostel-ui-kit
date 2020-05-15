@@ -1,7 +1,7 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .social {
-  .social__logo {
+  &__logo {
     font-family: 'FontAwesome';
     font-size: 24px;
     background: $gradient-color;

@@ -7,7 +7,7 @@
   padding: 40px 30px 29px;
   margin-bottom: 40px;
 
-  .register__header {
+  &__header {
     margin-bottom: 19px;
   }
 
@@ -19,7 +19,7 @@
     margin-bottom: 16px;
   }
 
-  .register__data__header {
+  &__data__header {
     margin-top: 19px;
     margin-bottom: 4px;
   }
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
   }
 
-  .register__foot {
+  &__foot {
     margin-top: 30px;
     display: flex;
     align-items: center;

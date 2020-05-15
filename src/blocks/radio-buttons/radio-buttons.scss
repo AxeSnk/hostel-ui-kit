@@ -1,12 +1,12 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .radio-buttons {
+
   &__label {
     position: relative;
     margin-right: 20px;
     padding-left: 30px;
     cursor: pointer;
-
 
     .radio-buttons__input:checked,
     .radio-buttons__input:not(:checked) {

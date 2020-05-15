@@ -15,7 +15,7 @@
     justify-items: center;
   }
 
-  .search-room__sidebar {
+  &__sidebar {
     max-width: 266px;
 
     .sidebar__item {
@@ -54,7 +54,7 @@
     }
   }
 
-  .search-room__samples {
+  &__samples {
     display: grid;
     margin-left: 36px;
     margin-top: 5px;
@@ -63,7 +63,7 @@
       margin-left: 0;
     }
 
-    .search-room__samples__header {
+    &__header {
       margin-bottom: 20px;
     }
     .samples__wrapper {

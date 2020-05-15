@@ -2,7 +2,7 @@
 
 .slider {
 
-  .slider__header {
+  &__header {
     display: flex;
     margin-bottom: 25px;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  .slider__footnote {
+  &__footnote {
     font-size: 12px;
     line-height: 14px;
     margin-top: 10px;

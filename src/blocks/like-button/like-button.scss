@@ -11,7 +11,7 @@
   padding: 3px 10px 3px 6px;
   cursor: pointer;
 
-  .like-button__icon {
+  &__icon {
     font-size: 10px;
     margin-right: 5px;
     background: $dark_25-color;
@@ -19,7 +19,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .like-button__counter {
+  &__counter {
     font-size: 10px;
     line-height: 12px;
     color: $dark_25-color;

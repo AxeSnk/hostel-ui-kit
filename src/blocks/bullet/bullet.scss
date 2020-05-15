@@ -4,7 +4,7 @@
   display: flex;
   align-items: baseline;
 
-  .bullet__point {
+  &__point {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -12,7 +12,7 @@
     margin-right: 10px;
   }
 
-  .bullet__text {
+  &__text {
     max-width: 235px;
   }
 }
