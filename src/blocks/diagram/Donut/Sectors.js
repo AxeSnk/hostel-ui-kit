@@ -19,8 +19,8 @@ class Sectors {
     sectors.forEach(item => {
       const { name, color, value, gradient } = item;
       let stroke;
-      let angle = (value !== 0) ? value * 360 / total : 0;
-      endAngle += angle
+      let angle = value !== 0 ? (value * 360) / total : 0;
+      endAngle += angle;
 
       if (color) {
         stroke = color;
@@ -39,7 +39,8 @@ class Sectors {
         fill: 'none',
         stroke,
         'data-name': name,
-        'stroke-width': (value !== 0) ? '1' : '0',
+        'data-value': value,
+        'stroke-width': value !== 0 ? '1' : '0'
       });
 
       startAngle += angle;

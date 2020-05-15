@@ -14,7 +14,6 @@
 ## Used libraries and plug-ins:
 
 - air-datepicker([docs](http://t1m0n.name/air-datepicker/docs/index-ru.html))
-- apexcharts([docs](https://apexcharts.com/))
 - inputmask([docs](https://github.com/RobinHerbots/Inputmask))
 - item-quantity-dropdown([docs](https://github.com/reservamos/item-quantity-dropdown#readme))
 - jquery

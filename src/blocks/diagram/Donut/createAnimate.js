@@ -1,4 +1,4 @@
-import { createElementNS } from "./createElements";
+import { createElementNS } from './createElements';
 
 function createAnimate(name, from, to, begin) {
   const animate = createElementNS('animate', {
@@ -10,7 +10,7 @@ function createAnimate(name, from, to, begin) {
     fill: 'freeze'
   });
 
-  return animate
+  return animate;
 }
 
 export default createAnimate;
