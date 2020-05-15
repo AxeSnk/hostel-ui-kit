@@ -2,7 +2,7 @@ include ../button/button
 include ../field/field
 
 mixin login({ title })
-  .login
+  form.login
     h1.login__header= title
     +field({placeholder: 'Email', type: 'email'})
     +field({placeholder: 'Пароль', type: 'password'})

@@ -5,7 +5,7 @@ mixin field({ title='', note='', placeholder='', value='', masked=false, calenda
   if calendar.on
     - classes.push(`js-calendar__${calendar.input}`);
 
-  form.field__wrapper
+  .field__wrapper
     .filed__header
       h3.field__title= title
       .field__note= note

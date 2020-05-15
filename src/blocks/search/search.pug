@@ -3,7 +3,7 @@ include ../dropdown/dropdown
 include ../button/button
 
 mixin search({ title='' })
-  .search
+  form.search
     h1.search__header= title
     .search__range
       +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})

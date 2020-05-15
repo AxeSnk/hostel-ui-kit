@@ -1,6 +1,6 @@
 mixin toggle({ items=[] }={})
   each item in items
-    form.toggle
+    .toggle
       label.toggle__label= item.label
         input.toggle__input(type='checkbox', checked=item.checked)
         .toggle__marker

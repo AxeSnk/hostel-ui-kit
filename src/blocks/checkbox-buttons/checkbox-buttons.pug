@@ -3,6 +3,6 @@ include ../checkbox/checkbox
 mixin checkbox-buttons({ title='', list=[] } = {})
   .checkbox-buttons
     h3.checkbox-buttons__header= title
-    form.checkbox-buttons__list
+    .checkbox-buttons__list
       each item in list
         +checkbox({ label: item.label, checked: item.checked})

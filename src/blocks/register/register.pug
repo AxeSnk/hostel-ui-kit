@@ -4,7 +4,7 @@ include ../radio-buttons/radio-buttons
 include ../toggle/toggle
 
 mixin register({ title='' })
-  .register
+  form.register
     h1.register__header= title
     +field({placeholder: 'Имя'})
     +field({placeholder: 'Фамилия'})
