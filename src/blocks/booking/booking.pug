@@ -9,9 +9,9 @@ mixin booking({ header=[], price=[], total='' })
       .booking__header__luxury= header.luxury
       .booking__header__cost= header.cost
       .booking__header__inday в сутки
-    .booking__range
-      +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'left'}})
-      +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'right'}})
+    .booking__range.js-calendar
+      +field({title: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})
+      +field({title: 'Выезд', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}})
     .booking__guests.js-dropdown
       h3.dropdown__title Гости
       +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})

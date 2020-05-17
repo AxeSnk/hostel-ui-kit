@@ -130,6 +130,11 @@
   letter-spacing: 1.1px;
   font-weight: bold;
   text-transform: uppercase;
+
+  &:hover{
+    color: inherit;
+    background: inherit;
+  }
 }
 .datepicker--button[data-action='clear'] {
   color: rgba(31, 32, 65, 0.5);
@@ -137,11 +142,19 @@
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
 }
-.datepicker--button[data-action='today'] {
+.datepicker--button-apply {
+  display: flex;
+  height: 15px;
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  align-items: center;
   color: #bc9cff;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: flex-end;
-  justify-content: flex-end;
+  text-transform: uppercase;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
 }
 .datepicker--cell-day.-other-month-,
 .datepicker--cell-year.-other-decade- {
