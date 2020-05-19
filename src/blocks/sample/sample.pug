@@ -3,7 +3,7 @@ include ../rate-button/rate-button
 mixin sample({ list=[] })
   each item in list
     .sample
-      .sample__image(style=`background-image: url('img/room${item.img}.jpg')`)
+      .sample__image(style=`background-image: url('img/room-${item.img}.jpg')`)
         if item.arrows
           .image__arrow__left
             i.material-icons.sample__image--prev keyboard_arrow_left
