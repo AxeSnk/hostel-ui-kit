@@ -8,12 +8,7 @@ mixin register({ title='' })
     h1.register__header= title
     +field({placeholder: 'Имя'})
     +field({placeholder: 'Фамилия'})
-    +radio-buttons({ 
-      items: [
-        {label: 'Мужчина', name: 'sex', checked: true},
-        {label: 'Женщина', name: 'sex', checked: false}
-      ]
-    })
+    +radio-buttons({ items: [ {label: 'Мужчина', name: 'sex', checked: true}, {label: 'Женщина', name: 'sex', checked: false} ] })
     +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
     h3.register__data__header Данные для входа в сервис
     +field({placeholder: 'Email', type: 'email'})

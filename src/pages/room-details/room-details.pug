@@ -43,16 +43,4 @@ block content
           h2.room-details__cancellation__header Отмена
           .room-details__cancellation__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-details__card
-        +booking({
-          header:{number: '888', luxury: 'люкс', cost: '9 990₽'},
-          price: [
-            {name: '9 990₽ х 4 суток', cost: '39 960₽'},
-            {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'},
-            {name: 'Сбор за дополнительные услуги', info: true, cost: '300₽'}
-          ],
-          total: '38 081₽'
-        })
-
-
-
-
+        +booking({ header:{number: '888', luxury: 'люкс', cost: '9 990₽'}, price: [ {name: '9 990₽ х 4 суток', cost: '39 960₽'}, {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'}, {name: 'Сбор за дополнительные услуги', info: true, cost: '300₽'} ], total: '38 081₽' })

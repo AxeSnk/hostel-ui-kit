@@ -1,10 +1,13 @@
 mixin dropdown({ category='', list=[] })
-  div(class= `js-dropdown__${category}`).iqdropdown
+  div.iqdropdown(class=`js-dropdown__${category}`)
     p.iqdropdown-selection Сколько гостей
     i.material-icons.expand-more__icon expand_more
     .iqdropdown-menu
       each item in list
-        .iqdropdown-menu-option(data-id= `${item.title}` data-defaultcount=`${item.count}`)
+        .iqdropdown-menu-option(
+          data-id=`${item.title}`,
+          data-defaultcount=`${item.count}`
+        )
           div
             p.iqdropdown-item= item.title
       .buttons-dropdown__wrapper

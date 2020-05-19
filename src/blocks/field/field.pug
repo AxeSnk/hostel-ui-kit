@@ -1,7 +1,7 @@
 mixin field({ title='', note='', placeholder='', value='', masked=false, calendar={on, input}, type='text', button={send:false,dropdown:false} }={})
   - let classes = [];
   if masked
-    - classes.push("js-masked");
+    - classes.push('js-masked');
   if calendar.on
     - classes.push(`js-calendar__${calendar.input}`);
 

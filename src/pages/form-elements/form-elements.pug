@@ -56,62 +56,23 @@ block content
             .dropdown__note Default
           +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__item.form-elements__checkbox
-          +checkbox-list({
-            title: 'Expandable checkbox list',
-            list: [
-              { label: 'Завтрак', checked: false }
-            ]
-          })
+          +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false } ] })
         .form-elements__item
-          +checkbox-list({
-            title: 'Expandable checkbox list',
-            list: [
-              { label: 'Завтрак', checked: false },
-              { label: 'Письменный стол', checked: true },
-              { label: 'Стул для кормления', checked: true },
-              { label: 'Кроватка', checked: true },
-              { label: 'Телевизор', checked: false },
-              { label: 'Шампунь', checked: false },
-              { label: 'Телевизор', checked: false },
-              { label: 'Шампунь', checked: false },
-            ]
-          })
+          +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false }, { label: 'Письменный стол', checked: true }, { label: 'Стул для кормления', checked: true }, { label: 'Кроватка', checked: true }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, ] })
 
       .form-elements__midl-column
         .form-elements__item.form-elements__item--short
-          +checkbox-buttons({
-            title: 'Checkbox buttons',
-            list: [
-              { label: 'Можно курить', checked: false },
-              { label: 'Можно с питомцами', checked: true },
-              { label: 'Можно пригласить гостей (до 10 человек)', checked: true }
-            ]
-          })
+          +checkbox-buttons({ title: 'Checkbox buttons', list: [ { label: 'Можно курить', checked: false }, { label: 'Можно с питомцами', checked: true }, { label: 'Можно пригласить гостей (до 10 человек)', checked: true } ] })
         .form-elements__item
           h3.radio-buttons__header Radio buttons
-          +radio-buttons({ 
-            items: [
-              {label: 'Мужчина', name: 'sex', checked: true},
-              {label: 'Женщина', name: 'sex', checked: false}
-            ]
-          })
+          +radio-buttons({ items: [ {label: 'Мужчина', name: 'sex', checked: true}, {label: 'Женщина', name: 'sex', checked: false} ] })
         .form-elements__item
           h3.toggle__header Toggle
-          +toggle({
-            items: [
-              {label: 'Получать спецпредложения', checked: true},
-              {label: 'Получать спецпредложения', checked: false},
-            ]
-          })
+          +toggle({ items: [ {label: 'Получать спецпредложения', checked: true}, {label: 'Получать спецпредложения', checked: false}, ] })
         .form-elements__item
           h3.like-button__header Like button
           .like-button__wrapper
-            +like-button({
-              items: [
-                {liked: false, counter: '2'},
-                {liked: true, counter: '12'}
-              ]
-            })
+            +like-button({ items: [ {liked: false, counter: '2'}, {liked: true, counter: '12'} ] })
         .form-elements__item
           h3.rate-button__header Rate button
           .rate-button__wrapper
@@ -124,7 +85,7 @@ block content
         .form-elements__item.form-elements__item--small
           h3.rich-checkbox__header Rich checkbox buttons
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
-          +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист  и проводит до номера.', checked: false})
+          +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.', checked: false})
 
       .form-elements__right-column
         .form-elements__item.form-elements__item--small
@@ -156,9 +117,6 @@ block content
             +bullet({text: 'Без вечеринок и мероприятий'})
             +bullet({text: 'Время прибытия — после 13:00, а выезд до 12:00'})
 
-
-
-    
     .form-elements__footer
       .form-elements__item.form-elements__features
         .feature__wrapper

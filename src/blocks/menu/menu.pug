@@ -3,11 +3,11 @@ mixin menu({ list=[] })
     i.material-icons.burger-menu.js-burger-menu
     nav.nav-menu.js-nav-menu
       each item in list
-        - let classes = [""];
+        - let classes = [''];
         if item.bold
           - classes.push(`${item.bold}`);
         if item.more
-          - classes.push("expand-more");
+          - classes.push('expand-more');
         .nav-menu__item.js-nav-menu__item
           a.nav-menu__item-link.js-menu-more(class=classes, href=item.href)= item.title
           if item.more
