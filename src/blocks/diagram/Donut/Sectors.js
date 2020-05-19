@@ -11,13 +11,13 @@ class Sectors {
   }
 
   createSectors() {
-    const { size, total, sectors } = this.config;
+    const { total, sectors } = this.config;
 
     let startAngle = 0;
     let endAngle = 0;
 
     sectors.forEach(item => {
-      const { name, color, value, gradient } = item;
+      const { title, color, value, gradient } = item;
       let stroke;
       let angle = value !== 0 ? (value * 360) / total : 0;
       endAngle += angle;
@@ -25,8 +25,8 @@ class Sectors {
       if (color) {
         stroke = color;
       } else {
-        stroke = `url(#${name})`;
-        let gradientSvg = createGradient(gradient, name);
+        stroke = `url(#${gradient.name})`;
+        let gradientSvg = createGradient(gradient);
         this.root.appendChild(gradientSvg);
       }
 
@@ -38,7 +38,8 @@ class Sectors {
         d,
         fill: 'none',
         stroke,
-        'data-name': name,
+        'data-title': title,
+        'data-name': gradient.name,
         'data-value': value,
         'stroke-width': value !== 0 ? '1' : '0'
       });

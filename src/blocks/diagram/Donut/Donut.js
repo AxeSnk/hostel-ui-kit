@@ -17,8 +17,8 @@ class Donut {
   }
 
   createWrap() {
-    this.figure = createElement('figure', { class: 'diagram__figure' });
-    this.wrap = createElement('div', { class: 'diagram__figure-wrap' });
+    this.figure = createElement('figure', { class: 'diagram' });
+    this.wrap = createElement('div', { class: 'diagram__wrap' });
     this.figure.appendChild(this.wrap);
     this.root.appendChild(this.figure);
   }
@@ -39,14 +39,14 @@ class Donut {
 
     if (labels.show) {
       this.labelValue = createElementNS('text', {
-        class: 'donut-label__value',
+        class: 'donut__label__value',
         x: '43%',
         y: '36%'
       });
       this.labelValue.innerHTML = `${total}`;
 
       this.labelUnit = createElementNS('text', {
-        class: 'donut-label__unit',
+        class: 'donut__label__unit',
         x: '43%',
         y: '40%'
       });

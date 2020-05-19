@@ -27,31 +27,31 @@ class Legend {
     const { size, sectors } = this.config;
 
     sectors.forEach(item => {
-      let { color, value, name, gradient } = item;
+      let { color, value, title, gradient } = item;
 
       if (item.color) {
         color = item.color;
       } else {
-        color = `url(#${name})`;
+        color = `url(#${gradient.name})`;
       }
 
       const li = createElement('li', {
-        class: `legend-item legend-item--${name}`,
-        'data-name': name
+        class: `legend-item legend-item--${gradient.name}`,
+        'data-name': gradient.name
       });
       this.list.appendChild(li);
 
       const circle = createElement('div', {
-        class: `legend-item__circle circle--${name}`
+        class: `legend-item__circle circle--${gradient.name}`
       });
       li.appendChild(circle);
 
-      const title = createElement('span', {
-        class: `legend-item__title title--${name}`,
-        'data-name': name
+      const titleLegend = createElement('span', {
+        class: `legend-item__title title--${gradient.name}`,
+        'data-name': gradient.name
       });
-      title.innerHTML = `${name}`;
-      li.appendChild(title);
+      titleLegend.innerHTML = `${title}`;
+      li.appendChild(titleLegend);
     });
   }
 }

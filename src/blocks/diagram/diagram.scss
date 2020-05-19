@@ -1,80 +1,81 @@
 .js-diagram {
-
-  .diagram__figure {
+  .diagram {
     display: flex;
-  }
 
-  .donut__sector {
-    cursor: pointer;
-  }
+    &__wrap,
+    &__legend {
+      align-self: center;
+    }
 
-  .donut__label {
-    font-size: 16px;
-    fill: #000;
-    -moz-transform: translateY(0.25em);
-    -ms-transform: translateY(0.25em);
-    -webkit-transform: translateY(0.25em);
-    transform: translateY(0.25em);
-  }
+    .donut {
+      &__sector {
+        cursor: pointer;
+      }
 
-  .donut-label__value {
-    font-size: 0.4em;
-    font-weight: bold;
-    line-height: 1;
-    text-anchor: middle;
-    -moz-transform: translateY(-0.25em);
-    -ms-transform: translateY(-0.25em);
-    -webkit-transform: translateY(-0.25em);
-    transform: translateY(-0.25em);
-  }
+      &__label {
+        font-size: 16px;
+        fill: #000;
+        -moz-transform: translateY(0.25em);
+        -ms-transform: translateY(0.25em);
+        -webkit-transform: translateY(0.25em);
+        transform: translateY(0.25em);
 
-  .donut-label__unit {
-    font-size: 0.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-anchor: middle;
-    -moz-transform: translateY(0.7em);
-    -ms-transform: translateY(0.7em);
-    -webkit-transform: translateY(0.7em);
-    transform: translateY(0.7em);
-  }
+        &__value {
+          font-size: 0.4em;
+          font-weight: bold;
+          line-height: 1;
+          text-anchor: middle;
+          -moz-transform: translateY(-0.25em);
+          -ms-transform: translateY(-0.25em);
+          -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+        }
 
-  .diagram__figure-wrap,
-  .diagram__legend {
-    align-self: center;
-  }
+        &__unit {
+          font-size: 0.2em;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-anchor: middle;
+          -moz-transform: translateY(0.7em);
+          -ms-transform: translateY(0.7em);
+          -webkit-transform: translateY(0.7em);
+          transform: translateY(0.7em);
+        }
+      }
+    }
 
-  .diagram__legend {
-    padding-right: 5px;
-    padding-top: 2px;
-  }
+    &__legend {
+      padding-right: 5px;
+      padding-top: 2px;
 
-  .legend-item {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
 
-  .legend-item__circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
+        &__circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
 
-  .circle--Удовлетворительно {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  }
+        .circle--satisfactorily {
+          background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        }
 
-  .circle--Хорошо {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  }
+        .circle--good {
+          background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+        }
 
-  .circle--Великолепно {
-    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-  }
+        .circle--perfectly {
+          background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+        }
 
-  .circle--Разочарован {
-    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-   }
+        .circle--disappointed {
+          background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+        }
+      }
+    }
+  }
 }

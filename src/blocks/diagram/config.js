@@ -7,36 +7,48 @@ const config = {
   },
   sectors: [
     {
-      name: 'Великолепно',
+      title: 'Великолепно',
       value: 520,
-      gradient: [
-        { offset: 0, color: '#FFE39C' },
-        { offset: 100, color: '#FFBA9C' }
-      ]
+      gradient: {
+        name: 'perfectly',
+        scenenodes: [
+          { offset: 0, color: '#FFE39C' },
+          { offset: 100, color: '#FFBA9C' }
+        ]
+      }
     },
     {
-      name: 'Хорошо',
+      title: 'Хорошо',
       value: 260,
-      gradient: [
-        { offset: 0, color: '#6FCF97' },
-        { offset: 100, color: '#66D2EA' }
-      ]
+      gradient: {
+        name: 'good',
+        scenenodes: [
+          { offset: 0, color: '#6FCF97' },
+          { offset: 100, color: '#66D2EA' }
+        ]
+      }
     },
     {
-      name: 'Удовлетворительно',
+      title: 'Удовлетворительно',
       value: 260,
-      gradient: [
-        { offset: 0, color: '#BC9CFF' },
-        { offset: 100, color: '#8BA4F9' }
-      ]
+      gradient: {
+        name: 'satisfactorily',
+        scenenodes: [
+          { offset: 0, color: '#BC9CFF' },
+          { offset: 100, color: '#8BA4F9' }
+        ]
+      }
     },
     {
-      name: 'Разочарован',
+      title: 'Разочарован',
       value: 0,
-      gradient: [
-        { offset: 0, color: '#919191' },
-        { offset: 100, color: '#3D4975' }
-      ]
+      gradient: {
+        name: 'disappointed',
+        scenenodes: [
+          { offset: 0, color: '#919191' },
+          { offset: 100, color: '#3D4975' }
+        ]
+      }
     }
   ]
 };
