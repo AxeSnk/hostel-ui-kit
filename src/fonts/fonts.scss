@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'montserrat';
-  src: url('./Montserrat/Montserrat.woff') format('woff'),
-    url('./Montserrat/Montserrat.ttf') format('truetype'),
-    url('./Montserrat/Montserrat.svg') format('svg');
+  src: url('./montserrat/montserrat.woff') format('woff'),
+    url('./montserrat/montserrat.ttf') format('truetype'),
+    url('./montserrat/montserrat.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserrat-bold';
-  src: url('./Montserrat/Montserrat-bold.woff') format('woff'),
-    url('./Montserrat/Montserrat-bold.ttf') format('truetype'),
-    url('./Montserrat/Montserrat-bold.svg') format('svg');
+  src: url('./montserrat/montserrat-bold.woff') format('woff'),
+    url('./montserrat/montserrat-bold.ttf') format('truetype'),
+    url('./montserrat/montserrat-bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;  
 }
