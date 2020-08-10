@@ -1,4 +1,4 @@
-mixin button({ title='', border=false, disabled=false, link=false, long=false }={})
+mixin button({ title='', border=false, disabled=false, link=false, long=false, href='/mock-address/change-me' }={})
   - let classes = ['button'];
   if border
     - classes.push('button--border');
@@ -9,6 +9,6 @@ mixin button({ title='', border=false, disabled=false, link=false, long=false }=
   if long
     - classes.push('button--long');
   .button__wrapper
-    button(class=classes)= title
+    a(class=classes href=href)= title
       if long
         i.material-icons.button__icon arrow_forward
