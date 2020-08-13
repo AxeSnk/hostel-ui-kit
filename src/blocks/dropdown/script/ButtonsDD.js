@@ -17,9 +17,8 @@ class ButtonsDD {
     }
   }
 
-  setSelectionText(totalItems) {
-    totalItems = 0;
-    return totalItems;
+  setSelectionText() {
+    console.log('setSelectionText')
   }
 }
 
