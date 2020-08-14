@@ -8,11 +8,10 @@ mixin dropdown({ category='', list=[] })
           data-id=`${item.title}`,
           data-defaultcount=`${item.count}`
         )
-          div
-            p.iqdropdown-item= item.title
-          .iqdropdown-controls
+          p.iqdropdown-item= item.title
+          .iqdropdown-controls.js-iqdropdown-controls
             .iqdropdown-controls__increment.controls__button.js-minus -
-            input.iqdropdown-controls__count(readonly="readonly" type="text" value="0") 
+            input.iqdropdown-controls__count.js-controls__count(readonly="readonly" type="text" value="0") 
             .iqdropdown-controls__decrement.controls__button.js-plus +
       .buttons-dropdown__wrapper
         button.button__dropdown.button__dropdown--clear.js-button__dropdown--clear(type='button') Очистить

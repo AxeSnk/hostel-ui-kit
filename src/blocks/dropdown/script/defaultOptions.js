@@ -4,7 +4,7 @@ const defaultOptions = {
   maxItems: 9,
   minItems: 0,
   items: ['гостей', 'гость', 'гостя'],
-  itemCount: { baby: true, items: ['младенцев', 'младенец', 'младенца'] }
+  itemsBaby: ['младенцев', 'младенец', 'младенца']
 };
 
 export default defaultOptions;
