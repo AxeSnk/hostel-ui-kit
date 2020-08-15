@@ -4,7 +4,8 @@ const defaultOptions = {
   maxItems: 9,
   minItems: 0,
   items: ['гостей', 'гость', 'гостя'],
-  itemsBaby: ['младенцев', 'младенец', 'младенца']
+  itemsBaby: ['младенцев', 'младенец', 'младенца'],
+  buttons: true
 };
 
 export default defaultOptions;

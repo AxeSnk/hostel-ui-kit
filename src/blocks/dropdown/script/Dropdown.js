@@ -1,10 +1,7 @@
-// import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-// import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import ButtonsDD from './ButtonsDD.js';
 import defaultOptions from './defaultOptions';
 
 class Dropdown {
-  constructor(root, options = {}) {
+  constructor(root, options) {
     this.options = { ...defaultOptions, ...options };
     this.root = root;
     this.init();
@@ -12,10 +9,10 @@ class Dropdown {
   }
 
   init() {
-    const { defaultText, maxItems, minItems } = this.options;
-
+    const { maxItems, minItems, buttons } = this.options;
     this.totalItems = 0;
     this.baby = 0;
+    this.active = false;
     this.input = this.root.querySelector('.js-iqdropdown-selection');
     this.items = this.root.querySelectorAll('.js-iqdropdown-menu-option');
     this.item = Array.from(this.items).map(item => ({
@@ -23,28 +20,65 @@ class Dropdown {
       increment: item.querySelector('.js-plus'),
       decrement: item.querySelector('.js-minus'),
       countInput: item.querySelector('.js-controls__count'),
+      id: item.dataset.id,
       count: Number(
         item.querySelector('.js-controls__count').getAttribute('value')
       )
     }));
     this.item.map(i => {
-      i.count <= minItems ? i.decrement.classList.add('disabled') : i.decrement.classList.remove('disabled')
-      i.count >= maxItems ? i.increment.classList.add('disabled') : i.increment.classList.remove('disabled')
-    })
+      this.totalItems += i.count;
 
-    this.clearButton = this.root.querySelector('.js-button__dropdown--clear');
-    this.applyButton = this.root.querySelector('.js-button__dropdown--apply');
+      i.count <= minItems
+        ? i.decrement.classList.add('disabled')
+        : i.decrement.classList.remove('disabled');
+      i.count >= maxItems
+        ? i.increment.classList.add('disabled')
+        : i.increment.classList.remove('disabled');
+    });
+
     this.menu = this.root.querySelector('.js-iqdropdown-menu');
     this.icon = this.root.querySelector('.js-iqdropdown-icon');
 
+    buttons ? this.addButtons() : null;
+
     this.incrementList = this.root.querySelectorAll('.js-plus');
     this.decrementList = this.root.querySelectorAll('.js-minus');
+
+    this.upDate();
+
+  }
+
+  addButtons() {
+    const btnWrapper = document.createElement('div');
+    btnWrapper.classList.add('buttons-dropdown__wrapper');
+
+    const clearButton = document.createElement('button');
+    clearButton.classList.add(
+      'button__dropdown', 'button__dropdown--clear', 'js-button__dropdown--clear'
+    );
+    clearButton.setAttribute('type', 'button');
+    clearButton.innerHTML = 'Очистить'
+
+    const applyButton = document.createElement('button');
+    applyButton.classList.add(
+      'button__dropdown', 'button__dropdown--apply', 'js-button__dropdown--apply'
+    );
+    applyButton.setAttribute('type', 'button');
+    applyButton.innerHTML = 'Применить'
+
+    btnWrapper.appendChild(clearButton)
+    btnWrapper.appendChild(applyButton);
+    this.menu.appendChild(btnWrapper);
+
+    this.clearButton = this.root.querySelector('.js-button__dropdown--clear');
+    this.applyButton = this.root.querySelector('.js-button__dropdown--apply');
+
+    this.applyButton.addEventListener('click', this.hide.bind(this));
+    this.clearButton.addEventListener('click', this.clear.bind(this));
   }
 
   addListeners() {
-    this.root.addEventListener('click', this.showMenu.bind(this));
-    this.applyButton.addEventListener('click', this.hide.bind(this));
-    this.clearButton.addEventListener('click', this.clear.bind(this));
+    this.root.addEventListener('click', this.clickRoot.bind(this));
     for (var i = 0, len = this.incrementList.length; i < len; i++) {
       this.incrementList[i].addEventListener('click', this.plus.bind(this));
     }
@@ -55,7 +89,12 @@ class Dropdown {
     document.addEventListener('click', this.hide.bind(this));
   }
 
+  clickRoot(e) {
+    this.icon == e.target && this.active ? this.hide(e) : this.showMenu();
+  }
+
   showMenu() {
+    this.active = true;
     this.root.classList.add('active');
     this.icon.classList.add('icon-active');
   }
@@ -127,28 +166,56 @@ class Dropdown {
     return textBaby;
   }
 
+  numOfLetters(text) {
+    if (text.length > 19) {
+      text = text.slice(0, 20) + '...';
+    }
+    return text;
+  }
+
   upDate() {
-    const { defaultText, maxItems, minItems } = this.options;
-    const text = this.plural();
-    const textBaby = this.pluralBabyes();
+    const { defaultText, maxItems, minItems, type } = this.options;
+    let totalText = '';
+
+    if (type == 'guests') {
+      const text = this.plural();
+      const textBaby = this.pluralBabyes();
+      totalText = this.totalItems + ' ' + text + textBaby;
+    }
+
+    if (type == 'rooms') {
+      this.item.map(i => {
+        i.count > 0 ? (totalText += i.count + ' ' + i.id + ', ') : null;
+        totalText = this.numOfLetters(totalText);
+      });
+    }
 
     this.item.map(i => {
-      i.count <= minItems ? i.decrement.classList.add('disabled') : i.decrement.classList.remove('disabled')
-      i.count >= maxItems ? i.increment.classList.add('disabled') : i.increment.classList.remove('disabled')
-    })
+      i.count <= minItems
+        ? i.decrement.classList.add('disabled')
+        : i.decrement.classList.remove('disabled');
+      i.count >= maxItems
+        ? i.increment.classList.add('disabled')
+        : i.increment.classList.remove('disabled');
+    });
 
     this.totalItems > 0
-      ? (this.input.innerHTML = this.totalItems + ' ' + text + textBaby)
+      ? (this.input.innerHTML = totalText)
       : (this.input.innerHTML = defaultText);
-    this.totalItems > 0
+    
+    if(this.clearButton) {
+      this.totalItems > 0
       ? this.clearButton.classList.add('active')
       : this.clearButton.classList.remove('active');
+    }
   }
 
   hide(e) {
     const notDropdown = !this.root.contains(e.target);
     const isApplyButton = e.target == this.applyButton;
-    if (notDropdown || isApplyButton) {
+    const isIcon = e.target == this.icon;
+    if (notDropdown || isApplyButton || isIcon) {
+      this.active = false;
       this.root.classList.remove('active');
       this.icon.classList.remove('icon-active');
     }
