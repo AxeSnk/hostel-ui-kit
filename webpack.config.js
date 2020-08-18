@@ -6,8 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const PAGES_DIR = path.resolve(__dirname, 'src/pages');
-const PAGES = fs.readdirSync(PAGES_DIR);
+const PATHS = {
+  source: path.join(__dirname, 'src'),
+  dist: path.join(__dirname, 'dist'),
+};
 
 module.exports = {
   entry: {
@@ -16,7 +18,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     filename: 'js/[name].js',
-    path: __dirname + '/dist'
+    path: PATHS.dist
   },
   module: {
     rules: [
@@ -30,8 +32,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'fonts',
-          publicPath: '../fonts'
+          outputPath: 'fonts'
         }
       },
       {
@@ -42,8 +43,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img',
-              publicPath: '../img'
+              outputPath: 'img'
             }
           }
         ]
@@ -108,11 +108,11 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: 'styles.css',
       template: './src/index.scss'
     }),
 
-    new CopyPlugin([{ from: './src/favicons', to: 'favicons/' }]),
+    new CopyPlugin({patterns:[{ from: './src/favicons', to: 'favicons/' }]}),
 
     new webpack.ProvidePlugin({
       $: 'jquery',
