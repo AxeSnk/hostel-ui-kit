@@ -112,7 +112,7 @@ module.exports = {
       template: './src/index.scss'
     }),
 
-    new CopyPlugin({patterns:[{ from: './src/favicons', to: 'favicons/' }]}),
+    new CopyPlugin([{ from: './src/favicons', to: 'favicons/' }]),
 
     new webpack.ProvidePlugin({
       $: 'jquery',

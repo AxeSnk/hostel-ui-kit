@@ -1,4 +1,4 @@
-import 'jquery-ui-dist/jquery-ui.js';
+import 'jquery-ui-slider/jquery-ui.js';
 
 class Slider {
   constructor() {
@@ -6,8 +6,8 @@ class Slider {
   }
 
   init() {
-    let $element = $('.js-slider');
-    let val = $('.js-slider__val');
+    const $element = $('.js-container');
+    const val = $('.js-slider__val');
 
     $element.slider({
       min: 0,

@@ -50,8 +50,8 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.3",
-    "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.3.1",
-    "jquery-ui-dist": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-slider": "^1.12.1"
   }
 }

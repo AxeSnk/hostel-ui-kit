@@ -44,6 +44,8 @@
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   border: 2px solid #ffffff;
   border-radius: 10px;
+  user-select: none;
+  outline: none;
 }
 .ui-slider .ui-slider-range {
   position: absolute;
@@ -73,6 +75,7 @@
 .ui-widget-content {
   border: 1px solid $dark_25-color;
   background: #fff;
+  cursor: pointer;
 }
 /* оформление активного участка (между двумя ползунками) */
 .ui-widget-header {
