@@ -1,4 +1,4 @@
-import 'jquery-ui-slider/jquery-ui.js';
+import 'jquery-ui-slider/jquery-ui';
 
 class Slider {
   constructor() {
