@@ -1,7 +1,7 @@
 mixin like-button({ items=[] }={})
   each item in items
     if item.liked
-      form.like-button--liked.like-button
+      form.like-button_theme_liked.like-button
         i.like-button__icon.material-icons favorite
         .like-button__counter= item.counter
     else

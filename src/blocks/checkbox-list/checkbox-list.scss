@@ -15,7 +15,7 @@
       cursor: pointer;
     }
 
-    .expand-more__icon--open {
+    .expand-more__icon_open {
       transform: rotate(180deg);
     }
   }
@@ -28,7 +28,7 @@
     }
   }
 
-  &__menu--open {
+  &__menu_open {
     display: block;
   }
 }

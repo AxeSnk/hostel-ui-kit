@@ -50,7 +50,7 @@ class Calendar {
   addButton() {
     const applyButton = document.createElement('span');
     applyButton.innerHTML = 'Применить';
-    applyButton.classList.add('datepicker--button-apply');
+    applyButton.classList.add('datepicker__button-apply');
     this.buttons.prepend(applyButton);
     applyButton.addEventListener('click', this.hidePicker.bind(this));
   }

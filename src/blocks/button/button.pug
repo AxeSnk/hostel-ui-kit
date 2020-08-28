@@ -1,13 +1,13 @@
 mixin button({ title='', border=false, disabled=false, link=false, long=false, href='/mock-address/change-me' }={})
   - let classes = ['button'];
   if border
-    - classes.push('button--border');
+    - classes.push('button_theme_border');
   if disabled
-    - classes.push('button--disabled');
+    - classes.push('button_disabled');
   if link
-    - classes.push('button--link');
+    - classes.push('button_theme_link');
   if long
-    - classes.push('button--long');
+    - classes.push('button_size_long');
   .button__wrapper
     a(class=classes href=href)= title
       if long

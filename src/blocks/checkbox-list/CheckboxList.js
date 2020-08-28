@@ -16,8 +16,8 @@ class CheckboxList {
   }
 
   onClick() {
-    this.menu.toggleClass('checkbox-list__menu--open');
-    this.icon.toggleClass('expand-more__icon--open');
+    this.menu.toggleClass('checkbox-list__menu_open');
+    this.icon.toggleClass('expand-more__icon_open');
   }
 }
 

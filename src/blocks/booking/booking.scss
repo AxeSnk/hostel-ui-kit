@@ -9,7 +9,7 @@
   padding: 40px 30px 29px;
   margin-bottom: 40px;
 
-  &__header {
+  &-header {
     display: flex;
     align-items: baseline;
     margin-bottom: 15px;
@@ -56,7 +56,7 @@
     }
   }
 
-  &__range {
+  &-range {
     display: flex;
     margin-bottom: 19px;
 
@@ -65,7 +65,7 @@
     }
   }
 
-  &__guests {
+  &-guests {
     margin-bottom: 21px;
 
     .dropdown__title {
@@ -73,10 +73,10 @@
     }
   }
 
-  &__price-list {
+  &-price {
     margin-bottom: 30px;
 
-    .price-list__item {
+    .price-item {
       display: flex;
       align-items: flex-start;
       margin-bottom: 16px;
@@ -99,7 +99,7 @@
     }
   }
 
-  &__total {
+  &-total {
     display: flex;
     justify-content: space-between;
     align-items: baseline;

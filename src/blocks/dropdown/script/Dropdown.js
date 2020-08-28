@@ -54,14 +54,14 @@ class Dropdown {
 
     const clearButton = document.createElement('button');
     clearButton.classList.add(
-      'button__dropdown', 'button__dropdown--clear', 'js-button__dropdown--clear'
+      'button__dropdown', 'button__dropdown-clear', 'js-button__dropdown-clear'
     );
     clearButton.setAttribute('type', 'button');
     clearButton.innerHTML = 'Очистить'
 
     const applyButton = document.createElement('button');
     applyButton.classList.add(
-      'button__dropdown', 'button__dropdown--apply', 'js-button__dropdown--apply'
+      'button__dropdown', 'button__dropdown-apply', 'js-button__dropdown-apply'
     );
     applyButton.setAttribute('type', 'button');
     applyButton.innerHTML = 'Применить'
@@ -70,8 +70,8 @@ class Dropdown {
     btnWrapper.appendChild(applyButton);
     this.menu.appendChild(btnWrapper);
 
-    this.clearButton = this.root.querySelector('.js-button__dropdown--clear');
-    this.applyButton = this.root.querySelector('.js-button__dropdown--apply');
+    this.clearButton = this.root.querySelector('.js-button__dropdown-clear');
+    this.applyButton = this.root.querySelector('.js-button__dropdown-apply');
 
     this.applyButton.addEventListener('click', this.hide.bind(this));
     this.clearButton.addEventListener('click', this.clear.bind(this));

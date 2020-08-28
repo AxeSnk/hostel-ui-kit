@@ -7,10 +7,10 @@ mixin footer({ info='', list1=[], list2=[], list3=[], title='', text='', placeho
   footer.footer
     .footer__line
     .footer__wrapper
-      .footer__info__wrapper
+      .footer-info__wrapper
         +logo({ui: false})
-        .footer__info= info
-      .footer__menu__wrapper
+        .footer-info= info
+      .footer-menu__wrapper
         +menu({list: list1})
         +menu({list: list2})
         +menu({list: list3})

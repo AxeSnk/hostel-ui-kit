@@ -137,12 +137,12 @@
   }
 }
 
-.sample-image .sample__image--prev,
-.sample-image .sample__image--next {
+.sample-image .sample__image-prev,
+.sample-image .sample__image-next {
   display: none;
 }
-.sample-image:hover .sample__image--prev,
-.sample-image:hover .sample__image--next {
+.sample-image:hover .sample__image-prev,
+.sample-image:hover .sample__image-next {
   display: block;
   font-size: 24px;
   color: white;

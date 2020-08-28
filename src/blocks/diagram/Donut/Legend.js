@@ -36,18 +36,18 @@ class Legend {
       }
 
       const li = createElement('li', {
-        class: `legend-item legend-item--${gradient.name}`,
+        class: `legend-item legend-item_theme_${gradient.name}`,
         'data-name': gradient.name
       });
       this.list.appendChild(li);
 
       const circle = createElement('div', {
-        class: `legend-item__circle circle--${gradient.name}`
+        class: `legend-item__circle circle_theme_${gradient.name}`
       });
       li.appendChild(circle);
 
       const titleLegend = createElement('span', {
-        class: `legend-item__title title--${gradient.name}`,
+        class: `legend-item__title title_theme_${gradient.name}`,
         'data-name': gradient.name
       });
       titleLegend.innerHTML = `${title}`;

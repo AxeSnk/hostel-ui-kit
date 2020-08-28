@@ -148,16 +148,16 @@
 
     }
 
-    .form-elements__item--small {
+    .form-elements__item_size_small {
       max-width: 266px;
       margin-bottom: 36px;
     }
 
-    .form-elements__item--short {
+    .form-elements__item_size_short {
       max-width: 222px;
     }
 
-    .form-elements__item--drpodown {
+    .form-elements__item-drpodown {
       margin-top: 96px;
       margin-bottom: 15px;
     }
@@ -178,7 +178,7 @@
       width: 280px;
     }
 
-    .form-elements__item--long {
+    .form-elements__item_size_long {
       width: 711px;
 
       .comment {

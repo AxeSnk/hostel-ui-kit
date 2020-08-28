@@ -15,29 +15,29 @@
   cursor: pointer;
 }
 
-.button--border {
+.button_theme_border {
   color: $purple-color;
   background: #fff;
   border: 2px solid $purple-color;
   padding: 12px 17px 13px;
 }
 
-.button--disabled {
+.button_disabled {
   opacity: 0.5;
   cursor: auto;
 }
 
-.button--link {
+.button_theme_link {
   padding: 0;
   background: none;
   color: $purple-color;
 }
 
-.button--link + .button--disabled {
+.button_theme_link + .button_theme_disabled {
   color: $dark_50-color;
 }
 
-.button--long {
+.button_size_long {
   position: relative;
   display: flex;
   justify-content: center;

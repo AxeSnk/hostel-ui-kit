@@ -150,17 +150,17 @@
       outline: none;
     }
 
-    .button__dropdown--apply {
+    .button__dropdown-apply {
       color: $purple-color;
       margin-left: auto;
     }
 
-    .button__dropdown--clear {
+    .button__dropdown-clear {
       visibility: hidden;
       color: $dark_50-color;
     }
 
-    .button__dropdown--clear.active {
+    .button__dropdown-clear.active {
       visibility: visible;
     }
   }
