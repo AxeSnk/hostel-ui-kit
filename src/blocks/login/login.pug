@@ -6,7 +6,7 @@ mixin login({ title })
     h1.login__header= title
     +field({placeholder: 'Email', type: 'email'})
     +field({placeholder: 'Пароль', type: 'password'})
-    +button({title: 'Войти', long: true})
+    +button({title: 'Войти', arrow: true}).button_size_long
     .login__foot
       .login__note Нет аккаунта на Toxin?
-      +button({title: 'Создать', border: true})
+      +button({title: 'Создать'}).button_theme_border

@@ -14,7 +14,7 @@ mixin register({ title='' })
     +field({placeholder: 'Email', type: 'email'})
     +field({placeholder: 'Пароль', type: 'password'})
     +toggle({ items: [{label: 'Получать спецпредложения'}] })
-    +button({title: 'Перейти к оплате', long: true})
+    +button({title: 'Перейти к оплате', arrow: true}).button_size_long
     .register__foot
       .register__note Уже есть аккаунт на Toxin
-      +button({title: 'Войти', border: true})
+      +button({title: 'Войти'}).button_theme_border

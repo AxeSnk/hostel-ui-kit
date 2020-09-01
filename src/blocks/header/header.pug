@@ -11,5 +11,5 @@ mixin header({ list=[], reg, buttons })
         .name__login= reg.name
       else
         .buttons__wrapper
-          +button({title: buttons.title1, border: true, href: 'sign-in.html'})
-          +button({title: buttons.title2, href: 'sign-up.html'})
+          +button({title: buttons.title1, link: true, href: 'sign-in.html'}).button_theme_border
+          +button({title: buttons.title2, link: true, href: 'sign-up.html'})

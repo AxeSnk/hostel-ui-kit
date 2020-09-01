@@ -1,14 +1,12 @@
-mixin button({ title='', border=false, disabled=false, link=false, long=false, href='/mock-address/change-me' }={})
-  - let classes = ['button'];
-  if border
-    - classes.push('button_theme_border');
-  if disabled
-    - classes.push('button_disabled');
-  if link
-    - classes.push('button_theme_link');
-  if long
-    - classes.push('button_size_long');
+mixin button({ title = '', link = false, arrow = false, href = '/mock-address/change-me' }={})
   .button__wrapper
-    a(class=classes href=href)= title
-      if long
-        i.material-icons.button__icon arrow_forward
+    if link
+      a(href = href).button&attributes(attributes)= title
+        if arrow
+          i.material-icons.button__icon arrow_forward
+    else
+      button(type = "submit").button&attributes(attributes)= title
+        if arrow
+          i.material-icons.button__icon arrow_forward
+
+

@@ -93,16 +93,16 @@ block content
         .form-elements__item
           h3.buttons__header Buttons
           .buttons__default
-            +button({title: 'Click me'})
-            +button({title: 'Click me', disabled: true})
-          .buttons__border
-            +button({title: 'Click me', border: true})
-            +button({title: 'Click me', border: true, disabled: true})
-          .buttons__link
             +button({title: 'Click me', link: true})
-            +button({title: 'Click me', link: true, disabled: true})
+            +button({title: 'Click me', link: true}).button_disabled
+          .buttons__border
+            +button({title: 'Click me', link: true}).button_theme_border
+            +button({title: 'Click me', link: true}).button_disabled.button_theme_border
+          .buttons__link
+            +button({title: 'Click me', link: true}).button_size_small
+            +button({title: 'Click me', link: true}).button_size_small.button_disabled
           .buttons__long
-            +button({title: 'Перейти к оплате', long: true})
+            +button({title: 'Перейти к оплате', link: true, arrow: true}).button_size_long
         .form-elements__item
           h3.pagination__header Pagination
           +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
