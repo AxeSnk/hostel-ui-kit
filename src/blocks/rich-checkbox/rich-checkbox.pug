@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 
-mixin rich-checkbox({ label, details, checked=false }={})
+mixin rich-checkbox({ label, name, details, checked=false }={})
   .rich-checkbox
-    +checkbox({ label: label, checked: checked })
+    +checkbox({ label: label, name: name, checked: checked })
     .rich-checkbox__details= details

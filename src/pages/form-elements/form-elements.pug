@@ -42,9 +42,9 @@ block content
         .form-elements__item
           +range-date
         .form-elements__item.form-elements__item_size_small.js-calendar
-          +field({title: 'filter date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
+          +field({title: 'filter date dropdown', name: 'calendar-range', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
         .form-elements__item.form-elements__item_size_small
-          +field({title: 'subscription text field', type: 'email', placeholder: 'Email', button:{send:true}})
+          +field({title: 'subscription text field', name: 'email', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__item.form-elements__item_size_small.form-elements__item-drpodown.js-dropdown
           .dropdown__header
             h3.dropdown__title Dropdown

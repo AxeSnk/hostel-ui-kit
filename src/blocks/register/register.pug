@@ -6,15 +6,15 @@ include ../toggle/toggle
 mixin register({ title='' })
   form.register
     h1.register__header= title
-    +field({placeholder: 'Имя'})
-    +field({placeholder: 'Фамилия'})
+    +field({placeholder: 'Имя', name: 'name'})
+    +field({placeholder: 'Фамилия', name: 'surname'})
     +radio-buttons({ items: [ {label: 'Мужчина', name: 'sex', checked: true}, {label: 'Женщина', name: 'sex', checked: false} ] })
-    +field({title: 'Дата рождения', placeholder: 'ДД.ММ.ГГГГ', masked: true})
+    +field({title: 'Дата рождения', name: 'date-of-birth', placeholder: 'ДД.ММ.ГГГГ', masked: true})
     h3.register__data__header Данные для входа в сервис
-    +field({placeholder: 'Email', type: 'email'})
-    +field({placeholder: 'Пароль', type: 'password'})
+    +field({placeholder: 'Email', name: 'email', type: 'email'})
+    +field({placeholder: 'Пароль', name: 'password', type: 'password'})
     +toggle({ items: [{label: 'Получать спецпредложения'}] })
     +button({title: 'Перейти к оплате', arrow: true}).button_size_long
     .register__foot
       .register__note Уже есть аккаунт на Toxin
-      +button({title: 'Войти'}).button_theme_border
+      +button({title: 'Войти', link: true, href: 'sign-in.html'}).button_theme_border

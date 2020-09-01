@@ -17,7 +17,8 @@ mixin footer({ info='', list1=[], list2=[], list3=[], title='', text='', placeho
       .footer__subscription
         .subscription__title= title
         .subscription__text= text
-        +field({type: 'email', placeholder: placeholder, button:{send:true}})
+        form.field__form(name='subscribe-form')
+          +field({type: 'email', name: 'email', placeholder: placeholder, button:{send:true}})
     .footer__line
     .footer__copyright
       .copyright__text= copyright

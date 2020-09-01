@@ -1,4 +1,4 @@
-mixin field({ title='', note='', placeholder='', value='', masked=false, calendar={on, input}, type='text', button={send:false,dropdown:false} }={})
+mixin field({ title='', note='', placeholder='', value='', name ='', masked=false, calendar={on, input}, type='text', button={send:false,dropdown:false} }={})
   - let classes = [];
   if masked
     - classes.push('js-masked');
@@ -9,7 +9,7 @@ mixin field({ title='', note='', placeholder='', value='', masked=false, calenda
     .filed__header
       h3.field__title= title
       .field__note= note
-    input.field__input(class=classes, placeholder=placeholder, value=value, type=type)
+    input.field__input(class=classes, placeholder=placeholder, value=value, type=type, name=name)
     if button.send
       i.material-icons.arrow__icon arrow_forward
     if button.dropdown

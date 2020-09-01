@@ -6,4 +6,4 @@ mixin checkbox-list({ title='', list=[] } = {})
       i.material-icons.expand-more__icon.js-checkbox-list__icon expand_more
     .checkbox-list__menu.js-checkbox-list__menu
       each item in list
-        +checkbox({ label: item.label, checked: item.checked})
+        +checkbox({ label: item.label, name: item.name, checked: item.checked})

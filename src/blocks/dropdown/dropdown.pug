@@ -1,6 +1,6 @@
 mixin dropdown({ category='', defaultText='', list=[] })
   div.iqdropdown(class=`js-dropdown__${category}`)
-    p.iqdropdown-selection.js-iqdropdown-selection= defaultText
+    input.iqdropdown-selection.js-iqdropdown-selection(name=category, value=defaultText)
     i.material-icons.expand-more__icon.js-iqdropdown-icon expand_more
     .iqdropdown-menu.js-iqdropdown-menu
       each item in list

@@ -5,4 +5,4 @@ mixin checkbox-buttons({ title='', list=[] } = {})
     h3.checkbox-buttons__header= title
     .checkbox-buttons__list
       each item in list
-        +checkbox({ label: item.label, checked: item.checked})
+        +checkbox({ label: item.label, checked: item.checked, name: item.name})

@@ -2,5 +2,5 @@ include ../field/field
 
 mixin range-date
   .range-date.js-calendar
-    +field({title: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})
-    +field({title: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}})
+    +field({title: 'date dropdown', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})
+    +field({title: 'date dropdown', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}})
