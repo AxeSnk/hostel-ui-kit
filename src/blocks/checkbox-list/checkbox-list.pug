@@ -3,7 +3,7 @@ include ../checkbox/checkbox
 mixin checkbox-list({ title='', list=[] } = {})
   .checkbox-list.js-checkbox-list
     h3.checkbox-list__header.js-checkbox-list__header= title
-      i.material-icons.expand-more__icon.js-checkbox-list__icon expand_more
+      i.material-icons.expand-icon.js-checkbox-list__icon expand_more
     .checkbox-list__menu.js-checkbox-list__menu
       each item in list
         +checkbox({ label: item.label, name: item.name, checked: item.checked})

@@ -3,27 +3,27 @@ include ../field/field
 
 mixin booking({ header=[], price=[], total='' })
   form.booking
-    .booking-header
-      .booking-header__numeration №
-      .booking-header__number= header.number
-      .booking-header__luxury= header.luxury
-      .booking-header__cost= header.cost
-      .booking-header__inday в сутки
-    .booking-range.js-calendar
+    .booking__header
+      .booking__header-numeration №
+      .booking__header-number= header.number
+      .booking__header-luxury= header.luxury
+      .booking__header-cost= header.cost
+      .booking__header-inday в сутки
+    .booking__date-range.js-calendar
       +field({title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})
       +field({title: 'Выезд', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}})
-    .booking-guests.js-dropdown
-      h3.dropdown__title Гости
+    .booking__guests.js-dropdown
+      h3.booking__guests-title Гости
       +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
-    .booking-price
+    .booking__price
       each item in price
         .price-item
           .price-item__name= item.name
           if item.info
             i.material-icons.price-item__info error_outline
           .price-item__cost= item.cost
-    .booking-total
-      .booking-total__title Итого
-      .booking-total__points
-      .booking-total__cost= total
+    .booking__total
+      .booking__total-title Итого
+      .booking__total-points
+      .booking__total-cost= total
     +button({title: 'Забронировать', arrow: true}).button_size_long

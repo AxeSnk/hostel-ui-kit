@@ -9,9 +9,9 @@ class Calendar {
   }
 
   init() {
-    this.start = this.root.querySelector('.js-calendar__start');
-    this.end = this.root.querySelector('.js-calendar__end');
-    this.range = this.root.querySelector('.js-calendar__range');
+    this.start = this.root.querySelector('.js-calendar-start');
+    this.end = this.root.querySelector('.js-calendar-end');
+    this.range = this.root.querySelector('.js-calendar-range');
 
     if (this.start && this.end) {
       this.picker = $(this.start)

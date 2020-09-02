@@ -81,12 +81,12 @@
       content: "close";
     }
 
-    .name__login {
+    .login-name {
       border-left: 1px solid $dark_10-color;
       padding-left: 35px;
     }
 
-    .buttons__wrapper {
+    .buttons {
       display: flex;
 
       @media (max-width: 540px) {

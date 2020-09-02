@@ -9,12 +9,12 @@
   padding: 40px 30px 29px;
   margin-bottom: 40px;
 
-  &-header {
+  &__header {
     display: flex;
     align-items: baseline;
     margin-bottom: 15px;
 
-    &__numeration {
+    &-numeration {
       font-family: 'open-sans', sans-serif;
       font-weight: bold;
       font-size: 14px;
@@ -23,7 +23,7 @@
       margin-right: 5px;
     }
 
-    &__number {
+    &-number {
       font-family: 'open-sans', sans-serif;
       font-weight: bold;
       font-size: 24px;
@@ -32,7 +32,7 @@
       margin-right: 5px;
     }
 
-    &__luxury {
+    &-luxury {
       font-weight: bold;
       font-size: 12px;
       line-height: 15px;
@@ -40,7 +40,7 @@
       color: $purple-color;
     }
 
-    &__cost {
+    &-cost {
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
@@ -49,31 +49,31 @@
       margin-right: 5px;
     }
 
-    &__inday {
+    &-inday {
       font-size: 12px;
       line-height: 18px;
       color: $dark_50-color;
     }
   }
 
-  &-range {
+  &__date-range {
     display: flex;
     margin-bottom: 19px;
 
-    .field__wrapper:first-child {
+    .field:first-child {
       margin-right: 20px;
     }
   }
 
-  &-guests {
+  &__guests {
     margin-bottom: 21px;
 
-    .dropdown__title {
+    &-title {
       margin-bottom: 4px;
     }
   }
 
-  &-price {
+  &__price {
     margin-bottom: 30px;
 
     .price-item {
@@ -99,7 +99,7 @@
     }
   }
 
-  &-total {
+  &__total {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -109,16 +109,16 @@
     color: $dark_100-color;
     margin-bottom: 20px;
 
-    &__title {
+    &-title {
       margin-right: 5px;
     }
 
-    &__points {
+    &-points {
       flex: 1;
       border-bottom: 1px dotted $dark_25-color;
     }
 
-    &__cost {
+    &-cost {
       margin-left: 5px;
     }
   }

@@ -15,12 +15,12 @@
     display: flex;
     margin-bottom: 20px;
 
-    .field__wrapper:first-child {
+    .field:first-child {
       margin-right: 20px;
     }
   }
 
-  &__dropdown__header {
+  &__dropdown {
     margin-bottom: 31px;
     
     .dropdown__title {

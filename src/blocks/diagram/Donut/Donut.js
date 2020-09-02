@@ -1,8 +1,6 @@
 import { createElement, createElementNS } from './createElements';
-import createGradient from './createGradient';
 import Legend from './Legend';
 import Sectors from './Sectors';
-import getSectorPath from './getSectorPath';
 
 class Donut {
   constructor(root, config) {
@@ -39,14 +37,14 @@ class Donut {
 
     if (labels.show) {
       this.labelValue = createElementNS('text', {
-        class: 'donut__label__value',
+        class: 'donut__value',
         x: '43%',
         y: '36%'
       });
       this.labelValue.innerHTML = `${total}`;
 
       this.labelUnit = createElementNS('text', {
-        class: 'donut__label__unit',
+        class: 'donut__unit',
         x: '43%',
         y: '40%'
       });

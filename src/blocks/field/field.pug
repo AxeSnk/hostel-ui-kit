@@ -3,14 +3,14 @@ mixin field({ title='', note='', placeholder='', value='', name ='', masked=fals
   if masked
     - classes.push('js-masked');
   if calendar.on
-    - classes.push(`js-calendar__${calendar.input}`);
+    - classes.push(`js-calendar-${calendar.input}`);
 
-  .field__wrapper
+  .field
     .filed__header
       h3.field__title= title
       .field__note= note
     input.field__input(class=classes, placeholder=placeholder, value=value, type=type, name=name)
     if button.send
-      i.material-icons.arrow__icon arrow_forward
+      i.material-icons.arrow-icon arrow_forward
     if button.dropdown
-      i.material-icons.expand-more__icon expand_more
+      i.material-icons.expand-more-icon expand_more

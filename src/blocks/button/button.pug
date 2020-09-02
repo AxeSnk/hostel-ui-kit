@@ -1,5 +1,5 @@
 mixin button({ title = '', link = false, arrow = false, href = '/mock-address/change-me' }={})
-  .button__wrapper
+  .button-wrapper
     if link
       a(href = href).button&attributes(attributes)= title
         if arrow

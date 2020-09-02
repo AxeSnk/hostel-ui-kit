@@ -1,6 +1,6 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
-.field__wrapper {
+.field {
   position: relative;
 
   .filed__header {
@@ -53,7 +53,7 @@
     display: block;
   }
 
-  .expand-more__icon {
+  .expand-more-icon {
     position: absolute;
     top: 35px;
     right: 10px;
@@ -63,7 +63,7 @@
     cursor: pointer;
   }
   
-  .arrow__icon {
+  .arrow-icon {
     position: absolute;
     top: 35px;
     right: 10px;

@@ -5,17 +5,17 @@
     position: relative;
     line-height: 24px;
     margin-bottom: 14px;
+    cursor: pointer;
 
-    .expand-more__icon {
+    .expand-icon {
       position: absolute;
       right: 5%;
       font-size: 24px;
       line-height: 24px;
       color: $dark_50-color;
-      cursor: pointer;
     }
 
-    .expand-more__icon_open {
+    .expand-icon_open {
       transform: rotate(180deg);
     }
   }

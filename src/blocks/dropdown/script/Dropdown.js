@@ -13,31 +13,31 @@ class Dropdown {
     this.totalItems = 0;
     this.baby = 0;
     this.active = false;
-    this.input = this.root.querySelector('.js-iqdropdown-selection');
-    this.items = this.root.querySelectorAll('.js-iqdropdown-menu-option');
+    this.input = this.root.querySelector('.js-iqdropdown__selection');
+    this.items = this.root.querySelectorAll('.js-iqdropdown__menu-option');
     this.item = Array.from(this.items).map(item => ({
       item,
       increment: item.querySelector('.js-plus'),
       decrement: item.querySelector('.js-minus'),
-      countInput: item.querySelector('.js-controls__count'),
+      countInput: item.querySelector('.js-controls-count'),
       id: item.dataset.id,
       count: Number(
-        item.querySelector('.js-controls__count').getAttribute('value')
+        item.querySelector('.js-controls-count').getAttribute('value')
       )
     }));
     this.item.map(i => {
       this.totalItems += i.count;
 
       i.count <= minItems
-        ? i.decrement.classList.add('disabled')
-        : i.decrement.classList.remove('disabled');
+        ? i.decrement.classList.add('_disabled')
+        : i.decrement.classList.remove('_disabled');
       i.count >= maxItems
-        ? i.increment.classList.add('disabled')
-        : i.increment.classList.remove('disabled');
+        ? i.increment.classList.add('_disabled')
+        : i.increment.classList.remove('_disabled');
     });
 
-    this.menu = this.root.querySelector('.js-iqdropdown-menu');
-    this.icon = this.root.querySelector('.js-iqdropdown-icon');
+    this.menu = this.root.querySelector('.js-iqdropdown__menu');
+    this.icon = this.root.querySelector('.js-iqdropdown__icon');
 
     buttons ? this.addButtons() : null;
 
@@ -50,18 +50,18 @@ class Dropdown {
 
   addButtons() {
     const btnWrapper = document.createElement('div');
-    btnWrapper.classList.add('buttons-dropdown__wrapper');
+    btnWrapper.classList.add('iqdropdown__buttons');
 
     const clearButton = document.createElement('button');
     clearButton.classList.add(
-      'button__dropdown', 'button__dropdown-clear', 'js-button__dropdown-clear'
+      'iqdropdown__button', 'iqdropdown__button-clear', 'js-iqdropdown__button-clear'
     );
     clearButton.setAttribute('type', 'button');
     clearButton.innerHTML = 'Очистить'
 
     const applyButton = document.createElement('button');
     applyButton.classList.add(
-      'button__dropdown', 'button__dropdown-apply', 'js-button__dropdown-apply'
+      'iqdropdown__button', 'iqdropdown__button-apply', 'js-iqdropdown__button-apply'
     );
     applyButton.setAttribute('type', 'button');
     applyButton.innerHTML = 'Применить'
@@ -70,8 +70,8 @@ class Dropdown {
     btnWrapper.appendChild(applyButton);
     this.menu.appendChild(btnWrapper);
 
-    this.clearButton = this.root.querySelector('.js-button__dropdown-clear');
-    this.applyButton = this.root.querySelector('.js-button__dropdown-apply');
+    this.clearButton = this.root.querySelector('.js-iqdropdown__button-clear');
+    this.applyButton = this.root.querySelector('.js-iqdropdown__button-apply');
 
     this.applyButton.addEventListener('click', this.hide.bind(this));
     this.clearButton.addEventListener('click', this.clear.bind(this));
@@ -95,8 +95,8 @@ class Dropdown {
 
   showMenu() {
     this.active = true;
-    this.root.classList.add('active');
-    this.icon.classList.add('icon-active');
+    this.root.classList.add('_active');
+    this.icon.classList.add('icon_active');
   }
 
   plus(e) {
@@ -109,7 +109,7 @@ class Dropdown {
           i.countInput.setAttribute('value', i.count);
           if (
             'Младенцы' ==
-            e.target.closest('.js-iqdropdown-menu-option').dataset.id
+            e.target.closest('.js-iqdropdown__menu-option').dataset.id
           ) {
             this.baby += 1;
           }
@@ -129,7 +129,7 @@ class Dropdown {
         i.countInput.setAttribute('value', i.count);
         if (
           'Младенцы' ==
-          e.target.closest('.js-iqdropdown-menu-option').dataset.id
+          e.target.closest('.js-iqdropdown__menu-option').dataset.id
         ) {
           this.baby -= 1;
         }
@@ -192,21 +192,21 @@ class Dropdown {
 
     this.item.map(i => {
       i.count <= minItems
-        ? i.decrement.classList.add('disabled')
-        : i.decrement.classList.remove('disabled');
+        ? i.decrement.classList.add('_disabled')
+        : i.decrement.classList.remove('_disabled');
       i.count >= maxItems
-        ? i.increment.classList.add('disabled')
-        : i.increment.classList.remove('disabled');
+        ? i.increment.classList.add('_disabled')
+        : i.increment.classList.remove('_disabled');
     });
 
     this.totalItems > 0
-      ? (this.input.innerHTML = totalText)
-      : (this.input.innerHTML = defaultText);
+      ? (this.input.setAttribute('value', `${totalText}`))
+      : (this.input.setAttribute('value', `${defaultText}`))
     
     if(this.clearButton) {
       this.totalItems > 0
-      ? this.clearButton.classList.add('active')
-      : this.clearButton.classList.remove('active');
+      ? this.clearButton.classList.add('_active')
+      : this.clearButton.classList.remove('_active');
     }
   }
 
@@ -216,8 +216,8 @@ class Dropdown {
     const isIcon = e.target == this.icon;
     if (notDropdown || isApplyButton || isIcon) {
       this.active = false;
-      this.root.classList.remove('active');
-      this.icon.classList.remove('icon-active');
+      this.root.classList.remove('_active');
+      this.icon.classList.remove('icon_active');
     }
   }
 

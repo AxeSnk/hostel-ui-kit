@@ -8,8 +8,8 @@ mixin header({ list=[], reg, buttons })
       +logo({ui: false})
       +menu({list: list})
       if reg.on
-        .name__login= reg.name
+        .login-name= reg.name
       else
-        .buttons__wrapper
+        .buttons
           +button({title: buttons.title1, link: true, href: 'sign-in.html'}).button_theme_border
           +button({title: buttons.title2, link: true, href: 'sign-up.html'})

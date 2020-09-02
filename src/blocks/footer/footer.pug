@@ -6,19 +6,20 @@ include ../social/social
 mixin footer({ info='', list1=[], list2=[], list3=[], title='', text='', placeholder='', copyright=''})
   footer.footer
     .footer__line
-    .footer__wrapper
-      .footer-info__wrapper
+    .footer__content
+      .footer__info
         +logo({ui: false})
-        .footer-info= info
-      .footer-menu__wrapper
+        .footer__info-text= info
+      .footer__menu
         +menu({list: list1})
         +menu({list: list2})
         +menu({list: list3})
       .footer__subscription
-        .subscription__title= title
-        .subscription__text= text
-        form.field__form(name='subscribe-form')
-          +field({type: 'email', name: 'email', placeholder: placeholder, button:{send:true}})
+        .footer__subscription-title= title
+        .footer__subscription-text= text
+        .footer__subscription-field
+          form.subscription-form(name='subscribe-form')
+            +field({type: 'email', name: 'email', placeholder: placeholder, button:{send:true}})
     .footer__line
     .footer__copyright
       .copyright__text= copyright
