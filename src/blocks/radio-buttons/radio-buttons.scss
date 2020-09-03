@@ -1,41 +1,40 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .radio-buttons {
-
   &__label {
     position: relative;
     margin-right: 20px;
     padding-left: 30px;
     cursor: pointer;
+  }
 
-    .radio-buttons__input:checked,
-    .radio-buttons__input:not(:checked) {
-      display:none;
-    }
+  &__input:checked,
+  &__input:not(:checked) {
+    display: none;
+  }
 
-    .radio-buttons__input:checked ~ .radio-buttons__marker::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 12px;
-      height: 12px;
-      box-sizing: border-box;
-      background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      border-radius: 100%;
-    }
+  &__input:checked ~ &__marker::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    box-sizing: border-box;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 100%;
+  }
 
-    .radio-buttons__marker {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 100%;
-      border: 1px solid $dark_25-color;
-      box-sizing: border-box;
-    }
+  &__marker {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid $dark_25-color;
+    box-sizing: border-box;
   }
 }

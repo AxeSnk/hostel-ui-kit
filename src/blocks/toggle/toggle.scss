@@ -7,43 +7,44 @@
     position: relative;
     cursor: pointer;
     user-select: none;
-    
-    .toggle__input {
-      display: none;
-    }
-
-    .toggle__marker {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 40px;
-      height: 20px;
-      border: 1px solid $dark_25-color;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .toggle__marker::after {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 12px;
-      height: 12px;
-      top: 4px;
-      left: 4px;
-      border-radius: 50%;
-      background-color: $dark_25-color;
-      transition: 0.3s;
-    }
-
-    .toggle__input:checked ~ .toggle__marker::after {
-      transform: translateX(20px);
-      background-image: $gradient-color;
-    }
-
-    .toggle__input:checked ~ .toggle__marker {
-      border-color: $purple-color;
-    }
   }
+
+  &__input {
+    display: none;
+  }
+
+  &__marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark_25-color;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  &__marker::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: $dark_25-color;
+    transition: 0.3s;
+  }
+
+  &__input:checked ~ &__marker::after {
+    transform: translateX(20px);
+    background-image: $gradient-color;
+  }
+
+  &__input:checked ~ &__marker {
+    border-color: $purple-color;
+  }
+
 
 }

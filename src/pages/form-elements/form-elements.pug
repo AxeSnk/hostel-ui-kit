@@ -33,9 +33,9 @@ block content
         .form-elements__item
           +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
         .form-elements__item.js-dropdown
-          .dropdown__header
-            h3.dropdown__title Dropdown
-            .dropdown__note Default
+          .dropdown-header
+            h3.dropdown-header__title Dropdown
+            .dropdown-header__note Default
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .form-elements__item
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
@@ -46,14 +46,14 @@ block content
         .form-elements__item.form-elements__item_size_small
           +field({title: 'subscription text field', name: 'email', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__item.form-elements__item_size_small.form-elements__item-drpodown.js-dropdown
-          .dropdown__header
-            h3.dropdown__title Dropdown
-            .dropdown__note Default
+          .dropdown-header
+            h3.dropdown-header__title Dropdown
+            .dropdown-header__note Default
           +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__item.form-elements__item_size_small.js-dropdown
-          .dropdown__header
-            h3.dropdown__title Dropdown
-            .dropdown__note Default
+          .dropdown-header
+            h3.dropdown-header__title Dropdown
+            .dropdown-header__note Default
           +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__item.form-elements__checkbox
           +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false } ] })
@@ -64,26 +64,26 @@ block content
         .form-elements__item.form-elements__item_size_short
           +checkbox-buttons({ title: 'Checkbox buttons', list: [ { label: 'Можно курить', checked: false }, { label: 'Можно с питомцами', checked: true }, { label: 'Можно пригласить гостей (до 10 человек)', checked: true } ] })
         .form-elements__item
-          h3.radio-buttons__header Radio buttons
+          h3.radio-buttons-header Radio buttons
           +radio-buttons({ items: [ {label: 'Мужчина', name: 'sex', checked: true}, {label: 'Женщина', name: 'sex', checked: false} ] })
         .form-elements__item
-          h3.toggle__header Toggle
+          h3.toggle-header Toggle
           +toggle({ items: [ {label: 'Получать спецпредложения', checked: true}, {label: 'Получать спецпредложения', checked: false}, ] })
         .form-elements__item
-          h3.like-button__header Like button
-          .like-button__wrapper
+          h3.like-button-header Like button
+          .like-button-wrapper
             +like-button({ items: [ {liked: false, counter: '2'}, {liked: true, counter: '12'} ] })
         .form-elements__item
-          h3.rate-button__header Rate button
-          .rate-button__wrapper
+          h3.rate-button-header Rate button
+          .rate-button-wrapper
             +rate-button({rate: 4})
             +rate-button({rate: 5})
         .form-elements__item.js-dropdown
-          .dropdown__header
-            h3.dropdown__title Dropdown
+          .dropdown-header
+            h3.dropdown-header__title Dropdown
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .form-elements__item.form-elements__item_size_small
-          h3.rich-checkbox__header Rich checkbox buttons
+          h3.rich-checkbox-header Rich checkbox buttons
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.', checked: false})
 
@@ -91,27 +91,27 @@ block content
         .form-elements__item.form-elements__item_size_small
           +slider({title: 'Range slider'})
         .form-elements__item
-          h3.buttons__header Buttons
-          .buttons__default
+          h3.buttons-header Buttons
+          .buttons-default
             +button({title: 'Click me', link: true})
             +button({title: 'Click me', link: true}).button_disabled
-          .buttons__border
+          .buttons-border
             +button({title: 'Click me', link: true}).button_theme_border
             +button({title: 'Click me', link: true}).button_disabled.button_theme_border
-          .buttons__link
+          .buttons-link
             +button({title: 'Click me', link: true}).button_size_small
             +button({title: 'Click me', link: true}).button_size_small.button_disabled
-          .buttons__long
+          .buttons-long
             +button({title: 'Перейти к оплате', link: true, arrow: true}).button_size_long
         .form-elements__item
-          h3.pagination__header Pagination
+          h3.pagination-header Pagination
           +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
         .form-elements__item.js-dropdown
-          .dropdown__header
-            h3.dropdown__title Dropdown
+          .dropdown-header
+            h3.dropdown-title Dropdown
           +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 2}, {title: 'Дети', count: 1}, {title: 'Младенцы', count: 0}]})
         .form-elements__item
-          h3.bullet-list__header Bullet list
+          h3.bullet-list-header Bullet list
           .bullet-list
             +bullet({text: 'Нельзя с питомцами'})
             +bullet({text: 'Без вечеринок и мероприятий'})

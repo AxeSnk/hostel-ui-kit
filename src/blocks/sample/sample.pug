@@ -8,15 +8,15 @@ mixin sample({ list=[] })
           - for (let i = 0; i < item.img.length; i += 1)
             a.image-room.js-image-room(href= item.href)
               img.room-img(src= `img/room-${item.img[i]}.jpg` alt='room-img')
-          .image-ellipses__wrapper
-            .js-image-ellipse.image-ellipse
-            .js-image-ellipse.image-ellipse
-            .js-image-ellipse.image-ellipse
-            .js-image-ellipse.image-ellipse
-        .image__arrow__left.js-arrow-left
-          i.material-icons.sample__image-prev keyboard_arrow_left
-        .image__arrow__right.js-arrow-right
-          i.material-icons.sample__image-next keyboard_arrow_left
+          .image-ellipses
+            .js-image-ellipses__item.image-ellipses__item
+            .js-image-ellipses__item.image-ellipses__item
+            .js-image-ellipses__item.image-ellipses__item
+            .js-image-ellipses__item.image-ellipses__item
+        .sample-image__prev.js-sample-image__prev
+          i.material-icons.sample-image__prev-arrow keyboard_arrow_left
+        .sample-image__next.js-sample-image__next
+          i.material-icons.sample-image__next-arrow keyboard_arrow_left
 
       .sample__info
         .sample__price

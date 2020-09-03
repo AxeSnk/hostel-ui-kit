@@ -9,9 +9,9 @@ class PhotoSlider {
     this.index = 0;
     this.images = this.slider.querySelectorAll('.js-image-room');
     this.images[this.index].classList.add('image-show')
-    this.arrowLeft = this.slider.querySelector('.js-arrow-left');
-    this.arrowRight = this.slider.querySelector('.js-arrow-right');
-    this.dots = this.slider.querySelectorAll('.js-image-ellipse');
+    this.arrowLeft = this.slider.querySelector('.js-sample-image__prev');
+    this.arrowRight = this.slider.querySelector('.js-sample-image__next');
+    this.dots = this.slider.querySelectorAll('.js-image-ellipses__item');
     this.dots[this.index].classList.add('elipse-filled')
   }
 

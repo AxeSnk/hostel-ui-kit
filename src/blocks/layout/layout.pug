@@ -14,7 +14,7 @@ html(lang="ru")
       block header
         +header({ list: [ {title: 'О нас', href: '/mock-address/change-me'}, {title: 'Услуги', more: true, sublist: [ {subtitle: 'Элемент-1', subhref: '/mock-address/change-me'}, {subtitle: 'Элемент-2', subhref: '/mock-address/change-me'} ]}, {title: 'Вакансии', href: '/mock-address/change-me'}, {title: 'Новости', href: '/mock-address/change-me'}, {title: 'Соглашения', more: true, sublist: [ {subtitle: 'Элемент-1', subhref: '/mock-address/change-me'}, {subtitle: 'Элемент-2', subhref: '/mock-address/change-me'}, {subtitle: 'Элемент-3', subhref: '/mock-address/change-me'} ]}, ], reg: {on: false}, buttons: {title1: 'Войти', title2: 'Зарегистрироваться'}})
 
-      .content__wrapper
-        block content
+      block content
+
       block footer
         +footer({ info: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', list1: [ {title: 'Навигация', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'О нас', href: '/mock-address/change-me'}, {title: 'Новости', href: '/mock-address/change-me'}, {title: 'Служба поддержки', href: '/mock-address/change-me'}, {title: 'Услуги', href: '/mock-address/change-me'} ], list2: [ {title: 'О нас', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'О сервисе', href: '/mock-address/change-me'}, {title: 'Наша команда', href: '/mock-address/change-me'}, {title: 'Вакансии', href: '/mock-address/change-me'}, {title: 'Инвесторы', href: '/mock-address/change-me'} ], list3: [ {title: 'Служба поддержки', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'Соглашения', href: '/mock-address/change-me'}, {title: 'Сообщества', href: '/mock-address/change-me'}, {title: 'Связь с нами', href: '/mock-address/change-me'} ], title: 'Подписка', text: 'Получайте специальные предложения и новости сервиса', placeholder: 'Email', copyright: 'Copyright © 2018 Toxin отель. Все права защищены.' })

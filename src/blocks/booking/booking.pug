@@ -10,8 +10,8 @@ mixin booking({ header=[], price=[], total='' })
       .booking__header-cost= header.cost
       .booking__header-inday в сутки
     .booking__date-range.js-calendar
-      +field({title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}})
-      +field({title: 'Выезд', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}})
+      +field({title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
+      +field({title: 'Выезд', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})
     .booking__guests.js-dropdown
       h3.booking__guests-title Гости
       +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})

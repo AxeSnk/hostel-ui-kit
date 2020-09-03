@@ -25,7 +25,7 @@
         max-width: 240px;
       }
 
-      .dropdown-guests__title {
+      .dropdown-guests-title {
         margin-bottom: 4px;
       }
 
@@ -34,7 +34,7 @@
         margin-top: 30px;
       }
 
-      .rich-checkbox__header {
+      .rich-checkbox-header {
         margin-top: 32px;
         margin-bottom: 15px;
       }
@@ -43,7 +43,7 @@
         margin-bottom: 12px;
       }
 
-      .dropdown-rooms__title {
+      .dropdown-rooms-title {
         margin-bottom: 4px;
         margin-top: 28px;
       }
@@ -63,10 +63,10 @@
       margin-left: 0;
     }
 
-    &__header {
+    &-header {
       margin-bottom: 20px;
     }
-    .samples__wrapper {
+    &-wrapper {
       display: grid;
       justify-items: center;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));

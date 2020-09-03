@@ -111,8 +111,13 @@
       margin-bottom: 23px;
     }
 
-    .field .arrow__icon {
-      top: 10px;
+    .field {
+      display: flex;
+      align-items: center;
+
+      .arrow-icon {
+        top: auto;
+      }
     }
 
   }
