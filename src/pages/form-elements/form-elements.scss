@@ -5,163 +5,208 @@
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: 'left . middle . right';
+    grid-template-columns: 320px 126px 320px 72px 320px;
+    justify-content: center;
     padding: 31px 141px 0;
+  }
 
-    .form-elements__left-column {
-      flex-grow: .5;
+  &__left {
+    grid-area: left;
+  }
+
+  &__middle {
+    grid-area: middle;
+    padding-top: 3px;
+  }
+
+  &__right {
+    grid-area: right;
+    padding-top: 3px;
+  }
+
+  &__email {
+    margin-bottom: 16px;
+  }
+
+  &__text-field {
+    margin-bottom: 16px;
+  }
+
+  &__dropdown-guests {
+    margin-bottom: 19px;
+  }
+
+  &__masked-field {
+    margin-bottom: 36px;
+  }
+
+  &__range-date {
+    margin-bottom: 37px;
+  }
+
+  &__filter-date {
+    max-width: 266px;
+    margin-bottom: 37px;
+  }
+
+  &__subscription-text {
+    max-width: 266px;
+    margin-bottom: 96px;
+  }
+
+  &__dropdown-rooms {
+    max-width: 266px;
+    margin-bottom: 16px;
+  }
+
+  &__dropdown-rooms-open {
+    max-width: 266px;
+    margin-bottom: 168px;
+  }
+
+  &__checkbox-list {
+    max-width: 266px;
+    margin-bottom: 40px;
+  }
+
+  &__checkbox-list-open {
+    max-width: 266px;
+  }
+
+
+
+  &__buttons {
+    margin-top: 40px;
+    margin-bottom: 39px;
+  }
+
+  &__buttons-title {
+    margin-bottom: 15px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 2px 0 0 1px;
+  }
+
+  &__button-item {
+    height: 44px;
+    margin-bottom: 30px;
+    margin-right: 18px;
+  }
+
+  &__button-item_small {
+    margin-right: 20px;
+  }
+
+  &__button-item_long {
+    margin-top: 31px;
+  }
+
+
+  .radio-buttons-header {
+    margin-bottom: 12px;
+    margin-top: 41px;
+  }
+
+  .range-date {
+  }
+  
+  .radio-buttons {
+    margin-bottom: 39px;
+  }
+
+  .toggle-header {
+    margin-bottom: 12px;
+  }
+
+  .toggle {
+    margin-bottom: 10px;
+  }
+
+  .like-button-header {
+    margin-top: 42px;
+    margin-bottom: 15px;
+  }
+
+  .like-button-wrapper {
+    display: flex;
+
+    .like-button {
+      margin-right: 10px;
     }
+  }
 
-    .form-elements__midl-column {
-      padding-top: 3px;
-      flex-grow: .23;
+  .rate-button-header {
+    margin-top: 38px;
+    margin-bottom: 15px;
+  }
+
+  .rate-button-wrapper {
+    display: flex;
+    margin-bottom: 186px;
+
+    .rate-button {
+      margin-right: 20px;
     }
+  }
 
-    .form-elements__right-column {
-      padding-top: 3px;
-    }
+  .rich-checkbox-header {
+    margin-top: 256px;
+    margin-bottom: 15px;
+  }
 
-       
-    .form-elements__item {
-      width: 320px;
-      margin-bottom: 16px;
-
-      .dropdown-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        line-height: 24px;
-    
-        &__title {
-          line-height: 24px;
-        }
-    
-        &__note {
-          font-size: 12px;
-          text-transform: uppercase;
-        }
-      }    
-
-      .radio-buttons-header {
-        margin-bottom: 12px;
-        margin-top: 41px;
-      }
-    
-      .range-date {
-        margin-top: 40px;
-        margin-bottom: 37px;
-      }
-      
-      .radio-buttons {
-        margin-bottom: 39px;
-      }
-
-      .toggle-header {
-        margin-bottom: 12px;
-      }
-
-      .toggle {
-        margin-bottom: 10px;
-      }
-
-      .like-button-header {
-        margin-top: 42px;
-        margin-bottom: 15px;
-      }
-
-      .like-button-wrapper {
-        display: flex;
-
-        .like-button {
-          margin-right: 10px;
-        }
-      }
-
-      .rate-button-header {
-        margin-top: 38px;
-        margin-bottom: 15px;
-      }
-
-      .rate-button-wrapper {
-        display: flex;
-        margin-bottom: 186px;
-
-        .rate-button {
-          margin-right: 20px;
-        }
-      }
-
-      .rich-checkbox-header {
-        margin-top: 256px;
-        margin-bottom: 15px;
-      }
-
-      .rich-checkbox {
-        margin-bottom: 10px;
-      }
-
-      .button-wrapper {
-        margin-right: 19px;
-      }
-
-      .buttons-header {
-        margin-top: 43px;
-        margin-bottom: 15px;
-      }
-
-      .buttons-default {
-        display: flex;
-        margin-bottom: 30px;
-      }
-
-      .buttons-border {
-        display: flex;
-        margin-bottom: 26px;
-      }
-
-      .buttons-link {
-        display: flex;
-        margin-bottom: 26px;
-      }
-
-      .buttons-long {
-        margin-bottom: 38px;
-      }
+  .rich-checkbox {
+    margin-bottom: 10px;
+  }
 
 
-      .pagination-header {
-        margin-bottom: 15px;
-      }
 
-      .pagination {
-        margin-bottom: 229px;
-      }
+  .buttons-default {
+    display: flex;
+    margin-bottom: 30px;
+  }
 
-      .bullet-list-header {
-        margin-top: 255px;
-        margin-bottom: 15px;
-      }
+  .buttons-border {
+    display: flex;
+    margin-bottom: 26px;
+  }
 
-      .bullet {
-        margin-bottom: 8px;
-      }
+  .buttons-link {
+    display: flex;
+    margin-bottom: 26px;
+  }
 
-    }
 
-    .form-elements__item_size_small {
-      max-width: 266px;
-      margin-bottom: 36px;
-    }
+
+  .pagination-header {
+    margin-bottom: 15px;
+  }
+
+  .pagination {
+    margin-bottom: 229px;
+  }
+
+  .bullet-list-header {
+    margin-top: 255px;
+    margin-bottom: 15px;
+  }
+
+  .bullet {
+    margin-bottom: 8px;
+  }
+
+
+
 
     .form-elements__item_size_short {
       max-width: 222px;
     }
 
-    .form-elements__item-drpodown {
-      margin-top: 96px;
-      margin-bottom: 15px;
-    }
 
     .form-elements__checkbox {
       margin-top: 168px;
@@ -186,6 +231,6 @@
         padding-top: 10px;
       }
     }
-  }
+  
 
 }

@@ -1,14 +1,20 @@
-mixin dropdown({ category='', defaultText='', list=[] })
-  div.iqdropdown(class=`js-dropdown-${category}`)
-    input.iqdropdown__selection.js-iqdropdown__selection(name=category, value=defaultText)
-    i.material-icons.iqdropdown__icon.js-iqdropdown__icon expand_more
-    .iqdropdown__menu.js-iqdropdown__menu
-      each item in list
-        .iqdropdown__menu-option.js-iqdropdown__menu-option(
-          data-id=`${item.title}`,
-        )
-          p.iqdropdown__item= item.title
-          .iqdropdown__controls.js-iqdropdown__controls
-            .iqdropdown__controls-increment.controls-button.js-minus -
-            input.iqdropdown__controls-count.js-controls-count(readonly="readonly" type="text" value=`${item.count}`) 
-            .iqdropdown__controls-decrement.controls-button.js-plus +
+mixin dropdown({ active = false, title = '', note = '', category = '', defaultText = '', list = [] })
+  - const menuOpen = active ? 'dropdown__menu_active' : '' ;
+  
+  .dropdown.js-dropdown
+    .dropdown__header
+      h3.dropdown__title= title
+      .dropdown__note= note
+    .dropdown__wrapper(class=`js-dropdown-${category}`)
+      input.dropdown__selection.js-dropdown__selection(name=category, value=defaultText)
+      i.material-icons.dropdown__icon.js-dropdown__icon expand_more
+      .dropdown__menu.js-dropdown__menu(class= menuOpen)
+        each item in list
+          .dropdown__menu-option.js-dropdown__menu-option(
+            data-id=`${item.title}`,
+          )
+            p.dropdown__item= item.title
+            .dropdown__controls.js-dropdown__controls
+              .dropdown__controls-increment.dropdown__controls-button.js-minus -
+              input.dropdown__controls-count.js-controls-count(readonly="readonly" type="text" value=`${item.count}`) 
+              .dropdown__controls-decrement.dropdown__controls-button.js-plus +

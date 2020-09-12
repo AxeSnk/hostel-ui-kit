@@ -1,7 +1,5 @@
 .range-date {
-  display: flex;
-
-  .field:first-child {
-    margin-right: 20px;
-  }
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-gap: 20px;
 }

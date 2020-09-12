@@ -27,40 +27,31 @@ block content
     .form-elements__logo
       +logo({ui: true})
     .form-elements__wrapper
-      .form-elements__left-column
-        .form-elements__item
+      .form-elements__left
+        .form-elements__email
           +field({title: 'text-field', note: 'default', placeholder: 'Email'})
-        .form-elements__item
-          +field({title: 'text-field', note: 'hover/focus', value: 'This is pretty awesome'})
-        .form-elements__item.js-dropdown
-          .dropdown-header
-            h3.dropdown-header__title Dropdown
-            .dropdown-header__note Default
-          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
-        .form-elements__item
+        .form-elements__text-field
+          +field({title: 'text-field', note: 'hover / focus', value: 'This is pretty awesome'})
+        .form-elements__dropdown-guests
+          +dropdown({title: 'dropdown', note: 'default', category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+        .form-elements__masked-field
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
-        .form-elements__item
+        .form-elements__range-date
           +range-date
-        .form-elements__item.form-elements__item_size_small.js-calendar
+        .form-elements__filter-date
           +field({title: 'filter date dropdown', name: 'calendar-range', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
-        .form-elements__item.form-elements__item_size_small
+        .form-elements__subscription-text
           +field({title: 'subscription text field', name: 'email', type: 'email', placeholder: 'Email', button:{send:true}})
-        .form-elements__item.form-elements__item_size_small.form-elements__item-drpodown.js-dropdown
-          .dropdown-header
-            h3.dropdown-header__title Dropdown
-            .dropdown-header__note Default
-          +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
-        .form-elements__item.form-elements__item_size_small.js-dropdown
-          .dropdown-header
-            h3.dropdown-header__title Dropdown
-            .dropdown-header__note Default
-          +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
-        .form-elements__item.form-elements__checkbox
+        .form-elements__dropdown-rooms
+          +dropdown({title: 'dropdown', note: 'default', category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+        .form-elements__dropdown-rooms-open
+          +dropdown({active: true, title: 'dropdown', note: 'expanded', category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+        .form-elements__checkbox-list
           +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false } ] })
-        .form-elements__item
-          +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false }, { label: 'Письменный стол', checked: true }, { label: 'Стул для кормления', checked: true }, { label: 'Кроватка', checked: true }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, ] })
+        .form-elements__checkbox-list-open
+          +checkbox-list({ active: true, title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false }, { label: 'Письменный стол', checked: true }, { label: 'Стул для кормления', checked: true }, { label: 'Кроватка', checked: true }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, ] })
 
-      .form-elements__midl-column
+      .form-elements__middle
         .form-elements__item.form-elements__item_size_short
           +checkbox-buttons({ title: 'Checkbox buttons', list: [ { label: 'Можно курить', checked: false }, { label: 'Можно с питомцами', checked: true }, { label: 'Можно пригласить гостей (до 10 человек)', checked: true } ] })
         .form-elements__item
@@ -87,21 +78,25 @@ block content
           +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
           +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.', checked: false})
 
-      .form-elements__right-column
+      .form-elements__right
         .form-elements__item.form-elements__item_size_small
           +slider({title: 'Range slider'})
-        .form-elements__item
-          h3.buttons-header Buttons
-          .buttons-default
-            +button({title: 'Click me', link: true})
-            +button({title: 'Click me', link: true}).button_disabled
-          .buttons-border
-            +button({title: 'Click me', link: true}).button_theme_border
-            +button({title: 'Click me', link: true}).button_disabled.button_theme_border
-          .buttons-link
-            +button({title: 'Click me', link: true}).button_size_small
-            +button({title: 'Click me', link: true}).button_size_small.button_disabled
-          .buttons-long
+        .form-elements__buttons
+          h3.form-elements__buttons-title Buttons
+          .form-elements__buttons-wrapper
+            .form-elements__button-item
+              +button({title: 'Click me', link: true})
+            .form-elements__button-item
+              +button({title: 'Click me', link: true}).button_disabled
+            .form-elements__button-item
+              +button({title: 'Click me', link: true}).button_theme_border
+            .form-elements__button-item
+              +button({title: 'Click me', link: true}).button_disabled.button_theme_border
+            .form-elements__button-item_small
+              +button({title: 'Click me', link: true}).button_size_small
+            .form-elements__button-item_small
+              +button({title: 'Click me', link: true}).button_size_small.button_disabled
+          .form-elements__button-item_long
             +button({title: 'Перейти к оплате', link: true, arrow: true}).button_size_long
         .form-elements__item
           h3.pagination-header Pagination

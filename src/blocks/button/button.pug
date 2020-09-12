@@ -1,12 +1,11 @@
 mixin button({ title = '', link = false, arrow = false, href = '/mock-address/change-me' }={})
-  .button-wrapper
-    if link
-      a(href = href).button&attributes(attributes)= title
-        if arrow
-          i.material-icons.button__icon arrow_forward
-    else
-      button(type = "submit").button&attributes(attributes)= title
-        if arrow
-          i.material-icons.button__icon arrow_forward
+  if link
+    a(href = href).button&attributes(attributes)= title
+      if arrow
+        i.material-icons.button__icon arrow_forward
+  else
+    button(type = "submit").button&attributes(attributes)= title
+      if arrow
+        i.material-icons.button__icon arrow_forward
 
 

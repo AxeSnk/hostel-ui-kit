@@ -1,11 +1,14 @@
 mixin field({ title='', note='', placeholder='', value='', name ='', masked=false, calendar={on, input}, type='text', button={send:false,dropdown:false} }={})
   - let classes = [];
+  - let mainClass = [];
+  if calendar.input == 'range'
+    - mainClass.push('js-calendar')
   if masked
     - classes.push('js-masked');
   if calendar.on
     - classes.push(`js-calendar-${calendar.input}`);
 
-  .field
+  .field(class=mainClass)
     .filed__header
       h3.field__title= title
       .field__note= note

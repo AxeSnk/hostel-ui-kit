@@ -1,7 +1,7 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .button {
-  width: 100%;
+  display: flex;
   padding: 14px 19px 15px;
   font-family: 'montserrat', sans-serif;
   font-weight: bold;
