@@ -1,11 +1,5 @@
 .checkbox-buttons {
-  &__header {
-    margin-bottom: 16px;
-  }
-
-  &__list {
-    .checkbox {
-      margin-bottom: 12px;
-    }
+  &__wrapper {
+    padding: 6px 0;
   }
 }

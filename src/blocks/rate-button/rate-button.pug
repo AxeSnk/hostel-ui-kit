@@ -1,5 +1,6 @@
-mixin rate-button({rate}={})
-  - var count = 0;
+mixin rate-button({ rate=5 }={})
+  - let count = 0;
+
   .rate-button
     while count < 5
       if count < rate

@@ -1,8 +1,7 @@
 include ../checkbox/checkbox
 
-mixin checkbox-buttons({ title='', list=[] } = {})
+mixin checkbox-buttons({ list=[] } = {})
   .checkbox-buttons
-    h3.checkbox-buttons__header= title
-    .checkbox-buttons__list
-      each item in list
+    each item in list
+      .checkbox-buttons__wrapper
         +checkbox({ label: item.label, checked: item.checked, name: item.name})

@@ -1,11 +1,14 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .radio-buttons {
+  display: flex;
+  justify-content: space-between;
+
   &__label {
     position: relative;
-    margin-right: 20px;
     padding-left: 30px;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   &__input:checked,

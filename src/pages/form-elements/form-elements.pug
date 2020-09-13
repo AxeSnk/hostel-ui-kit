@@ -33,50 +33,61 @@ block content
         .form-elements__text-field
           +field({title: 'text-field', note: 'hover / focus', value: 'This is pretty awesome'})
         .form-elements__dropdown-guests
-          +dropdown({title: 'dropdown', note: 'default', category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+          .form-elements__dropdown-guests-header
+            h3.form-elements__dropdown-guests-title dropdown
+            .form-elements__dropdown-guests-note default
+          +dropdown({ category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
         .form-elements__masked-field
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
         .form-elements__range-date
-          +range-date
+          +range-date()
         .form-elements__filter-date
           +field({title: 'filter date dropdown', name: 'calendar-range', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
         .form-elements__subscription-text
           +field({title: 'subscription text field', name: 'email', type: 'email', placeholder: 'Email', button:{send:true}})
         .form-elements__dropdown-rooms
-          +dropdown({title: 'dropdown', note: 'default', category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+          .form-elements__dropdown-rooms-header
+            h3.form-elements__dropdown-rooms-title dropdown
+            .form-elements__dropdown-rooms-note default
+          +dropdown({ category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__dropdown-rooms-open
-          +dropdown({active: true, title: 'dropdown', note: 'expanded', category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+          .form-elements__dropdown-rooms-header
+            h3.form-elements__dropdown-rooms-title dropdown
+            .form-elements__dropdown-rooms-note expanded
+          +dropdown({active: true, category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
         .form-elements__checkbox-list
-          +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false } ] })
+          +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак' } ] })
         .form-elements__checkbox-list-open
-          +checkbox-list({ active: true, title: 'Expandable checkbox list', list: [ { label: 'Завтрак', checked: false }, { label: 'Письменный стол', checked: true }, { label: 'Стул для кормления', checked: true }, { label: 'Кроватка', checked: true }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, { label: 'Телевизор', checked: false }, { label: 'Шампунь', checked: false }, ] })
+          +checkbox-list({ active: true, title: 'Expandable checkbox list', list: [ { label: 'Завтрак' }, { label: 'Письменный стол', checked: true }, { label: 'Стул для кормления', checked: true }, { label: 'Кроватка', checked: true }, { label: 'Телевизор' }, { label: 'Шампунь' }, { label: 'Телевизор' }, { label: 'Шампунь' } ] })
 
       .form-elements__middle
-        .form-elements__item.form-elements__item_size_short
-          +checkbox-buttons({ title: 'Checkbox buttons', list: [ { label: 'Можно курить', checked: false }, { label: 'Можно с питомцами', checked: true }, { label: 'Можно пригласить гостей (до 10 человек)', checked: true } ] })
-        .form-elements__item
-          h3.radio-buttons-header Radio buttons
+        .form-elements__checkbox-buttons
+          h3.form-elements__checkbox-buttons-header Checkbox buttons
+          +checkbox-buttons({ list: [ { label: 'Можно курить' }, { label: 'Можно с питомцами', checked: true }, { label: 'Можно пригласить гостей (до 10 человек)', checked: true } ] })
+        .form-elements__radio-buttons
+          h3.form-elements__radio-buttons-header Radio buttons
           +radio-buttons({ items: [ {label: 'Мужчина', name: 'sex', checked: true}, {label: 'Женщина', name: 'sex', checked: false} ] })
-        .form-elements__item
-          h3.toggle-header Toggle
-          +toggle({ items: [ {label: 'Получать спецпредложения', checked: true}, {label: 'Получать спецпредложения', checked: false}, ] })
-        .form-elements__item
-          h3.like-button-header Like button
-          .like-button-wrapper
-            +like-button({ items: [ {liked: false, counter: '2'}, {liked: true, counter: '12'} ] })
-        .form-elements__item
-          h3.rate-button-header Rate button
-          .rate-button-wrapper
+        .form-elements__toggle
+          h3.form-elements__toggle-header Toggle
+          +toggle({ label: 'Получать спецпредложения', checked: true })
+          +toggle({ label: 'Получать спецпредложения' })
+        .form-elements__like-buttons
+          h3.form-elements__like-buttons-header Like button
+          .form-elements__like-buttons-wrapper
+            +like-button({ counter: '2' })
+            +like-button({ liked: true, counter: '12' })
+        .form-elements__rate-buttons
+          h3.form-elements__rate-buttons-header Rate button
+          .form-elements__rate-buttons-wrapper
             +rate-button({rate: 4})
-            +rate-button({rate: 5})
-        .form-elements__item.js-dropdown
-          .dropdown-header
-            h3.dropdown-header__title Dropdown
-          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
-        .form-elements__item.form-elements__item_size_small
-          h3.rich-checkbox-header Rich checkbox buttons
-          +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.', checked: false})
-          +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.', checked: false})
+            +rate-button()
+        .form-elements__dropdown-guests-open
+          h3.form-elements__dropdown-guests-open-header Dropdown
+          +dropdown({active: true, category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+        .form-elements__rich-checkbox
+          h3.form-elements__rich-checkbox-header Rich checkbox buttons
+          +rich-checkbox({label: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см.'})
+          +rich-checkbox({label: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
 
       .form-elements__right
         .form-elements__item.form-elements__item_size_small

@@ -26,53 +26,153 @@
     padding-top: 3px;
   }
 
-  &__email {
-    margin-bottom: 16px;
-  }
-
   &__text-field {
-    margin-bottom: 16px;
+    margin-top: 16px;
   }
 
   &__dropdown-guests {
-    margin-bottom: 19px;
+    margin-top: 16px;
   }
 
+  &__dropdown-guests-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__dropdown-guests-title {
+    line-height: 24px;
+  }
+
+  &__dropdown-guests-note {
+    font-size: 12px;
+  }
+
+
   &__masked-field {
-    margin-bottom: 36px;
+    margin-top: 19px;
   }
 
   &__range-date {
-    margin-bottom: 37px;
+    margin-top: 36px;
   }
 
   &__filter-date {
     max-width: 266px;
-    margin-bottom: 37px;
+    margin-top: 37px;
   }
 
   &__subscription-text {
     max-width: 266px;
-    margin-bottom: 96px;
+    margin-top: 37px;
   }
 
   &__dropdown-rooms {
     max-width: 266px;
-    margin-bottom: 16px;
+    margin-top: 96px;
+  }
+
+  &__dropdown-rooms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__dropdown-rooms-title {
+    line-height: 24px;
+  }
+
+  &__dropdown-rooms-note {
+    font-size: 12px;
   }
 
   &__dropdown-rooms-open {
     max-width: 266px;
-    margin-bottom: 168px;
+    margin-top: 16px;
   }
 
   &__checkbox-list {
     max-width: 266px;
-    margin-bottom: 40px;
+    margin-top: 168px;
   }
 
   &__checkbox-list-open {
     max-width: 266px;
+    margin-top: 40px;
+  }
+
+  &__checkbox-buttons {
+    max-width: 222px;
+  }
+
+  &__checkbox-buttons-header {
+    margin-bottom: 10px;
+  }
+
+  &__radio-buttons {
+    max-width: 220px;
+    margin-top: 35px;
+  }
+
+  &__radio-buttons-header {
+    margin-bottom: 12px;
+  }
+
+  &__toggle {
+    margin-top: 39px;
+  }
+
+  &__toggle-header {
+    margin-bottom: 5px;
+  }
+
+  &__like-buttons {
+    margin-top: 37px;
+  }
+
+  &__like-buttons-header {
+    margin-bottom: 15px;
+  }
+
+  &__like-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  &__rate-buttons {
+    margin-top: 39px;
+  }
+
+  &__rate-buttons-header {
+    margin-bottom: 15px;
+  }
+
+  &__rate-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 259px;
+  }
+
+  &__dropdown-guests-open {
+    margin-top: 188px;
+  }
+
+  &__dropdown-guests-open-header {
+    margin-bottom: 4px;
+  }
+
+  &__rich-checkbox {
+    max-width: 260px;
+    margin-top: 248px;
+  }
+
+  &__rich-checkbox-header {
+    margin-bottom: 15px;
   }
 
 
@@ -108,57 +208,8 @@
   }
 
 
-  .radio-buttons-header {
-    margin-bottom: 12px;
-    margin-top: 41px;
-  }
 
-  .range-date {
-  }
-  
-  .radio-buttons {
-    margin-bottom: 39px;
-  }
 
-  .toggle-header {
-    margin-bottom: 12px;
-  }
-
-  .toggle {
-    margin-bottom: 10px;
-  }
-
-  .like-button-header {
-    margin-top: 42px;
-    margin-bottom: 15px;
-  }
-
-  .like-button-wrapper {
-    display: flex;
-
-    .like-button {
-      margin-right: 10px;
-    }
-  }
-
-  .rate-button-header {
-    margin-top: 38px;
-    margin-bottom: 15px;
-  }
-
-  .rate-button-wrapper {
-    display: flex;
-    margin-bottom: 186px;
-
-    .rate-button {
-      margin-right: 20px;
-    }
-  }
-
-  .rich-checkbox-header {
-    margin-top: 256px;
-    margin-bottom: 15px;
-  }
 
   .rich-checkbox {
     margin-bottom: 10px;

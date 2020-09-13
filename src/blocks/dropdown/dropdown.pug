@@ -1,10 +1,7 @@
-mixin dropdown({ active = false, title = '', note = '', category = '', defaultText = '', list = [] })
+mixin dropdown({ active = false, category = '', defaultText = '', list = [] })
   - const menuOpen = active ? 'dropdown__menu_active' : '' ;
   
   .dropdown.js-dropdown
-    .dropdown__header
-      h3.dropdown__title= title
-      .dropdown__note= note
     .dropdown__wrapper(class=`js-dropdown-${category}`)
       input.dropdown__selection.js-dropdown__selection(name=category, value=defaultText)
       i.material-icons.dropdown__icon.js-dropdown__icon expand_more

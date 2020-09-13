@@ -53,6 +53,8 @@ figure {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;

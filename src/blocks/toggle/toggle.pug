@@ -1,6 +1,5 @@
-mixin toggle({ items=[] }={})
-  each item in items
-    .toggle
-      label.toggle__label= item.label
-        input.toggle__input(type="checkbox", checked=item.checked)
-        .toggle__marker
+mixin toggle({ label='', checked=false }={})
+  .toggle
+    label.toggle__label= label
+      input.toggle__input(type="checkbox", checked=checked)
+      .toggle__marker
