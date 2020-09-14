@@ -1,29 +1,64 @@
 .form-elements {
-  
   &__logo {
     padding: 30px;
   }
 
   &__wrapper {
     display: grid;
-    grid-template-areas: 'left . middle . right';
+    grid-template-areas:
+      'left . middle . right'
+      'bottom bottom bottom bottom bottom';
     grid-template-columns: 320px 126px 320px 72px 320px;
     justify-content: center;
     padding: 31px 141px 0;
+
+    @media (max-width: 1430px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
   }
 
   &__left {
     grid-area: left;
+
+    @media (max-width: 1430px) {
+      max-width: 300px;
+    }
   }
 
   &__middle {
     grid-area: middle;
     padding-top: 3px;
+    
+    @media (max-width: 1430px) {
+      max-width: 300px;
+    }
   }
 
   &__right {
     grid-area: right;
     padding-top: 3px;
+
+    @media (max-width: 1430px) {
+      max-width: 300px;
+    }
+  }
+
+  &__bottom {
+    grid-area: bottom;
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 2.6fr;
+    gap: 172px;
+
+    @media (max-width: 1430px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__text-field {
@@ -49,7 +84,6 @@
   &__dropdown-guests-note {
     font-size: 12px;
   }
-
 
   &__masked-field {
     margin-top: 19px;
@@ -169,17 +203,23 @@
   &__rich-checkbox {
     max-width: 260px;
     margin-top: 248px;
+    margin-left: -15px;
   }
 
   &__rich-checkbox-header {
     margin-bottom: 15px;
   }
 
+  &__rich-checkbox-wrapper {
+    margin-bottom: 10px;
+  }
 
+  &__slider {
+    width: 266px;
+  }
 
   &__buttons {
-    margin-top: 40px;
-    margin-bottom: 39px;
+    margin-top: 42px;
   }
 
   &__buttons-title {
@@ -207,81 +247,40 @@
     margin-top: 31px;
   }
 
-
-
-
-
-  .rich-checkbox {
-    margin-bottom: 10px;
+  &__pagination {
+    margin-top: 39px;
   }
 
-
-
-  .buttons-default {
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-  .buttons-border {
-    display: flex;
-    margin-bottom: 26px;
-  }
-
-  .buttons-link {
-    display: flex;
-    margin-bottom: 26px;
-  }
-
-
-
-  .pagination-header {
+  &__pagination-header {
     margin-bottom: 15px;
   }
 
-  .pagination {
-    margin-bottom: 229px;
+  &__dropdown-guests-preset {
+    margin-top: 232px;
   }
 
-  .bullet-list-header {
+  &__dropdown-guests-preset-title {
+    margin-bottom: 4px;
+  }
+
+  &__bullet-list {
     margin-top: 255px;
-    margin-bottom: 15px;
+    max-width: 260px;
   }
 
-  .bullet {
-    margin-bottom: 8px;
+  &__bullet-list-header {
+    margin-bottom: 6px;
   }
 
-
-
-
-    .form-elements__item_size_short {
-      max-width: 222px;
-    }
-
-
-    .form-elements__checkbox {
-      margin-top: 168px;
-      margin-bottom: 36px;
-    }
-
+  &__bullet-list-wrapper {
+    padding: 5px 0;
   }
 
-  .form-elements__footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 185px 140px 0;
+  &__feature {
+    max-width: 290px;
+  }
 
-    .form-elements__item {
-      width: 280px;
-    }
-
-    .form-elements__item_size_long {
-      width: 711px;
-
-      .comment {
-        padding-top: 10px;
-      }
-    }
-  
-
+  &__comment {
+    padding-top: 10px;
+  }
 }

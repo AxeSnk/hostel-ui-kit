@@ -5,14 +5,10 @@
   align-items: baseline;
 
   &__point {
-    width: 10px;
+    min-width: 10px;
     height: 10px;
     border-radius: 50%;
     background: $dark_25-color;
     margin-right: 10px;
-  }
-
-  &__text {
-    max-width: 235px;
   }
 }

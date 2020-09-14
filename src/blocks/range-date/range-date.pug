@@ -1,6 +1,6 @@
 include ../field/field
 
-mixin range-date
+mixin range-date({ valStart='', valEnd='' }={})
   .range-date.js-calendar
-    +field({title: 'date dropdown', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
-    +field({title: 'date dropdown', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})
+    +field({value: valStart, title: 'date dropdown', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
+    +field({value: valEnd, title: 'date dropdown', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})

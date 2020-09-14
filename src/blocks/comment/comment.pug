@@ -4,7 +4,7 @@ mixin comment({img, name, date, liked, counter, text})
   .comment
     .comment__icons
       .comment__avatar(style=`background-image: url('img/${img}.jpg')`)
-      +like-button({items: [ {liked: liked, counter: counter} ]})
+      +like-button({liked: liked, counter: counter})
     .comment__container
       .comment__title
         .comment__title-name= name
