@@ -4,9 +4,13 @@ include ../field/field
 mixin login({ title })
   form.login
     h1.login__header= title
-    +field({placeholder: 'Email', name: 'email', type: 'email'})
-    +field({placeholder: 'Пароль', name: 'password', type: 'password'})
-    +button({title: 'Войти', arrow: true}).button_size_long
+    .login__field
+      +field({placeholder: 'Email', name: 'email', type: 'email'})
+    .login__field
+      +field({placeholder: 'Пароль', name: 'password', type: 'password'})
+    .login__button
+      +button({title: 'Войти', arrow: true}).button_size_long
     .login__foot
       .login__note Нет аккаунта на Toxin?
-      +button({title: 'Создать', link: true, href: 'sign-up.html'}).button_theme_border
+      .login__foot-button
+        +button({title: 'Создать', link: true, href: 'sign-up.html'}).button_theme_border

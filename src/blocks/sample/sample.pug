@@ -3,29 +3,31 @@ include ../rate-button/rate-button
 mixin sample({ list=[] })
   each item in list
     .sample
-      .sample-image.js-sample-image
-        .sample-image__container.js-sample-image__container
+      .sample__image.js-sample__image
+        .sample__image-container.js-sample__image-container
           - for (let i = 0; i < item.img.length; i += 1)
-            a.image-room.js-image-room(href= item.href)
-              img.room-img(src= `img/room-${item.img[i]}.jpg` alt='room-img')
-          .image-ellipses
-            .js-image-ellipses__item.image-ellipses__item
-            .js-image-ellipses__item.image-ellipses__item
-            .js-image-ellipses__item.image-ellipses__item
-            .js-image-ellipses__item.image-ellipses__item
-        .sample-image__prev.js-sample-image__prev
-          i.material-icons.sample-image__prev-arrow keyboard_arrow_left
-        .sample-image__next.js-sample-image__next
-          i.material-icons.sample-image__next-arrow keyboard_arrow_left
+            a.sample__image-room.js-sample__image-room(href= item.href)
+              img.sample__image-pic(src= `img/room-${item.img[i]}.jpg` alt='room-img')
+          .sample__image-ellipses
+            .js-sample__image-ellipses-item.sample__image-ellipses-item
+            .js-sample__image-ellipses-item.sample__image-ellipses-item
+            .js-sample__image-ellipses-item.sample__image-ellipses-item
+            .js-sample__image-ellipses-item.sample__image-ellipses-item
+        .sample__image-arrow.sample__image-arrow_prev.js-sample__image-arrow_prev
+          .sample__image-arrow-wrapper
+            i.material-icons keyboard_arrow_left
+        .sample__image-arrow.sample__image-arrow_next.js-sample__image-arrow_next
+          .sample__image-arrow-wrapper
+            i.material-icons keyboard_arrow_left
 
       .sample__info
         .sample__price
-          .price__numeration №
-          .price__number= item.number
-          .price__luxury= item.luxury
-          .price__cost= `${item.cost}₽`
-          .price__inday в сутки
+          .sample__price-numeration №
+          .sample__price-number= item.number
+          .sample__price-luxury= item.luxury
+          .sample__price-cost= `${item.cost}₽`
+          .sample__price-inday в сутки
         .sample__reviews
           +rate-button({rate: item.rate})
-          .reviews__number= item.reviews
-          .reviews__text Отзывов
+          .sample__reviews-number= item.reviews
+          .sample__reviews-text Отзывов

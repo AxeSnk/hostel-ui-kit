@@ -7,12 +7,12 @@ class PhotoSlider {
   init(root) {
     this.slider = root;
     this.index = 0;
-    this.images = this.slider.querySelectorAll('.js-image-room');
-    this.images[this.index].classList.add('image-show')
-    this.arrowLeft = this.slider.querySelector('.js-sample-image__prev');
-    this.arrowRight = this.slider.querySelector('.js-sample-image__next');
-    this.dots = this.slider.querySelectorAll('.js-image-ellipses__item');
-    this.dots[this.index].classList.add('elipse-filled')
+    this.images = this.slider.querySelectorAll('.js-sample__image-room');
+    this.images[this.index].classList.add('sample__image-room_show')
+    this.arrowLeft = this.slider.querySelector('.js-sample__image-arrow_prev');
+    this.arrowRight = this.slider.querySelector('.js-sample__image-arrow_next');
+    this.dots = this.slider.querySelectorAll('.js-sample__image-ellipses-item');
+    this.dots[this.index].classList.add('sample__image-ellipses-item_filled')
   }
 
   addListeners() {
@@ -25,19 +25,19 @@ class PhotoSlider {
   }
 
   movePrev() {
-    this.images[this.index].classList.remove('image-show')
-    this.dots[this.index].classList.remove('elipse-filled')
+    this.images[this.index].classList.remove('sample__image-room_show')
+    this.dots[this.index].classList.remove('sample__image-ellipses-item_filled')
     this.index == 0 ? this.index = 3 : this.index -= 1
-    this.images[this.index].classList.add('image-show')
-    this.dots[this.index].classList.add('elipse-filled')
+    this.images[this.index].classList.add('sample__image-room_show')
+    this.dots[this.index].classList.add('sample__image-ellipses-item_filled')
   }
 
   moveNext() {
-    this.images[this.index].classList.remove('image-show')
-    this.dots[this.index].classList.remove('elipse-filled')
+    this.images[this.index].classList.remove('sample__image-room_show')
+    this.dots[this.index].classList.remove('sample__image-ellipses-item_filled')
     this.index == 3 ? this.index = 0 : this.index += 1
-    this.images[this.index].classList.add('image-show')
-    this.dots[this.index].classList.add('elipse-filled')
+    this.images[this.index].classList.add('sample__image-room_show')
+    this.dots[this.index].classList.add('sample__image-ellipses-item_filled')
   }
 }
 

@@ -17,22 +17,22 @@ block content
     .cards__logo
       +logo({ui: true})
     .cards__wrapper
-      .cards__column
-        .cards__item
+      .cards__column-left
+        .cards__search
           +search({ title: 'Найдём номера под ваши пожелания' })
 
-        .cards__item
+        .cards__register
           +register({ title: 'Регистрация аккаунта' })
 
-      .cards__column
-        .cards__item
+      .cards__column-center
+        .cards__booking
           +booking({ header:{number: '888', luxury: 'люкс', cost: '9 990₽'}, price: [ {name: '9 990₽ х 4 суток', cost: '39 960₽'}, {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'}, {name: 'Сбор за дополнительные услуги', info: true, cost: '300₽'} ], total: '38 081₽' })
 
-        .cards__item
+        .cards__login
           +login({ title: 'Войти'})
 
-      .cards__column
-        .js-calendar
+      .cards__column-right
+        .cards__calendar.js-calendar
           .js-calendar-range
 
         +sample({ list: [ {href: 'room-details.html', img: ['1', '2', '3', '4'], arrows: true, number: '888', luxury: 'люкс', cost: '9 990', rate: 5, reviews: '145'}, {href: 'room-details.html', img: ['2', '3', '4', '5'], arrows: false, number: '840', cost: '9 900', rate: 4, reviews: '65'} ]})

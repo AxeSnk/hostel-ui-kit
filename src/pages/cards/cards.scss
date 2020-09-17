@@ -6,16 +6,37 @@
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas:
+    'left center right';
+    grid-template-columns: 380px 380px 320px;
+    gap: 40px;
     padding: 42px 140px;
-
-    .cards__column {
-      max-width: 380px;
-
-      .sample {
-        margin-top: 40px;
-      }
-    }
   }
+
+  &__column-left {
+    grid-area: left;
+  }
+
+  &__column-center {
+    grid-area: center;
+  }
+
+  &__column-right {
+    grid-area: right;
+  }
+
+  &__register {
+    margin-top: 40px;
+  }
+
+  &__calendar {
+    margin-bottom: 40px;
+  }
+
+  .sample {
+    margin-bottom: 38px;
+  }
+
+
 }

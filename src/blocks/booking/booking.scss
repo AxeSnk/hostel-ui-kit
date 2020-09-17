@@ -6,21 +6,20 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background: #ffffff;
-  padding: 40px 30px 29px;
+  padding: 39px 29px 29px;
   margin-bottom: 40px;
 
   &__header {
     display: flex;
     align-items: baseline;
-    margin-bottom: 15px;
 
     &-numeration {
-      font-family: 'open-sans', sans-serif;
+      font-family: 'qucksand', sans-serif;
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
       color: $dark_100-color;
-      margin-right: 5px;
+      margin-right: 6px;
     }
 
     &-number {
@@ -44,7 +43,7 @@
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
-      color: $dark_50-color; 
+      color: $dark_50-color;
       margin-left: auto;
       margin-right: 5px;
     }
@@ -58,7 +57,7 @@
 
   &__date-range {
     display: flex;
-    margin-bottom: 19px;
+    margin-top: 16px;
 
     .field:first-child {
       margin-right: 20px;
@@ -66,7 +65,7 @@
   }
 
   &__guests {
-    margin-bottom: 21px;
+    margin-top: 19px;
 
     &-title {
       margin-bottom: 4px;
@@ -74,28 +73,34 @@
   }
 
   &__price {
-    margin-bottom: 30px;
+    display: grid;
+    grid-auto-rows: minmax(34px, auto);
+    line-height: 18px;
+    margin-top: 21px;
+  }
 
-    .price-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 16px;
+  &__price-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+    &-name {
+      max-width: 214px;
+    }
+
+    &-info {
+      width: 18px;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid $dark_25-color;
+      border-radius: 10px;
       line-height: 18px;
+      color: $dark_25-color;
+      margin-left: 5px;
+    }
 
-      &__name {
-        max-width: 214px;
-      }
-
-      &__info {
-        font-size: 26px;
-        line-height: 18px;
-        color: $dark_25-color;
-        transform: rotate(180deg);
-      }
-
-      &__cost {
-        margin-left: auto;
-      }
+    &-cost {
+      margin-left: auto;
     }
   }
 
@@ -103,11 +108,10 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-family: 'open-sans', sans-serif;
     font-weight: bold;
     font-size: 19px;
     color: $dark_100-color;
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     &-title {
       margin-right: 5px;
@@ -119,7 +123,12 @@
     }
 
     &-cost {
-      margin-left: 5px;
+      transform: scaleX(0.85);
+      transform-origin: 100% 0;
     }
+  }
+
+  &__button {
+    margin-top: 20px;
   }
 }

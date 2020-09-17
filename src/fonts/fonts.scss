@@ -46,3 +46,20 @@
     url('./font-awesome/font-awesome.ttf') format('truetype'),
     url('./font-awesome/font-awesome.svg') format('svg');
 }
+
+@font-face {
+  font-family: 'quicksand';
+  src: url('./quicksand/quicksand-regular.woff') format('woff'),
+    url('./quicksand/quicksand-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;  
+
+}
+
+@font-face {
+  font-family: 'quicksand';
+  src: url('./quicksand/quicksand-bold.woff') format('woff'),
+    url('./quicksand/quicksand-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;  
+}

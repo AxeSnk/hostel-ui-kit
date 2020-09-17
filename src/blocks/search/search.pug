@@ -9,6 +9,7 @@ mixin search({ title='' })
       +field({title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
       +field({title: 'Выезд', name: 'calendar-end',placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})
     .search__dropdown.js-dropdown
-      h3.dropdown__title Гости
+      h3.search__dropdown-title Гости
       +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
-    +button({title: 'Перейти к оплате', arrow: true}).button_size_long
+    .search__button
+      +button({title: 'Подобрать номер', arrow: true}).button_size_long

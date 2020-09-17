@@ -2,18 +2,19 @@
 
 .button {
   display: flex;
+  justify-content: center;
   padding: 14px 19px 15px;
   font-family: 'montserrat', sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  letter-spacing: 0.06px;
   color: #fff;
   text-transform: uppercase;
   background: $gradient-color;
   border: none;
   border-radius: 22px;
   cursor: pointer;
+  width: -webkit-fill-available;
 }
 
 .button_theme_border {
