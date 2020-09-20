@@ -10,12 +10,153 @@ block title
 block header
 block content
   .headers-footers
-    .headers-footers__wrapper
+    .headers-footers__logo
       +logo({ui: true})
-    +header({ list: [ {title: 'Home', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'About Us', href: '/mock-address/change-me'}, {title: 'Services', more: true, sublist: [ {subtitle: 'Item1', subhref: '/mock-address/change-me'}, {subtitle: 'Item2', subhref: '/mock-address/change-me'} ]}, {title: 'Careers', href: '/mock-address/change-me'}, {title: 'News', href: '/mock-address/change-me'}, {title: 'Documentation', href: '/mock-address/change-me'}, ], reg: {on: false}, buttons: {title1: 'Login', title2: 'Register'}})
-    +header({ list: [ {title: 'Home', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'About Us', href: '/mock-address/change-me'}, {title: 'Services', more: true, sublist: [ {subtitle: 'Item1', subhref: '/mock-address/change-me'}, {subtitle: 'Item2', subhref: '/mock-address/change-me'} ]}, {title: 'Careers', href: '/mock-address/change-me'}, {title: 'News', href: '/mock-address/change-me'}, {title: 'Documentation', href: '/mock-address/change-me'}, ], reg: {on: true, name: 'Cosmin Negota'}, buttons: {title1: 'Login', title2: 'Register'}})
-    +footer({ info: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', list1: [ {title: 'Navigation', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'About Us', href: '/mock-address/change-me'}, {title: 'News', href: '/mock-address/change-me'}, {title: 'Support', href: '/mock-address/change-me'}, {title: 'Products', href: '/mock-address/change-me'} ], list2: [ {title: 'About Us', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'Who we are', href: '/mock-address/change-me'}, {title: 'Our team', href: '/mock-address/change-me'}, {title: 'Careers', href: '/mock-address/change-me'}, {title: 'Investors', href: '/mock-address/change-me'} ], list3: [ {title: 'Support', href: '/mock-address/change-me', bold: 'item_theme_bold'}, {title: 'Documentation', href: '/mock-address/change-me'}, {title: 'Community', href: '/mock-address/change-me'}, {title: 'Get in Touch', href: '/mock-address/change-me'} ], title: 'Subscribe to our newsletter', text: 'Receive our latest news and promotions in your inbox!', placeholder: 'Your email address', copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
 
-    +footer-creative
+    .headers-footers__head-wrapper
+      +header({ list: [ 
+        {
+          title: 'Home', 
+          href: '/mock-address/change-me', 
+          bold: 'menu__nav-link_bold'
+        }, 
+        {
+          title: 'About Us', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'Services', 
+          more: true, 
+          sublist: [ 
+            {
+              subtitle: 'Item1', 
+              subhref: '/mock-address/change-me'
+            }, 
+            {
+              subtitle: 'Item2',
+              subhref: '/mock-address/change-me'
+            } 
+          ]
+        }, 
+        {
+          title: 'Careers', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'News', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'Documentation', 
+          href: '/mock-address/change-me'
+        }, 
+      ], 
+      reg: {on: false}, 
+      buttons: {title1: 'Login', title2: 'Register'}})
+
+    .headers-footers__head-wrapper
+      +header({ list: [ 
+        {
+          title: 'Home', 
+          href: '/mock-address/change-me', 
+          bold: 'menu__nav-link_bold'
+        }, 
+        {
+          title: 'About Us', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'Services', 
+          more: true, 
+          sublist: [ 
+            {
+              subtitle: 'Item1', 
+              subhref: '/mock-address/change-me'
+            }, 
+            {
+              subtitle: 'Item2', 
+              subhref: '/mock-address/change-me'
+            } 
+          ]
+        }, 
+        {
+          title: 'Careers', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'News', 
+          href: '/mock-address/change-me'
+        }, 
+        {
+          title: 'Documentation', 
+          href: '/mock-address/change-me'
+        }, 
+      ], 
+      reg: {on: true, name: 'Cosmin Negoita'},
+      buttons: {title1: 'Login', title2: 'Register'}})
+
+    .headers-footers__foot-default
+      +footer({ 
+        info: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+        head1: 'Navigation',  
+        list1: [ 
+          {
+            title: 'About Us', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'News', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Support', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Products', 
+            href: '/mock-address/change-me'
+          } 
+        ], 
+        head2: 'About Us',  
+        list2: [ 
+          {
+            title: 'Who we are', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Our team', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Careers', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Investors', 
+            href: '/mock-address/change-me'
+          } 
+        ], 
+        head3: 'Support',  
+        list3: [ 
+          {
+            title: 'Documentation', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Community', 
+            href: '/mock-address/change-me'
+          }, 
+          {
+            title: 'Get in Touch', 
+            href: '/mock-address/change-me'
+          } 
+        ], 
+        title: 'Subscribe to our newsletter', 
+        text: 'Receive our latest news and promotions in your inbox!', 
+        placeholder: 'Your email address', 
+        copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
+
+    .headers-footers__foot-creative
+      +footer-creative
 
 block footer

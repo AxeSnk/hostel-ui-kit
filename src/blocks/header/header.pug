@@ -5,11 +5,17 @@ include ../button/button
 mixin header({ list=[], reg, buttons })
   header.header
     .header__wrapper
-      +logo({ui: false})
-      +menu({list: list})
-      if reg.on
-        .login-name= reg.name
-      else
-        .buttons
-          +button({title: buttons.title1, link: true, href: 'sign-in.html'}).button_theme_border
-          +button({title: buttons.title2, link: true, href: 'sign-up.html'})
+      .header__logo
+        +logo({ui: false})
+      .js-header__nav.header__nav
+        .js-header__menu.header__menu
+          .js-header__burger.header__burger
+          +menu({list: list})
+          if reg.on
+            .js-header__login-name.header__login-name= reg.name
+          else
+            .js-header__buttons.header__buttons
+              .header__button-login
+                +button({title: buttons.title1, link: true, href: 'sign-in.html'}).button_theme_border
+              .header__button-reg
+                +button({title: buttons.title2, link: true, href: 'sign-up.html'})

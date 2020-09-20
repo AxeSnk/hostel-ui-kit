@@ -3,11 +3,12 @@
 .button {
   display: flex;
   justify-content: center;
-  padding: 14px 19px 15px;
+  align-items: center;
+  height: 100%;
+  padding: 0 19px;
   font-family: 'montserrat', sans-serif;
   font-weight: bold;
   font-size: 12px;
-  line-height: 15px;
   color: #fff;
   text-transform: uppercase;
   background: $gradient-color;
@@ -21,7 +22,7 @@
   color: $purple-color;
   background: #fff;
   border: 2px solid $purple-color;
-  padding: 12px 17px 13px;
+  padding: 0 17px;
 }
 
 .button_disabled {

@@ -7,7 +7,7 @@
   &__wrapper {
     max-width: 1920px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 9.72%;
     margin: 0 auto;
@@ -16,99 +16,102 @@
       padding: 15px 5%;
     }
 
-    .logo {
-      margin-right: auto;
-
-      @media (max-width: 1020px) {
-        margin-right: 20px;
-      }
-
-      @media (max-width: 440px) {
-        display: none;
-      }
-    }
-
-    .menu {
-      margin-right: 30px;
-      position: relative;
-
-      .nav-menu {
-        @media (max-width: 1020px) {
-          display: none;
-        }
-      }
-
-      .menu-active {
-        position: absolute;
-        top: 50px;
-        display: flex;
-        flex-direction: column;
-        background: #fff;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        padding: 10px 20px;
-        z-index: 3;
-
-        .nav-menu__item {
-          margin-bottom: 10px;
-
-          .submenu-active {
-            left: 100%;
-            top: 0;
-          }
-        }
-      }
-    }
-
-    .burger-menu {
-      display: none;
-      cursor: pointer;
-      font-size: 30px;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-color: $purple-color;
-
-      @media (max-width: 1020px) {
-        display: block;
-      }
-    }
-
-    .burger-menu::after {
-      content: "menu";
-    }
-
-    .cross-icon::after {
-      content: "close";
-    }
-
-    .login-name {
-      border-left: 1px solid $dark_10-color;
-      padding-left: 35px;
-    }
-
-    .buttons {
-      display: flex;
-
-      @media (max-width: 540px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .button {
-        padding: 10px 20px 9px 19px;
-      }
-
-      .button_theme_border {
-        padding: 8px 18px 7px;
-        margin-right: 20px;
-
-        @media (max-width: 540px) {
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-      }
+    @media (max-width: 1020px) {
+      padding: 15px 9.72%;
     }
   }
 
+  &__burger {
+    &::after {
+      display: none;
+      cursor: pointer;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-color: $purple-color;
+      font-family: 'material-icons';
+      font-size: 30px;
+      content: 'menu';
+
+      @media (max-width: 1020px) {
+        display: flex;
+      }
+    }
+
+    &_active {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    align-items: center;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    &_active {
+      position: absolute;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      background: #fff;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      padding: 10px 20px;
+      margin: 0;
+      z-index: 3;
+    }
+  }
+
+  &__login-name {
+    border-left: 1px solid $dark_10-color;
+    padding-left: 31px;
+    margin-left: 30px;
+
+    @media (max-width: 1020px) {
+      display: none;
+    }
+
+    &_active {
+      display: flex;
+      border-left: none;
+      border-top: 1px solid $dark_10-color;
+      padding: 10px 0;
+      margin: 5px 0 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-left: 28px;
+
+    @media (max-width: 1020px) {
+      display: none;
+    }
+
+  }
+
+  &__button-login {
+    height: 30px;
+    margin-right: 22px;
+
+    @media (max-width: 1020px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button-reg {
+    height: 34px;
+
+    @media (max-width: 1020px) {
+      margin-bottom: 5px;
+    }
+  }
 }

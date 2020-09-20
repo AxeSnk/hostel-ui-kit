@@ -1,0 +1,24 @@
+@import '../../colors-and-type/colors-and-type.scss';
+
+.foot-menu {
+  &__head {
+    margin-top: 2px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    color: $dark_50-color;
+    cursor: pointer;
+    margin-top: 15px;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $dark_100-color;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+mixin foot-menu({ head='', list=[] })
+  .foot-menu
+    h3.foot-menu__head= head
+    .foot-menu__wrapper
+      each item in list
+        - let clsBold = item.bold ? 'foot-menu__item_bold' : ''
+        a.foot-menu__link(class=clsBold, href=item.href)= item.title

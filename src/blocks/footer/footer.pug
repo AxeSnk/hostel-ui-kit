@@ -1,19 +1,21 @@
 include ../field/field
+include ../foot-menu/foot-menu
 include ../logo/logo
 include ../menu/menu
 include ../social/social
 
-mixin footer({ info='', list1=[], list2=[], list3=[], title='', text='', placeholder='', copyright=''})
+mixin footer({ info='', head1='', head2='', head3='', list1=[], list2=[], list3=[], title='', text='', placeholder='', copyright=''})
   footer.footer
     .footer__line
     .footer__content
       .footer__info
-        +logo({ui: false})
+        .footer__logo
+          +logo({ui: false})
         .footer__info-text= info
       .footer__menu
-        +menu({list: list1})
-        +menu({list: list2})
-        +menu({list: list3})
+        +foot-menu({head: head1, list: list1})
+        +foot-menu({head: head2, list: list2})
+        +foot-menu({head: head3, list: list3})
       .footer__subscription
         .footer__subscription-title= title
         .footer__subscription-text= text
@@ -22,8 +24,8 @@ mixin footer({ info='', list1=[], list2=[], list3=[], title='', text='', placeho
             +field({type: 'email', name: 'email', placeholder: placeholder, button:{send:true}})
     .footer__line
     .footer__copyright
-      .copyright__text= copyright
-      .copyright__social
+      .footer__copyright-text= copyright
+      .footer__copyright-social
         +social({name: 'twitter', href: 'http://twitter.com'})
         +social({name: 'facebook-square', href: 'http://facebook.com'})
         +social({name: 'instagram', href: 'http://instagram.com'})

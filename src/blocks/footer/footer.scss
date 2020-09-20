@@ -5,17 +5,18 @@
   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 
   &__content {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 100px 9.72% 82px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template: auto/repeat(5, 1fr);
+    grid-template-areas: 'info menu menu menu subscription';
+    justify-content: center;
+    padding: 100px 9.72% 96px;
 
     @media(max-width: 1200px) {
-      padding: 100px 5% 82px;
+      padding: 100px 5% 96px;
     }
 
-    @media(max-width: 1020px) {
+    @media(max-width: 1023px) {
+      display: flex;
       flex-direction: column;
       align-items: center;
       padding: 50px 5%;
@@ -24,17 +25,11 @@
   }
 
   &__info {
+    grid-area: info;
+    width: 260px;
 
-    @media(max-width: 1020px) {
+    @media(max-width: 1023px) {
       margin-bottom: 25px;
-    }
-
-    .logo {
-      margin-bottom: 17px;
-
-      @media(max-width: 1020px) {
-        margin: 0 auto 17px;
-      }
     }
 
     &-text {
@@ -46,53 +41,44 @@
     }
   }
 
+  &__logo {
+    margin-bottom: 17px;
+
+    @media(max-width: 1023px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
   &__menu {
+    grid-area: menu;
     display: flex;
     flex: 0.87;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-right: 20px;
+    padding: 0 6%;
+    margin-right: 50px;
 
     @media(max-width: 1200px) {
       margin-right: 0;
       flex: none;
     }
 
-    @media(max-width: 1020px) {
+    @media(max-width: 1023px) {
+      width: 100%;
       margin-bottom: 25px;
     }
 
-    > .menu {
-      .nav-menu {
-        flex-direction: column;
+  }
 
-        @media(max-width: 1020px) {
-          align-items: center;
-          margin-right: 15px;
-        }   
-
-        .item_theme_bold {
-          font-size: 12px;
-          text-transform: uppercase;
-          color: $dark_100-color;
-        }
-
-        .nav-menu__item {
-          margin-bottom: 14px;
-
-          @media(max-width: 1020px) {
-            text-align: center;
-            margin-right: 0;
-          }   
-
-          @media(max-width: 440px) {
-          }
-        }
-      }
-    }
+  &__menu-item {
+    display: flex;
+    flex-direction: column;
   }
 
   &__subscription {
+    grid-area: subscription;
+    width: 260px;
 
     @media(max-width: 1020px) {
       text-align: center;
@@ -143,23 +129,17 @@
       align-items: center;
     }
 
-    .copyright__text {
+    &-text {
       text-align: center;
     }
 
-    .copyright__social {
+    &-social {
       display: flex;
+      justify-content: space-between;
+      width: 114px;
 
       @media(max-width: 560px) {
         margin-top: 10px;
-      }
-
-      .social {
-        margin-right: 24px;
-      }
-
-      .social:last-child {
-        margin-right: 0;
       }
     }
   }

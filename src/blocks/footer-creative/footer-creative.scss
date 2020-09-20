@@ -15,14 +15,7 @@
 
   &__social {
     display: flex;
-
-    .social {
-      margin-right: 24px;
-    }
-
-    .social:last-child {
-      margin-right: 0;
-    }
-
+    justify-content: space-between;
+    width: 110px;
   }
 }

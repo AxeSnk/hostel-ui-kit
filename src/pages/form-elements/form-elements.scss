@@ -236,15 +236,20 @@
   &__button-item {
     height: 44px;
     margin-bottom: 30px;
-    margin-right: 18px;
-  }
-
-  &__button-item_small {
     margin-right: 20px;
-  }
 
-  &__button-item_long {
-    margin-top: 31px;
+    &_border {
+      height: 40px;
+    }
+
+    &_small {
+      margin-right: 20px;
+    }
+
+    &_long {
+      margin-top: 26px;
+      height: 44px;
+    }
   }
 
   &__pagination {

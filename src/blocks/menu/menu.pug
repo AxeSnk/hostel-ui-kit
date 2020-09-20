@@ -1,16 +1,18 @@
 mixin menu({ list=[] })
-  .menu.js-menu
-    i.material-icons.burger-menu.js-burger-menu
-    nav.nav-menu.js-nav-menu
+  .js-menu.menu
+    nav.menu__nav.js-menu__nav
       each item in list
         - let classes = [''];
         if item.bold
           - classes.push(`${item.bold}`);
         if item.more
-          - classes.push('expand-more');
-        .nav-menu__item.js-nav-menu__item
-          a.nav-menu__item-link.js-menu-more(class=classes, href=item.href)= item.title
+          - classes.push('js-menu__nav-link');
+        - let navClass = item.more ? 'menu__nav-item_more' : ''
+        .menu__nav-item(class=navClass)
+          a.menu__nav-link(class=classes, href=item.href)= item.title
           if item.more
-            .js-nav-menu__submenu
+            i.js-menu__nav-arrow.material-icons.menu__nav-arrow expand_more
+          if item.more
+            .js-menu__submenu.menu__submenu
               each subitem in item.sublist
-                a.nav-menu__submenu-item(href=subitem.subhref)= subitem.subtitle
+                a.menu__submenu-item(href=subitem.subhref)= subitem.subtitle

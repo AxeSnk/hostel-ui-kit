@@ -4,65 +4,92 @@
   display: flex;
   align-items: center;
 
-  .nav-menu {
-    display: flex;
-
-    &__item {
-      position: relative;
-      margin-right: 27px;
-
-      .nav-menu__item-link,
-      .nav-menu__submenu-item {
-        display: flex;
-        color: $dark_50-color;
-        align-items: center;
-        cursor: pointer;
-
-      }
-
-      .expand-more::after {
-        content: 'expand_more';
-        font-family: 'material-icons';
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .more-active::after {
-        transform: rotate(180deg);
-      }
-    
-      .item_theme_bold {
-        font-weight: bold;
-      }
-
-      .js-nav-menu__submenu {
-        display: none;
-      }
-
-      .submenu-active {
-        display: block;
-        position: absolute;
-        background-color: white;
-        border-radius: 4px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-        padding: 10px 15px;
-
-        .nav-menu__submenu-item {
-          margin-top: 10px;
-        }
-
-        .nav-menu__submenu-item:first-child {
-          margin-top: 0;
-        }
-
-      }
-    }
-
-    .nav-menu__item:last-child {
-      margin-right: 0;
-    }
-
+  @media (max-width: 1020px) {
+    justify-content: center;
   }
 
-}
+  &__nav {
+    display: flex;
 
+    @media (max-width: 1020px) {
+      display: none;
+    }
+
+    &_active {
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 4px;
+      z-index: 40;
+    }
+
+    &-item {
+      position: relative;
+      margin-left: 27px;
+
+      @media (max-width: 1020px) {
+        margin: 5px 0;
+      }
+
+      &_more {
+        display: flex;
+      }
+    }
+
+    &-link {
+      display: flex;
+      color: $dark_50-color;
+      align-items: center;
+      cursor: pointer;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark_100-color;
+      }
+
+      &_bold {
+        font-weight: bold;
+        color: $dark_75-color;
+      }
+    }
+
+    &-arrow {
+      font-size: 24px;
+
+      &_expanded {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+
+    &_active {
+      display: block;
+      position: absolute;
+      top: 40px;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      padding: 10px 15px;
+      z-index: 20;
+
+      @media (max-width: 1020px) {
+        right: 100%;
+        top: 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      color: $dark_50-color;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 0;
+    }
+  }
+}
