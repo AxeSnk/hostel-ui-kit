@@ -17,50 +17,60 @@
 
   &__sidebar {
     max-width: 266px;
+  }
 
-    .sidebar__item {
-      margin-bottom: 20px;
+  &__dropdown-quests {
+    margin-top: 20px;
 
-      .checkbox {
-        max-width: 240px;
-      }
-
-      .dropdown-guests-title {
-        margin-bottom: 4px;
-      }
-
-      .slider,
-      .checkbox-buttons {
-        margin-top: 30px;
-      }
-
-      .rich-checkbox-header {
-        margin-top: 32px;
-        margin-bottom: 15px;
-      }
-
-      .rich-checkbox {
-        margin-bottom: 12px;
-      }
-
-      .dropdown-rooms-title {
-        margin-bottom: 4px;
-        margin-top: 28px;
-      }
-
-      .checkbox-list {
-        margin-top: 25px;
-      }
+    &-title {
+      margin-bottom: 3px;
     }
+  }
+
+  &__slider {
+    margin-top: 30px;
+  }
+
+  &__checkbox-buttons {
+    margin-top: 31px;
+    max-width: 230px;
+
+    &-title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__rich-checkbox {
+    margin-top: 25px;
+
+    &-title {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      max-width: 260px;
+      margin: 10px 0;
+    }
+  }
+
+  &__dropdown-comfort {
+    margin-top: 30px;
+
+    &-title {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__checkbox-list {
+    margin-top: 26px;
   }
 
   &__samples {
     display: grid;
-    margin-left: 36px;
-    margin-top: 5px;
+    padding: 4px 0 0 35px;
 
     @media(max-width: 824px) {
-      margin-left: 0;
+      padding: 4px 0 0 0;
     }
 
     &-header {
@@ -70,14 +80,15 @@
       display: grid;
       justify-items: center;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      row-gap: 20px;
+      row-gap: 19px;
       column-gap: 12px;
-      margin-bottom: 41px;
-    }
-
-    .pagination {
-      justify-self: center;
-      margin-right: 15px;
+      margin-bottom: 39px;
     }
   }
+
+  &__pagination {
+    justify-self: center;
+    margin-right: 14px;
+  }
+
 }

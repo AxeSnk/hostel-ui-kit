@@ -1,8 +1,8 @@
 mixin like-button({ liked=false, counter='' }={})
   if liked
     form.like-button.like-button_theme_liked
-      i.like-button__icon.material-icons favorite
-      .like-button__counter= counter
+      i.like-button__icon.like-button__icon_theme_liked.material-icons favorite
+      .like-button__counter.like-button__counter_theme_liked= counter
   else
     form.like-button
       i.like-button__icon.material-icons favorite_border

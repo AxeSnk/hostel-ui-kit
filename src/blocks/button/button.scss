@@ -16,45 +16,45 @@
   border-radius: 22px;
   cursor: pointer;
   width: -webkit-fill-available;
-}
 
-.button_theme_border {
-  color: $purple-color;
-  background: #fff;
-  border: 2px solid $purple-color;
-  padding: 0 17px;
-}
+  &_theme_border {
+    color: $purple-color;
+    background: #fff;
+    border: 2px solid $purple-color;
+    padding: 0 17px;
+  }
 
-.button_disabled {
-  opacity: 0.5;
-  cursor: auto;
-}
+  &_disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
 
-.button_size_small {
-  padding: 0;
-  background: none;
-  color: $purple-color;
-}
+  &_size_small {
+    padding: 0;
+    background: none;
+    color: $purple-color;
+  }
 
-.button_size_small + .button_theme_disabled {
-  color: $dark_50-color;
-}
+  &_size_small + &_theme_disabled {
+    color: $dark_50-color;
+  }
 
-.button_size_long {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  &_size_long {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.button__icon {
-  font-size: 24px;
-  line-height: 24px;
-  position: absolute;
-  color: #FFFFFF;
-  right: 3%;
-}
+  &__icon {
+    font-size: 24px;
+    line-height: 24px;
+    position: absolute;
+    color: #FFFFFF;
+    right: 3%;
+  }
 
-.button:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }

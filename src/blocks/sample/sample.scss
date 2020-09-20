@@ -6,7 +6,7 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   user-select: none;
-  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &__image {
     position: relative;
@@ -48,8 +48,6 @@
     &-ellipses {
       position: absolute;
       display: flex;
-      // align-self: flex-end;
-      // justify-content: space-between;
       right: 17px;
       bottom: 15px;
       z-index: 10;

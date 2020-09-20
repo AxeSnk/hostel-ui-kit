@@ -17,26 +17,25 @@
     background: $dark_25-color;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    &_theme_liked {
+      background: $purple-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__counter {
     font-size: 10px;
     line-height: 12px;
     color: $dark_25-color;
+
+    &_theme_liked {
+      color: $purple-color;
+    }
   }
 
   &_theme_liked {
     border-color: $purple-color;
-  
-    .like-button__icon {
-      background: $purple-color;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  
-    .like-button__counter {
-      color: $purple-color;
-    }
   }
 }
-

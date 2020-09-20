@@ -12,7 +12,7 @@
     padding: 70px 0 18px;
   }
 
-  .search {
+  &__search {
     width: 380px;
     margin-bottom: 320px;
 
@@ -21,7 +21,7 @@
     }
   }
 
-  .landing__note {
+  &__note {
     max-width: 268px;
     align-self: flex-end;
     text-align: end;

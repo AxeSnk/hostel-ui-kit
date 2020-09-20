@@ -2,12 +2,16 @@
 
 .rich-checkbox {
 
-  .checkbox {
+  &__wrapper {
     color: $dark_75-color;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 6px;
+
+    .checkbox {
+      color: $dark_75-color;
+    }
   }
 
   &__details {

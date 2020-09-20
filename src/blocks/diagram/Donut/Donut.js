@@ -15,7 +15,7 @@ class Donut {
   }
 
   createWrap() {
-    this.figure = createElement('figure', { class: 'diagram' });
+    this.figure = createElement('figure', { class: 'diagram__figure' });
     this.wrap = createElement('div', { class: 'diagram__wrap' });
     this.figure.appendChild(this.wrap);
     this.root.appendChild(this.figure);
@@ -25,26 +25,26 @@ class Donut {
     const { size, total, labels, sectors } = this.config;
 
     this.donut = createElementNS('svg', {
-      class: 'donut',
+      class: 'diagram__donut',
       width: `${size}%`,
       height: `${size}%`,
       viewBox: `0 0 42 42`
     });
 
     this.label = createElementNS('g', {
-      class: 'donut__label'
+      class: 'diagram__donut-label'
     });
 
     if (labels.show) {
       this.labelValue = createElementNS('text', {
-        class: 'donut__value',
+        class: 'diagram__donut-value',
         x: '43%',
         y: '36%'
       });
       this.labelValue.innerHTML = `${total}`;
 
       this.labelUnit = createElementNS('text', {
-        class: 'donut__unit',
+        class: 'diagram__donut-unit',
         x: '43%',
         y: '40%'
       });
@@ -60,7 +60,7 @@ class Donut {
 
   addListenerLegends() {
     const list = [
-      ...this.legend.getList().querySelectorAll('.legend-item__title')
+      ...this.legend.getList().querySelectorAll('.diagram__legend-title')
     ];
     list.map(item => {
       item.addEventListener('mouseover', this.handlePathOver.bind(this));
@@ -69,7 +69,7 @@ class Donut {
   }
 
   handlePathOver(e) {
-    const sector = [...this.donut.querySelectorAll('.donut__sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
       const isTarget =
         item.getAttribute('data-name') == e.target.getAttribute('data-name');
@@ -80,7 +80,7 @@ class Donut {
   }
 
   handlePathOut(e) {
-    const sector = [...this.donut.querySelectorAll('.donut__sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
       const isTarget =
         item.getAttribute('data-name') == e.target.getAttribute('data-name');
@@ -91,7 +91,7 @@ class Donut {
   }
 
   addListenerPath() {
-    const sector = [...this.donut.querySelectorAll('.donut__sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
       item.addEventListener('mouseover', this.changeLabel.bind(this));
       item.addEventListener('mouseout', this.reDrawLabelValue.bind(this));

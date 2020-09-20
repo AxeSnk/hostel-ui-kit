@@ -9,11 +9,11 @@ mixin field({ title='', note='', placeholder='', value='', name ='', masked=fals
     - classes.push(`js-calendar-${calendar.input}`);
 
   .field(class=mainClass)
-    .filed__header
+    .field__header
       h3.field__title= title
       .field__note= note
     input.field__input(class=classes, placeholder=placeholder, value=value, type=type, name=name)
     if button.send
-      i.material-icons.arrow-icon arrow_forward
+      i.material-icons.field__arrow-icon arrow_forward
     if button.dropdown
-      i.material-icons.expand-more-icon expand_more
+      i.material-icons.field__expand-more-icon expand_more
