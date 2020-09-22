@@ -7,23 +7,34 @@
 
   &__wrapper {
     display: grid;
+    justify-content: center;
     grid-template-areas:
     'left center right';
     grid-template-columns: 380px 380px 320px;
     gap: 40px;
     padding: 42px 140px;
+   
+    @media(max-width: 1245px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__column-left {
     grid-area: left;
+    max-width: 380px
   }
 
   &__column-center {
     grid-area: center;
+    max-width: 380px
   }
 
   &__column-right {
     grid-area: right;
+    max-width: 320px
   }
 
   &__register {

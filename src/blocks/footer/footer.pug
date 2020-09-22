@@ -6,23 +6,21 @@ include ../social/social
 
 mixin footer({ info='', head1='', head2='', head3='', list1=[], list2=[], list3=[], title='', text='', placeholder='', copyright=''})
   footer.footer
-    .footer__line
     .footer__content
-      .footer__info
+      section.footer__info
         .footer__logo
           +logo({ui: false})
         .footer__info-text= info
-      .footer__menu
+      nav.footer__menu
         +foot-menu({head: head1, list: list1})
         +foot-menu({head: head2, list: list2})
         +foot-menu({head: head3, list: list3})
-      .footer__subscription
+      article.footer__subscription
         .footer__subscription-title= title
         .footer__subscription-text= text
         .footer__subscription-field
           form.subscription-form(name='subscribe-form')
             +field({type: 'email', name: 'email', placeholder: placeholder, button:{send:true}})
-    .footer__line
     .footer__copyright
       .footer__copyright-text= copyright
       .footer__copyright-social
