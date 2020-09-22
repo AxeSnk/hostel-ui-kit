@@ -6,12 +6,20 @@
   background: #ffffff;
   padding: 39px 29px 29px;
 
+  @media(max-width: 425px) {
+    padding: 20px 15px;
+  }
+
   &__range {
     display: flex;
     margin-top: 16px;
 
     .field:first-child {
       margin-right: 20px;
+
+      @media(max-width: 425px) {
+        margin-right: 10px;
+      }
     }
   }
 

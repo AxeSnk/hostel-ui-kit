@@ -16,9 +16,11 @@
     width: 380px;
     margin-bottom: 320px;
 
-    @media(max-width: 480px) {
+    @media(max-width: 425px) {
       max-width: 320px;
+      margin-bottom: 20px;
     }
+
   }
 
   &__note {

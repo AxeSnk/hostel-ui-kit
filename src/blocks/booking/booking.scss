@@ -9,6 +9,10 @@
   padding: 39px 29px 29px;
   margin-bottom: 40px;
 
+  @media(max-width:425px) {
+    padding: 20px 15px;
+  }
+
   &__header {
     display: flex;
     align-items: baseline;
@@ -61,6 +65,10 @@
 
     .field:first-child {
       margin-right: 20px;
+
+      @media(max-width:425px) {
+        margin-right: 10px;
+      }
     }
   }
 
