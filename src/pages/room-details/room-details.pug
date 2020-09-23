@@ -16,25 +16,25 @@ block content
       +room-photos()
     .room-details__content
       .room-details__info
-        .room-details__feature
+        section.room-details__feature
           h2.room-details__feature-header Сведения о номере
           .room-details__feature-wrapper
             +feature({icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
             +feature({icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})
             +feature({icon: 'whatshot', title: 'Уют', text: 'Номер оснащён камином'})
-        .room-details__impressions
+        section.room-details__impressions
           h2.room-details__impressions-header Впечатления от номера
           .room-details__diagram
             +diagram
-        .room-details__reviews
+        section.room-details__reviews
           .room-details__reviews-header
             h2.room-details__reviews-title Отзывы посетителей номера
             .room-details__reviews-number 2 отзыва
-          .room-details__comment
+          article.room-details__comment
             +comment({img:'ava', name: 'Мурад Сарафанов', date: '5 дней назад', liked: true, counter: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
-          .room-details__comment
+          article.room-details__comment
             +comment({img:'ava-2', name: 'Патрисия Стёклышкова', date: 'Неделю назад', liked: false, counter: '2', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
-        .room-details__bullet-list
+        section.room-details__bullet-list
           h2.room-details__bullet-list-header Правила
           .room-details__bullet-list-wrapper
             +bullet({text: 'Нельзя с питомцами'})
@@ -42,8 +42,8 @@ block content
             +bullet({text: 'Без вечеринок и мероприятий'})
           .room-details__bullet-list-wrapper
             +bullet({text: 'Время прибытия — после 13:00, а выезд до 12:00'})
-        .room-details__cancellation
+        section.room-details__cancellation
           h2.room-details__cancellation-header Отмена
           .room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-      .room-details__card
+      section.room-details__card
         +booking({ header:{number: '888', luxury: 'люкс', cost: '9 990₽'}, price: [ {name: '9 990₽ х 4 суток', cost: '39 960₽'}, {name: 'Сбор за услуги: скидка 2 179₽', info: true, cost: '0₽'}, {name: 'Сбор за дополнительные услуги', info: true, cost: '300₽'} ], total: '38 081₽' })
