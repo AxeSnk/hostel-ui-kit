@@ -12,7 +12,7 @@ class Dropdown {
     const { maxItems, minItems, buttons } = this.options;
     this.totalItems = 0;
     this.baby = 0;
-    this.active = false;
+    this.open = false;
     this.input = this.root.querySelector('.js-dropdown__selection');
     this.items = this.root.querySelectorAll('.js-dropdown__menu-option');
     this.item = Array.from(this.items).map(item => ({
@@ -76,12 +76,10 @@ class Dropdown {
     this.clearButton = this.root.querySelector('.js-dropdown__button-clear');
     this.applyButton = this.root.querySelector('.js-dropdown__button-apply');
 
-    this.applyButton.addEventListener('click', this.hide.bind(this));
     this.clearButton.addEventListener('click', this.clear.bind(this));
   }
 
   addListeners() {
-    this.root.addEventListener('click', this.clickRoot.bind(this));
     for (var i = 0, len = this.incrementList.length; i < len; i++) {
       this.incrementList[i].addEventListener('click', this.plus.bind(this));
     }
@@ -89,18 +87,31 @@ class Dropdown {
       this.decrementList[i].addEventListener('click', this.minus.bind(this));
     }
 
-    document.addEventListener('click', this.hide.bind(this));
+    document.addEventListener('click', this.clickRoot.bind(this));
   }
 
   clickRoot(e) {
-    this.icon == e.target && this.active ? this.hide(e) : this.showMenu();
+    const notDropdown = !this.root.contains(e.target);
+    const isInput = e.target == this.input;
+    const isApplyButton = e.target == this.applyButton;
+    const isIconClose = (e.target == this.icon) && (this.open == false);
+    const isIconOpen = (e.target == this.icon) && (this.open == true);
+
+    if(isInput || isIconClose) {
+      this.showMenu();
+    };
+
+    if(notDropdown || isApplyButton || isIconOpen) {
+      this.hide();
+      this.upDate();
+    };
   }
 
   showMenu() {
-    this.active = true;
     this.input.classList.add('dropdown__selection_active');
     this.menu.classList.add('dropdown__menu_active');
     this.icon.classList.add('dropdown__icon_active');
+    this.open = true;
   }
 
   plus(e) {
@@ -120,7 +131,6 @@ class Dropdown {
         }
       });
       this.totalItems += 1;
-      this.upDate();
     }
   }
 
@@ -137,7 +147,6 @@ class Dropdown {
           this.baby -= 1;
         }
         this.totalItems -= 1;
-        this.upDate();
       }
     });
   }
@@ -213,16 +222,11 @@ class Dropdown {
     }
   }
 
-  hide(e) {
-    const notDropdown = !this.root.contains(e.target);
-    const isApplyButton = e.target == this.applyButton;
-    const isIcon = e.target == this.icon;
-    if (notDropdown || isApplyButton || isIcon) {
-      this.active = false;
-      this.input.classList.remove('dropdown__selection_active');
-      this.menu.classList.remove('dropdown__menu_active');
-      this.icon.classList.remove('dropdown__icon_active');
-    }
+  hide() {
+    this.open = false;
+    this.input.classList.remove('dropdown__selection_active');
+    this.menu.classList.remove('dropdown__menu_active');
+    this.icon.classList.remove('dropdown__icon_active');
   }
 
   clear() {
