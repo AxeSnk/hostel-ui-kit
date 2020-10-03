@@ -63,8 +63,8 @@ class Donut {
       ...this.legend.getList().querySelectorAll('.diagram__legend-title')
     ];
     list.map(item => {
-      item.addEventListener('mouseover', this.handlePathOver.bind(this));
-      item.addEventListener('mouseout', this.handlePathOut.bind(this));
+      item.addEventListener('mouseover', e => this.handlePathOver(e));
+      item.addEventListener('mouseout', e => this.handlePathOut(e));
     });
   }
 
@@ -93,8 +93,8 @@ class Donut {
   addListenerPath() {
     const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
-      item.addEventListener('mouseover', this.changeLabel.bind(this));
-      item.addEventListener('mouseout', this.reDrawLabelValue.bind(this));
+      item.addEventListener('mouseover', e => this.changeLabel(e));
+      item.addEventListener('mouseout', () => this.reDrawLabelValue());
     });
   }
 

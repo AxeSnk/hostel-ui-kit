@@ -7,7 +7,7 @@ class Slider {
 
   init() {
     const $element = $('.js-container');
-    const val = $('.js-slider__val');
+    const $val = $('.js-slider__val');
 
     $element.slider({
       min: 0,
@@ -15,10 +15,10 @@ class Slider {
       values: [5000, 10000],
       range: true,
       slide: function(event, ui) {
-        val.val(ui.values[0] + '\u20bd - ' + ui.values[1] + '\u20bd')
+        $val.val(ui.values[0] + '\u20bd - ' + ui.values[1] + '\u20bd')
       },
     });
-    val.val($element.slider('values', 0) + '\u20bd - ' + $element.slider('values', 1) + '\u20bd');
+    $val.val($element.slider('values', 0) + '\u20bd - ' + $element.slider('values', 1) + '\u20bd');
   }
 
 }

@@ -7,11 +7,11 @@ mixin dropdown({ active = false, category = '', defaultText = '', list = [] })
       i.material-icons.dropdown__icon.js-dropdown__icon expand_more
       .dropdown__menu.js-dropdown__menu(class= menuOpen)
         each item in list
-          .dropdown__menu-option.js-dropdown__menu-option(
+          .dropdown__menu-options.js-dropdown__menu-options(
             data-id=`${item.title}`,
           )
             p.dropdown__item= item.title
             .dropdown__controls.js-dropdown__controls
               .dropdown__controls-increment.dropdown__controls-button.js-minus -
-              input.dropdown__controls-count.js-controls-count(readonly="readonly" type="text" value=`${item.count}`) 
+              input.dropdown__controls-counter.js-controls-counter(readonly="readonly" type="text" value=`${item.count}`) 
               .dropdown__controls-decrement.dropdown__controls-button.js-plus +

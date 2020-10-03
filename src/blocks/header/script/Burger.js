@@ -14,8 +14,8 @@ class Burger {
   }
 
   addListeners() {
-    this.burgerIcon.addEventListener('click', this.openMenu.bind(this));
-    document.addEventListener('click', this.hide.bind(this));
+    this.burgerIcon.addEventListener('click', () => this.openMenu());
+    document.addEventListener('click', e => this.hide(e));
   }
 
   openMenu() {

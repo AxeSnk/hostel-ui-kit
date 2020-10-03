@@ -17,7 +17,7 @@ class Calendar {
       this.picker = $(this.start)
         .datepicker({
           ...options,
-          onSelect: this.onDateSelect.bind(this)
+          onSelect: () => this.onDateSelect()
         })
         .data('datepicker');
 
@@ -52,7 +52,7 @@ class Calendar {
     applyButton.innerHTML = 'Применить';
     applyButton.classList.add('datepicker__button-apply');
     this.buttons.prepend(applyButton);
-    applyButton.addEventListener('click', this.hidePicker.bind(this));
+    applyButton.addEventListener('click', () => this.hidePicker());
   }
 
   hidePicker() {
