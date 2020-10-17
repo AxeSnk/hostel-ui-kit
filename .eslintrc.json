@@ -1,5 +1,9 @@
 {
-  "extends": ["plugin:fsd/all"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended","airbnb","plugin:fsd/all"],
   "plugins": ["fsd"],
   "rules": {
     "fsd/hof-name-prefix": "error",

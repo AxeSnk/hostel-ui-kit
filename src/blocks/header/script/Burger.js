@@ -14,11 +14,11 @@ class Burger {
   }
 
   addListeners() {
-    this.burgerIcon.addEventListener('click', () => this.openMenu());
-    document.addEventListener('click', e => this.hide(e));
+    this.burgerIcon.addEventListener('click', this.openMenu);
+    document.addEventListener('click', this.hide);
   }
 
-  openMenu() {
+  openMenu = () => {
     this.burger.classList.add('header__nav_active');
     this.menu.classList.add('header__menu_active');
     this.menuNav.classList.add('menu__nav_active');
@@ -26,7 +26,7 @@ class Burger {
     this.login ? this.login.classList.add('header__login-name_active') : this.buttons.classList.add('header__buttons_active');
   }
 
-  hide(e) {
+  hide = (e) => {
     const notBurger = !this.burger.contains(e.target);
 
     if (notBurger) {

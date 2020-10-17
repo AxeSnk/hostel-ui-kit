@@ -76,21 +76,21 @@ class Dropdown {
     this.clearButton = this.root.querySelector('.js-dropdown__button-clear');
     this.applyButton = this.root.querySelector('.js-dropdown__button-apply');
 
-    this.clearButton.addEventListener('click', () => this.clear());
+    this.clearButton.addEventListener('click', this.clear);
   }
   
   addListeners() {
     for (var i = 0, len = this.incrementList.length; i < len; i++) {
-      this.incrementList[i].addEventListener('click', e => this.plus(e));
+      this.incrementList[i].addEventListener('click', this.plus);
     }
     for (var i = 0, len = this.decrementList.length; i < len; i++) {
-      this.decrementList[i].addEventListener('click', e => this.minus(e));
+      this.decrementList[i].addEventListener('click', this.minus);
     }
 
-    document.addEventListener('click', e => this.clickRoot(e));
+    document.addEventListener('click', this.clickRoot);
   }
 
-  clickRoot(e) {
+  clickRoot = (e) => {
     const isDropdown = this.root.contains(e.target);
     const isInput = e.target === this.selection;
     const isApplyButton = e.target === this.applyButton;
@@ -114,7 +114,7 @@ class Dropdown {
     this.menuOpen = true;
   }
 
-  plus(e) {
+  plus = (e) => {
     const { maxItems } = this.options;
     const maxCount = this.totalCounter >= maxItems;
     if (!maxCount) {
@@ -134,7 +134,7 @@ class Dropdown {
     }
   }
 
-  minus(e) {
+  minus = (e) => {
     const { minItems } = this.options;
     const minCount = this.totalCounter <= minItems;
     this.menuOptions.map(i => {
@@ -229,7 +229,7 @@ class Dropdown {
     this.icon.classList.remove('dropdown__icon_active');
   }
 
-  clear() {
+  clear = () => {
     const { minItems } = this.options;
     this.menuOptions.map(i => {
       i.count = minItems;

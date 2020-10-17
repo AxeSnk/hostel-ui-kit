@@ -63,12 +63,12 @@ class Donut {
       ...this.legend.getList().querySelectorAll('.diagram__legend-title')
     ];
     list.map(item => {
-      item.addEventListener('mouseover', e => this.handlePathOver(e));
-      item.addEventListener('mouseout', e => this.handlePathOut(e));
+      item.addEventListener('mouseover', this.handlePathOver);
+      item.addEventListener('mouseout', this.handlePathOut);
     });
   }
 
-  handlePathOver(e) {
+  handlePathOver = (e) => {
     const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
       const isTarget =
@@ -79,7 +79,7 @@ class Donut {
     });
   }
 
-  handlePathOut(e) {
+  handlePathOut = (e) => {
     const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
       const isTarget =
@@ -93,12 +93,12 @@ class Donut {
   addListenerPath() {
     const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
     sector.map(item => {
-      item.addEventListener('mouseover', e => this.changeLabel(e));
-      item.addEventListener('mouseout', () => this.reDrawLabelValue());
+      item.addEventListener('mouseover', this.changeLabel);
+      item.addEventListener('mouseout', this.reDrawLabelValue);
     });
   }
 
-  changeLabel(e) {
+  changeLabel = (e) => {
     const value = e.target.getAttribute('data-value');
     const name = e.target.getAttribute('data-name');
     this.labelValue.innerHTML = value;
@@ -106,7 +106,7 @@ class Donut {
     this.labelUnit.setAttribute('fill', `url(#${name})`);
   }
 
-  reDrawLabelValue() {
+  reDrawLabelValue = () => {
     this.labelValue.innerHTML = this.config.total;
     this.labelValue.removeAttribute('fill');
     this.labelUnit.removeAttribute('fill');

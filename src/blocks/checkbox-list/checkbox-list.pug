@@ -1,12 +1,12 @@
 include ../checkbox/checkbox
 
 mixin checkbox-list({ active=false, title='', list=[] } = {})
-  - const menuOpen = active ? 'checkbox-list__menu_open' : '';
+  - const menuIsOpened = active ? 'checkbox-list__menu_isOpened' : '';
   - const iconActive = active ? 'checkbox-list__expand-icon_active' : '';
 
   .checkbox-list.js-checkbox-list
     h3.checkbox-list__header.js-checkbox-list__header= title
       i.material-icons.checkbox-list__expand-icon.js-checkbox-list__icon(class= iconActive) expand_more
-    .checkbox-list__menu.js-checkbox-list__menu(class= menuOpen)
+    .checkbox-list__menu.js-checkbox-list__menu(class= menuIsOpened)
       each item in list
         +checkbox({ label: item.label, name: item.name, checked: item.checked})

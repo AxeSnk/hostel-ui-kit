@@ -12,11 +12,11 @@ class CheckboxList {
   }
 
   addListener() {
-    this.$checkboxList.on('click', () => this.onClick());
+    this.$checkboxList.on('click', this.onClick);
   }
 
-  onClick() {
-    this.$menu.toggleClass('checkbox-list__menu_open');
+  onClick = () => {
+    this.$menu.toggleClass('checkbox-list__menu_isOpened');
     this.$icon.toggleClass('checkbox-list__expand-icon_active');
   }
 }

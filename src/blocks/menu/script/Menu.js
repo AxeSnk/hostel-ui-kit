@@ -9,15 +9,15 @@ class Menu {
     this.$navLink = $(this.menu).find('.js-menu__nav-link');
     this.$submenu = $(this.menu).find('.js-menu__submenu');
 
-    document.addEventListener('click', e => this.hide(e));
-    this.$navLink.each((i, element) => this.addListenerSubmenu(i, element));
+    document.addEventListener('click', this.hide);
+    this.$navLink.each(this.addListenerSubmenu);
   }
 
-  addListenerSubmenu(i, element) {
-    $(element).on('click', e => this.toggleSubmenu(e));
+  addListenerSubmenu = (i, element) => {
+    $(element).on('click', this.toggleSubmenu);
   }
 
-  hide(e) {
+  hide = (e) => {
     const $arrow = $(this.menu).find('.js-menu__nav-arrow');
 
     if (!this.$navLink.is(e.target)) {
@@ -26,7 +26,7 @@ class Menu {
     }
   }
 
-  toggleSubmenu(e) {
+  toggleSubmenu = (e) => {
     const $submenu = $(e.currentTarget)
       .parent()
       .find('.js-menu__submenu');

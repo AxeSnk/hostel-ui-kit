@@ -17,7 +17,7 @@ class Calendar {
       this.picker = $(this.start)
         .datepicker({
           ...options,
-          onSelect: () => this.onDateSelect()
+          onSelect: this.onDateSelect
         })
         .data('datepicker');
 
@@ -35,7 +35,7 @@ class Calendar {
       .querySelector('.datepicker--buttons');
   }
 
-  onDateSelect() {
+  onDateSelect = () => {
     let [startDate, endDate] = this.start.value.split(
       options.multipleDatesSeparator
     );
@@ -52,10 +52,10 @@ class Calendar {
     applyButton.innerHTML = 'Применить';
     applyButton.classList.add('datepicker__button-apply');
     this.buttons.prepend(applyButton);
-    applyButton.addEventListener('click', () => this.hidePicker());
+    applyButton.addEventListener('click', this.hidePicker);
   }
 
-  hidePicker() {
+  hidePicker = () => {
     this.picker.hide();
   }
 }
