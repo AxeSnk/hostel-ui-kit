@@ -14,7 +14,7 @@
   }
 
   &__selection {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', 'open-sans', sans-serif;
     color: $dark_75-color;
     font-size: 14px;
     box-sizing: border-box;
@@ -50,10 +50,10 @@
     line-height: 1px;
     color: $dark_50-color;
     cursor: pointer;
-  }
 
-  &__icon_active {
-    transform: rotate(180deg);
+    &_active {
+      transform: rotate(180deg);
+    }
   }
 
   &__menu {
@@ -97,7 +97,7 @@
   &__controls-counter {
     width: 34px;
     font-size: 12px;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', 'open-sans', sans-serif;
     font-weight: bold;
     padding: 0;
     border: none;
@@ -127,7 +127,7 @@
   }
 
   &__button {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', 'open-sans', sans-serif;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -135,26 +135,26 @@
     border: none;
     background: none;
     cursor: pointer;
+
+    &_type_apply {
+      color: $purple-color;
+      margin-left: auto;
+    }
+
+    &_type_clear {
+      visibility: hidden;
+  
+      &_active {
+        color: $dark_50-color;
+        visibility: visible;
+      }
+    }
   }
 
   &__button,
   &__button:active,
   &__button:focus {
     outline: none;
-  }
-
-  &__button_type_apply {
-    color: $purple-color;
-    margin-left: auto;
-  }
-
-  &__button_type_clear {
-    visibility: hidden;
-
-    &_active {
-      color: $dark_50-color;
-      visibility: visible;
-    }
   }
 
   &__controls-button {

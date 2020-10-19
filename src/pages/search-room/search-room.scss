@@ -21,10 +21,10 @@
 
   &__dropdown-quests {
     margin-top: 20px;
+  }
 
-    &-title {
-      margin-bottom: 3px;
-    }
+  &__dropdown-quests-title {
+    margin-bottom: 3px;
   }
 
   &__slider {
@@ -34,31 +34,31 @@
   &__checkbox-buttons {
     margin-top: 31px;
     max-width: 230px;
+  }
 
-    &-title {
-      margin-bottom: 10px;
-    }
+  &__checkbox-buttons-title {
+    margin-bottom: 10px;
   }
 
   &__rich-checkbox {
     margin-top: 25px;
+  }
 
-    &-title {
-      margin-bottom: 15px;
-    }
+  &__rich-checkbox-title {
+    margin-bottom: 15px;
+  }
 
-    &-wrapper {
-      max-width: 260px;
-      margin: 10px 0;
-    }
+  &__rich-checkbox-wrapper {
+    max-width: 260px;
+    margin: 10px 0;
   }
 
   &__dropdown-comfort {
     margin-top: 30px;
+  }
 
-    &-title {
-      margin-bottom: 3px;
-    }
+  &__dropdown-comfort-title {
+    margin-bottom: 3px;
   }
 
   &__checkbox-list {
@@ -72,18 +72,19 @@
     @media(max-width: 824px) {
       padding: 4px 0 0 0;
     }
+  }
 
-    &-header {
-      margin-bottom: 20px;
-    }
-    &-wrapper {
-      display: grid;
-      justify-items: center;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      row-gap: 19px;
-      column-gap: 12px;
-      margin-bottom: 39px;
-    }
+  &__samples-header {
+    margin-bottom: 20px;
+  }
+
+  &__samples-wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    row-gap: 19px;
+    column-gap: 12px;
+    margin-bottom: 39px;
   }
 
   &__pagination {

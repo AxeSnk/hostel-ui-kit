@@ -34,7 +34,7 @@ class Sectors {
       const d2 = getSectorPath(18, 18, 32 - 2, startAngle, endAngle);
 
       const sector = createElementNS('path', {
-        class: 'diagram__donut-sector',
+        class: 'diagram__sector',
         d,
         fill: 'none',
         stroke,

@@ -32,19 +32,19 @@ class Donut {
     });
 
     this.label = createElementNS('g', {
-      class: 'diagram__donut-label'
+      class: 'diagram__label'
     });
 
     if (labels.show) {
       this.labelValue = createElementNS('text', {
-        class: 'diagram__donut-value',
+        class: 'diagram__value',
         x: '43%',
         y: '36%'
       });
       this.labelValue.innerHTML = `${total}`;
 
       this.labelUnit = createElementNS('text', {
-        class: 'diagram__donut-unit',
+        class: 'diagram__unit',
         x: '43%',
         y: '40%'
       });
@@ -69,7 +69,7 @@ class Donut {
   }
 
   handlePathOver = (e) => {
-    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
     sector.map(item => {
       const isTarget =
         item.getAttribute('data-name') == e.target.getAttribute('data-name');
@@ -80,7 +80,7 @@ class Donut {
   }
 
   handlePathOut = (e) => {
-    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
     sector.map(item => {
       const isTarget =
         item.getAttribute('data-name') == e.target.getAttribute('data-name');
@@ -91,7 +91,7 @@ class Donut {
   }
 
   addListenerPath() {
-    const sector = [...this.donut.querySelectorAll('.diagram__donut-sector')];
+    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
     sector.map(item => {
       item.addEventListener('mouseover', this.changeLabel);
       item.addEventListener('mouseout', this.reDrawLabelValue);

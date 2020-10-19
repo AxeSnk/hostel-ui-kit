@@ -20,7 +20,7 @@
   }
 
   &__input {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', 'open-sans', sans-serif;
     box-sizing: border-box;
     border-radius: 4px;
     background: #ffffff;
@@ -44,7 +44,6 @@
       color: $dark_75-color;
     }
   }
-
 
   &__expand-more-icon {
     position: absolute;

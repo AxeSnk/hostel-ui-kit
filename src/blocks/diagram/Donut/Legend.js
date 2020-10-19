@@ -36,13 +36,13 @@ class Legend {
       }
 
       const li = createElement('li', {
-        class: `diagram__legend-item diagram__legend-item_theme_${gradient.name}`,
+        class: `diagram__item diagram__item_theme_${gradient.name}`,
         'data-name': gradient.name
       });
       this.list.appendChild(li);
 
       const circle = createElement('div', {
-        class: `diagram__legend-circle diagram__legend-circle_theme_${gradient.name}`
+        class: `diagram__circle diagram__circle_theme_${gradient.name}`
       });
       li.appendChild(circle);
 

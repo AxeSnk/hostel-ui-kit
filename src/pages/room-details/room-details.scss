@@ -47,18 +47,18 @@
     @media(max-width: 930px) {
       margin-bottom: 30px;
     }  
+  }
 
-    &-header {
-      letter-spacing: -0.6px;
-      margin-bottom: 20px;
-    }
+  &__feature-header {
+    letter-spacing: -0.6px;
+    margin-bottom: 20px;
+  }
 
-    &-wrapper {
-      .feature:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-      }
+  &__feature-wrapper {
+    .feature:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
     }
   }
 
@@ -69,13 +69,13 @@
       margin-bottom: 30px;
       width: 320px;
     } 
-    
-    &-header {
-      letter-spacing: -0.6px;
+  }
 
-      @media(max-width: 400px) {
-        padding: 0 20px;
-      }
+  &__impressions-header {
+    letter-spacing: -0.6px;
+
+    @media(max-width: 400px) {
+      padding: 0 20px;
     }
   }
 
@@ -99,29 +99,28 @@
     @media(max-width: 540px) {
       padding: 0 20px;
     }
+  }
 
+  &__reviews-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 
-    &-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-
-      @media(max-width: 430px) {
-        flex-direction: column;
-      }
+    @media(max-width: 430px) {
+      flex-direction: column;
     }
+  }
 
-    &-title {
-      letter-spacing: -0.6px;
-    }
+  &__reviews-title {
+    letter-spacing: -0.6px;
+  }
 
-    &-number {
-      font-size: 14px;
-      color: $dark_50-color;
+  &__reviews-number {
+    font-size: 14px;
+    color: $dark_50-color;
 
-      @media(max-width: 430px) {
-        align-self: flex-end;
-      }
+    @media(max-width: 430px) {
+      align-self: flex-end;
     }
   }
 
@@ -135,16 +134,16 @@
     @media(max-width: 930px) {
       margin-bottom: 30px;
     }  
+  }
 
-    &-header {
-      letter-spacing: -0.6px;
-      margin-left: 20px;
-      margin-bottom: 16px;
-    }
+  &__bullet-list-header {
+    letter-spacing: -0.6px;
+    margin-left: 20px;
+    margin-bottom: 16px;
+  }
 
-    &-wrapper {
-      margin-bottom: 10px;
-    }
+  &__bullet-list-wrapper {
+    margin-bottom: 10px;
   }
 
   &__cancellation {
@@ -154,11 +153,11 @@
       max-width: auto;
       padding: 0 20px;
     }
+  }
 
-    &-header {
-      letter-spacing: -0.6px;
-      margin-bottom: 16px;
-    }
+  &__cancellation-header {
+    letter-spacing: -0.6px;
+    margin-bottom: 16px;
   }
 
   &__card {

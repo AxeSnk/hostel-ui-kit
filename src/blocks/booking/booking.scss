@@ -16,47 +16,47 @@
   &__header {
     display: flex;
     align-items: baseline;
+  }
 
-    &-numeration {
-      font-family: 'qucksand', sans-serif;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 17px;
-      color: $dark_100-color;
-      margin-right: 6px;
-    }
+  &__numeration {
+    font-family: 'quicksand', 'open-sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark_100-color;
+    margin-right: 6px;
+  }
 
-    &-number {
-      font-family: 'open-sans', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 30px;
-      color: $dark_100-color;
-      margin-right: 5px;
-    }
+  &__number {
+    font-family: 'open-sans', 'montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark_100-color;
+    margin-right: 5px;
+  }
 
-    &-luxury {
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
-      text-transform: uppercase;
-      color: $purple-color;
-    }
+  &__luxury {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple-color;
+  }
 
-    &-cost {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 18px;
-      color: $dark_50-color;
-      margin-left: auto;
-      margin-right: 5px;
-    }
+  &__cost {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark_50-color;
+    margin-left: auto;
+    margin-right: 5px;
+  }
 
-    &-inday {
-      font-size: 12px;
-      line-height: 18px;
-      color: $dark_50-color;
-    }
+  &__inday {
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark_50-color;
   }
 
   &__date-range {
@@ -74,10 +74,10 @@
 
   &__guests {
     margin-top: 19px;
+  }
 
-    &-title {
-      margin-bottom: 4px;
-    }
+  &__guests-title {
+    margin-bottom: 4px;
   }
 
   &__price {
@@ -91,25 +91,25 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
+  }
 
-    &-name {
-      max-width: 214px;
-    }
+  &__price-name {
+    max-width: 214px;
+  }
 
-    &-info {
-      width: 18px;
-      font-weight: bold;
-      text-align: center;
-      border: 1px solid $dark_25-color;
-      border-radius: 10px;
-      line-height: 18px;
-      color: $dark_25-color;
-      margin-left: 5px;
-    }
+  &__price-info {
+    width: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid $dark_25-color;
+    border-radius: 10px;
+    line-height: 18px;
+    color: $dark_25-color;
+    margin-left: 5px;
+  }
 
-    &-cost {
-      margin-left: auto;
-    }
+  &__price-cost {
+    margin-left: auto;
   }
 
   &__total {
@@ -120,20 +120,20 @@
     font-size: 19px;
     color: $dark_100-color;
     margin-top: 20px;
+  }
 
-    &-title {
-      margin-right: 5px;
-    }
+  &__total-title {
+    margin-right: 5px;
+  }
 
-    &-points {
-      flex: 1;
-      border-bottom: 1px dotted $dark_25-color;
-    }
+  &__total-points {
+    flex: 1;
+    border-bottom: 1px dotted $dark_25-color;
+  }
 
-    &-cost {
-      transform: scaleX(0.85);
-      transform-origin: 100% 0;
-    }
+  &__total-cost {
+    transform: scaleX(0.85);
+    transform-origin: 100% 0;
   }
 
   &__button {

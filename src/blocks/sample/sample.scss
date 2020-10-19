@@ -36,62 +36,62 @@
       font-size: 24px;
       color: white;
     }
+  }
 
-    &-container {
-      position: relative;
+  &__image-container {
+    position: relative;
+  }
+
+  &__image-pic {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__image-ellipses {
+    position: absolute;
+    display: flex;
+    right: 17px;
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  &__image-ellipses-item {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    margin-left: 3.5px;
+
+    &_filled {
+      background: #fff;
     }
+  }
 
-    &-pic {
-      border-radius: 4px 4px 0 0;
+  &__image-room {
+    display: none;
+
+    &_show {
+      display: block;
     }
+  }
 
-    &-ellipses {
-      position: absolute;
-      display: flex;
-      right: 17px;
-      bottom: 15px;
-      z-index: 10;
+  &__image-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 44px;
+    height: 100%;
+  }
 
-      &-item {
-        width: 7.5px;
-        height: 7.5px;
-        border: 1px solid #ffffff;
-        border-radius: 50%;
-        box-sizing: border-box;
-        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-        margin-left: 3.5px;
+  &__image-arrow-wrapper {
+    display: none;
+  }
 
-        &_filled {
-          background: #fff;
-        }
-      }
-    }
-
-    &-room {
-      display: none;
-
-      &_show {
-        display: block;
-      }
-    }
-
-    &-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      width: 44px;
-      height: 100%;
-
-      &-wrapper {
-        display: none;
-      }
-
-      &_next {
-        transform: rotate(180deg);
-        right: 0;
-      }
-    }
+  &__image-arrow_next {
+    transform: rotate(180deg);
+    right: 0;
   }
 
   &__info {
@@ -104,63 +104,64 @@
     padding-bottom: 8px;
     margin-bottom: 8px;
     border-bottom: 1px solid $dark_10-color;
+  }
 
-    &-numeration {
-      font-family: 'quicksand', sans-serif;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 17px;
-      color: $dark_100-color;
-      margin-right: 5px;
-    }
+  &__price-numeration {
+    font-family: 'quicksand', 'open-sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark_100-color;
+    margin-right: 5px;
+  }
 
-    &-number {
-      font-family: 'open-sans', sans-serif;
-      font-weight: bold;
-      font-size: 19px;
-      line-height: 24px;
-      color: $dark_100-color;
-      margin-right: 5px;
-    }
+  &__price-number {
+    font-family: 'open-sans', 'montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $dark_100-color;
+    margin-right: 5px;
+  }
 
-    &-luxury {
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
-      text-transform: uppercase;
-      color: $purple-color;
-    }
+  &__price-luxury {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple-color;
+  }
 
-    &-cost {
-      font-weight: bold;
-      font-size: 14px;
-      color: $dark_50-color;
-      margin-left: auto;
-      margin-right: 5px;
-    }
+  &__price-cost {
+    font-weight: bold;
+    font-size: 14px;
+    color: $dark_50-color;
+    margin-left: auto;
+    margin-right: 5px;
+  }
 
-    &-inday {
-      font-size: 12px;
-      line-height: 18px;
-      color: $dark_50-color;
-    }
+  &__price-inday {
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark_50-color;
   }
 
   &__reviews {
     display: flex;
-
-    &-number {
-      font-weight: bold;
-      font-size: 14px;
-      color: $dark_50-color;
-      margin-left: auto;
-      margin-right: 4px;
-    }
-
-    &-text {
-      font-size: 14px;
-      color: $dark_50-color;
-      margin-right: 2px;
-    }
   }
+
+  &__reviews-number {
+    font-weight: bold;
+    font-size: 14px;
+    color: $dark_50-color;
+    margin-left: auto;
+    margin-right: 4px;
+  }
+
+  &__reviews-text {
+    font-size: 14px;
+    color: $dark_50-color;
+    margin-right: 2px;
+  }
+
 }

@@ -4,11 +4,11 @@ include ../field/field
 mixin booking({ header=[], price=[], total='' })
   form.booking
     .booking__header
-      .booking__header-numeration №
-      .booking__header-number= header.number
-      .booking__header-luxury= header.luxury
-      .booking__header-cost= header.cost
-      .booking__header-inday в сутки
+      .booking__numeration №
+      .booking__number= header.number
+      .booking__luxury= header.luxury
+      .booking__cost= header.cost
+      .booking__inday в сутки
     .booking__date-range.js-calendar
       +field({value: '19.08.2019', title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
       +field({value: '23.08.2019', title: 'Выезд', name: 'calendar-end', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})
@@ -18,10 +18,10 @@ mixin booking({ header=[], price=[], total='' })
     .booking__price
       each item in price
         .booking__price-item
-          .booking__price-item-name= item.name
+          .booking__price-name= item.name
           if item.info
-            .booking__price-item-info i
-          .booking__price-item-cost= item.cost
+            .booking__price-info i
+          .booking__price-cost= item.cost
     .booking__total
       .booking__total-title Итого
       .booking__total-points
