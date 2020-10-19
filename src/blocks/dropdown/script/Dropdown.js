@@ -54,8 +54,8 @@ class Dropdown {
     const clearButton = document.createElement('button');
     clearButton.classList.add(
       'dropdown__button',
-      'dropdown__button-clear',
-      'js-dropdown__button-clear'
+      'dropdown__button_type_clear',
+      'js-dropdown__button_type_clear'
     );
     clearButton.setAttribute('type', 'button');
     clearButton.innerHTML = 'Очистить';
@@ -63,8 +63,8 @@ class Dropdown {
     const applyButton = document.createElement('button');
     applyButton.classList.add(
       'dropdown__button',
-      'dropdown__button-apply',
-      'js-dropdown__button-apply'
+      'dropdown__button_type_apply',
+      'js-dropdown__button_type_apply'
     );
     applyButton.setAttribute('type', 'button');
     applyButton.innerHTML = 'Применить';
@@ -73,8 +73,8 @@ class Dropdown {
     btnWrapper.appendChild(applyButton);
     this.menu.appendChild(btnWrapper);
 
-    this.clearButton = this.root.querySelector('.js-dropdown__button-clear');
-    this.applyButton = this.root.querySelector('.js-dropdown__button-apply');
+    this.clearButton = this.root.querySelector('.js-dropdown__button_type_clear');
+    this.applyButton = this.root.querySelector('.js-dropdown__button_type_apply');
 
     this.clearButton.addEventListener('click', this.clear);
   }
@@ -217,8 +217,8 @@ class Dropdown {
 
     if (this.clearButton) {
       this.totalCounter > 0
-        ? this.clearButton.classList.add('dropdown__button-clear_active')
-        : this.clearButton.classList.remove('dropdown__button-clear_active');
+        ? this.clearButton.classList.add('dropdown__button_type_clear_active')
+        : this.clearButton.classList.remove('dropdown__button_type_clear_active');
     }
   }
 

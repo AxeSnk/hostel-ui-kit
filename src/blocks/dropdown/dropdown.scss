@@ -143,12 +143,12 @@
     outline: none;
   }
 
-  &__button-apply {
+  &__button_type_apply {
     color: $purple-color;
     margin-left: auto;
   }
 
-  &__button-clear {
+  &__button_type_clear {
     visibility: hidden;
 
     &_active {
