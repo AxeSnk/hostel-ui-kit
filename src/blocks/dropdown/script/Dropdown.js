@@ -25,15 +25,15 @@ class Dropdown {
         item.querySelector('.js-controls-counter').getAttribute('value')
       )
     }));
-    this.menuOptions.map(i => {
-      this.totalCounter += i.count;
+    this.menuOptions.forEach(element => {
+      this.totalCounter += element.count;
 
-      i.count <= minItems
-        ? i.decrement.classList.add('dropdown__controls-button_disabled')
-        : i.decrement.classList.remove('dropdown__controls-button_disabled');
-      i.count >= maxItems
-        ? i.increment.classList.add('dropdown__controls-button_disabled')
-        : i.increment.classList.remove('dropdown__controls-button_disabled');
+      element.count <= minItems
+        ? element.decrement.classList.add('dropdown__controls-button_disabled')
+        : element.decrement.classList.remove('dropdown__controls-button_disabled');
+        element.count >= maxItems
+        ? element.increment.classList.add('dropdown__controls-button_disabled')
+        : element.increment.classList.remove('dropdown__controls-button_disabled');
     });
 
     this.menu = this.root.querySelector('.js-dropdown__menu');
@@ -116,12 +116,12 @@ class Dropdown {
 
   plus = (e) => {
     const { maxItems } = this.options;
-    const maxCount = this.totalCounter >= maxItems;
-    if (!maxCount) {
-      this.menuOptions.map(i => {
-        if (i.item.contains(e.target)) {
-          i.count += 1;
-          i.controlCounter.setAttribute('value', i.count);
+    const isMaxValue = this.totalCounter >= maxItems;
+    if (!isMaxValue) {
+      this.menuOptions.forEach(element => {
+        if (element.item.contains(e.target)) {
+          element.count += 1;
+          element.controlCounter.value = `${element.count}`;
           if (
             'Младенцы' ==
             e.target.closest('.js-dropdown__menu-options').dataset.id
@@ -136,11 +136,11 @@ class Dropdown {
 
   minus = (e) => {
     const { minItems } = this.options;
-    const minCount = this.totalCounter <= minItems;
-    this.menuOptions.map(i => {
-      if (!minCount && i.item.contains(e.target) && i.count > 0) {
-        i.count -= 1;
-        i.controlCounter.setAttribute('value', i.count);
+    const isMinValue = this.totalCounter <= minItems;
+    this.menuOptions.forEach(element => {
+      if (!isMinValue && element.item.contains(e.target) && element.count > 0) {
+        element.count -= 1;
+        element.controlCounter.value = `${element.count}`;
         if (
           'Младенцы' == e.target.closest('.js-dropdown__menu-options').dataset.id
         ) {
@@ -196,19 +196,19 @@ class Dropdown {
     }
 
     if (type == 'rooms') {
-      this.menuOptions.map(i => {
-        i.count > 0 && (totalText = `${totalText}${i.count} ${i.id}, `);
+      this.menuOptions.forEach(element => {
+        element.count > 0 && (totalText = `${totalText}${element.count} ${element.id}, `);
         totalText = this.numOfLetters(totalText);
       });
     }
 
-    this.menuOptions.map(i => {
-      i.count <= minItems
-        ? i.decrement.classList.add('dropdown__controls-button_disabled')
-        : i.decrement.classList.remove('dropdown__controls-button_disabled');
-      i.count >= maxItems
-        ? i.increment.classList.add('dropdown__controls-button_disabled')
-        : i.increment.classList.remove('dropdown__controls-button_disabled');
+    this.menuOptions.forEach(element => {
+      element.count <= minItems
+        ? element.decrement.classList.add('dropdown__controls-button_disabled')
+        : element.decrement.classList.remove('dropdown__controls-button_disabled');
+        element.count >= maxItems
+        ? element.increment.classList.add('dropdown__controls-button_disabled')
+        : element.increment.classList.remove('dropdown__controls-button_disabled');
     });
 
     this.totalCounter > 0
@@ -231,9 +231,9 @@ class Dropdown {
 
   clear = () => {
     const { minItems } = this.options;
-    this.menuOptions.map(i => {
-      i.count = minItems;
-      i.controlCounter.setAttribute('value', i.count);
+    this.menuOptions.forEach(element => {
+      element.count = minItems;
+      element.controlCounter.value = `${element.count}`;
     });
     this.totalCounter = 0;
     this.babyesCounter = 0;
