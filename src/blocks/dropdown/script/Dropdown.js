@@ -157,9 +157,9 @@ class Dropdown {
     const isFourItems = this.totalCounter > 1 && this.totalCounter <= 4;
 
     let text;
-    isOneItems ? (text = items[1]) : null;
-    isFourItems ? (text = items[2]) : null;
-    this.totalCounter > 4 ? (text = items[0]) : null;
+    isOneItems && (text = items[1]);
+    isFourItems && (text = items[2]);
+    this.totalCounter > 4 && (text = items[0]);
 
     return text;
   }
@@ -171,16 +171,16 @@ class Dropdown {
     const isFourBabyes = this.babyesCounter > 1 && this.babyesCounter <= 4;
 
     let textBaby = '';
-    isOneBabyes ? (textBaby = ', ' + this.babyesCounter + ' ' + itemsBaby[1]) : '';
-    isFourBabyes ? (textBaby = ', ' + this.babyesCounter + ' ' + itemsBaby[2]) : '';
-    this.babyesCounter > 4 ? (textBaby = ', ' + this.babyesCounter + ' ' + itemsBaby[0]) : '';
+    isOneBabyes && (textBaby = `, ${this.babyesCounter} ${itemsBaby[1]}`);
+    isFourBabyes && (textBaby = `, ${this.babyesCounter} ${itemsBaby[2]}`);
+    this.babyesCounter > 4 && (textBaby = `, ${this.babyesCounter} ${itemsBaby[0]}`);
 
     return textBaby;
   }
 
   numOfLetters(text) {
     if (text.length > 19) {
-      text = text.slice(0, 20) + '...';
+      text = `${text.slice(0, 20)}...`;
     }
     return text;
   }
@@ -192,12 +192,12 @@ class Dropdown {
     if (type == 'guests') {
       const text = this.plural();
       const textBaby = this.pluralBabyes();
-      totalText = this.totalCounter + ' ' + text + textBaby;
+      totalText = `${this.totalCounter} ${text}${textBaby}`;
     }
 
     if (type == 'rooms') {
       this.menuOptions.map(i => {
-        i.count > 0 ? (totalText += i.count + ' ' + i.id + ', ') : null;
+        i.count > 0 && (totalText = `${totalText}${i.count} ${i.id}, `);
         totalText = this.numOfLetters(totalText);
       });
     }
