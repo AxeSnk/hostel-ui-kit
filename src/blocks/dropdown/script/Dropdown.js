@@ -80,12 +80,12 @@ class Dropdown {
   }
   
   addListeners() {
-    for (var i = 0, len = this.incrementList.length; i < len; i++) {
-      this.incrementList[i].addEventListener('click', this.plus);
-    }
-    for (var i = 0, len = this.decrementList.length; i < len; i++) {
-      this.decrementList[i].addEventListener('click', this.minus);
-    }
+    this.incrementList.forEach((item) => {
+      item.addEventListener('click', this.plus);
+    });
+    this.decrementList.forEach((item) => {
+      item.addEventListener('click', this.minus);
+    });
 
     document.addEventListener('click', this.clickRoot);
   }
