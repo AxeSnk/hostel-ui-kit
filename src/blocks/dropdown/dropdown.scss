@@ -1,16 +1,15 @@
 @import '../../colors-and-type/colors-and-type.scss';
 
 .dropdown {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
+  
+  display: flex;
+  align-items: center;
+  position: relative;
 
-    &::placeholder {
-      color: $dark_25-color;
-      font-size: 14px;
-      line-height: 18px;
-    }
+  &::placeholder {
+    color: $dark_25-color;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   &__selection {
@@ -24,8 +23,13 @@
     width: 100%;
     height: auto;
     line-height: 18px;
-    padding: 12px 15px;
+    padding: 12px 88px 12px 15px;
     outline: none;
+    text-overflow: ellipsis;
+
+    &::selection {
+      background-color: none;
+    }
 
     &::after {
       display: none;
@@ -41,6 +45,7 @@
       border: 1px solid $dark_50-color;
       border-radius: 4px 4px 0 0;
     }
+    
   }
 
   &__icon {
@@ -77,6 +82,11 @@
     font-weight: 800;
     color: $dark_100-color;
     text-transform: uppercase;
+    
+    &::selection {
+      background-color: none;
+    }
+
   }
 
   &__controls {
@@ -103,6 +113,11 @@
     border: none;
     text-align: center;
     outline: none;
+
+    &::selection {
+      background-color: none;
+    }
+
   }
 
   &__menu_active {
@@ -142,13 +157,14 @@
     }
 
     &_type_clear {
-      visibility: hidden;
-  
-      &_active {
-        color: $dark_50-color;
-        visibility: visible;
-      }
+      visibility: visible;
+      color: $dark_50-color;
     }
+
+    &_hidden {
+      visibility: hidden;
+    }
+
   }
 
   &__button,

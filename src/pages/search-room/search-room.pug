@@ -20,7 +20,34 @@ block content
           +field({value:'19 авг - 23 авг', title: 'Даты пребывания в отеле', name: 'calendar-range', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'range'}, button: {dropdown: true}})
         .search-room__dropdown-quests
           h3.search-room__dropdown-quests-title Гости
-          +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 2}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 1}]})
+          +dropdown({
+            placeholder: 'Сколько гостей', 
+            category: 'guests', 
+            buttons: true, 
+            plurals: [
+              'гость',
+              'гостя',
+              'гостей'
+            ],
+            list:[
+              {
+                title: 'Взрослые', 
+                count: 2
+              }, {
+                title: 'Дети', 
+                count: 1
+              }, {
+                title: 'Младенцы', 
+                count: 1, 
+                unique: true,
+                uniquePlurals: [
+                  'младенец',
+                  'младенца',
+                  'младенцев'
+                ]
+              }
+            ]
+          })
         .search-room__slider
           +slider({title: 'Диапазон цены', footnote: 'Стоимость за сутки пребывания в номере'})
         .search-room__checkbox-buttons
@@ -34,7 +61,40 @@ block content
             +rich-checkbox({label: 'Помощник для инвалидов', name: 'assistant-for-invalid', details: 'На 1 этаже вас встретит специалист и проводит до номера.', checked: false})
         .search-room__dropdown-comfort
           h3.search-room__dropdown-comfort-title Удобства номера
-          +dropdown({category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+          +dropdown({
+            category: 'rooms', 
+            placeholder: 'Удобства',
+            list:[
+              {
+                title: 'спальни', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'спальня',
+                  'спальни',
+                  'спален'
+                ]
+              }, {
+                title: 'кровати', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'кровать',
+                  'кровати',
+                  'кроватей'
+                ]
+              }, {
+                title: 'ванные комнаты', 
+                count: 1,
+                unique: true,
+                uniquePlurals: [
+                  'ванная комната',
+                  'ванные комнаты',
+                  'ванных комнат'
+                ]
+              }
+            ]
+          })
         .search-room__checkbox-list
           +checkbox-list({ title: 'дополнительные удобства', list: [ { label: 'Завтрак', name: 'breakfast', checked: false }, { label: 'Письменный стол', name: 'desk', checked: true }, { label: 'Стул для кормления', name: 'feeding-chair', checked: true }, { label: 'Кроватка', name: 'cot', checked: true }, { label: 'Телевизор', name: 'TV', checked: false }, { label: 'Шампунь', name: 'shampoo', checked: false }, { label: 'Телевизор', name: 'TV-2', checked: false }, { label: 'Шампунь', name: 'shampoo-2', checked: false }, ] })
 

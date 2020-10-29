@@ -16,17 +16,19 @@ class Sectors {
     let startAngle = 0;
     let endAngle = 0;
 
-    sectors.forEach(item => {
-      const { title, color, value, gradient } = item;
+    sectors.forEach((item) => {
+      const {
+        title, color, value, gradient,
+      } = item;
       let stroke;
-      let angle = value !== 0 ? (value * 360) / total : 0;
+      const angle = value !== 0 ? (value * 360) / total : 0;
       endAngle += angle;
 
       if (color) {
         stroke = color;
       } else {
         stroke = `url(#${gradient.name})`;
-        let gradientSvg = createGradient(gradient);
+        const gradientSvg = createGradient(gradient);
         this.root.appendChild(gradientSvg);
       }
 
@@ -41,7 +43,7 @@ class Sectors {
         'data-title': title,
         'data-name': gradient.name,
         'data-value': value,
-        'stroke-width': value !== 0 ? '1' : '0'
+        'stroke-width': value !== 0 ? '1' : '0',
       });
 
       startAngle += angle;

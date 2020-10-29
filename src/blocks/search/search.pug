@@ -8,8 +8,36 @@ mixin search({ title='' })
     .search__range.js-calendar
       +field({title: 'Прибытие', name: 'calendar-start', placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'start'}, button: {dropdown: true}})
       +field({title: 'Выезд', name: 'calendar-end',placeholder: 'ДД.ММ.ГГГГ', calendar: {on: true, input: 'end'}, button: {dropdown: true}})
-    .search__dropdown.js-dropdown
+    .search__dropdown
       h3.search__dropdown-title Гости
-      +dropdown({category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+      +dropdown({
+        placeholder: 'Сколько гостей', 
+        category: 'guests', 
+        buttons: true, 
+        plurals: [
+          'гость',
+          'гостя',
+          'гостей'
+        ],
+        list:[
+          {
+            title: 'Взрослые', 
+            count: 2
+          }, {
+            title: 'Дети', 
+            count: 1
+          }, {
+            title: 'Младенцы', 
+            count: 1, 
+            unique: true,
+            uniquePlurals: [
+              'младенец',
+              'младенца',
+              'младенцев'
+            ]
+          }
+        ]
+      })
+
     .search__button
       +button({title: 'Подобрать номер', arrow: true}).button_size_long

@@ -23,7 +23,11 @@ class Burger {
     this.menu.classList.add('header__menu_active');
     this.menuNav.classList.add('menu__nav_active');
     this.burgerIcon.classList.add('header__burger_active');
-    this.login ? this.login.classList.add('header__login-name_active') : this.buttons.classList.add('header__buttons_active');
+    if (this.login) {
+      this.login.classList.add('header__login-name_active');
+    } else {
+      this.buttons.classList.add('header__buttons_active');
+    }
   }
 
   hide = (e) => {
@@ -34,7 +38,11 @@ class Burger {
       this.menu.classList.remove('header__menu_active');
       this.menuNav.classList.remove('menu__nav_active');
       this.burgerIcon.classList.remove('header__burger_active');
-      this.login ? this.login.classList.remove('header__login-name_active') : this.buttons.classList.remove('header__buttons_active');
+      if (this.login) {
+        this.login.classList.remove('header__login-name_active');
+      } else {
+        this.buttons.classList.remove('header__buttons_active');
+      }
     }
   }
 }

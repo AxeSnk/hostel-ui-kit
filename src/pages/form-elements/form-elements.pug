@@ -36,7 +36,35 @@ block content
           .form-elements__dropdown-guests-header
             h3.form-elements__dropdown-guests-title dropdown
             .form-elements__dropdown-guests-note default
-          +dropdown({ category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+          +dropdown({ 
+            category: 'guests',
+            placeholder: 'Сколько гостей', 
+            category: 'guests', 
+            buttons: true, 
+            plurals: [
+              'гость',
+              'гостя',
+              'гостей',
+            ], 
+            list:[
+              {
+                title: 'Взрослые', 
+                count: 0
+              }, {
+                title: 'Дети',
+                count: 0
+              }, {
+                title: 'Младенцы', 
+                count: 0, 
+                unique: true,
+                uniquePlurals: [
+                  'младенец',
+                  'младенца',
+                  'младенцев'
+                ]
+              }
+            ]
+          })
         .form-elements__masked-field
           +field({title: 'masked text field', note: 'default', placeholder: 'ДД.ММ.ГГГГ', masked: true})
         .form-elements__range-date
@@ -49,12 +77,79 @@ block content
           .form-elements__dropdown-rooms-header
             h3.form-elements__dropdown-rooms-title dropdown
             .form-elements__dropdown-rooms-note default
-          +dropdown({ category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+          +dropdown({ 
+            category: 'rooms', 
+            placeholder: 'Удобства',
+            list:[
+              {
+                title: 'спальни', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'спальня',
+                  'спальни',
+                  'спален'
+                ]
+              }, {
+                title: 'кровати', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'кровать',
+                  'кровати',
+                  'кроватей'
+                ]
+              }, {
+                title: 'ванные комнаты', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'ванная комната',
+                  'ванные комнаты',
+                  'ванных комнат'
+                ]
+              }
+            ]
+          })
         .form-elements__dropdown-rooms-open
           .form-elements__dropdown-rooms-header
             h3.form-elements__dropdown-rooms-title dropdown
             .form-elements__dropdown-rooms-note expanded
-          +dropdown({active: true, category: 'rooms', list:[{title: 'спальни', count: 2}, {title: 'кровати', count: 2}, {title: 'ванные комнаты', count: 0}]})
+          +dropdown({
+            active: true, 
+            category: 'rooms', 
+            placeholder: 'Удобства',
+            list:[
+              {
+                title: 'спальни', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'спальня',
+                  'спальни',
+                  'спален'
+                ]
+              }, {
+                title: 'кровати', 
+                count: 2,
+                unique: true,
+                uniquePlurals: [
+                  'кровать',
+                  'кровати',
+                  'кроватей'
+                ]
+              }, {
+                title: 'ванные комнаты', 
+                count: 1,
+                unique: true,
+                uniquePlurals: [
+                  'ванная комната',
+                  'ванные комнаты',
+                  'ванных комнат'
+                ]
+              }
+            ]
+          })
         .form-elements__checkbox-list
           +checkbox-list({ title: 'Expandable checkbox list', list: [ { label: 'Завтрак' } ] })
         .form-elements__checkbox-list-open
@@ -83,7 +178,35 @@ block content
             +rate-button()
         .form-elements__dropdown-guests-open
           h3.form-elements__dropdown-guests-open-header Dropdown
-          +dropdown({active: true, category: 'guests', list:[{title: 'Взрослые', count: 0}, {title: 'Дети', count: 0}, {title: 'Младенцы', count: 0}]})
+          +dropdown({
+            active: true, 
+            placeholder: 'Сколько гостей', 
+            category: 'guests', 
+            buttons: true, 
+            plurals: [
+              'гость',
+              'гостя',
+              'гостей',
+            ],
+            list:[
+              {
+                title: 'Взрослые', 
+                count: 0
+              }, {
+                title: 'Дети', 
+                count: 0
+              }, {
+                title: 'Младенцы', 
+                count: 0, 
+                unique: true,
+                uniquePlurals: [
+                  'младенец',
+                  'младенца',
+                  'младенцев'
+                ]
+              }
+            ]
+          })
         .form-elements__rich-checkbox
           h3.form-elements__rich-checkbox-header Rich checkbox buttons
           .form-elements__rich-checkbox-wrapper
@@ -116,7 +239,35 @@ block content
           +pagination({footnote: '1 – 12 из 100+ вариантов аренды'})
         .form-elements__dropdown-guests-preset
           h3.form-elements__dropdown-guests-preset-title Dropdown
-          +dropdown({active: true, category: 'guests', list:[{title: 'Взрослые', count: 2}, {title: 'Дети', count: 1}, {title: 'Младенцы', count: 0}]})
+          +dropdown({
+            active: true, 
+            category: 'guests', 
+            placeholder: 'Сколько гостей',
+            buttons: true, 
+            plurals: [
+              'гость',
+              'гостя',
+              'гостей',
+            ],
+            list:[
+              {
+                title: 'Взрослые', 
+                count: 2
+              }, {
+                title: 'Дети', 
+                count: 1
+              }, {
+                title: 'Младенцы', 
+                count: 0,
+                unique: true,
+                uniquePlurals: [
+                  'младенец',
+                  'младенца',
+                  'младенцев'
+                ]
+              }
+            ]
+          })
         .form-elements__bullet-list
           h3.form-elements__bullet-list-header Bullet list
           .form-elements__bullet-list-wrapper

@@ -1,5 +1,3 @@
 import PhotoSlider from './script/PhotoSlider';
 
-document
-  .querySelectorAll('.js-sample__image')
-  .forEach(item => new PhotoSlider(item));
+document.querySelectorAll('.js-sample__image').forEach((root) => new PhotoSlider(root));

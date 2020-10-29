@@ -1,5 +1,3 @@
-import Burger from './script/Burger'
+import Burger from './script/Burger';
 
-$(document).ready(() => {
-  $('.js-header__nav').each((i, root) => new Burger(root));
-})
+document.querySelectorAll('.js-header__nav').forEach((root) => new Burger(root));

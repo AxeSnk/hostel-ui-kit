@@ -3,7 +3,7 @@ const config = {
   total: 1040,
   labels: {
     show: true,
-    unit: 'голосов'
+    unit: 'голосов',
   },
   sectors: [
     {
@@ -13,9 +13,9 @@ const config = {
         name: 'perfectly',
         scenenodes: [
           { offset: 0, color: '#FFE39C' },
-          { offset: 100, color: '#FFBA9C' }
-        ]
-      }
+          { offset: 100, color: '#FFBA9C' },
+        ],
+      },
     },
     {
       title: 'Хорошо',
@@ -24,9 +24,9 @@ const config = {
         name: 'good',
         scenenodes: [
           { offset: 0, color: '#6FCF97' },
-          { offset: 100, color: '#66D2EA' }
-        ]
-      }
+          { offset: 100, color: '#66D2EA' },
+        ],
+      },
     },
     {
       title: 'Удовлетворительно',
@@ -35,9 +35,9 @@ const config = {
         name: 'satisfactorily',
         scenenodes: [
           { offset: 0, color: '#BC9CFF' },
-          { offset: 100, color: '#8BA4F9' }
-        ]
-      }
+          { offset: 100, color: '#8BA4F9' },
+        ],
+      },
     },
     {
       title: 'Разочарован',
@@ -46,11 +46,11 @@ const config = {
         name: 'disappointed',
         scenenodes: [
           { offset: 0, color: '#919191' },
-          { offset: 100, color: '#3D4975' }
-        ]
-      }
-    }
-  ]
+          { offset: 100, color: '#3D4975' },
+        ],
+      },
+    },
+  ],
 };
 
 export default config;

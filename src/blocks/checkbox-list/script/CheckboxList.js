@@ -6,18 +6,18 @@ class CheckboxList {
   }
 
   init() {
-    this.$checkboxList = $(this.root).find('.js-checkbox-list__header');
-    this.$menu = $(this.root).find('.js-checkbox-list__menu');
-    this.$icon = $(this.root).find('.js-checkbox-list__icon');
+    this.checkboxList = this.root.querySelector('.js-checkbox-list__header');
+    this.menu = this.root.querySelector('.js-checkbox-list__menu');
+    this.icon = this.root.querySelector('.js-checkbox-list__icon');
   }
 
   addListener() {
-    this.$checkboxList.on('click', this.onClick);
+    this.checkboxList.addEventListener('click', this.onClick);
   }
 
   onClick = () => {
-    this.$menu.toggleClass('checkbox-list__menu_isOpened');
-    this.$icon.toggleClass('checkbox-list__expand-icon_active');
+    this.menu.classList.toggle('checkbox-list__menu_isOpened');
+    this.icon.classList.toggle('checkbox-list__expand-icon_active');
   }
 }
 

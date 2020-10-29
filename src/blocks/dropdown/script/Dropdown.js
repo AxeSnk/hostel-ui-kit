@@ -1,243 +1,191 @@
-import defaultOptions from './defaultOptions';
-
 class Dropdown {
-  constructor(root, options) {
-    this.options = { ...defaultOptions, ...options };
+  constructor(root) {
     this.root = root;
+    this.initState();
     this.init();
     this.addListeners();
+    this.update();
+    this.setSelection();
+  }
+
+  initState() {
+    this.state = {
+      totalCount: '',
+      plurals: this.root.dataset.plurals,
+      uniqueCounts: [],
+      isMenuActive: this.root.dataset.active,
+      value: '',
+    };
   }
 
   init() {
-    const { maxItems, minItems, buttons } = this.options;
-    this.totalCounter = 0;
-    this.babyesCounter = 0;
-    this.menuOpen = false;
     this.selection = this.root.querySelector('.js-dropdown__selection');
     this.menuOptionsList = this.root.querySelectorAll('.js-dropdown__menu-options');
-    this.menuOptions = Array.from(this.menuOptionsList).map(item => ({
-      item,
-      increment: item.querySelector('.js-plus'),
-      decrement: item.querySelector('.js-minus'),
+    this.menuOptions = Array.from(this.menuOptionsList).map((item) => ({
+      minus: item.querySelector('.js-dropdown__controls-minus'),
+      plus: item.querySelector('.js-dropdown__controls-plus'),
       controlCounter: item.querySelector('.js-controls-counter'),
       id: item.dataset.id,
       count: Number(
-        item.querySelector('.js-controls-counter').getAttribute('value')
-      )
+        item.querySelector('.js-controls-counter').dataset.value,
+      ),
+      plurals: item.dataset.uniquePlurals,
     }));
-    this.menuOptions.forEach(element => {
-      this.totalCounter += element.count;
 
-      element.count <= minItems
-        ? element.decrement.classList.add('dropdown__controls-button_disabled')
-        : element.decrement.classList.remove('dropdown__controls-button_disabled');
-        element.count >= maxItems
-        ? element.increment.classList.add('dropdown__controls-button_disabled')
-        : element.increment.classList.remove('dropdown__controls-button_disabled');
+    this.menuOptions.forEach((item) => {
+      this.state.uniqueCounts.push(item.count);
     });
 
     this.menu = this.root.querySelector('.js-dropdown__menu');
     this.icon = this.root.querySelector('.js-dropdown__icon');
 
-    buttons ? this.addButtons() : null;
-
-    this.incrementList = this.root.querySelectorAll('.js-plus');
-    this.decrementList = this.root.querySelectorAll('.js-minus');
-
-    this.upDate();
-  }
-
-  addButtons() {
-    const btnWrapper = document.createElement('div');
-    btnWrapper.classList.add('dropdown__buttons');
-
-    const clearButton = document.createElement('button');
-    clearButton.classList.add(
-      'dropdown__button',
-      'dropdown__button_type_clear',
-      'js-dropdown__button_type_clear'
-    );
-    clearButton.setAttribute('type', 'button');
-    clearButton.innerHTML = 'Очистить';
-
-    const applyButton = document.createElement('button');
-    applyButton.classList.add(
-      'dropdown__button',
-      'dropdown__button_type_apply',
-      'js-dropdown__button_type_apply'
-    );
-    applyButton.setAttribute('type', 'button');
-    applyButton.innerHTML = 'Применить';
-
-    btnWrapper.appendChild(clearButton);
-    btnWrapper.appendChild(applyButton);
-    this.menu.appendChild(btnWrapper);
-
     this.clearButton = this.root.querySelector('.js-dropdown__button_type_clear');
     this.applyButton = this.root.querySelector('.js-dropdown__button_type_apply');
 
-    this.clearButton.addEventListener('click', this.clear);
+    this.minusBtnList = this.root.querySelectorAll('.js-dropdown__controls-minus');
+    this.plusBtnList = this.root.querySelectorAll('.js-dropdown__controls-plus');
   }
-  
+
   addListeners() {
-    this.incrementList.forEach((item) => {
-      item.addEventListener('click', this.plus);
-    });
-    this.decrementList.forEach((item) => {
-      item.addEventListener('click', this.minus);
+    this.menuOptions.forEach((item, i) => {
+      const handleMinusClick = () => {
+        const isGreaterZero = this.state.uniqueCounts[i] > 0;
+
+        this.state.uniqueCounts[i] -= isGreaterZero && 1;
+        this.update();
+      };
+      const handlePlusClick = () => {
+        this.state.uniqueCounts[i] += 1;
+        this.update();
+      };
+
+      item.minus.addEventListener('click', handleMinusClick);
+      item.plus.addEventListener('click', handlePlusClick);
     });
 
-    document.addEventListener('click', this.clickRoot);
+    document.addEventListener('click', this.handleDocumentClick);
   }
 
-  clickRoot = (e) => {
+  handleDocumentClick = (e) => {
     const isDropdown = this.root.contains(e.target);
     const isInput = e.target === this.selection;
     const isApplyButton = e.target === this.applyButton;
-    const isIconClose = (e.target === this.icon) && (this.menuOpen === false);
-    const isIconOpen = (e.target === this.icon) && (this.menuOpen === true);
+    const isClearButton = e.target === this.clearButton;
+    const isIconClose = (e.target === this.icon) && (this.state.isMenuActive === false);
+    const isIconOpen = (e.target === this.icon) && (this.state.isMenuActive === true);
 
-    if(isInput || isIconClose) {
+    const isShowDropdown = isInput || isIconClose;
+    const isHideDropdown = !isDropdown || isApplyButton || isIconOpen;
+
+    if (isShowDropdown) {
       this.showMenu();
-    };
+      this.update();
+    }
 
-    if(!isDropdown || isApplyButton || isIconOpen) {
+    if (isHideDropdown) {
       this.hide();
-      this.upDate();
-    };
-  }
+      this.update();
+      this.setSelection();
+    }
 
-  showMenu() {
-    this.selection.classList.add('dropdown__selection_active');
-    this.menu.classList.add('dropdown__menu_active');
-    this.icon.classList.add('dropdown__icon_active');
-    this.menuOpen = true;
-  }
-
-  plus = (e) => {
-    const { maxItems } = this.options;
-    const isMaxValue = this.totalCounter >= maxItems;
-    if (!isMaxValue) {
-      this.menuOptions.forEach(element => {
-        if (element.item.contains(e.target)) {
-          element.count += 1;
-          element.controlCounter.value = `${element.count}`;
-          if (
-            'Младенцы' ==
-            e.target.closest('.js-dropdown__menu-options').dataset.id
-          ) {
-            this.babyesCounter += 1;
-          }
-        }
-      });
-      this.totalCounter += 1;
+    if (isClearButton) {
+      this.clearCounts();
+      this.update();
     }
   }
 
-  minus = (e) => {
-    const { minItems } = this.options;
-    const isMinValue = this.totalCounter <= minItems;
-    this.menuOptions.forEach(element => {
-      if (!isMinValue && element.item.contains(e.target) && element.count > 0) {
-        element.count -= 1;
-        element.controlCounter.value = `${element.count}`;
-        if (
-          'Младенцы' == e.target.closest('.js-dropdown__menu-options').dataset.id
-        ) {
-          this.babyesCounter -= 1;
-        }
-        this.totalCounter -= 1;
+  showMenu() {
+    this.state.isMenuActive = true;
+  }
+
+  hide() {
+    this.state.isMenuActive = false;
+  }
+
+  update() {
+    if (this.state.isMenuActive) {
+      this.selection.classList.add('dropdown__selection_active');
+      this.menu.classList.add('dropdown__menu_active');
+      this.icon.classList.add('dropdown__icon_active');
+    } else {
+      this.selection.classList.remove('dropdown__selection_active');
+      this.menu.classList.remove('dropdown__menu_active');
+      this.icon.classList.remove('dropdown__icon_active');
+    }
+
+    this.state.totalCount = this.state.uniqueCounts.reduce(
+      (sum, currentValue) => sum + currentValue, 0,
+    );
+
+    this.menuOptions.forEach((item, i) => {
+      item.controlCounter.value = this.state.uniqueCounts[i].toString();
+
+      if (this.state.uniqueCounts[i] === 0) {
+        item.minus.classList.add('dropdown__controls-button_disabled');
+      } else {
+        item.minus.classList.remove('dropdown__controls-button_disabled');
+      }
+
+      if (this.state.totalCount === 0 && this.clearButton) {
+        this.clearButton.classList.add('dropdown__button_hidden');
+      } else if (this.clearButton) {
+        this.clearButton.classList.remove('dropdown__button_hidden');
       }
     });
   }
 
-  plural() {
-    const { items } = this.options;
-    const isOneItems = this.totalCounter > 0 && this.totalCounter == 1;
-    const isFourItems = this.totalCounter > 1 && this.totalCounter <= 4;
+  setSelection() {
+    let otherCount = 0;
+    let uniqueCount = '';
+    let uniqueItemText = '';
+    const uniqueArr = [];
+    const otherPlurals = JSON.parse(this.state.plurals);
 
-    let text;
-    isOneItems && (text = items[1]);
-    isFourItems && (text = items[2]);
-    this.totalCounter > 4 && (text = items[0]);
+    this.menuOptions.forEach((item, i) => {
+      if (item.id === 'null' && this.state.uniqueCounts[i] >= 1) {
+        otherCount += this.state.uniqueCounts[i];
+      }
+      if (item.id === 'unique' && this.state.uniqueCounts[i] >= 1) {
+        uniqueCount = `${this.state.uniqueCounts[i]}`;
 
-    return text;
-  }
+        const uniquePlurals = JSON.parse(item.plurals);
 
-  pluralBabyes() {
-    const { itemsBaby } = this.options;
-
-    const isOneBabyes = this.babyesCounter > 0 && this.babyesCounter == 1;
-    const isFourBabyes = this.babyesCounter > 1 && this.babyesCounter <= 4;
-
-    let textBaby = '';
-    isOneBabyes && (textBaby = `, ${this.babyesCounter} ${itemsBaby[1]}`);
-    isFourBabyes && (textBaby = `, ${this.babyesCounter} ${itemsBaby[2]}`);
-    this.babyesCounter > 4 && (textBaby = `, ${this.babyesCounter} ${itemsBaby[0]}`);
-
-    return textBaby;
-  }
-
-  numOfLetters(text) {
-    if (text.length > 19) {
-      text = `${text.slice(0, 20)}...`;
-    }
-    return text;
-  }
-
-  upDate() {
-    const { defaultText, maxItems, minItems, type } = this.options;
-    let totalText = '';
-
-    if (type == 'guests') {
-      const text = this.plural();
-      const textBaby = this.pluralBabyes();
-      totalText = `${this.totalCounter} ${text}${textBaby}`;
-    }
-
-    if (type == 'rooms') {
-      this.menuOptions.forEach(element => {
-        element.count > 0 && (totalText = `${totalText}${element.count} ${element.id}, `);
-        totalText = this.numOfLetters(totalText);
-      });
-    }
-
-    this.menuOptions.forEach(element => {
-      element.count <= minItems
-        ? element.decrement.classList.add('dropdown__controls-button_disabled')
-        : element.decrement.classList.remove('dropdown__controls-button_disabled');
-        element.count >= maxItems
-        ? element.increment.classList.add('dropdown__controls-button_disabled')
-        : element.increment.classList.remove('dropdown__controls-button_disabled');
+        uniqueItemText = `${uniqueCount} ${this.formatCount(uniqueCount, uniquePlurals)}`;
+        uniqueArr.push(uniqueItemText);
+      }
     });
 
-    this.totalCounter > 0
-      ? this.selection.setAttribute('value', `${totalText}`)
-      : this.selection.setAttribute('value', `${defaultText}`);
+    const otherText = `${otherCount} ${this.formatCount(otherCount, otherPlurals)}`;
+    const uniqueText = uniqueArr.join(', ');
 
-    if (this.clearButton) {
-      this.totalCounter > 0
-        ? this.clearButton.classList.add('dropdown__button_type_clear_active')
-        : this.clearButton.classList.remove('dropdown__button_type_clear_active');
-    }
+    const textValue = () => {
+      if (otherCount && uniqueCount) return `${otherText}, ${uniqueText}`;
+
+      if (uniqueCount) return `${uniqueText}`;
+
+      if (otherCount) return `${otherText}`;
+
+      return '';
+    };
+
+    this.state.value = textValue();
+    this.selection.value = this.state.value;
   }
 
-  hide() {
-    this.menuOpen = false;
-    this.selection.classList.remove('dropdown__selection_active');
-    this.menu.classList.remove('dropdown__menu_active');
-    this.icon.classList.remove('dropdown__icon_active');
+  formatCount = (count, plurals) => {
+    count = Math.abs(count % 100);
+    const num = count % 10;
+
+    if (count > 10 && count < 20) return plurals[2];
+    if (num > 1 && num < 5) return plurals[1];
+    if (num === 1) return plurals[0];
+    return plurals[2];
   }
 
-  clear = () => {
-    const { minItems } = this.options;
-    this.menuOptions.forEach(element => {
-      element.count = minItems;
-      element.controlCounter.value = `${element.count}`;
+  clearCounts() {
+    this.state.uniqueCounts.forEach((item, i) => {
+      this.state.uniqueCounts[i] = 0;
     });
-    this.totalCounter = 0;
-    this.babyesCounter = 0;
-    this.upDate();
   }
 }
 

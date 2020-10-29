@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import 'air-datepicker';
 import options from './options';
 
@@ -17,7 +19,7 @@ class Calendar {
       this.picker = $(this.start)
         .datepicker({
           ...options,
-          onSelect: this.onDateSelect
+          onSelect: this.onDateSelect,
         })
         .data('datepicker');
 
@@ -37,7 +39,7 @@ class Calendar {
 
   onDateSelect = () => {
     let [startDate, endDate] = this.start.value.split(
-      options.multipleDatesSeparator
+      options.multipleDatesSeparator,
     );
     if (startDate === undefined) startDate = '';
     if (endDate === undefined) endDate = '';

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import 'jquery-ui-slider/jquery-ui';
 
 class Slider {
@@ -14,14 +16,12 @@ class Slider {
       max: 15000,
       values: [5000, 10000],
       range: true,
-      slide: function(event, ui) {
-        $val.val(`${ui.values[0]}₽ - ${ui.values[1]}₽`)
+      slide(event, ui) {
+        $val.val(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
       },
     });
     $val.val(`${$element.slider('values', 0)}₽ - ${$element.slider('values', 1)}₽`);
   }
-
 }
 
 export default Slider;
-

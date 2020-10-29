@@ -7,7 +7,7 @@ function createAnimate(name, from, to, begin) {
     to,
     dur: '300ms',
     begin,
-    fill: 'freeze'
+    fill: 'freeze',
   });
 
   return animate;

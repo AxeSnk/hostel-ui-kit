@@ -3,7 +3,12 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["eslint:recommended","airbnb","plugin:fsd/all"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb/base",
+    "plugin:fsd/all"
+  ],
+  "parser": "babel-eslint",
   "plugins": ["fsd"],
   "rules": {
     "fsd/hof-name-prefix": "error",
@@ -11,10 +16,7 @@
     "fsd/jq-cache-dom-elements": "error",
     "fsd/jq-use-js-prefix-in-selector": "error",
     "fsd/no-function-declaration-in-event-listener": "error",
-    "fsd/split-conditionals": "error"
-  },
-  "parserOptions": {
-    "ecmaVersion": 2015,
-    "sourceType": "module"
+    "fsd/split-conditionals": "error",
+    "no-param-reassign": "off"
   }
 }

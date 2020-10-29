@@ -1,17 +1,21 @@
-mixin dropdown({ active = false, category = '', defaultText = '', list = [] })
-  - const menuOpen = active ? 'dropdown__menu_active' : '' ;
+mixin dropdown({ active = false, category = '', placeholder = '', buttons = false, plurals=[], list = [ {} ] })
   
-  .dropdown.js-dropdown
-    .dropdown__wrapper(class=`js-dropdown-${category}`)
-      input.dropdown__selection.js-dropdown__selection(name=category, value=defaultText)
-      i.material-icons.dropdown__icon.js-dropdown__icon expand_more
-      .dropdown__menu.js-dropdown__menu(class= menuOpen)
-        each item in list
-          .dropdown__menu-options.js-dropdown__menu-options(
-            data-id=`${item.title}`,
-          )
-            p.dropdown__item= item.title
-            .dropdown__controls.js-dropdown__controls
-              .dropdown__controls-increment.dropdown__controls-button.js-minus -
-              input.dropdown__controls-counter.js-controls-counter(readonly="readonly" type="text" value=`${item.count}`) 
-              .dropdown__controls-decrement.dropdown__controls-button.js-plus +
+  .dropdown.js-dropdown(data-active=active, data-plurals=plurals)
+    input.dropdown__selection.js-dropdown__selection(name=category, placeholder=placeholder, readonly)
+    i.material-icons.dropdown__icon.js-dropdown__icon expand_more
+    .dropdown__menu.js-dropdown__menu
+      each item in list
+        - const { title = '', count = 0,  unique = false, uniquePlurals = [] } = item
+        .dropdown__menu-options.js-dropdown__menu-options(
+          data-id=`${unique ? 'unique' : 'null'}`,
+          data-unique-plurals=uniquePlurals
+        )
+          p.dropdown__item= title
+          .dropdown__controls.js-dropdown__controls
+            .dropdown__controls-minus.dropdown__controls-button.js-dropdown__controls-minus -
+            input.dropdown__controls-counter.js-controls-counter(readonly, type="text", data-value=`${count}`) 
+            .dropdown__controls-plus.dropdown__controls-button.js-dropdown__controls-plus +
+      if buttons
+        .dropdown__buttons
+          button.dropdown__button.dropdown__button_type_clear.js-dropdown__button_type_clear(type="button") Очистить
+          button.dropdown__button.dropdown__button_type_apply.js-dropdown__button_type_apply(type="button") Применить

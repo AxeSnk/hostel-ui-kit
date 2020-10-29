@@ -15,7 +15,6 @@
   border: none;
   border-radius: 22px;
   cursor: pointer;
-  width: -webkit-fill-available;
 
   &_theme_border {
     color: $purple-color;
@@ -44,6 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   &__icon {
