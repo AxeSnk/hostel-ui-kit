@@ -1,0 +1,85 @@
+.slider-image {
+  display: flex;
+  width: 270px;
+  height: 151px;
+  border-radius: 4px 4px 0 0;
+
+  &:hover &__arrow {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: 4px 0 0 0;
+    cursor: pointer;
+  }
+
+  &:hover &__arrow_next {
+    border-radius: 0 0 0 4px;
+  }
+
+
+  &:hover &__arrow-wrapper {
+    display: block;
+    font-size: 24px;
+    color: white;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__pic {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__ellipses {
+    position: absolute;
+    display: flex;
+    right: 17px;
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  &__ellipses-item {
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    margin-left: 3.5px;
+
+    &_filled {
+      background: #fff;
+    }
+  }
+
+  &__room {
+    display: none;
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 44px;
+    height: 100%;
+  }
+
+  &__arrow-wrapper {
+    display: none;
+  }
+
+  &__arrow_next {
+    transform: rotate(180deg);
+    right: 0;
+  }
+
+}

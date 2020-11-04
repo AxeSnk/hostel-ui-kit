@@ -1,25 +1,11 @@
 include ../rate-button/rate-button
+include ../slider-image/slider-image
 
 mixin sample({ list=[] })
   each item in list
     .sample
-      .sample__image.js-sample__image
-        .sample__image-container.js-sample__image-container
-          - for (let i = 0; i < item.img.length; i += 1)
-            a.sample__image-room.js-sample__image-room(href= item.href)
-              img.sample__image-pic(src= `img/room-${item.img[i]}.jpg` alt='room-img')
-          .sample__image-ellipses
-            .js-sample__image-ellipses-item.sample__image-ellipses-item
-            .js-sample__image-ellipses-item.sample__image-ellipses-item
-            .js-sample__image-ellipses-item.sample__image-ellipses-item
-            .js-sample__image-ellipses-item.sample__image-ellipses-item
-        .sample__image-arrow.sample__image-arrow_prev.js-sample__image-arrow_prev
-          .sample__image-arrow-wrapper
-            i.material-icons keyboard_arrow_left
-        .sample__image-arrow.sample__image-arrow_next.js-sample__image-arrow_next
-          .sample__image-arrow-wrapper
-            i.material-icons keyboard_arrow_left
-
+      .sample__image
+        +slider-image(item)
       .sample__info
         .sample__price
           .sample__price-numeration №

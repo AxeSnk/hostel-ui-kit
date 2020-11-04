@@ -1,0 +1,17 @@
+mixin slider-image({ img=[], href='' }) 
+  .slider-image.js-slider-image
+    .slider-image__container.js-slider-image__container
+      - for (let i = 0; i < img.length; i += 1)
+        a.slider-image__room.js-slider-image__room(href= href)
+          img.slider-image__pic(src= `img/room-${img[i]}.jpg` alt='room-img')
+      .slider-image__ellipses
+        .js-slider-image__ellipses-item.slider-image__ellipses-item
+        .js-slider-image__ellipses-item.slider-image__ellipses-item
+        .js-slider-image__ellipses-item.slider-image__ellipses-item
+        .js-slider-image__ellipses-item.slider-image__ellipses-item
+    .slider-image__arrow.slider-image__arrow_prev.js-slider-image__arrow_prev
+      .slider-image__arrow-wrapper
+        i.material-icons keyboard_arrow_left
+    .slider-image__arrow.slider-image__arrow_next.js-slider-image__arrow_next
+      .slider-image__arrow-wrapper
+        i.material-icons keyboard_arrow_left
