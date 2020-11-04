@@ -61,9 +61,7 @@ class Donut {
   }
 
   addListenerLegends() {
-    const list = [
-      ...this.legend.getList().querySelectorAll('.diagram__legend-title'),
-    ];
+    const list = this.legend.getList().querySelectorAll('.diagram__legend-title');
     list.forEach((item) => {
       item.addEventListener('mouseover', this.handlePathOver);
       item.addEventListener('mouseout', this.handlePathOut);
@@ -71,7 +69,7 @@ class Donut {
   }
 
   handlePathOver = (e) => {
-    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
+    const sector = this.donut.querySelectorAll('.diagram__sector');
     sector.forEach((item) => {
       const isTarget = item.dataset.name === e.target.dataset.name;
       if (isTarget) {
@@ -81,7 +79,7 @@ class Donut {
   }
 
   handlePathOut = (e) => {
-    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
+    const sector = this.donut.querySelectorAll('.diagram__sector');
     sector.forEach((item) => {
       const isTarget = item.dataset.name === e.target.dataset.name;
       if (isTarget) {
@@ -91,7 +89,7 @@ class Donut {
   }
 
   addListenerPath() {
-    const sector = [...this.donut.querySelectorAll('.diagram__sector')];
+    const sector = this.donut.querySelectorAll('.diagram__sector');
     sector.forEach((item) => {
       item.addEventListener('mouseover', this.changeLabel);
       item.addEventListener('mouseout', this.reDrawLabelValue);
