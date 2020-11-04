@@ -73,7 +73,7 @@ class Donut {
   handlePathOver = (e) => {
     const sector = [...this.donut.querySelectorAll('.diagram__sector')];
     sector.forEach((item) => {
-      const isTarget = item.getAttribute('data-name') === e.target.getAttribute('data-name');
+      const isTarget = item.dataset.name === e.target.dataset.name;
       if (isTarget) {
         item.dispatchEvent(new Event('mouseover'));
       }
@@ -83,7 +83,7 @@ class Donut {
   handlePathOut = (e) => {
     const sector = [...this.donut.querySelectorAll('.diagram__sector')];
     sector.forEach((item) => {
-      const isTarget = item.getAttribute('data-name') === e.target.getAttribute('data-name');
+      const isTarget = item.dataset.name === e.target.dataset.name;
       if (isTarget) {
         item.dispatchEvent(new Event('mouseout'));
       }
@@ -99,8 +99,7 @@ class Donut {
   }
 
   changeLabel = (e) => {
-    const value = e.target.getAttribute('data-value');
-    const name = e.target.getAttribute('data-name');
+    const { value, name } = e.target.dataset;
     this.labelValue.innerHTML = value;
     this.labelValue.setAttribute('fill', `url(#${name})`);
     this.labelUnit.setAttribute('fill', `url(#${name})`);
