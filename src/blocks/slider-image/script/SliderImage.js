@@ -20,35 +20,32 @@ class SliderImage {
       const isArrowLeft = e.target === this.arrowLeft || this.arrowLeft.contains(e.target);
       const isArrowRight = e.target === this.arrowRight || this.arrowRight.contains(e.target);
 
-      if (isArrowLeft) this.movePrev();
-      if (isArrowRight) this.moveNext();
+      if (isArrowLeft) {
+        this.index = (this.index < 1) ? this.images.length - 1 : this.index - 1;
+        this.slideImage();
+      }
+      if (isArrowRight) {
+        this.index = (this.index >= this.images.length - 1) ? 0 : this.index + 1;
+        this.slideImage();
+      }
     };
 
     this.slider.addEventListener('click', clickSlider);
   }
 
-  movePrev() {
+  slideImage() {
     this.images[this.index].classList.remove('slider-image__room_show');
     this.dots[this.index].classList.remove('slider-image__ellipses-item_filled');
-    if (this.index === 0) {
-      this.index = 3;
-    } else {
-      this.index -= 1;
-    }
-    this.images[this.index].classList.add('slider-image__room_show');
-    this.dots[this.index].classList.add('slider-image__ellipses-item_filled');
-  }
 
-  moveNext() {
-    this.images[this.index].classList.remove('slider-image__room_show');
-    this.dots[this.index].classList.remove('slider-image__ellipses-item_filled');
-    if (this.index === 3) {
-      this.index = 0;
-    } else {
-      this.index += 1;
-    }
-    this.images[this.index].classList.add('slider-image__room_show');
-    this.dots[this.index].classList.add('slider-image__ellipses-item_filled');
+    this.images.forEach((image, index) => {
+      if (this.index === index) {
+        image.classList.add('slider-image__room_show');
+        this.dots[index].classList.add('slider-image__ellipses-item_filled');
+      } else {
+        image.classList.remove('slider-image__room_show');
+        this.dots[index].classList.remove('slider-image__ellipses-item_filled');
+      }
+    });
   }
 }
 
